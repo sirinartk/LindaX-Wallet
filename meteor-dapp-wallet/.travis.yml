@@ -1,0 +1,14 @@
+language: node_js
+
+node_js: "7"
+
+sudo: required
+
+install:
+  - npm install -g meteor-build-client
+  - curl https://install.meteor.com/ | sh
+
+script:
+  - cd app
+  - npm run build
+
