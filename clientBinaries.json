@@ -43,7 +43,7 @@
               "url":
                 "https://lindax.nyc3.digitaloceanspaces.com/public/geth/geth-darwin-amd64-1.8.13.zip",
               "type": "zip",
-              "md5": "fb91b89830c024d40490863cb1e5a409",
+              "md5": "5cde5a390fc296b4170f7765757eb5f5",
               "bin": "geth-darwin-amd64-1.8.13/geth"
             },
             "bin": "geth",
