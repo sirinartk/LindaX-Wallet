@@ -254,18 +254,6 @@ Helpers.detectNetwork = function(hash) {
       network.name = 'Trajectory';
       break;
 
-    case '0x6341fd3daf94b748c72ced5a5b26028f2474f5f00d824504e4fa37a75767e177':
-      console.log('Network is Testnet #4 (Rinkeby)');
-      network.type = 'testnet';
-      network.name = 'Rinkeby';
-      break;
-
-    case '0x0cd786a2425d16f152c658316c423e6ce1181e15c3295826d7c9904cba9ce303':
-      console.log('Network is Testnet #2 (Morden)');
-      network.type = 'testnet';
-      network.name = 'Morden';
-      break;
-
     default:
       console.log('Network is privatenet');
       network.type = 'privatenet';
