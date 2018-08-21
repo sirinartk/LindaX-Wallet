@@ -41,10 +41,10 @@
           "x64": {
             "download": {
               "url":
-                "https://www.dropbox.com/s/iqixyeoymvuphsc/geth-darwin-amd64-1.8.11-dea1ce05.zip?dl=1",
+                "https://lindax.nyc3.digitaloceanspaces.com/public/geth/geth-darwin-amd64-1.8.13.zip",
               "type": "zip",
-              "md5": "d944c4422f51ab6e915d88c11f7c5d12",
-              "bin": "geth-darwin-amd64-1.8.11-dea1ce05/geth"
+              "md5": "fb91b89830c024d40490863cb1e5a409",
+              "bin": "geth-darwin-amd64-1.8.13/geth"
             },
             "bin": "geth",
             "commands": {
@@ -59,10 +59,10 @@
           "x64": {
             "download": {
               "url":
-                "https://www.dropbox.com/s/rz6nogb6m0era3o/geth-windows-amd64-1.8.11-dea1ce05.zip?dl=1",
+                "https://lindax.nyc3.digitaloceanspaces.com/public/geth/geth-windows-amd64-1.8.13.zip",
               "type": "zip",
-              "md5": "eaff8afeb7e7df332126651894adbf83",
-              "bin": "geth-windows-amd64-1.8.11-dea1ce05\\geth.exe"
+              "md5": "c62d95cd17bd563dc334b7ca92d26be8",
+              "bin": "geth-windows-amd64-1.8.13\\geth.exe"
             },
             "bin": "geth.exe",
             "commands": {
@@ -75,10 +75,10 @@
           "ia32": {
             "download": {
               "url":
-                "https://www.dropbox.com/s/g32t99lc8glvsnb/geth-windows-386-1.8.11-dea1ce05.zip?dl=1",
+                "https://lindax.nyc3.digitaloceanspaces.com/public/geth/geth-windows-386-1.8.13.zip",
               "type": "zip",
-              "md5": "9e9f3baecf031f0288c4176cdb9249dd",
-              "bin": "geth-windows-386-1.8.11-dea1ce05\\geth.exe"
+              "md5": "84a8dc024d1aab56b689b6f478d981b7",
+              "bin": "geth-windows-386-1.8.13\\geth.exe"
             },
             "bin": "geth.exe",
             "commands": {
