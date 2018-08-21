@@ -52,7 +52,7 @@ describe('nodes actions:', () => {
     afterEach(() => store.clearActions());
 
     it('should handle #changeNetwork', async () => {
-      await store.dispatch(changeNetwork('rinkeby'));
+      await store.dispatch(changeNetwork('trajectory'));
       const actions = store.getActions();
 
       assert.equal(actions.length, 2);

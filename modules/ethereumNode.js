@@ -100,11 +100,7 @@ class EthereumNode extends EventEmitter {
   }
 
   get isTestNetwork() {
-    return this.network === 'test' || this.network === 'ropsten';
-  }
-
-  get isRinkebyNetwork() {
-    return this.network === 'rinkeby';
+    return this.network === 'test' || this.network === 'trajectory';
   }
 
   get isDevNetwork() {
@@ -299,7 +295,7 @@ class EthereumNode extends EventEmitter {
   _start(nodeType, network, syncMode) {
     ethereumNodeLog.info(`Start node: ${nodeType} ${network} ${syncMode}`);
 
-    if (network === 'test' || network === 'ropsten') {
+    if (network === 'test' || network === 'trajectory') {
       ethereumNodeLog.debug('Node will connect to the test network');
     }
 
@@ -444,8 +440,8 @@ class EthereumNode extends EventEmitter {
       let args;
 
       switch (network) {
-        // Starts Ropsten network
-        case 'ropsten':
+        // Starts Trajectory network
+        case 'trajectory':
         // fall through
         case 'test':
           args = [
@@ -512,6 +508,8 @@ class EthereumNode extends EventEmitter {
 
       // add bootnode
       args.push('--bootnodes','enode://eebef10f9b7fedc34d2e0ac9bb89187ad73dd82c2d3e4c5f86f8b212bfe363e5c4420e2215d0f2299477136ce3f195b7cef89cdd07b7f9c6cf4820dfc9dd35a7@165.227.25.62:20305');
+
+      ethereumNodeLog.info(`Start node args: ${args}`);
 
       ethereumNodeLog.trace('Spawn', binPath, args);
 
@@ -714,11 +712,7 @@ class EthereumNode extends EventEmitter {
       case '0xd4e56740f876aef8c010b86a40d5f56745a118d0906a34e69aec8c0db1cb8fa3':
         return 'main';
       case '0x6341fd3daf94b748c72ced5a5b26028f2474f5f00d824504e4fa37a75767e177':
-        return 'rinkeby';
-      case '0x41941023680923e0fe4d74a34bdac8141f2540e3ae90623718e47d66d1ca4a2d':
-        return 'ropsten';
-      case '0xa3c565fc15c7478862d50ccd6561e3c06b24cc509bf388941c25ea985ce32cb9':
-        return 'kovan';
+        return 'trajectory';
       default:
         return 'private';
     }

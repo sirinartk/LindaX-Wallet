@@ -248,10 +248,10 @@ Helpers.detectNetwork = function(hash) {
       network.name = 'Main';
       break;
 
-    case '0x41941023680923e0fe4d74a34bdac8141f2540e3ae90623718e47d66d1ca4a2d':
-      console.log('Network is Testnet #3 (Ropsten)');
+    case '0x0b6193d6734e1cd18381f477102f7be9e354d051f44aeab1acde8e56f6863490':
+      console.log('Network is Testnet #1 (Trajectory)');
       network.type = 'testnet';
-      network.name = 'Ropsten';
+      network.name = 'Trajectory';
       break;
 
     case '0x6341fd3daf94b748c72ced5a5b26028f2474f5f00d824504e4fa37a75767e177':

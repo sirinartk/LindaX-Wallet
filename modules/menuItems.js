@@ -566,23 +566,13 @@ let menuTempl = function(webviews) {
         }
       },
       {
-        label: 'Ropsten - Test network',
+        label: 'Trajectory - Test network',
         accelerator: 'CommandOrControl+Alt+2',
-        checked: store.getState().nodes.network === 'ropsten',
+        checked: store.getState().nodes.network === 'trajectory',
         enabled: store.getState().nodes.network !== 'private',
         type: 'checkbox',
         click() {
-          changeNodeNetwork('ropsten', webviews);
-        }
-      },
-      {
-        label: 'Rinkeby - Test network',
-        accelerator: 'CommandOrControl+Alt+3',
-        checked: store.getState().nodes.network === 'rinkeby',
-        enabled: store.getState().nodes.network !== 'private',
-        type: 'checkbox',
-        click() {
-          changeNodeNetwork('rinkeby', webviews);
+          changeNodeNetwork('trajectory', webviews);
         }
       }
       // {
@@ -641,7 +631,7 @@ let menuTempl = function(webviews) {
     ]
   });
 
-  // Enables mining menu: only in Solo mode and Ropsten network (testnet)
+  // Enables mining menu: only in Solo mode and trajectory network (testnet)
   if (
     ethereumNode.isOwnNode &&
     (ethereumNode.isTestNetwork || ethereumNode.isDevNetwork)

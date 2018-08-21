@@ -133,10 +133,10 @@ describe('the nodes reducer', () => {
   it('should handle the "[MAIN]:NODES:CHANGE_NETWORK_SUCCESS" action', () => {
     const action = {
       type: '[MAIN]:NODES:CHANGE_NETWORK_SUCCESS',
-      payload: { network: 'rinkeby' }
+      payload: { network: 'trajectory' }
     };
     const expectedState = Object.assign({}, initialState, {
-      network: 'rinkeby'
+      network: 'trajectory'
     });
 
     assert.deepEqual(reducer(exampleState, action), expectedState);

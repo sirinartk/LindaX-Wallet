@@ -57,14 +57,8 @@ var checkNetwork = function() {
       case '0xd4e56740f876aef8c010b86a40d5f56745a118d0906a34e69aec8c0db1cb8fa3':
         Session.set('network', 'main');
         break;
-      case '0x6341fd3daf94b748c72ced5a5b26028f2474f5f00d824504e4fa37a75767e177':
-        Session.set('network', 'rinkeby');
-        break;
-      case '0x41941023680923e0fe4d74a34bdac8141f2540e3ae90623718e47d66d1ca4a2d':
-        Session.set('network', 'ropsten');
-        break;
-      case '0xa3c565fc15c7478862d50ccd6561e3c06b24cc509bf388941c25ea985ce32cb9':
-        Session.set('network', 'kovan');
+      case '0x0b6193d6734e1cd18381f477102f7be9e354d051f44aeab1acde8e56f6863490':
+        Session.set('network', 'trajectory');
         break;
       default:
         Session.set('network', 'private');

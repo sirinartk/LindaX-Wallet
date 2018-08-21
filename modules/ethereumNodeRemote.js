@@ -46,7 +46,9 @@ class EthereumNodeRemote extends EventEmitter {
         `Connecting to remote node on ${this.network}...`
       );
 
-      const provider = this._getProvider(this.network);
+      //const provider = this._getProvider(this.network);
+      // no infura provider for
+      const provider = null;
 
       if (!provider) {
         const errorMessage = `No provider for network: ${this.network}`;
@@ -174,7 +176,9 @@ class EthereumNodeRemote extends EventEmitter {
 
     this.network = network;
 
-    const provider = this._getProvider(network);
+    //const provider = this._getProvider(network);
+    // no infura provider for
+    const provider = null;
 
     if (!provider) {
       ethereumNodeRemoteLog.error('No provider');
@@ -194,10 +198,6 @@ class EthereumNodeRemote extends EventEmitter {
       // fall-through (uses Ropsten)
       case 'ropsten':
         return InfuraEndpoints.ethereum.websockets.Ropsten;
-      case 'rinkeby':
-        return InfuraEndpoints.ethereum.websockets.Rinkeby;
-      case 'kovan':
-        return InfuraEndpoints.ethereum.websockets.Kovan;
       default:
         ethereumNodeRemoteLog.error(`Unsupported network type: ${network}`);
         return null;
