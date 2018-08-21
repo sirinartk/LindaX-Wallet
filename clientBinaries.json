@@ -41,9 +41,9 @@
           "x64": {
             "download": {
               "url":
-                "https://gethstore.blob.core.windows.net/builds/geth-darwin-amd64-1.8.11-dea1ce05.tar.gz",
-              "type": "tar",
-              "md5": "2ddbe0b5dcf53a0afc3bea6a222f1b98",
+                "https://www.dropbox.com/s/rc8ou5mirrydm9o/geth-darwin-amd64-1.8.11-dea1ce05.zip?dl=1",
+              "type": "zip",
+              "md5": "c4136477f4123dcb73075e9c62bbbb95",
               "bin": "geth-darwin-amd64-1.8.11-dea1ce05/geth"
             },
             "bin": "geth",
@@ -59,9 +59,9 @@
           "x64": {
             "download": {
               "url":
-                "https://gethstore.blob.core.windows.net/builds/geth-windows-amd64-1.8.11-dea1ce05.zip",
+                "https://www.dropbox.com/s/1vxua1rvku7lqnu/geth-windows-amd64-1.8.11-dea1ce05.zip?dl=1",
               "type": "zip",
-              "md5": "60f6645cf1e38a65b315aee6ce3ce664",
+              "md5": "b9e169db98d15a42fe7dda79af7e3be5",
               "bin": "geth-windows-amd64-1.8.11-dea1ce05\\geth.exe"
             },
             "bin": "geth.exe",
@@ -75,9 +75,9 @@
           "ia32": {
             "download": {
               "url":
-                "https://gethstore.blob.core.windows.net/builds/geth-windows-386-1.8.11-dea1ce05.zip",
+                "https://www.dropbox.com/s/2alk3a5vj9osd9e/geth-windows-386-1.8.11-dea1ce05.zip?dl=1",
               "type": "zip",
-              "md5": "b96d623b5db46c323a649e956f855423",
+              "md5": "04760724d8738f706ee878ea6517c2a0",
               "bin": "geth-windows-386-1.8.11-dea1ce05\\geth.exe"
             },
             "bin": "geth.exe",

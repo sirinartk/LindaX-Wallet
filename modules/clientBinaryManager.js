@@ -11,9 +11,8 @@ const EventEmitter = require('events').EventEmitter;
 
 const log = require('./utils/logger').create('ClientBinaryManager');
 
-// should be       'https://raw.githubusercontent.com/ethereum/mist/master/clientBinaries.json'
 const BINARY_URL =
-  'https://raw.githubusercontent.com/ethereum/mist/master/clientBinaries.json';
+  'https://raw.githubusercontent.com/TheLindaProjectInc/LindaX-Wallet/master/clientBinaries.json';
 
 const ALLOWED_DOWNLOAD_URLS_REGEX = /^https:\/\/(?:(?:[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?\.)?ethereum\.org\/|gethstore\.blob\.core\.windows\.net\/|bintray\.com\/artifact\/download\/karalabe\/ethereum\/)(?:.+)/; // eslint-disable-line max-len
 
@@ -39,7 +38,7 @@ class Manager extends EventEmitter {
 
   _writeLocalConfig(json) {
     log.info('Write new client binaries local config to disk ...');
-
+    log.info(json);
     fs.writeFileSync(
       path.join(Settings.userDataPath, 'clientBinaries.json'),
       JSON.stringify(json, null, 2)
