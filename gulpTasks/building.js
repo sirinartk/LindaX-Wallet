@@ -12,7 +12,7 @@ const shell = require('shelljs');
 const version = require('../package.json').version;
 
 const type = options.type;
-const applicationName = options.wallet ? 'Ethereum Wallet' : 'Mist';
+const applicationName = options.wallet ? 'LindaX Wallet' : 'Mist';
 
 gulp.task('clean-dist', cb => {
   return del([`./dist_${type}`], cb);
@@ -88,7 +88,7 @@ gulp.task('pack-wallet', cb => {
   });
 });
 
-// Currently, Mist and Ethereum Wallet expects ./wallet/ to be in different paths. This task aims to fulfill this requirement.
+// Currently, Mist and LindaX Wallet expects ./wallet/ to be in different paths. This task aims to fulfill this requirement.
 gulp.task('move-wallet', cb => {
   if (type === 'wallet') {
     console.debug('Moving ./wallet to ./interface/wallet');

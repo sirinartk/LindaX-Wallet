@@ -49,7 +49,7 @@
       },
       "error": {
         "wrongChain":
-          "You seem to be on a different chain.  Please restart the Ethereum Wallet App!"
+          "You seem to be on a different chain.  Please restart the LindaX Wallet App!"
       },
       "warnings": {
         "txOriginVulnerabilityWallet":

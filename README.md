@@ -15,7 +15,7 @@ This repository is also the Electron host for the [Meteor-based wallet dapp](htt
 
 ## Help and troubleshooting
 
-In order to get help regarding Mist or Ethereum Wallet:
+In order to get help regarding Mist or LindaX Wallet:
 
 1.  Please check the [Mist troubleshooting guide](https://github.com/ethereum/mist/wiki).
 1.  Go to our [Gitter channel](https://gitter.im/ethereum/mist) to connect with the community for instant help.
@@ -201,13 +201,13 @@ To generate the binaries for Mist run:
 $ yarn build:mist
 ```
 
-To generate the Ethereum Wallet:
+To generate the LindaX Wallet:
 
 ```bash
 $ yarn build:wallet
 ```
 
-The generated binaries will be under `dist_mist/release` or `dist_wallet/release`. From 0.11.0, both Ethereum Wallet and Mist bundle a meteor-dapp-wallet instance (https://github.com/ethereum/meteor-dapp-wallet).
+The generated binaries will be under `dist_mist/release` or `dist_wallet/release`. From 0.11.0, both LindaX Wallet and Mist bundle a meteor-dapp-wallet instance (https://github.com/ethereum/meteor-dapp-wallet).
 
 #### Options
 

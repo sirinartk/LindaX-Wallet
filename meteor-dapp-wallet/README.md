@@ -1,4 +1,4 @@
-# Ethereum Wallet Ðapp
+# LindaX Wallet Ðapp
 
 The Ethereum wallet.
 

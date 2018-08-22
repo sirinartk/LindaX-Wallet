@@ -1,4 +1,4 @@
-Ethereum Wallet
+LindaX Wallet
 
 The Ethereum wallet, which allows you to create simple and multisig wallets to manage your ether.
 

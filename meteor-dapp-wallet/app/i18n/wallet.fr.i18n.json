@@ -37,7 +37,7 @@
                 }
             },
             "error": {
-                "wrongChain": "Vous semblez être sur une chaine différente, veuillez redémarrer Ethereum Wallet App !"
+                "wrongChain": "Vous semblez être sur une chaine différente, veuillez redémarrer LindaX Wallet App !"
             },
             "warnings": {
                 "txOriginVulnerabilityWallet": "Ce portefeuille de contrat à puce a le code obsolète et est soumis à des attaques de phishing. ",

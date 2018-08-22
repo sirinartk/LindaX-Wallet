@@ -103,7 +103,7 @@ exports.mocha = (_module, options) => {
 
       this.geth = yield startGeth();
 
-      const appFileName = options.app === 'wallet' ? 'Ethereum Wallet' : 'Mist';
+      const appFileName = options.app === 'wallet' ? 'LindaX Wallet' : 'Mist';
       const platformArch = `${process.platform}-${process.arch}`;
       console.info(`${appFileName} :: ${platformArch}`);
 
