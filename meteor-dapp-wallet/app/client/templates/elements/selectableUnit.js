@@ -18,8 +18,8 @@ The available units
 */
 selectableUnits = [
   {
-    text: 'ETHER',
-    value: 'ether'
+    text: 'LINDAX',
+    value: 'lindax'
   },
   {
     text: 'FINNEY', //(µΞ)
@@ -55,7 +55,7 @@ if (moment().format('MM-DD') == '04-01') {
     { text: 'LOVELACE', value: 'lovelace' },
     { text: 'BABBAGE', value: 'babbage' },
     { text: 'WEI', value: 'wei' },
-    { text: 'NOETHER', value: 'noether' }
+    { text: 'NOLINDAX', value: 'nolindax' }
   );
 
   // Claude's Birthday

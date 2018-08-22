@@ -14,7 +14,7 @@ const log = require('./utils/logger').create('ClientBinaryManager');
 const BINARY_URL =
   'https://raw.githubusercontent.com/TheLindaProjectInc/LindaX-Wallet/master/clientBinaries.json';
 
-const ALLOWED_DOWNLOAD_URLS_REGEX = /(https:\/\/)(lindax\.nyc3\.digitaloceanspaces\.com\/)(?:.+)/; // eslint-disable-line max-len
+const ALLOWED_DOWNLOAD_URLS_REGEX = /(https:\/\/)(lindaproject\.nyc3\.digitaloceanspaces\.com\/)(?:.+)/; // eslint-disable-line max-len
 
 class Manager extends EventEmitter {
   constructor() {

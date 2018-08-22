@@ -506,9 +506,6 @@ class EthereumNode extends EventEmitter {
         args = args.concat(nodeOptions);
       }
 
-      // add bootnode
-      args.push('--bootnodes','enode://eebef10f9b7fedc34d2e0ac9bb89187ad73dd82c2d3e4c5f86f8b212bfe363e5c4420e2215d0f2299477136ce3f195b7cef89cdd07b7f9c6cf4820dfc9dd35a7@165.227.25.62:20305');
-
       ethereumNodeLog.info(`Start node args: ${args}`);
 
       ethereumNodeLog.trace('Spawn', binPath, args);

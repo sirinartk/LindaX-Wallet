@@ -54,7 +54,7 @@ Session.setDefault('network', false);
 var checkNetwork = function() {
   web3.eth.getBlock(0).then(function(block) {
     switch (block.hash) {
-      case '0xd4e56740f876aef8c010b86a40d5f56745a118d0906a34e69aec8c0db1cb8fa3':
+      case '0xaa9da902a93b360bec5f2401d2bdfae952a03b331f7dc7e7560ec5a20ed1148e':
         Session.set('network', 'main');
         break;
       case '0x0b6193d6734e1cd18381f477102f7be9e354d051f44aeab1acde8e56f6863490':
