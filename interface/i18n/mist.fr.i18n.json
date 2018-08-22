@@ -85,7 +85,7 @@
       "legacyChain": {
         "title": "Legacy chain detected",
         "description":
-          "Your node is currently on the unsupported Ethereum Classic chain. To use this chain use tools provided by the ethereum classic project at\nhttps://ethereumclassic.github.io.\n\nTo revert to the main ethereum chain follow the tutorial here:\nhttps://github.com/ethereum/mist/releases/0.8.2"
+          "Your node is currently on the unsupported Ethereum Classic chain. To use this chain use tools provided by the ethereum classic project at\nhttps://ethereumclassic.github.io.\n\nTo revert to the main ethereum chain follow the tutorial here:\nhttps://github.com/thelindaprojectinc/lindax-wallet/releases/0.8.2"
       }
     },
     "rightClick": {
@@ -125,7 +125,7 @@
     "startScreen": {
       "runningNodeFound": "Nœud Ethereum actif trouvé !",
       "nodeConnectionTimeout":
-        "Echec du démarrage du nœud Ethereum !<br><small>Si vous <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'>avez installé Geth</a>, utilisez cette commande pour le lancer : <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/ethereum/mist/issues' class='button' target='_blank'> Ou signalez le problème </a></small>",
+        "Echec du démarrage du nœud Ethereum !<br><small>Si vous <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'>avez installé Geth</a>, utilisez cette commande pour le lancer : <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> Ou signalez le problème </a></small>",
       "nodeBinaryNotFound":
         "Pas de binaire du nœud Ethereum trouvé !<br><small> <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'> Veuillez en lancer d'abord un manuellement. </a> </small>",
       "nodeSyncing": "Le nœud Ethereum se synchronise, veuillez patienter...",

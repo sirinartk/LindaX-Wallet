@@ -287,7 +287,7 @@
             "title": "<strong>Tokens</strong> personalitzats",
             "subTitle": "Tokens agegits",
             "admin": "__name__ (pàgina d'administració)",
-            "description": "Els tokens són monedes i altres fungibles construïts sobre la platforma d'Ethereum. Per tal que tots els comptes puguin veure i enviar els tokens, necessites afegir la seva adreça a aquesta llista. Pots crear el teu propi token simplement modificant <a href=\"https://ethereum.org/token#the-code\" target=\"_blank\">aquest exemple d'un contracte de token personalitzat</a> o aprenent-ne més sobre <a href=\"https://www.ethereum.org/token\" target=\"_blank\">tokens d'Ethereum</a>.",
+            "description": "Els tokens són monedes i altres fungibles construïts sobre la platforma d'Ethereum. Per tal que tots els comptes puguin veure i enviar els tokens, necessites afegir la seva adreça a aquesta llista. Pots crear el teu propi token simplement modificant <a href=\"https://lindax.network/token#the-code\" target=\"_blank\">aquest exemple d'un contracte de token personalitzat</a> o aprenent-ne més sobre <a href=\"https://www.ethereum.org/token\" target=\"_blank\">tokens d'Ethereum</a>.",
             "deleteToken": "Vols eliminar aquest token <strong>__token__</strong> de la teva llista?",
             "addedToken": "__token__ afegit a la teva llista de visualització",
             "editedToken": "Token __token__ editat",

@@ -286,7 +286,7 @@
             "title": "<strong>Valuta</strong> të personalizuara",
             "subTitle": "Valutat e shtuara",
             "admin": "__name__ (faqja e administrimit)",
-            "description": "Valutat janë elemente të këmbyeshme të ndërtuara mbi platformën Ethereum. Në mënyrë që llogaritë të mund të kontrollojnë për valuta dhe t'i dërgojnë ato, duhet të shtoni adresën e tyre në këtë listë. Mund të krijoni valutën tuaj personale thjesht duke modifikuar <a href=\"https://ethereum.org/token#the-code\" target=\"_blank\">këtë shembull kontrate valute të personalizuar</a> ose duke mësuar më shumë rreth <a href=\"https://www.ethereum.org/token\" target=\"_blank\">Valutave Ethereum</a>.",
+            "description": "Valutat janë elemente të këmbyeshme të ndërtuara mbi platformën Ethereum. Në mënyrë që llogaritë të mund të kontrollojnë për valuta dhe t'i dërgojnë ato, duhet të shtoni adresën e tyre në këtë listë. Mund të krijoni valutën tuaj personale thjesht duke modifikuar <a href=\"https://lindax.network/token#the-code\" target=\"_blank\">këtë shembull kontrate valute të personalizuar</a> ose duke mësuar më shumë rreth <a href=\"https://www.ethereum.org/token\" target=\"_blank\">Valutave Ethereum</a>.",
             "deleteToken": "A doni ta hiqni valutën <strong>__token__</strong> nga lista juaj?",
             "addedToken": "__token__ u shtua në listën tuaj të vëzhgimit",
             "editedToken": "U modifikua valuta __token__",

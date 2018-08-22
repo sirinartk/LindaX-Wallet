@@ -84,7 +84,7 @@
       "legacyChain": {
         "title": "レガシーチェーンを検出しました",
         "description":
-          "あなたのノードは現在サポートされていません. Ethereum のクラシックプロジェクトによって提供されるこのチェーン使用ツールを使用するには \nhttps://ethereumclassic.github.io.\n\nメイン Ethereum チェーンに戻す方法のチュートリアルはこちら:\nhttps://github.com/ethereum/mist/releases/0.8.2"
+          "あなたのノードは現在サポートされていません. Ethereum のクラシックプロジェクトによって提供されるこのチェーン使用ツールを使用するには \nhttps://ethereumclassic.github.io.\n\nメイン Ethereum チェーンに戻す方法のチュートリアルはこちら:\nhttps://github.com/thelindaprojectinc/lindax-wallet/releases/0.8.2"
       }
     },
     "rightClick": {
@@ -125,7 +125,7 @@
     "startScreen": {
       "runningNodeFound": "起動している Ethereum ノードを見つけました!",
       "nodeConnectionTimeout":
-        "Ethereum ノードをスタート出来ませんでした!<br><small>もし<a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'>Geth</a>をインストールしているならば,このコマンドを使ってみてください: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/ethereum/mist/issues' class='button' target='_blank'>もしくは問題を報告して下さい。 </a></small>",
+        "Ethereum ノードをスタート出来ませんでした!<br><small>もし<a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'>Geth</a>をインストールしているならば,このコマンドを使ってみてください: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'>もしくは問題を報告して下さい。 </a></small>",
       "nodeBinaryNotFound":
         "Ethereum ノードバイナリーが見つかりませんでした。<br><small> <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'> 手動でスタートして下さい。 </a> </small>",
       "nodeSyncing": "Ethereum ノードは同期中です...",

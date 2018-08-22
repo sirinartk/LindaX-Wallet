@@ -103,7 +103,7 @@
       "legacyChain": {
         "title": "Legacy chain gedetecteerd",
         "description":
-          "Je node draait momenteel op de niet ondersteunde Ethereum Classic chain. Om deze chain te gebruiken dien je de tools te gebruiken van het Ethereum Classic project op\nhttps://ethereumclassic.github.io.\n\nOm terug te gaan naar de standaard Ethereum chain kun je deze tutorial volgen:\nhttps://github.com/ethereum/mist/releases/0.8.2"
+          "Je node draait momenteel op de niet ondersteunde Ethereum Classic chain. Om deze chain te gebruiken dien je de tools te gebruiken van het Ethereum Classic project op\nhttps://ethereumclassic.github.io.\n\nOm terug te gaan naar de standaard Ethereum chain kun je deze tutorial volgen:\nhttps://github.com/thelindaprojectinc/lindax-wallet/releases/0.8.2"
       }
     },
     "rightClick": {
@@ -143,7 +143,7 @@
     "startScreen": {
       "runningNodeFound": "Lopende Ethereum node gevonden!",
       "nodeConnectionTimeout":
-        "Ethereum node opstarten niet mogelijk!<br><small>Als je <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'>Geth geinstalleerd hebt</a>, gebruik dan dit commando om het op te starten: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/ethereum/mist/issues' class='button' target='_blank'> Of meld een fout </a></small>",
+        "Ethereum node opstarten niet mogelijk!<br><small>Als je <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'>Geth geinstalleerd hebt</a>, gebruik dan dit commando om het op te starten: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> Of meld een fout </a></small>",
       "nodeBinaryNotFound":
         "Geen Ethereum node gevonden!<br><small> <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'> Start er a.u.b. handmatig een. </a> </small>",
       "nodeStarting": "Ethereum node opstarten...",

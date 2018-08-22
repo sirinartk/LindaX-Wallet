@@ -738,7 +738,7 @@ let menuTempl = function(webviews) {
     {
       label: i18n.t('mist.applicationMenu.help.mistWiki'),
       click() {
-        shell.openExternal('https://github.com/ethereum/mist/wiki');
+        shell.openExternal('https://github.com/thelindaprojectinc/lindax-wallet/wiki');
       }
     },
     {
@@ -750,7 +750,7 @@ let menuTempl = function(webviews) {
     {
       label: i18n.t('mist.applicationMenu.help.reportBug'),
       click() {
-        shell.openExternal('https://github.com/ethereum/mist/issues');
+        shell.openExternal('https://github.com/thelindaprojectinc/lindax-wallet/issues');
       }
     }
   );

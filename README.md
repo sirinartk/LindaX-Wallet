@@ -17,20 +17,20 @@ This repository is also the Electron host for the [Meteor-based wallet dapp](htt
 
 In order to get help regarding Mist or LindaX Wallet:
 
-1.  Please check the [Mist troubleshooting guide](https://github.com/ethereum/mist/wiki).
+1.  Please check the [Mist troubleshooting guide](https://github.com/thelindaprojectinc/lindax-wallet/wiki).
 1.  Go to our [Gitter channel](https://gitter.im/ethereum/mist) to connect with the community for instant help.
-1.  Search for [similar issues](https://github.com/ethereum/mist/issues?q=is%3Aopen+is%3Aissue+label%3A%22Type%3A+Canonical%22) and potential help.
-1.  Or create a [new issue](https://github.com/ethereum/mist/issues) and provide as much information as you can to recreate your problem.
+1.  Search for [similar issues](https://github.com/thelindaprojectinc/lindax-wallet/issues?q=is%3Aopen+is%3Aissue+label%3A%22Type%3A+Canonical%22) and potential help.
+1.  Or create a [new issue](https://github.com/thelindaprojectinc/lindax-wallet/issues) and provide as much information as you can to recreate your problem.
 
 ## How to contribute
 
-Contributions via Pull Requests are welcome. You can see where to help looking for issues with the [Enhancement](https://github.com/ethereum/mist/issues?q=is%3Aopen+is%3Aissue+label%3A%22Type%3A+Enhancement%22) or [Bug](https://github.com/ethereum/mist/issues?q=is%3Aopen+is%3Aissue+label%3A%22Type%3A+Bug%22) labels. We can help guide you towards the solution.
+Contributions via Pull Requests are welcome. You can see where to help looking for issues with the [Enhancement](https://github.com/thelindaprojectinc/lindax-wallet/issues?q=is%3Aopen+is%3Aissue+label%3A%22Type%3A+Enhancement%22) or [Bug](https://github.com/thelindaprojectinc/lindax-wallet/issues?q=is%3Aopen+is%3Aissue+label%3A%22Type%3A+Bug%22) labels. We can help guide you towards the solution.
 
-You can also help by [responding to issues](https://github.com/ethereum/mist/issues?q=is%3Aissue+is%3Aopen+label%3A%22Status%3A+Triage%22). Sign up on [CodeTriage](https://www.codetriage.com/ethereum/mist) and it'll send you gentle notifications with a configurable frequency. It is a nice way to help while learning.
+You can also help by [responding to issues](https://github.com/thelindaprojectinc/lindax-wallet/issues?q=is%3Aissue+is%3Aopen+label%3A%22Status%3A+Triage%22). Sign up on [CodeTriage](https://www.codetriage.com/ethereum/mist) and it'll send you gentle notifications with a configurable frequency. It is a nice way to help while learning.
 
 ## Installation
 
-If you want to install the app from a pre-built version on the [release page](https://github.com/ethereum/mist/releases), you can simply run the executable after download.
+If you want to install the app from a pre-built version on the [release page](https://github.com/thelindaprojectinc/lindax-wallet/releases), you can simply run the executable after download.
 
 For updating, simply download the new version and copy it over the old one (keep a backup of the old one if you want to be sure).
 
@@ -76,7 +76,7 @@ $ curl -o- -L https://yarnpkg.com/install.sh | bash
 Now you're ready to initialize Mist for development:
 
 ```bash
-$ git clone https://github.com/ethereum/mist.git
+$ git clone https://github.com/thelindaprojectinc/lindax-wallet.git
 $ cd mist
 $ yarn
 ```
@@ -98,7 +98,7 @@ $ cd mist
 $ yarn dev:electron
 ```
 
-_NOTE: Client binaries (e.g. [geth](https://github.com/ethereum/go-ethereum)) specified in [clientBinaries.json](https://github.com/ethereum/mist/blob/master/clientBinaries.json) will be checked during every startup and downloaded if out-of-date, binaries are stored in the [config folder](#config-folder)._
+_NOTE: Client binaries (e.g. [geth](https://github.com/ethereum/go-ethereum)) specified in [clientBinaries.json](https://github.com/thelindaprojectinc/lindax-wallet/blob/master/clientBinaries.json) will be checked during every startup and downloaded if out-of-date, binaries are stored in the [config folder](#config-folder)._
 
 _NOTE: use `--help` to display available options, e.g. `--loglevel debug` (or `trace`) for verbose output_
 

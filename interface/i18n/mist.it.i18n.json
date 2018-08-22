@@ -107,7 +107,7 @@
       "legacyChain": {
         "title": "Rilevata chain obsoleta",
         "description":
-          "Il tuo nodo si trova su una chain Ethereum Classic non supportata. Per usare questa chain usa strumenti forniti dal progetto ethereum classic da \nhttps://ethereumclassic.github.io.\n\nPer ritornare sulla chain principale di ethereum segui il tutorial seguente:\nhttps://github.com/ethereum/mist/releases/0.8.2",
+          "Il tuo nodo si trova su una chain Ethereum Classic non supportata. Per usare questa chain usa strumenti forniti dal progetto ethereum classic da \nhttps://ethereumclassic.github.io.\n\nPer ritornare sulla chain principale di ethereum segui il tutorial seguente:\nhttps://github.com/thelindaprojectinc/lindax-wallet/releases/0.8.2",
         "swarm": {
           "notEnabled":
             "Swarm non è abilitato. Per abilitare Swarm devi cliccare su Abilita Swarm (menu -> Sviluppo -> Abilita Swarm)."
@@ -155,7 +155,7 @@
     "startScreen": {
       "runningNodeFound": "Trovato nodo Ethereum in esecuzione!",
       "nodeConnectionTimeout":
-        "Impossibile avviare un nodo Ethereum!<br><small>Se <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'>hai installato Geth</a>, usa questo comando per eseguirlo:<br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/ethereum/mist/issues' class='button' target='_blank'> o riporta il problema </a></small>",
+        "Impossibile avviare un nodo Ethereum!<br><small>Se <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'>hai installato Geth</a>, usa questo comando per eseguirlo:<br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> o riporta il problema </a></small>",
       "nodeBinaryNotFound":
         "Impossibile trovare l'eseguibile del nodo Ethereum !<br><small> <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'> Per favore avvialo manualmente prima. </a> </small>",
       "nodeSyncing": "Il nodo Ethereum deve sincronizzarsi, attendere prego...",

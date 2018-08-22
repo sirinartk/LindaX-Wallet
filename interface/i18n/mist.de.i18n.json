@@ -87,7 +87,7 @@
       "legacyChain": {
         "title": "Veraltete Chain erkannt",
         "description":
-          "Dein Softwareknoten ist zur Zeit auf der nicht unterstützten Ethereum Classic Chain. Um diese Chain zu nutzen, verwende die Tools vom Ethereum Classic Project unter\nhttps://ethereumclassic.github.io.\n\nUm zur Hauptchain von Ethereum zurückzukehren, folge den Schritten in diesem Tutorial:\nhttps://github.com/ethereum/mist/releases/0.8.2"
+          "Dein Softwareknoten ist zur Zeit auf der nicht unterstützten Ethereum Classic Chain. Um diese Chain zu nutzen, verwende die Tools vom Ethereum Classic Project unter\nhttps://ethereumclassic.github.io.\n\nUm zur Hauptchain von Ethereum zurückzukehren, folge den Schritten in diesem Tutorial:\nhttps://github.com/thelindaprojectinc/lindax-wallet/releases/0.8.2"
       }
     },
     "rightClick": {
@@ -127,7 +127,7 @@
     "startScreen": {
       "runningNodeFound": "Laufender Ethereum Softwareknoten gefunden!",
       "nodeConnectionTimeout":
-        "Ethereum Softwareknoten konnte nicht gestartet werden!<br><small>Wenn du <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'>Geth installiert hast,</a>, verwende bitte diesen Befehl, um Geth zu starten: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/ethereum/mist/issues' class='button' target='_blank'>oder sende einen Fehlerreport</a></small>",
+        "Ethereum Softwareknoten konnte nicht gestartet werden!<br><small>Wenn du <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'>Geth installiert hast,</a>, verwende bitte diesen Befehl, um Geth zu starten: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'>oder sende einen Fehlerreport</a></small>",
       "nodeBinaryNotFound":
         "Keine Programmdatei für den Ethereum Softwareknoten gefunden!<br><small> <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'> Bitte starte den Ethereum Softwareknoten manuell. </a> </small>",
       "nodeSyncing":

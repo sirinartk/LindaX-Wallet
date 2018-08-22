@@ -14,7 +14,7 @@ Number of blocks synchronized: 0
 Check the already existing issues to keep duplicates to a minimum.
 
 
-You'll find possible solutions for these common issues below on Mist Wiki: https://github.com/ethereum/mist/wiki.
+You'll find possible solutions for these common issues below on Mist Wiki: https://github.com/thelindaprojectinc/lindax-wallet/wiki.
 
 - Ether is not shown in the wallet
 - I send ether to the wallet contract but it doesn't show up

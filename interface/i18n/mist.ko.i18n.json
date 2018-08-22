@@ -85,7 +85,7 @@
       "legacyChain": {
         "title": "레거시 체인 감지",
         "description":
-          "노드가 현재 지원되지 않는 이더리움 클래식 체인에 있습니다. 이 체인을 사용하려면 이더리움 클래식 프로젝트에서 제공하는 도구를 사용하십시오.\nhttps://ethereumclassic.github.io.\n\n이더리움 체인으로 되돌리려면 튜토리얼을 살펴보세요.:\nhttps://github.com/ethereum/mist/releases/0.8.2"
+          "노드가 현재 지원되지 않는 이더리움 클래식 체인에 있습니다. 이 체인을 사용하려면 이더리움 클래식 프로젝트에서 제공하는 도구를 사용하십시오.\nhttps://ethereumclassic.github.io.\n\n이더리움 체인으로 되돌리려면 튜토리얼을 살펴보세요.:\nhttps://github.com/thelindaprojectinc/lindax-wallet/releases/0.8.2"
       }
     },
     "rightClick": {
@@ -125,7 +125,7 @@
     "startScreen": {
       "runningNodeFound": "작동 중인 이더리움 노드를 발견!",
       "nodeConnectionTimeout":
-        "이더리움 노드를 시작할 수 없습니다! <br><small>만일<a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'>Geth</a> 를 인스톨 했다면, 다음의 명령어를 사용해 실행하세요: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/ethereum/mist/issues' class='button' target='_blank'> 또는 이슈를 리포트하세요 </a></small>",
+        "이더리움 노드를 시작할 수 없습니다! <br><small>만일<a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'>Geth</a> 를 인스톨 했다면, 다음의 명령어를 사용해 실행하세요: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> 또는 이슈를 리포트하세요 </a></small>",
       "nodeBinaryNotFound":
         "이더리움 노드 실행파일이 없습니다!<br><small> <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'> 수동으로 이를 먼저 실행하세요.</a> </small>",
       "nodeSyncing": "이더리움 노드에 동기화가 필요합니다, 기다려 주세요...",
