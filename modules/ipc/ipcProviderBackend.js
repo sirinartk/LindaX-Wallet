@@ -175,7 +175,7 @@ class IpcProviderBackend {
                       ethereumNode.removeListener('state', onStateChange);
 
                       log.debug(
-                        `Ethereum node connected, resume connecting socket ${ownerId}`
+                        `LindaX node connected, resume connecting socket ${ownerId}`
                       );
 
                       resolve();
@@ -244,7 +244,7 @@ class IpcProviderBackend {
     ) {
       // stop syncing when node about to be stopped
       case ethereumNode.STATES.STOPPING:
-        log.info('Ethereum node stopping, disconnecting sockets');
+        log.info('LindaX node stopping, disconnecting sockets');
 
         // Unsubscribe remote subscriptions
         _.each(this._remoteSubscriptions, remoteSubscriptionId => {

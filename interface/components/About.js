@@ -29,11 +29,14 @@ class About extends React.Component {
             License {window.mist.license}
             <br />
             GitHub{' '}
-            <a href="https://github.com/thelindaprojectinc/lindax-wallet" target="_blank">
-              github.com/ethereum/mist
+            <a
+              href="https://github.com/thelindaprojectinc/lindax-wallet"
+              target="_blank"
+            >
+              github.com/thelindaprojectinc/Linda-X-Wallet
             </a>
           </p>
-          <small>Copyright 2018 Ethereum Foundation</small>
+          <small>Copyright 2018 The Linda Project Inc</small>
         </div>
       </div>
     );

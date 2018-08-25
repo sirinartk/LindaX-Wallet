@@ -1,6 +1,6 @@
 # LindaX Wallet Ðapp
 
-The Ethereum wallet.
+The LindaX wallet.
 
 [![Build Status](https://travis-ci.org/ethereum/meteor-dapp-wallet.svg?branch=master)](https://travis-ci.org/ethereum/meteor-dapp-wallet)
 
@@ -46,7 +46,7 @@ Navigating to `index.html` will start the app, but you will need to serve it ove
 
 ---
 
-To deploy to the **wallet.ethereum.org** site, execute these commands:
+To deploy to the **wallet.lindax.network** site, execute these commands:
 
     $ git checkout gh-pages
     $ git merge develop
@@ -59,9 +59,9 @@ And push (or PR) your changes to the `gh-pages` branch.
 
 ## Gas usage statistics
 
-* Deploy original wallet: 1 230 162
-* Deploy wallet stub: 184 280
-* Simple Wallet transaction: 64 280
-* Multisig Wallet transaction below daily limit: 79 280
-* Multisig Wallet transaction above daily limit: 171 096
-* 1 Multisig confirmation: 48 363
+- Deploy original wallet: 1 230 162
+- Deploy wallet stub: 184 280
+- Simple Wallet transaction: 64 280
+- Multisig Wallet transaction below daily limit: 79 280
+- Multisig Wallet transaction above daily limit: 171 096
+- 1 Multisig confirmation: 48 363

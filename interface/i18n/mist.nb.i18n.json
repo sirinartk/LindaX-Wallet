@@ -5,7 +5,7 @@
         "label": "__app__",
         "about": "Om __app__",
         "checkForUpdates": "Se etter oppdateringer...",
-        "checkForNodeUpdates": "Check for Ethereum node updates...",
+        "checkForNodeUpdates": "Check for LindaX node updates...",
         "services": "Tjenester",
         "hide": "Skjul __app__",
         "hideOthers": "Skjul Andre",
@@ -43,7 +43,7 @@
         "devToolsWebview": "__webview__",
         "runTests": "Kjør tester",
         "logFiles": "Vis loggfil",
-        "ethereumNode": "Ethereum Node",
+        "ethereumNode": "LindaX Node",
         "network": "Nettverk",
         "mainNetwork": "Hovednettverk",
         "startMining": "⛏ Start Mining",
@@ -68,7 +68,7 @@
       "timeSync": {
         "title": "Datamaskinens klokke er ikke synkronisert.",
         "description":
-          "For å kunne synkronisere med Ethereum-nettverket trenger du å synkronisere datamaskinens klokke med en tidssynkroniseringsserver.",
+          "For å kunne synkronisere med LindaX-nettverket trenger du å synkronisere datamaskinens klokke med en tidssynkroniseringsserver.",
         "win32":
           "Gå til tidsinnstillinger for internett i systeminnstillinger og kryss av i boksen. Se denne guiden for detaljer: http://www.guidingtech.com/3119/windows-clock-sync/",
         "linux":
@@ -84,7 +84,7 @@
       "legacyChain": {
         "title": "Legacy chain detected",
         "description":
-          "Your node is currently on the unsupported Ethereum Classic chain. To use this chain use tools provided by the ethereum classic project at\nhttps://ethereumclassic.github.io.\n\nTo revert to the main ethereum chain follow the tutorial here:\nhttps://github.com/thelindaprojectinc/lindax-wallet/releases/0.8.2"
+          "Your node is currently on the unsupported Ethereum Classic chain. To use this chain use tools provided by the ethereum classic project at\nhttps://ethereumclassic.github.io.\n\nTo revert to the main LindaX chain follow the tutorial here:\nhttps://github.com/thelindaprojectinc/lindax-wallet/releases/0.8.2"
       }
     },
     "rightClick": {
@@ -107,7 +107,7 @@
       "privateNetwork": "Privatnett",
       "test": "test",
       "testnetExplain":
-        "Du er på testnettet, IKKE SEND noen ekte ether til disse adressene",
+        "Du er på testnettet, IKKE SEND noen ekte LindaX til disse adressene",
       "timeSinceBlock": "Tid siden siste blokk"
     },
     "sidebar": {
@@ -122,20 +122,19 @@
       }
     },
     "startScreen": {
-      "runningNodeFound": "Fant kjørende Ethereum-node!",
+      "runningNodeFound": "Fant kjørende LindaX-node!",
       "nodeConnectionTimeout":
-        "Kunne ikke starte Ethereum-node!<br><small>Hvis du <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'>installerte Geth</a>, bruk denne kommandoen for å kjøre det: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> Eller rapporter et problem </a></small>",
+        "Kunne ikke starte LindaX-node!<br><small>Hvis du <a href='https://www.LindaX/cli#geth' class='button' target='_blank'>installerte Geth</a>, bruk denne kommandoen for å kjøre det: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> Eller rapporter et problem </a></small>",
       "nodeBinaryNotFound":
-        "Ingen Ethereum-node kilde funnet!<br><small> <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'> Vennligst start en manuelt først. </a> </small>",
-      "nodeStarting": "Ethereum-node starter opp...",
-      "nodeStarted": "Ethereum-node startet",
-      "nodeConnected": "Ethereum-node tilkoblet",
-      "nodeStopping": "Ethereum-node stopper...",
-      "nodeStopped": "Ethereum-node stoppet",
-      "nodeError": "Ethereum-node tilkoblingsfeil :'(",
-      "unableToBindPort":
-        "Ethereum-node kan ikke kjøre. Kjører det en allerede?",
-      "nodeSyncing": "Ethereum-node trenger å synkroniseres, vennligst vent...",
+        "Ingen LindaX-node kilde funnet!<br><small> <a href='https://www.LindaX/cli#geth' class='button' target='_blank'> Vennligst start en manuelt først. </a> </small>",
+      "nodeStarting": "LindaX-node starter opp...",
+      "nodeStarted": "LindaX-node startet",
+      "nodeConnected": "LindaX-node tilkoblet",
+      "nodeStopping": "LindaX-node stopper...",
+      "nodeStopped": "LindaX-node stoppet",
+      "nodeError": "LindaX-node tilkoblingsfeil :'(",
+      "unableToBindPort": "LindaX-node kan ikke kjøre. Kjører det en allerede?",
+      "nodeSyncing": "LindaX-node trenger å synkroniseres, vennligst vent...",
       "nodeSyncInfo": "Laster ned blokk __currentBlock__ av __highestBlock__.",
       "nodeSyncConnecting": "Leter etter peers...",
       "launchApp": "Start Applikasjonen",
@@ -147,7 +146,7 @@
         "downloading": "Downloading new node...",
         "loadConfig": "Loading client config...",
         "filtering": "Filtering client binaries...",
-        "done": "Ethereum node up-to-date...",
+        "done": "LindaX node up-to-date...",
         "error": "Error running downloaded binary."
       }
     },
@@ -179,7 +178,7 @@
         "estimatedGasError":
           "Data kan ikke utføres, så den kommer til å bruke all gass.",
         "gasPrice": "Gass pris",
-        "perMillionGas": "ether per million gass",
+        "perMillionGas": "LindaX per million gass",
         "gasLimit": "Gi maksimal avgift",
         "data": "Data",
         "buttons": {
@@ -192,7 +191,7 @@
           "multipleKeysMatchAddress":
             "Multiple keys match address. Please remove duplicates from keystore (menu -> File -> Backup -> Accounts)",
           "insufficientFundsForGas":
-            "Insufficient funds in main account (etherbase) to pay for gas",
+            "Insufficient funds in main account (LindaXbase) to pay for gas",
           "sameAccount": "Can't send to itself"
         },
         "transactionThrow":
@@ -210,8 +209,7 @@
       },
       "importAccount": {
         "doYouHaveAWalletFile": "Har du en lommebok-fil?",
-        "walletFileDescription":
-          "<p>Hvis du har deltatt på forhåndssalget av Ethereum i 2014, har du en fil med navnet <code>ethereum_wallet_backup.json</code>. Den ble lastet ned etter salget, og også sendt til din e-post</p>",
+        "walletFileDescription": "<p></p>",
         "dropFilesHere": "Slipp filen fra forhåndssalget",
         "importing": "Importerer...",
         "buttons": {

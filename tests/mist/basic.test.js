@@ -225,7 +225,7 @@ test[
   const client = this.client;
   yield this.selectTab('browser');
 
-  yield this.navigateTo('https://wallet.ethereum.org');
+  yield this.navigateTo('https://wallet.lindax.network');
   yield Q.delay(1000);
   const selectedTab = (yield client.execute(() => {
     // code executed in browser context

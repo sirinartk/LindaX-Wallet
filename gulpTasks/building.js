@@ -129,7 +129,7 @@ gulp.task('build-dist', cb => {
     license: 'GPL-3.0',
     homepage: 'https://github.com/thelindaprojectinc/lindax-wallet',
     build: {
-      appId: `org.ethereum.${type}`,
+      appId: `network.lindax.${type}`,
       asar: true,
       directories: {
         buildResources: '../build',

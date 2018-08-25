@@ -291,7 +291,7 @@ let menuTempl = function(webviews) {
                 // geth
               } else {
                 if (process.platform === 'darwin') {
-                  userPath += '/Library/Ethereum/keystore';
+                  userPath += '/Library/LindaX/keystore';
                 }
 
                 if (
@@ -299,11 +299,11 @@ let menuTempl = function(webviews) {
                   process.platform === 'linux' ||
                   process.platform === 'sunos'
                 ) {
-                  userPath += '/.ethereum/keystore';
+                  userPath += '/.LindaX/keystore';
                 }
 
                 if (process.platform === 'win32') {
-                  userPath = `${Settings.appDataPath}\\Ethereum\\keystore`;
+                  userPath = `${Settings.appDataPath}\\LindaX\\keystore`;
                 }
               }
 
@@ -738,7 +738,9 @@ let menuTempl = function(webviews) {
     {
       label: i18n.t('mist.applicationMenu.help.mistWiki'),
       click() {
-        shell.openExternal('https://github.com/thelindaprojectinc/lindax-wallet/wiki');
+        shell.openExternal(
+          'https://github.com/thelindaprojectinc/lindax-wallet/wiki'
+        );
       }
     },
     {
@@ -750,7 +752,9 @@ let menuTempl = function(webviews) {
     {
       label: i18n.t('mist.applicationMenu.help.reportBug'),
       click() {
-        shell.openExternal('https://github.com/thelindaprojectinc/lindax-wallet/issues');
+        shell.openExternal(
+          'https://github.com/thelindaprojectinc/lindax-wallet/issues'
+        );
       }
     }
   );

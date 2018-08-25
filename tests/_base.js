@@ -237,8 +237,8 @@ exports.mocha = (_module, options) => {
           { _id: 'wallet' },
           {
             $set: {
-              url: 'https://wallet.ethereum.org',
-              redirect: 'https://wallet.ethereum.org',
+              url: 'https://wallet.lindax.network',
+              redirect: 'https://wallet.lindax.network',
               position: 1,
               permissions: { admin: true }
             }

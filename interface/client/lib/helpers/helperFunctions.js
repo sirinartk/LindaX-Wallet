@@ -439,7 +439,7 @@ Formats a given number toa unit balance
 @return {String} The formated balance including the unit
 **/
 // Helpers.formatBalance = function(number, format){
-//     number = web3.fromWei(number, LocalStore.get('etherUnit'));
+//     number = web3.fromWei(number, LocalStore.get('Unit'));
 
-//     return Helpers.formatNumber(number, format) +' '+ LocalStore.get('etherUnit');
+//     return Helpers.formatNumber(number, format) +' '+ LocalStore.get('Unit');
 // };

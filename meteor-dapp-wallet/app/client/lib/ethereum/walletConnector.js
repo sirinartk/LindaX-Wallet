@@ -20,7 +20,7 @@ Contains all collection observers
 collectionObservers = [];
 
 /**
-Config for the ethereum connector
+Config for the LindaX connector
 
 @property config
 */

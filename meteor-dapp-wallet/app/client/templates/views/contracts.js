@@ -191,7 +191,7 @@ var autoScanGetTokens = function(template) {
                 })
                 .then(function(result) {
                   var tokenAmt = web3.utils.toBN(result);
-                  var tokenAmtInEther = web3.utils.fromWei(tokenAmt, 'ether');
+                  var tokenAmtInEther = web3.utils.fromWei(tokenAmt, 'LindaX');
 
                   if (!tokenAmt.isZero()) {
                     console.log(

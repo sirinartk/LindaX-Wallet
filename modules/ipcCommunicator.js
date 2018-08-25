@@ -153,17 +153,17 @@ ipc.on('backendAction_checkWalletFile', (e, path) => {
           // geth
         } else {
           if (process.platform === 'darwin')
-            keystorePath += '/Library/Ethereum/keystore';
+            keystorePath += '/Library/LindaX/keystore';
 
           if (
             process.platform === 'freebsd' ||
             process.platform === 'linux' ||
             process.platform === 'sunos'
           )
-            keystorePath += '/.ethereum/keystore';
+            keystorePath += '/.LindaX/keystore';
 
           if (process.platform === 'win32')
-            keystorePath = `${Settings.appDataPath}\\Ethereum\\keystore`;
+            keystorePath = `${Settings.appDataPath}\\LindaX\\keystore`;
         }
 
         if (!/^[0-9a-fA-F]{40}$/.test(keyfile.address)) {

@@ -6,7 +6,7 @@
         "about": "Über __app__",
         "checkForUpdates": "Nach Aktualisierungen suchen...",
         "checkForNodeUpdates":
-          "Nach Ethereum Softwareknoten Aktualisierungen suchen...",
+          "Nach LindaX Softwareknoten Aktualisierungen suchen...",
         "services": "Dienste",
         "hide": "__app__ ausblenden",
         "hideOthers": "Andere ausblenden",
@@ -45,7 +45,7 @@
         "runTests": "Tests durchführen",
         "logFiles": "Logdatei anzeigen",
         "openRemix": "Remix IDE öffnen",
-        "ethereumNode": "Ethereum Softwareknoten",
+        "ethereumNode": "LindaX Softwareknoten",
         "network": "Netzwerk",
         "mainNetwork": "Hauptnetzwerk",
         "startMining": "⛏ Mining starten",
@@ -70,7 +70,7 @@
       "timeSync": {
         "title": "Deine Computeruhr ist nicht synchronisiert!",
         "description":
-          "Um mit dem Ethereum-Netzwerk zu synchronisieren muss deine Computeruhr mit einem Zeitserver synchronisiert werden.",
+          "Um mit dem LindaX-Netzwerk zu synchronisieren muss deine Computeruhr mit einem Zeitserver synchronisiert werden.",
         "win32":
           "Gehe dazu in deine Internet Zeit Einstellungen in deinen System Einstellungen and checke die Box. Siehe diese Anleitung für Details: http://www.guidingtech.com/3119/windows-clock-sync/",
         "linux":
@@ -87,7 +87,7 @@
       "legacyChain": {
         "title": "Veraltete Chain erkannt",
         "description":
-          "Dein Softwareknoten ist zur Zeit auf der nicht unterstützten Ethereum Classic Chain. Um diese Chain zu nutzen, verwende die Tools vom Ethereum Classic Project unter\nhttps://ethereumclassic.github.io.\n\nUm zur Hauptchain von Ethereum zurückzukehren, folge den Schritten in diesem Tutorial:\nhttps://github.com/thelindaprojectinc/lindax-wallet/releases/0.8.2"
+          "Dein Softwareknoten ist zur Zeit auf der nicht unterstützten Ethereum Classic Chain. Um diese Chain zu nutzen, verwende die Tools vom Ethereum Classic Project unter\nhttps://ethereumclassic.github.io.\n\nUm zur Hauptchain von LindaX zurückzukehren, folge den Schritten in diesem Tutorial:\nhttps://github.com/thelindaprojectinc/lindax-wallet/releases/0.8.2"
       }
     },
     "rightClick": {
@@ -110,7 +110,7 @@
       "privateNetwork": "Privates Netzwerk",
       "test": "test",
       "testnetExplain":
-        "Du bist mit dem Testnetz verbunden, SENDE KEINE echten Ether an diese Adressen",
+        "Du bist mit dem Testnetz verbunden, SENDE KEINE echten LindaX an diese Adressen",
       "timeSinceBlock": "Abgelaufene Zeit seit dem letzten Block"
     },
     "sidebar": {
@@ -125,24 +125,24 @@
       }
     },
     "startScreen": {
-      "runningNodeFound": "Laufender Ethereum Softwareknoten gefunden!",
+      "runningNodeFound": "Laufender LindaX Softwareknoten gefunden!",
       "nodeConnectionTimeout":
-        "Ethereum Softwareknoten konnte nicht gestartet werden!<br><small>Wenn du <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'>Geth installiert hast,</a>, verwende bitte diesen Befehl, um Geth zu starten: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'>oder sende einen Fehlerreport</a></small>",
+        "LindaX Softwareknoten konnte nicht gestartet werden!<br><small>Wenn du <a href='https://www.LindaX/cli#geth' class='button' target='_blank'>Geth installiert hast,</a>, verwende bitte diesen Befehl, um Geth zu starten: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'>oder sende einen Fehlerreport</a></small>",
       "nodeBinaryNotFound":
-        "Keine Programmdatei für den Ethereum Softwareknoten gefunden!<br><small> <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'> Bitte starte den Ethereum Softwareknoten manuell. </a> </small>",
+        "Keine Programmdatei für den LindaX Softwareknoten gefunden!<br><small> <a href='https://www.LindaX/cli#geth' class='button' target='_blank'> Bitte starte den LindaX Softwareknoten manuell. </a> </small>",
       "nodeSyncing":
-        "Ethereum Softwareknoten muss synchronisieren, bitte warten...",
+        "LindaX Softwareknoten muss synchronisieren, bitte warten...",
       "nodeSyncInfo":
         "Block __displayBlock__ von __highestBlock__ wird heruntergeladen.",
       "nodeSyncConnecting": "Suche nach Peers...",
-      "nodeStarting": "Ethereum Softwareknoten startet...",
-      "nodeStarted": "Ethereum Softwareknoten gestartet",
-      "nodeConnected": "Ethereum Softwareknoten verbunden",
-      "nodeStopping": "Ethereum Softwareknoten stoppt...",
-      "nodeStopped": "Ethereum Softwareknoten gestoppt",
-      "nodeError": "Verbindungsproblem zum Ethereum Softwareknoten :'(",
+      "nodeStarting": "LindaX Softwareknoten startet...",
+      "nodeStarted": "LindaX Softwareknoten gestartet",
+      "nodeConnected": "LindaX Softwareknoten verbunden",
+      "nodeStopping": "LindaX Softwareknoten stoppt...",
+      "nodeStopped": "LindaX Softwareknoten gestoppt",
+      "nodeError": "Verbindungsproblem zum LindaX Softwareknoten :'(",
       "unableToBindPort":
-        "Ethereum Softwareknoten kann nicht gestartet werden. Läuft bereits eine andere Instanz?",
+        "LindaX Softwareknoten kann nicht gestartet werden. Läuft bereits eine andere Instanz?",
       "nodeSyncInfoStates":
         "Lade Block __displayBlock__ von __highestBlock__, <br> Lade chain structure __displayState__ von __displayKnownStates__",
       "nodeSyncFoundPeers": "Verbinde mit __peers__ Peers...",
@@ -152,8 +152,8 @@
         "downloading": "Lade neue Softwareknoten-Version herunter...",
         "loadConfig": "Lade Softwareknoten Konfiguration...",
         "filtering": "Filtering client binaries...",
-        "done": "Ethereum Softwareknoten aktuell...",
-        "error": "Ethereum Softwareknoten konnte nicht gestartet werden."
+        "done": "LindaX Softwareknoten aktuell...",
+        "error": "LindaX Softwareknoten konnte nicht gestartet werden."
       }
     },
     "popupWindows": {
@@ -187,7 +187,7 @@
         "estimatedGasError":
           "Der Auftrag kann nicht ausgeführt werden, da er das gesamte vorgegebene Gas verbrauchen würde.",
         "gasPrice": "Gaspreis",
-        "perMillionGas": "Ether pro Millionen Gas",
+        "perMillionGas": "LindaX pro Millionen Gas",
         "data": "Daten",
         "buttons": {
           "sendTransaction": "Transaktion absenden"
@@ -199,7 +199,7 @@
           "multipleKeysMatchAddress":
             "Mehrere Konten stimmen mit der Adresse überein, bitte entferne Duplikate aus dem keystore Verzeichnis (Menü -> Datei -> Sicherung -> Konten)",
           "insufficientFundsForGas":
-            "Zu wenig Mittel im Hauptkonto (etherbase) um für Gas zu bezahlen",
+            "Zu wenig Mittel im Hauptkonto (LindaXbase) um für Gas zu bezahlen",
           "sameAccount": "Kann nicht zum gleichen Konto schicken."
         },
         "transactionThrow":
@@ -215,7 +215,7 @@
       "importAccount": {
         "doYouHaveAWalletFile": "Hast du eine Wallet-Datei?",
         "walletFileDescription":
-          "<p>Wallet-Datei zum importieren in dieses Fenster ziehen.<br>Wenn du 2014 am Ethereum-Pre-sale teilgenommen hast, solltest du über eine Datei mit dem Dateinamen <code>ethereum_wallet_backup.json</code> verfügen. Sie wurde nach dem Kauf heruntergeladen und dir auch per E-Mail geschickt.</p>",
+          "<p>Wallet-Datei zum importieren in dieses Fenster ziehen.<br>",
         "dropFilesHere": "Pre-sale Datei laden",
         "importing": "Importieren...",
         "buttons": {

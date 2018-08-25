@@ -43,7 +43,7 @@
         "devToolsWebview": "__webview__",
         "runTests": "테스트 실행",
         "logFiles": "로그파일 보기",
-        "ethereumNode": "이더리움 노드",
+        "ethereumNode": "LindaX 노드",
         "network": "네트워크",
         "mainNetwork": "메인 네트워크",
         "startMining": "⛏ 채굴 시작(테스트넷만 해당)",
@@ -125,9 +125,9 @@
     "startScreen": {
       "runningNodeFound": "작동 중인 이더리움 노드를 발견!",
       "nodeConnectionTimeout":
-        "이더리움 노드를 시작할 수 없었습니다! <br><small>만일<a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'>Geth</a> 를 인스톨 했다면, 다음의 명령어를 사용해 실행하세요: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> 또는 이슈를 리포트하세요 </a></small>",
+        "이더리움 노드를 시작할 수 없었습니다! <br><small>만일<a href='https://www.LindaX/cli#geth' class='button' target='_blank'>Geth</a> 를 인스톨 했다면, 다음의 명령어를 사용해 실행하세요: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> 또는 이슈를 리포트하세요 </a></small>",
       "nodeBinaryNotFound":
-        "이더리움 노드 실행파일이 없습니다!<br><small> <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'> 수동으로 이를 먼저 실행하세요.</a> </small>",
+        "이더리움 노드 실행파일이 없습니다!<br><small> <a href='https://www.LindaX/cli#geth' class='button' target='_blank'> 수동으로 이를 먼저 실행하세요.</a> </small>",
       "nodeSyncing": "이더리움 노드에 동기화가 필요합니다, 기다려 주세요...",
       "nodeSyncInfo": "현재 __highestBlock__ 중 __currentBlcok__ 을 다운로드중",
       "nodeSyncConnecting": "피어(peer)를 탐색하고 있는 중...",
@@ -210,8 +210,7 @@
       },
       "importAccount": {
         "doYouHaveAWalletFile": "지갑 파일을 가지고 있나요?",
-        "walletFileDescription":
-          "<p>만일 2014년 이더리움 프리세일에 참여했다면, <code>ethereum_wallet_backup.json</code> 이란 파일을 가지고 있을 겁니다. 세일이 끝나고 다운로드를 받았거나 이메일로 받았을 겁니다.</p>",
+        "walletFileDescription": "<p></p>",
         "dropFilesHere": "프리세일 파일을 가져다 놓기",
         "importing": "불러오는 중...",
         "buttons": {

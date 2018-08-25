@@ -5,7 +5,7 @@
         "label": "__app__",
         "about": "À propos de __app__",
         "checkForUpdates": "Chercher des mises à jour...",
-        "checkForNodeUpdates": "Check for Ethereum node updates...",
+        "checkForNodeUpdates": "Check for LindaX node updates...",
         "services": "Services",
         "hide": "Masquer __app__",
         "hideOthers": "Masquer les autres",
@@ -43,7 +43,7 @@
         "devToolsWebview": "__webview__",
         "runTests": "Lancer les tests",
         "logFiles": "Afficher le journal de log",
-        "ethereumNode": "Nœud Ethereum",
+        "ethereumNode": "Nœud LindaX",
         "network": "Réseau",
         "mainNetwork": "Réseau principal",
         "startMining": "⛏ Commencer à miner",
@@ -69,7 +69,7 @@
       "timeSync": {
         "title": "L'horloge de votre ordinateur n'est pas synchronisée.",
         "description":
-          "Pour être correctement synchronisé avec le réseau Ethereum, vous devez synchronizer l'horloge de votre ordinateur avec un serveur de synchronisation de temps.",
+          "Pour être correctement synchronisé avec le réseau LindaX, vous devez synchronizer l'horloge de votre ordinateur avec un serveur de synchronisation de temps.",
         "win32":
           "Allez dans vos paramètres d'heure Internet dans votre panneau de configuration et cochez la case. Lisez ce guide pour plus de détails : http://www.guidingtech.com/3119/windows-clock-sync/",
         "linux":
@@ -85,7 +85,7 @@
       "legacyChain": {
         "title": "Legacy chain detected",
         "description":
-          "Your node is currently on the unsupported Ethereum Classic chain. To use this chain use tools provided by the ethereum classic project at\nhttps://ethereumclassic.github.io.\n\nTo revert to the main ethereum chain follow the tutorial here:\nhttps://github.com/thelindaprojectinc/lindax-wallet/releases/0.8.2"
+          "Your node is currently on the unsupported Ethereum Classic chain. To use this chain use tools provided by the ethereum classic project at\nhttps://ethereumclassic.github.io.\n\nTo revert to the main LindaX chain follow the tutorial here:\nhttps://github.com/thelindaprojectinc/lindax-wallet/releases/0.8.2"
       }
     },
     "rightClick": {
@@ -108,7 +108,7 @@
       "privateNetwork": "Private-net",
       "test": "test",
       "testnetExplain":
-        "You are on the testnet, DO NOT SEND any real ether to these addresses",
+        "You are on the testnet, DO NOT SEND any real LindaX to these addresses",
       "timeSinceBlock": "depuis le dernier bloc"
     },
     "sidebar": {
@@ -123,23 +123,23 @@
       }
     },
     "startScreen": {
-      "runningNodeFound": "Nœud Ethereum actif trouvé !",
+      "runningNodeFound": "Nœud LindaX actif trouvé !",
       "nodeConnectionTimeout":
-        "Echec du démarrage du nœud Ethereum !<br><small>Si vous <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'>avez installé Geth</a>, utilisez cette commande pour le lancer : <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> Ou signalez le problème </a></small>",
+        "Echec du démarrage du nœud LindaX !<br><small>Si vous <a href='https://www.LindaX/cli#geth' class='button' target='_blank'>avez installé Geth</a>, utilisez cette commande pour le lancer : <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> Ou signalez le problème </a></small>",
       "nodeBinaryNotFound":
-        "Pas de binaire du nœud Ethereum trouvé !<br><small> <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'> Veuillez en lancer d'abord un manuellement. </a> </small>",
-      "nodeSyncing": "Le nœud Ethereum se synchronise, veuillez patienter...",
+        "Pas de binaire du nœud LindaX trouvé !<br><small> <a href='https://www.LindaX/cli#geth' class='button' target='_blank'> Veuillez en lancer d'abord un manuellement. </a> </small>",
+      "nodeSyncing": "Le nœud LindaX se synchronise, veuillez patienter...",
       "nodeSyncInfo":
         "Télechargement du bloc __displayBlock__ depuis le bloc __highestBlock__.",
       "nodeSyncConnecting": "À la recherche de pairs...",
-      "nodeStarting": "Ethereum node starting up...",
-      "nodeStarted": "Ethereum node started",
-      "nodeConnected": "Ethereum node connected",
-      "nodeStopping": "Ethereum node stopping...",
-      "nodeStopped": "Ethereum node stopped",
-      "nodeError": "Ethereum node connection error :'(",
+      "nodeStarting": "LindaX node starting up...",
+      "nodeStarted": "LindaX node started",
+      "nodeConnected": "LindaX node connected",
+      "nodeStopping": "LindaX node stopping...",
+      "nodeStopped": "LindaX node stopped",
+      "nodeError": "LindaX node connection error :'(",
       "unableToBindPort":
-        "Ethereum node cannot run. Is another instance already running?",
+        "LindaX node cannot run. Is another instance already running?",
       "nodeSyncInfoStates":
         "Downloading block __displayBlock__ of __highestBlock__, <br> Downloading chain structure __displayState__ of __displayKnownStates__",
       "nodeSyncFoundPeers": "Connecting to __peers__ peers...",
@@ -149,7 +149,7 @@
         "downloading": "Downloading new node...",
         "loadConfig": "Loading client config...",
         "filtering": "Filtering client binaries...",
-        "done": "Ethereum node up-to-date...",
+        "done": "LindaX node up-to-date...",
         "error": "Error running downloaded binary."
       }
     },
@@ -182,7 +182,7 @@
         "estimatedGasError":
           "Les données n'ont pas pu être executées et vont donc utiliser tout le gaz fourni.",
         "gasPrice": "Prix du gaz",
-        "perMillionGas": "ether par million de gaz",
+        "perMillionGas": "LindaX par million de gaz",
         "gasLimit": "Fournir la taxe maximum",
         "data": "Données",
         "buttons": {
@@ -195,7 +195,7 @@
           "multipleKeysMatchAddress":
             "Multiple keys match address. Please remove duplicates from keystore (menu -> File -> Backup -> Accounts)",
           "insufficientFundsForGas":
-            "Insufficient funds in main account (etherbase) to pay for gas",
+            "Insufficient funds in main account (LindaXbase) to pay for gas",
           "sameAccount": "Can't send to itself"
         },
         "transactionThrow":
@@ -213,8 +213,7 @@
       },
       "importAccount": {
         "doYouHaveAWalletFile": "Avez-vous un fichier wallet ?",
-        "walletFileDescription":
-          "<p>Si vous avez participé à la prévente Ethereum 2014, vous devriez avoir un fichier nommé <code>ethereum_wallet_backup.json</code>. Il a été téléchargé après la vente et vous a aussi été envoyé par e-mail</p>",
+        "walletFileDescription": "<p></p>",
         "dropFilesHere": "Déposer un fichier de prévente ici",
         "importing": "Importation...",
         "buttons": {

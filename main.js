@@ -135,7 +135,7 @@ app.on('ready', async () => {
     dialog.showErrorBox(
       'Insecure RPC connection',
       `
-WARNING: You are connecting to an Ethereum node via: ${Settings.rpcHttpPath}
+WARNING: You are connecting to an LindaX node via: ${Settings.rpcHttpPath}
 
 This is less secure than using local IPC - your passwords will be sent over the wire in plaintext.
 
@@ -307,7 +307,9 @@ function checkForLegacyChain() {
         detail: global.i18n.t('mist.errors.legacyChain.description')
       },
       () => {
-        shell.openExternal('https://github.com/thelindaprojectinc/lindax-wallet/releases');
+        shell.openExternal(
+          'https://github.com/thelindaprojectinc/lindax-wallet/releases'
+        );
         store.dispatch(quitApp());
       }
     );

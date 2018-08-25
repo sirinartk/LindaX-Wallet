@@ -5,7 +5,7 @@
         "label": "__app__",
         "about": "Sobre __app__",
         "checkForUpdates": "Buscar actualitzacions...",
-        "checkForNodeUpdates": "Busca actualitzacions dels nodes d'Ethereum...",
+        "checkForNodeUpdates": "Busca actualitzacions dels nodes d'LindaX...",
         "services": "Serveis",
         "hide": "Hide __app__",
         "hideOthers": "Ocultar els altres",
@@ -63,7 +63,7 @@
         "runTests": "Executar tests",
         "logFiles": "Mostrar fitxer de log",
         "openRemix": "Obrir Remix IDE",
-        "ethereumNode": "Node d'Ethereum",
+        "ethereumNode": "Node d'LindaX",
         "network": "Xarxa",
         "mainNetwork": "Xarxa Principal",
         "startMining": "⛏ Començar a minar (només Testnet)",
@@ -89,7 +89,7 @@
       "timeSync": {
         "title": "El rellotge de l'ordinador no està sincronitzat.",
         "description":
-          "Per estar del tot sincronitzat amb la xarxa Ethereum, necessites sincronitzar el rellotge del teu ordinador amb un servidor de sincronització.",
+          "Per estar del tot sincronitzat amb la xarxa LindaX, necessites sincronitzar el rellotge del teu ordinador amb un servidor de sincronització.",
         "win32":
           "Vés a les teves preferències del rellotge d'internet i marca la casella. Mira aquesta guia per tenir-ne més detalls: http://www.guidingtech.com/3119/windows-clock-sync/",
         "linux":
@@ -106,7 +106,7 @@
       "legacyChain": {
         "title": "Cadena 'legacy' detectada",
         "description":
-          "El teu node està actualment a la cadena d'Ethereum Classic. Per utilitzar aquesta cadena, utilitza les eines proporcionades pel projecte ethereum classic a\nhttps://ethereumclassic.github.io.\n\nPer canviar a la cadena principal d'ethereum segueix el aquest tutorial:\nhttps://github.com/thelindaprojectinc/lindax-wallet/releases/0.8.2"
+          "El teu node està actualment a la cadena d'LindaX Classic. Per utilitzar aquesta cadena, utilitza les eines proporcionades pel project LindaX classic a\nhttps://github.com/LindaProjectInc\n\nPer canviar a la cadena principal d'LindaX segueix el aquest tutorial:\nhttps://github.com/thelindaprojectinc/lindax-wallet/releases/0.8.2"
       }
     },
     "rightClick": {
@@ -129,7 +129,7 @@
       "privateNetwork": "Private-net",
       "test": "test",
       "testnetExplain":
-        "Ets a la __name__. NO ENVIÏS cap Ether real a aquestes adreces",
+        "Ets a la __name__. NO ENVIÏS cap LindaX real a aquestes adreces",
       "timeSinceBlock": "Temps transcorregut des de l'últim bloc"
     },
     "sidebar": {
@@ -148,21 +148,21 @@
       }
     },
     "startScreen": {
-      "runningNodeFound": "Trobat node d'Ethereum executant-se!",
+      "runningNodeFound": "Trobat node d'LindaX executant-se!",
       "nodeConnectionTimeout":
-        "No s'ha pogut iniciar el node d'Ethereum!<br><small>Si has <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'>instal·lat Geth</a>, utilitza aquesta comanda per executar-lo: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> O notifica l'error </a></small>",
+        "No s'ha pogut iniciar el node d'LindaX!<br><small>Si has <a href='https://github.com/LindaProjectInc' class='button' target='_blank'>instal·lat Geth</a>, utilitza aquesta comanda per executar-lo: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> O notifica l'error </a></small>",
       "nodeBinaryNotFound":
-        "No s'ha torbat el binari del node d'Ethereum!<br><small> <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'> Si us plau inicia'n un manualment primer. </a> </small>",
-      "nodeStarting": "Node d'Ethereum iniciant-se...",
-      "nodeStarted": "Node d'Ethereum iniciat",
-      "nodeConnected": "Node d'Ethereum connectat",
-      "nodeStopping": "Ethereum node aturant-se...",
-      "nodeStopped": "Node d'Ethereum aturat",
-      "nodeError": "Error de connectivitat del node d'Ethereum:'(",
+        "No s'ha torbat el binari del node d'LindaX!<br><small> <a href='https://github.com/LindaProjectInc' class='button' target='_blank'> Si us plau inicia'n un manualment primer. </a> </small>",
+      "nodeStarting": "Node d'LindaX iniciant-se...",
+      "nodeStarted": "Node d'LindaX iniciat",
+      "nodeConnected": "Node d'LindaX connectat",
+      "nodeStopping": "LindaX node aturant-se...",
+      "nodeStopped": "Node d'LindaX aturat",
+      "nodeError": "Error de connectivitat del node d'LindaX:'(",
       "unableToBindPort":
-        "El node d'Ethereum no pot executar-se. N'hi ha alguna altra instància excutant-se?",
+        "El node d'LindaX no pot executar-se. N'hi ha alguna altra instància excutant-se?",
       "nodeSyncing":
-        "El node d'Ethereum necessita sincronitzar-se, si us plau espera...",
+        "El node d'LindaX necessita sincronitzar-se, si us plau espera...",
       "nodeSyncInfo": "Descarregant bloc __displayBlock__ de __highestBlock__",
       "nodeSyncInfoStates":
         "Descarregant bloc __displayBlock__ de __highestBlock__, <br> Descarregant l'estructura de la cadena __displayState__ de __displayKnownStates__",
@@ -174,7 +174,7 @@
         "downloading": "Descarregant un nou node...",
         "loadConfig": "Carregant configuració del client...",
         "filtering": "Filtrant binaris del client...",
-        "done": "Node d'Ethereum actualitzat...",
+        "done": "Node d'LindaX actualitzat...",
         "error": "Error executant el binari descarregat."
       }
     },
@@ -228,7 +228,7 @@
           "El gas pot no ser suficient per acabar aquesta execució amb èxit.<br>Fés clic aquí per augmentar la quantitat de gas.",
         "noEstimate": "No s'ha pogut calcular el gas necessari.",
         "gasPrice": "Preu del Gas",
-        "perMillionGas": "ether per un milió de gas",
+        "perMillionGas": "LindaX per un milió de gas",
         "gasLimit": "Proporciona la comissió màxima",
         "data": "Dades en brut",
         "parameters": "Paràmetres",
@@ -242,7 +242,7 @@
           "multipleKeysMatchAddress":
             "Multiples claus coincideixen amb l'adreça. Si us plau eliminar els duplicats del fitxer de claus (menú -> Fixter -> Copia de seguretat -> Comptes)",
           "insufficientFundsForGas":
-            "Saldo insuficient al compte principal (etherbase) per pagar el gas",
+            "Saldo insuficient al compte principal (LindaXbase) per pagar el gas",
           "sameAccount": "No es pot enviar a un mateix"
         },
         "showRawBytecode": "mostrar dades en brut",
@@ -252,8 +252,7 @@
       },
       "importAccount": {
         "doYouHaveAWalletFile": "Tens un fitxer de wallet?",
-        "walletFileDescription":
-          "<p>Mou qualsevol wallet aquí per a importar-lo.<br>Si va participar a la Pre-venda d'Ethereum el 2014, hauries de tenir un fitxer anomenat <code>ethereum_wallet_backup.json</code>. El vas poder descarregar després de la venda i també se't va enviar al teu email</p>",
+        "walletFileDescription": "<p></p>",
         "dropFilesHere": "Deixa anar el fitxer de wallet",
         "importing": "Important...",
         "buttons": {
