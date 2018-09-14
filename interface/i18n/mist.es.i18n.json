@@ -43,7 +43,7 @@
         "devToolsWebview": "__webview__",
         "runTests": "Ejecutar pruebas",
         "logFiles": "Mostrar archivo de registro",
-        "ethereumNode": "Nodo de LindaX",
+        "lindaxNode": "Nodo de LindaX",
         "network": "Red",
         "mainNetwork": "Red principal",
         "startMining": "⛏ Empezar a minar",
@@ -74,10 +74,6 @@
       "nodeChecksumMismatch": {
         "title": "Checksum mismatch in downloaded node!",
         "description": "__algorithm__: __hash__\n\nPlease install the __type__ node version __version__ manually."
-      },
-      "legacyChain": {
-        "title": "Legacy chain detected",
-        "description": "Your node is currently on the unsupported Ethereum Classic chain. To use this chain use tools provided by the ethereum classic project at\nhttps://ethereumclassic.github.io.\n\nTo revert to the main LindaX chain follow the tutorial here:\nhttps://github.com/thelindaprojectinc/lindax-wallet/releases/0.8.2"
       }
     },
     "rightClick": {

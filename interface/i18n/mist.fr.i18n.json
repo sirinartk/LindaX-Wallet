@@ -43,7 +43,7 @@
         "devToolsWebview": "__webview__",
         "runTests": "Lancer les tests",
         "logFiles": "Afficher le journal de log",
-        "ethereumNode": "Nœud LindaX",
+        "lindaxNode": "Nœud LindaX",
         "network": "Réseau",
         "mainNetwork": "Réseau principal",
         "startMining": "⛏ Commencer à miner",
@@ -62,30 +62,18 @@
       }
     },
     "errors": {
-      "nodeConnect":
-        "Vous n'arrivez pas à vous connecter à un nœud ? Regarder le journal de log pour en savoir plus :",
-      "nodeStartup":
-        "Le nœud n'a apparemment pas pu être lancé, en avez-vous déjà un de lancé ? Est-il en train de mettre à jour la base de données actuellement ?",
+      "nodeConnect": "Vous n'arrivez pas à vous connecter à un nœud ? Regarder le journal de log pour en savoir plus :",
+      "nodeStartup": "Le nœud n'a apparemment pas pu être lancé, en avez-vous déjà un de lancé ? Est-il en train de mettre à jour la base de données actuellement ?",
       "timeSync": {
         "title": "L'horloge de votre ordinateur n'est pas synchronisée.",
-        "description":
-          "Pour être correctement synchronisé avec le réseau LindaX, vous devez synchronizer l'horloge de votre ordinateur avec un serveur de synchronisation de temps.",
-        "win32":
-          "Allez dans vos paramètres d'heure Internet dans votre panneau de configuration et cochez la case. Lisez ce guide pour plus de détails : http://www.guidingtech.com/3119/windows-clock-sync/",
-        "linux":
-          "Pour activer un serveur de synchronisation de temps, installez \"ntp\" via \"apt-get install ntp\".",
-        "darwin":
-          "Pour activer la synchronisation du temps, ouvrez les préférences de temps et cochez \"Régler la date et l'heure automatiquement\"."
+        "description": "Pour être correctement synchronisé avec le réseau LindaX, vous devez synchronizer l'horloge de votre ordinateur avec un serveur de synchronisation de temps.",
+        "win32": "Allez dans vos paramètres d'heure Internet dans votre panneau de configuration et cochez la case. Lisez ce guide pour plus de détails : http://www.guidingtech.com/3119/windows-clock-sync/",
+        "linux": "Pour activer un serveur de synchronisation de temps, installez \"ntp\" via \"apt-get install ntp\".",
+        "darwin": "Pour activer la synchronisation du temps, ouvrez les préférences de temps et cochez \"Régler la date et l'heure automatiquement\"."
       },
       "nodeChecksumMismatch": {
         "title": "Checksum mismatch in downloaded node!",
-        "description":
-          "__algorithm__: __hash__\n\nPlease install the __type__ node version __version__ manually."
-      },
-      "legacyChain": {
-        "title": "Legacy chain detected",
-        "description":
-          "Your node is currently on the unsupported Ethereum Classic chain. To use this chain use tools provided by the ethereum classic project at\nhttps://ethereumclassic.github.io.\n\nTo revert to the main LindaX chain follow the tutorial here:\nhttps://github.com/thelindaprojectinc/lindax-wallet/releases/0.8.2"
+        "description": "__algorithm__: __hash__\n\nPlease install the __type__ node version __version__ manually."
       }
     },
     "rightClick": {
@@ -107,8 +95,7 @@
       "peers": "pairs",
       "privateNetwork": "Private-net",
       "test": "test",
-      "testnetExplain":
-        "You are on the testnet, DO NOT SEND any real LindaX to these addresses",
+      "testnetExplain": "You are on the testnet, DO NOT SEND any real LindaX to these addresses",
       "timeSinceBlock": "depuis le dernier bloc"
     },
     "sidebar": {
@@ -124,13 +111,10 @@
     },
     "startScreen": {
       "runningNodeFound": "Nœud LindaX actif trouvé !",
-      "nodeConnectionTimeout":
-        "Echec du démarrage du nœud LindaX !<br><small>Si vous <a href='https://www.LindaX/cli#geth' class='button' target='_blank'>avez installé Geth</a>, utilisez cette commande pour le lancer : <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> Ou signalez le problème </a></small>",
-      "nodeBinaryNotFound":
-        "Pas de binaire du nœud LindaX trouvé !<br><small> <a href='https://www.LindaX/cli#geth' class='button' target='_blank'> Veuillez en lancer d'abord un manuellement. </a> </small>",
+      "nodeConnectionTimeout": "Echec du démarrage du nœud LindaX !<br><small>Si vous <a href='https://www.LindaX/cli#geth' class='button' target='_blank'>avez installé Geth</a>, utilisez cette commande pour le lancer : <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> Ou signalez le problème </a></small>",
+      "nodeBinaryNotFound": "Pas de binaire du nœud LindaX trouvé !<br><small> <a href='https://www.LindaX/cli#geth' class='button' target='_blank'> Veuillez en lancer d'abord un manuellement. </a> </small>",
       "nodeSyncing": "Le nœud LindaX se synchronise, veuillez patienter...",
-      "nodeSyncInfo":
-        "Télechargement du bloc __displayBlock__ depuis le bloc __highestBlock__.",
+      "nodeSyncInfo": "Télechargement du bloc __displayBlock__ depuis le bloc __highestBlock__.",
       "nodeSyncConnecting": "À la recherche de pairs...",
       "nodeStarting": "LindaX node starting up...",
       "nodeStarted": "LindaX node started",
@@ -138,10 +122,8 @@
       "nodeStopping": "LindaX node stopping...",
       "nodeStopped": "LindaX node stopped",
       "nodeError": "LindaX node connection error :'(",
-      "unableToBindPort":
-        "LindaX node cannot run. Is another instance already running?",
-      "nodeSyncInfoStates":
-        "Downloading block __displayBlock__ of __highestBlock__, <br> Downloading chain structure __displayState__ of __displayKnownStates__",
+      "unableToBindPort": "LindaX node cannot run. Is another instance already running?",
+      "nodeSyncInfoStates": "Downloading block __displayBlock__ of __highestBlock__, <br> Downloading chain structure __displayState__ of __displayKnownStates__",
       "nodeSyncFoundPeers": "Connecting to __peers__ peers...",
       "launchApp": "Launch Application",
       "clientBinaries": {
@@ -170,17 +152,13 @@
           "contractExecution": "Executer le contrat",
           "createContract": "Créer un contrat"
         },
-        "contractExecutionInfo":
-          "Vous êtes sur le point d'exécuter une fonction sur un contrat. Cela peut impliquer un transfert de valeur.",
-        "contractCreationInfo":
-          "Vous êtes sur le point de créer un contrat à partir des données fournies.",
-        "enterPassword":
-          "Entrez votre mot de passe pour confirmer la transaction",
+        "contractExecutionInfo": "Vous êtes sur le point d'exécuter une fonction sur un contrat. Cela peut impliquer un transfert de valeur.",
+        "contractCreationInfo": "Vous êtes sur le point de créer un contrat à partir des données fournies.",
+        "enterPassword": "Entrez votre mot de passe pour confirmer la transaction",
         "unlocking": "Confirmation...",
         "createContract": "Créer contrat",
         "estimatedFee": "Taxe de consommation estimée",
-        "estimatedGasError":
-          "Les données n'ont pas pu être executées et vont donc utiliser tout le gaz fourni.",
+        "estimatedGasError": "Les données n'ont pas pu être executées et vont donc utiliser tout le gaz fourni.",
         "gasPrice": "Prix du gaz",
         "perMillionGas": "LindaX par million de gaz",
         "gasLimit": "Fournir la taxe maximum",
@@ -189,27 +167,21 @@
           "sendTransaction": "Envoyer la transaction"
         },
         "errors": {
-          "connectionTimeout":
-            "La connexion au nœud n'a pas pu s'établir, est-ce un plantage dans l'arrière-plan ?",
+          "connectionTimeout": "La connexion au nœud n'a pas pu s'établir, est-ce un plantage dans l'arrière-plan ?",
           "wrongPassword": "Mauvais mot de passe",
-          "multipleKeysMatchAddress":
-            "Multiple keys match address. Please remove duplicates from keystore (menu -> File -> Backup -> Accounts)",
-          "insufficientFundsForGas":
-            "Insufficient funds in main account (LindaXbase) to pay for gas",
+          "multipleKeysMatchAddress": "Multiple keys match address. Please remove duplicates from keystore (menu -> File -> Backup -> Accounts)",
+          "insufficientFundsForGas": "Insufficient funds in main account (LindaXbase) to pay for gas",
           "sameAccount": "Can't send to itself"
         },
-        "transactionThrow":
-          "The contract won't allow this transaction to be executed",
+        "transactionThrow": "The contract won't allow this transaction to be executed",
         "noEstimate": "We couldn't estimate the gas.",
         "parameters": "Parameters",
         "showRawBytecode": "show raw data",
         "showDecodedParameters": "show decoded parameters",
         "lookupData": "Try to decode data",
         "lookupDataExplainer": "Look this up on the internet",
-        "overBlockGasLimit":
-          "The gas required for this execution could exceed the block gas limit.",
-        "notEnoughGas":
-          "Gas might not be enough to successfully finish this transaction.<br>Click here to increase the gas amount."
+        "overBlockGasLimit": "The gas required for this execution could exceed the block gas limit.",
+        "notEnoughGas": "Gas might not be enough to successfully finish this transaction.<br>Click here to increase the gas amount."
       },
       "importAccount": {
         "doYouHaveAWalletFile": "Avez-vous un fichier wallet ?",
@@ -222,8 +194,7 @@
         "errors": {
           "unknownFile": "Fichier non reconnu.",
           "wrongPassword": "Mauvais mot de passe.",
-          "importFailed":
-            "Echec à l'importation du fichier avec l'erreur : __error__"
+          "importFailed": "Echec à l'importation du fichier avec l'erreur : __error__"
         }
       },
       "updateAvailable": {
@@ -235,23 +206,19 @@
         "download": "Download new version",
         "skipUpdate": "Skip Update",
         "checking": "Checking for updates to __name__...",
-        "noUpdateFound":
-          "No update found. You are running the latest version of __name__."
+        "noUpdateFound": "No update found. You are running the latest version of __name__."
       },
       "connectAccount": {
         "chooseAccountTitle": "Choose account",
         "createAccount": "Create new account",
         "pinToSidebar": "Pin app to the sidebar",
-        "connectAccountDescription":
-          "You are sharing your identity with __dappName__. This allows the app to see any public information of your accounts, including balances connected to it."
+        "connectAccountDescription": "You are sharing your identity with __dappName__. This allows the app to see any public information of your accounts, including balances connected to it."
       }
     }
   },
   "elements": {
-    "checksumAlert":
-      "Cette adresse semble valide, mais elle n'a pas de fonctionnalités de sécurité qui vous protégeront contre les fautes de frappe, alors revérifiez que vous avez la bonne. Si elle est fournie, vérifiez si l'icône de sécurité correspond.",
-    "identiconHelper":
-      "C'est une icone de sécurité, si il y a le moindre changement sur l'adresse l'icône résultante devrait être complètement différente",
+    "checksumAlert": "Cette adresse semble valide, mais elle n'a pas de fonctionnalités de sécurité qui vous protégeront contre les fautes de frappe, alors revérifiez que vous avez la bonne. Si elle est fournie, vérifiez si l'icône de sécurité correspond.",
+    "identiconHelper": "C'est une icone de sécurité, si il y a le moindre changement sur l'adresse l'icône résultante devrait être complètement différente",
     "type": {
       "address": "Address",
       "bool": "Boolean",

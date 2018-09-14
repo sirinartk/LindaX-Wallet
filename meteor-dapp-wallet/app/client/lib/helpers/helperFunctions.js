@@ -27,7 +27,7 @@ Helpers.getDefaultContractExample = function(withoutPragma) {
     var solcVersion;
 
     // Keep this for now as the Mist-API object will only be availabe from Mist version >= 0.8.9
-    // so that older versions that will query code from wallet.ethereum.org won't use broken example code.
+    // so that older versions that will query code won't use broken example code.
     if (typeof mist !== 'undefined' && mist.solidity && mist.solidity.version) {
       solcVersion = mist.solidity.version;
     } else {
@@ -71,7 +71,7 @@ Return an account you own, from a list of accounts
 **/
 Helpers.getOwnedAccountFrom = function(accountList) {
   // Load the accounts owned by user and sort by balance
-  var accounts = EthAccounts.find({}, { sort: { balance: 1 } }).fetch();
+  var accounts = LXAccounts.find({}, { sort: { balance: 1 } }).fetch();
   accounts.sort(Helpers.sortByBalance);
 
   // Looks for them among the wallet account owner
@@ -125,7 +125,7 @@ Helpers.formatNumberByDecimals = function(number, decimals) {
     numberFormat += '0';
   }
 
-  return EthTools.formatNumber(
+  return LXTools.formatNumber(
     new BigNumber(number, 10).dividedBy(Math.pow(10, decimals)),
     numberFormat
   );
@@ -166,7 +166,7 @@ Check if the given wallet is a watch only wallet, by checking if we are one of o
 Helpers.isWatchOnly = function(id) {
   return !Wallets.findOne({
     _id: id,
-    owners: { $in: _.pluck(EthAccounts.find({}).fetch(), 'address') }
+    owners: { $in: _.pluck(LXAccounts.find({}).fetch(), 'address') }
   });
 };
 
@@ -193,7 +193,7 @@ Helpers.showNotification = function(i18nText, values, callback) {
 };
 
 /**
-Gets the docuement matching the given addess from the EthAccounts or Wallets collection.
+Gets the docuement matching the given addess from the LXAccounts or Wallets collection.
 
 @method getAccountByAddress
 @param {String} address
@@ -204,14 +204,14 @@ Helpers.getAccountByAddress = function(address, reactive) {
   // if(_.isString(address))
   //     address = address.toLowerCase();
   return (
-    EthAccounts.findOne({ address: address }, options) ||
+    LXAccounts.findOne({ address: address }, options) ||
     Wallets.findOne({ address: address }, options) ||
     CustomContracts.findOne({ address: address }, options)
   );
 };
 
 /**
-Gets the docuement matching the given query from the EthAccounts or Wallets collection.
+Gets the docuement matching the given query from the LXAccounts or Wallets collection.
 
 @method getAccounts
 @param {String} query
@@ -220,13 +220,13 @@ Gets the docuement matching the given query from the EthAccounts or Wallets coll
 Helpers.getAccounts = function(query, reactive) {
   var options = reactive === false ? { reactive: false } : {};
   if (_.isString(query.address)) query.address = query.address.toLowerCase();
-  return EthAccounts.find(query, options)
+  return LXAccounts.find(query, options)
     .fetch()
     .concat(Wallets.find(query, options).fetch());
 };
 
 /**
-Gets the docuement matching the given addess from the EthAccounts or Wallets collection and returns its name or address.
+Gets the docuement matching the given addess from the LXAccounts or Wallets collection and returns its name or address.
 
 @method getAccountNameByAddress
 @param {String} name or address
@@ -299,7 +299,7 @@ Helpers.formatTransactionBalance = function(value, exchangeRates, unit) {
   // make sure not existing values are not Spacebars.kw
   if (unit instanceof Spacebars.kw) unit = null;
 
-  var unit = unit || EthTools.getUnit(),
+  var unit = unit || LXTools.getUnit(),
     format = '0,0.00';
 
   if (
@@ -313,9 +313,9 @@ Helpers.formatTransactionBalance = function(value, exchangeRates, unit) {
     var price = new BigNumber(String(web3.fromWei(value, 'LindaX')), 10).times(
       exchangeRates[unit].price
     );
-    return EthTools.formatNumber(price, format) + ' ' + unit.toUpperCase();
+    return LXTools.formatNumber(price, format) + ' ' + unit.toUpperCase();
   } else {
-    return EthTools.formatBalance(value, format + '[0000000000000000] UNIT');
+    return LXTools.formatBalance(value, format + '[0000000000000000] UNIT');
   }
 };
 

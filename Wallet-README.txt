@@ -1,6 +1,6 @@
 LindaX Wallet
 
-The Ethereum wallet, which allows you to create simple and multisig wallets to manage your ether.
+The LindaX wallet, which allows you to create simple and multisig wallets to manage your LindaX.
 
 The wallet contains its own node, but can also use an already running one, if the IPC path of that node is the standard path.
 (See below)
@@ -9,11 +9,11 @@ The wallet contains its own node, but can also use an already running one, if th
 
 When you start the wallet on a testnet (e.g. different `--datadir`) you need to make sure to set the `--ipcpath` back to the original one.
 
-On OSX its `~/Library/Ethereum/geth.ipc` on linux `~/.ethereum/geth.ipc` and on windows it uses a named pipe, which doesn't need to be renamed.
+On OSX its `~/Library/LindaX/geth.ipc` on linux `~/.lindax/geth.ipc` and on windows it uses a named pipe, which doesn't need to be renamed.
 
 Example:
 
-    $ geth --datadir /my/chain/ --networkid 23 --ipcpath ~/Library/Ethereum/geth.ipc
+    $ geth --datadir /my/chain/ --networkid 23 --ipcpath ~/Library/LindaX/geth.ipc
 
 ### Original contract
 
@@ -37,19 +37,19 @@ The wallet (Mist) stores its data at:
 
 The nodes data is stored at:
 
-* Mac: ~/Library/Ethereum
-* Windows: %APPDATA%\Roaming\Ethereum
-* Linux: ~/.ethereum
+* Mac: ~/Library/LindaX
+* Windows: %APPDATA%\Roaming\LindaX
+* Linux: ~/.lindax
 
 ## Issues
 
 If you find issues or have suggestion, please report them at  
-https://github.com/ethereum/meteor-dapp-wallet/issues
+https://github.com/thelindaproject/lindax-wallet/issues
 
 ## Repository
 
 The wallet code can be found at  
-https://github.com/ethereum/meteor-dapp-wallet
+https://github.com/thelindaproject/lindax-wallet
 
 And the binary application code, which wraps the wallet app can be found at  
 https://github.com/thelindaprojectinc/lindax-wallet/tree/wallet

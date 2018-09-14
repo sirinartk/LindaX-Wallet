@@ -20,7 +20,7 @@ Template['views_modals_sendTransactionInfo'].helpers({
     */
   estimatedFee: function() {
     if (this.estimatedGas && this.gasPrice)
-      return EthTools.formatBalance(
+      return LXTools.formatBalance(
         new BigNumber(this.estimatedGas, 10).times(
           new BigNumber(this.gasPrice, 10)
         ),

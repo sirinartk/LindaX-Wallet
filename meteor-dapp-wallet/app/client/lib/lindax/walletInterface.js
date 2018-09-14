@@ -287,7 +287,7 @@ Deploys testnet wallet, when on other orig wallet was found
 var deployTestnetWallet = function() {
   var account = web3.eth.accounts[0];
 
-  EthElements.Modal.question(
+  LXElements.Modal.question(
     {
       text: new Spacebars.SafeString(
         TAPi18n.__('wallet.modals.testnetWallet.walletNeedsDeployment', {
@@ -297,7 +297,7 @@ var deployTestnetWallet = function() {
       cancel: true,
       ok: function() {
         // show loading
-        EthElements.Modal.show('views_modals_loading', { closeable: false });
+        LXElements.Modal.show('views_modals_loading', { closeable: false });
 
         // deploy testnet wallet
         WalletContract.new(
@@ -315,12 +315,12 @@ var deployTestnetWallet = function() {
                 console.log('Contract created at: ', contract.address);
 
                 LocalStore.set(
-                  'ethereum_testnetWalletContractAddress',
+                  'lindax_testnetWalletContractAddress',
                   contract.address
                 );
                 replaceStubAddress(contract.address);
 
-                EthElements.Modal.question({
+                LXElements.Modal.question({
                   text: new Spacebars.SafeString(
                     TAPi18n.__(
                       'wallet.modals.testnetWallet.testnetWalletDeployed',
@@ -343,7 +343,7 @@ var deployTestnetWallet = function() {
                 duration: 8
               });
 
-              EthElements.Modal.hide();
+              LXElements.Modal.hide();
             }
           }
         );
@@ -402,7 +402,7 @@ checkForOriginalWallet = function() {
   return;
 
   var enoughBalance = false;
-  _.each(_.pluck(EthAccounts.find({}).fetch(), 'balance'), function(bal) {
+  _.each(_.pluck(LXAccounts.find({}).fetch(), 'balance'), function(bal) {
     if (new BigNumber(bal, '10').gt(1000000000000000000)) enoughBalance = true;
   });
 
@@ -412,7 +412,7 @@ checkForOriginalWallet = function() {
     checkCodeOnAddress(mainNetAddress, function() {
       checkCodeOnAddress(testNetAddress, function() {
         var privateNetAddress = LocalStore.get(
-          'ethereum_testnetWalletContractAddress'
+          'lindax_testnetWalletContractAddress'
         );
 
         if (privateNetAddress)

@@ -63,7 +63,7 @@ var addCustomContract = function(e) {
       }
     );
 
-    // update balances from lib/ethereum/observeBlocks.js
+    // update balances from lib/lindax/observeBlocks.js
     updateBalances();
 
     GlobalNotification.success({
@@ -113,7 +113,7 @@ var addToken = function(e) {
       }
     });
 
-    // update balances from lib/ethereum/observeBlocks.js
+    // update balances from lib/lindax/observeBlocks.js
     updateBalances();
 
     GlobalNotification.success({
@@ -145,7 +145,7 @@ var autoScanGetTokens = function(template) {
       'https://raw.githubusercontent.com/MyEtherWallet/ethereum-lists/master/tokens/tokens-eth.json';
 
     var accounts = _.pluck(
-      EthAccounts.find()
+      LXAccounts.find()
         .fetch()
         .concat(CustomContracts.find().fetch())
         .concat(Wallets.find().fetch()),
@@ -298,7 +298,7 @@ Template['views_contracts'].events({
     */
   'click .add-contract': function() {
     // Open a modal
-    EthElements.Modal.question(
+    LXElements.Modal.question(
       {
         template: 'views_modals_addCustomContract',
         ok: addCustomContract,
@@ -318,7 +318,7 @@ Template['views_contracts'].events({
     e.preventDefault();
 
     // Open a modal
-    EthElements.Modal.question(
+    LXElements.Modal.question(
       {
         template: 'views_modals_addToken',
         ok: addToken,
@@ -378,7 +378,7 @@ Template['views_contracts'].events({
     e.preventDefault();
 
     // Open a modal
-    EthElements.Modal.question(
+    LXElements.Modal.question(
       {
         template: 'views_modals_addToken',
         data: this,

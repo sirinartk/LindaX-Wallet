@@ -4,7 +4,7 @@ const log = require('../../utils/logger').create('method');
 const Windows = require('../../windows');
 const db = require('../../db');
 
-import ethereumNodeRemote from '../../ethereumNodeRemote';
+import lindaxNodeRemote from '../../lindaxNodeRemote';
 
 /**
  * Process a request.
@@ -139,7 +139,7 @@ module.exports = class BaseProcessor {
 
   _sendToRemote(payload, retry = false) {
     return new Promise(async (resolve, reject) => {
-      const requestId = await ethereumNodeRemote.send(
+      const requestId = await lindaxNodeRemote.send(
         payload.method,
         payload.params
       );
@@ -169,11 +169,11 @@ module.exports = class BaseProcessor {
         if (data.id === requestId) {
           resolve(data);
           // TODO: remove listener
-          // ethereumNodeRemote.ws.removeListener('message', callback);
+          // lindaxNodeRemote.ws.removeListener('message', callback);
         }
       };
 
-      ethereumNodeRemote.ws.on('message', callback);
+      lindaxNodeRemote.ws.on('message', callback);
     });
   }
 

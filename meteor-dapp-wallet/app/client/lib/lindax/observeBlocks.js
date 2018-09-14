@@ -22,7 +22,7 @@ updateBalances = function() {
     .fetch()
     .concat(CustomContracts.find().fetch());
 
-  var allAccounts = EthAccounts.find()
+  var allAccounts = LXAccounts.find()
     .fetch()
     .concat(walletsAndContracts);
 
@@ -91,7 +91,7 @@ updateBalances = function() {
     ) {
       Helpers.getENSName(account.address, function(err, name, returnedAddr) {
         if (!err && account.address.toLowerCase() == returnedAddr) {
-          EthAccounts.update(
+          LXAccounts.update(
             { address: account.address },
             { $set: { name: name, ens: true, ensCheck: now } }
           );
@@ -104,7 +104,7 @@ updateBalances = function() {
             { $set: { name: name, ens: true, ensCheck: now } }
           );
         } else {
-          EthAccounts.update(
+          LXAccounts.update(
             { address: account.address },
             { $set: { ens: false, ensCheck: now } }
           );

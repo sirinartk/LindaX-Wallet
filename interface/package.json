@@ -15,7 +15,7 @@
     "mist",
     "web3"
   ],
-  "author": "Fabian Vogelsteller <fabian@ethereum.org>",
+  "author": "The Linda Project",
   "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/thelindaprojectinc/lindax-wallet/issues"

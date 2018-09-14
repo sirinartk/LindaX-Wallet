@@ -24,23 +24,23 @@ Config for the LindaX connector
 
 @property config
 */
-ethereumConfig = {
+lindaxConfig = {
   /**
     Number of blocks to rollback, from the last checkpoint block of the wallet.
 
-    @property ethereumConfig.rollBackBy
+    @property lindaxConfig.rollBackBy
     */
   rollBackBy: 0,
   /**
     Number of blocks to confirm a wallet
 
-    @property ethereumConfig.requiredConfirmations
+    @property lindaxConfig.requiredConfirmations
     */
   requiredConfirmations: 12,
   /**
     The default daily limit used for simple accounts
 
-    @property ethereumConfig.dailyLimitDefault
+    @property lindaxConfig.dailyLimitDefault
     */
   dailyLimitDefault: '100000000000000000000000000'
 };
@@ -77,25 +77,25 @@ connectToNode = function() {
 
   checkNetwork();
 
-  EthAccounts.init();
-  EthBlocks.init();
+  LXAccounts.init();
+  LXBlocks.init();
 
-  EthTools.ticker.start({
+  LXTools.ticker.start({
     extraParams: typeof mist !== 'undefined' ? 'Mist-' + mist.version : '',
     currencies: ['BTC', 'USD', 'EUR', 'BRL', 'GBP']
   });
 
-  if (EthAccounts.find().count() > 0) {
+  if (LXAccounts.find().count() > 0) {
     checkForOriginalWallet();
   }
 
-  // EthBlocks.detectFork(function(oldBlock, block){
+  // LXBlocks.detectFork(function(oldBlock, block){
   //     console.log('FORK detected from Block #'+ oldBlock.number + ' -> #'+ block.number +', rolling back!');
 
   //     // Go through all accounts and re-run
   //     _.each(Wallets.find({}).fetch(), function(wallet){
   //         // REMOVE ADDRESS for YOUNG ACCOUNTS, so that it tries to get the Created event and correct address again
-  //         if(wallet.creationBlock + ethereumConfig.requiredConfirmations >= block.number)
+  //         if(wallet.creationBlock + lindaxConfig.requiredConfirmations >= block.number)
   //             delete wallet.address;
 
   //         setupContractSubscription(wallet);

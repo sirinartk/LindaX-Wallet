@@ -52,7 +52,7 @@ Template['layout_browserBar'].helpers({
     */
   dappAccounts: function() {
     if (this.permissions) {
-      return EthAccounts.find({
+      return LXAccounts.find({
         address: { $in: this.permissions.accounts || [] }
       });
     }

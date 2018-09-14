@@ -35,7 +35,7 @@ Template['views_dashboard'].helpers({
     */
   accounts: function() {
     // balance need to be present, to show only full inserted accounts (not ones added by mist.requestAccount)
-    var accounts = EthAccounts.find(
+    var accounts = LXAccounts.find(
       { name: { $exists: true } },
       { sort: { name: 1 } }
     ).fetch();
@@ -50,7 +50,7 @@ Template['views_dashboard'].helpers({
     @method (hasAccounts)
     */
   hasAccounts: function() {
-    return EthAccounts.find().count() > 0;
+    return LXAccounts.find().count() > 0;
   },
   /**
     Are there any accounts?
@@ -59,7 +59,7 @@ Template['views_dashboard'].helpers({
     */
   hasMinimumBalance: function() {
     var enoughBalance = false;
-    _.each(_.pluck(EthAccounts.find({}).fetch(), 'balance'), function(bal) {
+    _.each(_.pluck(LXAccounts.find({}).fetch(), 'balance'), function(bal) {
       if (new BigNumber(bal, '10').gt(1000000000000000)) enoughBalance = true;
     });
 
@@ -106,7 +106,7 @@ Template['views_dashboard'].events({
         }
         accounts.forEach(function(account) {
           account = account.toLowerCase();
-          EthAccounts.upsert(
+          LXAccounts.upsert(
             { address: account },
             {
               $set: {

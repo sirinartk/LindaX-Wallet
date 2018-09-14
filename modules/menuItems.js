@@ -13,7 +13,7 @@ const Settings = require('./settings');
 const log = require('./utils/logger').create('menuItems');
 const swarmLog = require('./utils/logger').create('swarm');
 const updateChecker = require('./updateChecker');
-const ethereumNode = require('./ethereumNode.js');
+const lindaxNode = require('./lindaxNode.js');
 const ClientBinaryManager = require('./clientBinaryManager');
 
 import {
@@ -45,13 +45,13 @@ const createMenu = function(webviews) {
 };
 
 const restartNode = function(newType, newNetwork, syncMode, webviews) {
-  newNetwork = newNetwork || ethereumNode.network;
+  newNetwork = newNetwork || lindaxNode.network;
 
   log.info('Switch node', newType, newNetwork);
 
   store.dispatch(changeNetwork(newNetwork));
 
-  return ethereumNode
+  return lindaxNode
     .restart(newType, newNetwork, syncMode)
     .then(() => {
       Windows.getByType('main').load(global.interfaceAppUrl);
@@ -68,7 +68,7 @@ const changeNodeNetwork = function(network, webviews) {
 
   Settings.saveUserData('network', network);
 
-  restartNode(ethereumNode.type, network, ethereumNode.syncMode, webviews);
+  restartNode(lindaxNode.type, network, lindaxNode.syncMode, webviews);
 
   createMenu(webviews);
 };
@@ -78,13 +78,13 @@ const changeNodeSyncMode = function(syncMode, webviews) {
 
   Settings.saveUserData('syncmode', syncMode);
 
-  restartNode(ethereumNode.type, ethereumNode.network, syncMode, webviews);
+  restartNode(lindaxNode.type, lindaxNode.network, syncMode, webviews);
 
   createMenu(webviews);
 };
 
 const startMining = webviews => {
-  ethereumNode
+  lindaxNode
     .send('miner_start', [1])
     .then(ret => {
       log.info('miner_start', ret.result);
@@ -100,7 +100,7 @@ const startMining = webviews => {
 };
 
 const stopMining = webviews => {
-  ethereumNode
+  lindaxNode
     .send('miner_stop', [1])
     .then(ret => {
       log.info('miner_stop', ret.result);
@@ -264,7 +264,7 @@ let menuTempl = function(webviews) {
       {
         label: i18n.t('mist.applicationMenu.file.importPresale'),
         accelerator: 'CommandOrControl+I',
-        enabled: ethereumNode.isMainNetwork,
+        enabled: lindaxNode.isMainNetwork,
         click() {
           Windows.createPopup('importAccount');
         }
@@ -281,7 +281,7 @@ let menuTempl = function(webviews) {
               let userPath = Settings.userHomePath;
 
               // eth
-              if (ethereumNode.isEth) {
+              if (lindaxNode.isEth) {
                 if (process.platform === 'win32') {
                   userPath = `${Settings.appDataPath}\\Web3\\keys`;
                 } else {
@@ -523,8 +523,8 @@ let menuTempl = function(webviews) {
     if (gethClient) {
       nodeSubmenu.push({
         label: `Geth ${gethClient.version}`,
-        checked: ethereumNode.isOwnNode && ethereumNode.isGeth,
-        enabled: ethereumNode.isOwnNode,
+        checked: lindaxNode.isOwnNode && lindaxNode.isGeth,
+        enabled: lindaxNode.isOwnNode,
         type: 'checkbox',
         click() {
           restartNode('geth', null, 'fast', webviews);
@@ -535,8 +535,8 @@ let menuTempl = function(webviews) {
     if (ethClient) {
       nodeSubmenu.push({
         label: `Eth ${ethClient.version} (C++)`,
-        checked: ethereumNode.isOwnNode && ethereumNode.isEth,
-        enabled: ethereumNode.isOwnNode,
+        checked: lindaxNode.isOwnNode && lindaxNode.isEth,
+        enabled: lindaxNode.isOwnNode,
         // enabled: false,
         type: 'checkbox',
         click() {
@@ -546,7 +546,7 @@ let menuTempl = function(webviews) {
     }
 
     devToolsMenu.push({
-      label: i18n.t('mist.applicationMenu.develop.ethereumNode'),
+      label: i18n.t('mist.applicationMenu.develop.lindaxNode'),
       submenu: nodeSubmenu
     });
   }
@@ -578,11 +578,11 @@ let menuTempl = function(webviews) {
       // {
       //   label: 'Solo network',
       //   accelerator: 'CommandOrControl+Alt+4',
-      //   checked: ethereumNode.isOwnNode && ethereumNode.isDevNetwork,
-      //   enabled: ethereumNode.isOwnNode,
+      //   checked: lindaxNode.isOwnNode && lindaxNode.isDevNetwork,
+      //   enabled: lindaxNode.isOwnNode,
       //   type: 'checkbox',
       //   click() {
-      //     restartNode(ethereumNode.type, 'dev');
+      //     restartNode(lindaxNode.type, 'dev');
       //   }
       // }
     ]
@@ -594,7 +594,7 @@ let menuTempl = function(webviews) {
     submenu: [
       {
         label: i18n.t('mist.applicationMenu.develop.syncModeLight'),
-        enabled: ethereumNode.isOwnNode && !ethereumNode.isDevNetwork,
+        enabled: lindaxNode.isOwnNode && !lindaxNode.isDevNetwork,
         checked: store.getState().nodes.local.syncMode === 'light',
         type: 'checkbox',
         click() {
@@ -603,7 +603,7 @@ let menuTempl = function(webviews) {
       },
       {
         label: i18n.t('mist.applicationMenu.develop.syncModeFast'),
-        enabled: ethereumNode.isOwnNode && !ethereumNode.isDevNetwork,
+        enabled: lindaxNode.isOwnNode && !lindaxNode.isDevNetwork,
         checked: store.getState().nodes.local.syncMode === 'fast',
         type: 'checkbox',
         click() {
@@ -612,7 +612,7 @@ let menuTempl = function(webviews) {
       },
       {
         label: i18n.t('mist.applicationMenu.develop.syncModeFull'),
-        enabled: ethereumNode.isOwnNode,
+        enabled: lindaxNode.isOwnNode,
         checked: store.getState().nodes.local.syncMode === 'full',
         type: 'checkbox',
         click() {
@@ -621,7 +621,7 @@ let menuTempl = function(webviews) {
       },
       {
         label: i18n.t('mist.applicationMenu.develop.syncModeNoSync'),
-        enabled: ethereumNode.isOwnNode && !ethereumNode.isDevNetwork,
+        enabled: lindaxNode.isOwnNode && !lindaxNode.isDevNetwork,
         checked: store.getState().nodes.local.syncMode === 'nosync',
         type: 'checkbox',
         click() {
@@ -633,8 +633,8 @@ let menuTempl = function(webviews) {
 
   // Enables mining menu: only in Solo mode and trajectory network (testnet)
   if (
-    ethereumNode.isOwnNode &&
-    (ethereumNode.isTestNetwork || ethereumNode.isDevNetwork)
+    lindaxNode.isOwnNode &&
+    (lindaxNode.isTestNetwork || lindaxNode.isDevNetwork)
   ) {
     devToolsMenu.push(
       {
@@ -744,9 +744,9 @@ let menuTempl = function(webviews) {
       }
     },
     {
-      label: i18n.t('mist.applicationMenu.help.gitter'),
+      label: i18n.t('mist.applicationMenu.help.discord'),
       click() {
-        shell.openExternal('https://gitter.im/ethereum/mist');
+        shell.openExternal('https://discord.gg/j4MebEY');
       }
     },
     {

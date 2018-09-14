@@ -109,12 +109,12 @@ Template['layout_sidebar'].helpers({
   dappAccounts: function(limit) {
     if (this.permissions) {
       if (limit) {
-        return EthAccounts.find(
+        return LXAccounts.find(
           { address: { $in: this.permissions.accounts || [] } },
           { limit: limit }
         );
       }
-      return EthAccounts.find({
+      return LXAccounts.find({
         address: { $in: this.permissions.accounts || [] }
       });
     }

@@ -25,7 +25,7 @@ Meteor.startup(function() {
       } catch (err) {
         console.warn("numeral.js couldn't set number formating: ", err.message);
       }
-      EthTools.setLocale(lang);
+      LXTools.setLocale(lang);
     }
   });
 });

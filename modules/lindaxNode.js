@@ -17,7 +17,7 @@ import {
 } from './core/nodes/actions';
 
 import logger from './utils/logger';
-const ethereumNodeLog = logger.create('EthereumNode');
+const lindaxNodeLog = logger.create('LindaXNode');
 
 const DEFAULT_NODE_TYPE = 'geth';
 const DEFAULT_NETWORK = 'main';
@@ -40,7 +40,7 @@ let instance;
 /**
  * Etheruem nodes manager.
  */
-class EthereumNode extends EventEmitter {
+class LindaXNode extends EventEmitter {
   constructor() {
     super();
 
@@ -166,20 +166,20 @@ class EthereumNode extends EventEmitter {
       .catch(() => {
         this.isExternalNode = false;
 
-        ethereumNodeLog.warn(
+        lindaxNodeLog.warn(
           'Failed to connect to an existing local node. Starting our own...'
         );
 
-        ethereumNodeLog.info(`Node type: ${this.defaultNodeType}`);
-        ethereumNodeLog.info(`Network: ${this.defaultNetwork}`);
-        ethereumNodeLog.info(`SyncMode: ${this.defaultSyncMode}`);
+        lindaxNodeLog.info(`Node type: ${this.defaultNodeType}`);
+        lindaxNodeLog.info(`Network: ${this.defaultNetwork}`);
+        lindaxNodeLog.info(`SyncMode: ${this.defaultSyncMode}`);
 
         return this._start(
           this.defaultNodeType,
           this.defaultNetwork,
           this.defaultSyncMode
         ).catch(err => {
-          ethereumNodeLog.error('Failed to start node', err);
+          lindaxNodeLog.error('Failed to start node', err);
           throw err;
         });
       });
@@ -191,7 +191,7 @@ class EthereumNode extends EventEmitter {
         throw new Error('Cannot restart node since it was started externally');
       }
 
-      ethereumNodeLog.info('Restart node', newType, newNetwork);
+      lindaxNodeLog.info('Restart node', newType, newNetwork);
 
       return this.stop()
         .then(() => Windows.loading.show())
@@ -209,7 +209,7 @@ class EthereumNode extends EventEmitter {
         )
         .then(() => Windows.loading.hide())
         .catch(err => {
-          ethereumNodeLog.error('Error restarting node', err);
+          lindaxNodeLog.error('Error restarting node', err);
           throw err;
         });
     });
@@ -232,7 +232,7 @@ class EthereumNode extends EventEmitter {
 
         this.state = STATES.STOPPING;
 
-        ethereumNodeLog.info(
+        lindaxNodeLog.info(
           `Stopping existing node: ${this._type} ${this._network}`
         );
 
@@ -268,7 +268,7 @@ class EthereumNode extends EventEmitter {
           store.dispatch(resetLocalNode());
         });
     }
-    ethereumNodeLog.debug(
+    lindaxNodeLog.debug(
       'Disconnection already in progress, returning Promise.'
     );
     return this._stopPromise;
@@ -286,23 +286,23 @@ class EthereumNode extends EventEmitter {
   }
 
   /**
-   * Start an ethereum node.
+   * Start a lindax node.
    * @param  {String} nodeType geth, eth, etc
    * @param  {String} network  network id
    * @param  {String} syncMode full, fast, light, nosync
    * @return {Promise}
    */
   _start(nodeType, network, syncMode) {
-    ethereumNodeLog.info(`Start node: ${nodeType} ${network} ${syncMode}`);
+    lindaxNodeLog.info(`Start node: ${nodeType} ${network} ${syncMode}`);
 
     if (network === 'test' || network === 'trajectory') {
-      ethereumNodeLog.debug('Node will connect to the test network');
+      lindaxNodeLog.debug('Node will connect to the test network');
     }
 
     return this.stop()
       .then(() => {
         return this.__startNode(nodeType, network, syncMode).catch(err => {
-          ethereumNodeLog.error('Failed to start node', err);
+          lindaxNodeLog.error('Failed to start node', err);
 
           this._showNodeErrorDialog(nodeType, network);
 
@@ -310,7 +310,7 @@ class EthereumNode extends EventEmitter {
         });
       })
       .then(proc => {
-        ethereumNodeLog.info(
+        lindaxNodeLog.info(
           `Started node successfully: ${nodeType} ${network} ${syncMode}`
         );
 
@@ -333,7 +333,7 @@ class EthereumNode extends EventEmitter {
             this._checkSync();
           })
           .catch(err => {
-            ethereumNodeLog.error('Failed to connect to node', err);
+            lindaxNodeLog.error('Failed to connect to node', err);
 
             if (err.toString().indexOf('timeout') >= 0) {
               this.emit('nodeConnectionTimeout');
@@ -388,7 +388,7 @@ class EthereumNode extends EventEmitter {
       throw new Error(`Node "${nodeType}" binPath is not available.`);
     }
 
-    ethereumNodeLog.info(`Start node using ${binPath}`);
+    lindaxNodeLog.info(`Start node using ${binPath}`);
 
     return new Q((resolve, reject) => {
       this.__startProcess(nodeType, network, binPath, syncMode).then(
@@ -408,30 +408,25 @@ class EthereumNode extends EventEmitter {
     }
 
     return new Q((resolve, reject) => {
-      ethereumNodeLog.trace('Rotate log file');
+      lindaxNodeLog.trace('Rotate log file');
 
       logRotate(
         path.join(Settings.userDataPath, 'logs', 'all.log'),
         { count: 5 },
         error => {
           if (error) {
-            ethereumNodeLog.error('Log rotation problems', error);
+            lindaxNodeLog.error('Log rotation problems', error);
             return reject(error);
           }
         }
       );
 
       logRotate(
-        path.join(
-          Settings.userDataPath,
-          'logs',
-          'category',
-          'ethereum_node.log'
-        ),
+        path.join(Settings.userDataPath, 'logs', 'category', 'lindax_node.log'),
         { count: 5 },
         error => {
           if (error) {
-            ethereumNodeLog.error('Log rotation problems', error);
+            lindaxNodeLog.error('Log rotation problems', error);
             return reject(error);
           }
         }
@@ -501,14 +496,14 @@ class EthereumNode extends EventEmitter {
       const nodeOptions = Settings.nodeOptions;
 
       if (nodeOptions && nodeOptions.length) {
-        ethereumNodeLog.debug('Custom node options', nodeOptions);
+        lindaxNodeLog.debug('Custom node options', nodeOptions);
 
         args = args.concat(nodeOptions);
       }
 
-      ethereumNodeLog.info(`Start node args: ${args}`);
+      lindaxNodeLog.info(`Start node args: ${args}`);
 
-      ethereumNodeLog.trace('Spawn', binPath, args);
+      lindaxNodeLog.trace('Spawn', binPath, args);
 
       const proc = spawn(binPath, args);
 
@@ -516,7 +511,7 @@ class EthereumNode extends EventEmitter {
         if (this.state === STATES.STARTING) {
           this.state = STATES.ERROR;
 
-          ethereumNodeLog.info('Node startup error');
+          lindaxNodeLog.info('Node startup error');
 
           // TODO: detect this properly
           // this.emit('nodeBinaryNotFound');
@@ -526,13 +521,13 @@ class EthereumNode extends EventEmitter {
       });
 
       proc.stdout.on('data', data => {
-        ethereumNodeLog.trace('Got stdout data', data.toString());
+        lindaxNodeLog.trace('Got stdout data', data.toString());
         this.emit('data', data);
       });
 
       proc.stderr.on('data', data => {
-        ethereumNodeLog.trace('Got stderr data', data.toString());
-        ethereumNodeLog.info(data.toString()); // TODO: This should be ethereumNodeLog.error(), but not sure why regular stdout data is coming in through stderror
+        lindaxNodeLog.trace('Got stderr data', data.toString());
+        lindaxNodeLog.info(data.toString()); // TODO: This should be lindaxNodeLog.error(), but not sure why regular stdout data is coming in through stderror
         this.emit('data', data);
       });
 
@@ -545,7 +540,7 @@ class EthereumNode extends EventEmitter {
                 */
         setTimeout(() => {
           if (STATES.STARTING === this.state) {
-            ethereumNodeLog.info(
+            lindaxNodeLog.info(
               `${NODE_START_WAIT_MS}ms elapsed, assuming node started up successfully`
             );
             resolve(proc);
@@ -585,7 +580,7 @@ class EthereumNode extends EventEmitter {
     const cleanData = data.toString().replace(/[\r\n]+/, '');
     const nodeType = (this.type || 'node').toUpperCase();
 
-    ethereumNodeLog.trace(`${nodeType}: ${cleanData}`);
+    lindaxNodeLog.trace(`${nodeType}: ${cleanData}`);
 
     if (!/^-*$/.test(cleanData) && !_.isEmpty(cleanData)) {
       this.emit('nodeLog', cleanData);
@@ -602,7 +597,7 @@ class EthereumNode extends EventEmitter {
             error.tag = UNABLE_TO_BIND_PORT_ERROR;
           }
 
-          ethereumNodeLog.error(error);
+          lindaxNodeLog.error(error);
           return reject(error);
         }
       }
@@ -610,7 +605,7 @@ class EthereumNode extends EventEmitter {
   }
 
   _loadDefaults() {
-    ethereumNodeLog.trace('Load defaults');
+    lindaxNodeLog.trace('Load defaults');
 
     this.defaultNodeType =
       Settings.nodeType || Settings.loadUserData('node') || DEFAULT_NODE_TYPE;
@@ -621,12 +616,12 @@ class EthereumNode extends EventEmitter {
       Settings.loadUserData('syncmode') ||
       DEFAULT_SYNCMODE;
 
-    ethereumNodeLog.info(
+    lindaxNodeLog.info(
       Settings.syncmode,
       Settings.loadUserData('syncmode'),
       DEFAULT_SYNCMODE
     );
-    ethereumNodeLog.info(
+    lindaxNodeLog.info(
       `Defaults loaded: ${this.defaultNodeType} ${this.defaultNetwork} ${
         this.defaultSyncMode
       }`
@@ -716,6 +711,6 @@ class EthereumNode extends EventEmitter {
   }
 }
 
-EthereumNode.STARTING = 0;
+LindaXNode.STARTING = 0;
 
-module.exports = new EthereumNode();
+module.exports = new LindaXNode();

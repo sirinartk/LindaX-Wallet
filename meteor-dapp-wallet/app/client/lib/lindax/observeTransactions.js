@@ -41,7 +41,7 @@ addTransactionAfterSend = function(
   });
 
   // add from Account
-  EthAccounts.update(
+  LXAccounts.update(
     { address: from },
     {
       $addToSet: {
@@ -51,7 +51,7 @@ addTransactionAfterSend = function(
   );
 
   // add to Account
-  EthAccounts.update(
+  LXAccounts.update(
     { address: to },
     {
       $addToSet: {
@@ -288,7 +288,7 @@ var updateTransaction = function(newDocument, transaction, receipt) {
       to: Helpers.getAccountNameByAddress(newDocument.to)
     });
 
-    if (EthAccounts.findOne({ address: newDocument.from })) {
+    if (LXAccounts.findOne({ address: newDocument.from })) {
       web3.eth.getBalance(newDocument.from, newDocument.blockNumber, function(
         e,
         now
@@ -346,8 +346,8 @@ observeTransactions = function() {
 
         if (!e) {
           var confirmations =
-            tx.blockNumber && EthBlocks.latest.number
-              ? EthBlocks.latest.number + 1 - tx.blockNumber
+            tx.blockNumber && LXBlocks.latest.number
+              ? LXBlocks.latest.number + 1 - tx.blockNumber
               : 0;
           confCount++;
 
@@ -361,7 +361,7 @@ observeTransactions = function() {
           }
 
           if (
-            confirmations < ethereumConfig.requiredConfirmations &&
+            confirmations < lindaxConfig.requiredConfirmations &&
             confirmations >= 0
           ) {
             Helpers.eventLogs(
@@ -405,8 +405,8 @@ observeTransactions = function() {
           }
 
           if (
-            confirmations > ethereumConfig.requiredConfirmations ||
-            confCount > ethereumConfig.requiredConfirmations * 2
+            confirmations > lindaxConfig.requiredConfirmations ||
+            confCount > lindaxConfig.requiredConfirmations * 2
           ) {
             // confirm after a last check
             web3.eth.getTransaction(tx.transactionHash, function(
@@ -497,7 +497,7 @@ observeTransactions = function() {
       @method added
     */
     added: function(newDocument) {
-      var confirmations = EthBlocks.latest.number - newDocument.blockNumber;
+      var confirmations = LXBlocks.latest.number - newDocument.blockNumber;
 
       // add to accounts
       Wallets.update(
@@ -622,7 +622,7 @@ observeTransactions = function() {
           }
         }
       );
-      EthAccounts.update(
+      LXAccounts.update(
         { address: document.from },
         {
           $pull: {
@@ -630,7 +630,7 @@ observeTransactions = function() {
           }
         }
       );
-      EthAccounts.update(
+      LXAccounts.update(
         { address: document.to },
         {
           $pull: {

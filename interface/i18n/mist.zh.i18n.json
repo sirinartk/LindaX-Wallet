@@ -43,7 +43,7 @@
         "devToolsWebview": "__webview__",
         "runTests": "运行测试",
         "logFiles": "显示日志文件",
-        "ethereumNode": "LindaX",
+        "lindaxNode": "LindaX",
         "network": "网络",
         "mainNetwork": "主网络",
         "startMining": "⛏ 开启挖矿（仅限Testnet网络）",
@@ -63,28 +63,17 @@
     },
     "errors": {
       "nodeConnect": "无法连接节点？查看日志获取更多信息：",
-      "nodeStartup":
-        "该节点可能无法被启动，你是否正在运行一个节点？它是否正在更新数据库？",
+      "nodeStartup": "该节点可能无法被启动，你是否正在运行一个节点？它是否正在更新数据库？",
       "timeSync": {
         "title": "你的计算机时间同步不准确！",
-        "description":
-          "为了和以太坊网络保持同步，你的计算机时间和服务器时间需要保持同步。",
-        "win32":
-          "从系统选项中打开网络时间设置并勾选。详细信息参考：http://www.guidingtech.com/3119/windows-clock-sync/",
-        "linux":
-          "为开启时间同步服务器，请通过\"apt-get install ntp\"安装\"ntp\"。",
-        "darwin":
-          "为开启时间同步，打开时间选项并勾选\"Set the time and date automatically\"."
+        "description": "为了和以太坊网络保持同步，你的计算机时间和服务器时间需要保持同步。",
+        "win32": "从系统选项中打开网络时间设置并勾选。详细信息参考：http://www.guidingtech.com/3119/windows-clock-sync/",
+        "linux": "为开启时间同步服务器，请通过\"apt-get install ntp\"安装\"ntp\"。",
+        "darwin": "为开启时间同步，打开时间选项并勾选\"Set the time and date automatically\"."
       },
       "nodeChecksumMismatch": {
         "title": "Checksum mismatch in downloaded node!",
-        "description":
-          "__algorithm__: __hash__\n\nPlease install the __type__ node version __version__ manually."
-      },
-      "legacyChain": {
-        "title": "Legacy chain detected",
-        "description":
-          "Your node is currently on the unsupported Ethereum Classic chain. To use this chain use tools provided by the ethereum classic project at\nhttps://ethereumclassic.github.io.\n\nTo revert to the main LindaX chain follow the tutorial here:\nhttps://github.com/thelindaprojectinc/lindax-wallet/releases/0.8.2"
+        "description": "__algorithm__: __hash__\n\nPlease install the __type__ node version __version__ manually."
       }
     },
     "rightClick": {
@@ -107,8 +96,7 @@
       "peers": "节点",
       "privateNetwork": "Private-net",
       "test": "test",
-      "testnetExplain":
-        "你正处于Testnet测试网络中，请勿发送真正的以太币到这些地址中",
+      "testnetExplain": "你正处于Testnet测试网络中，请勿发送真正的以太币到这些地址中",
       "timeSinceBlock": "自上一块已经过去的时间"
     },
     "sidebar": {
@@ -124,10 +112,8 @@
     },
     "startScreen": {
       "runningNodeFound": "发现正在运行的以太坊节点！",
-      "nodeConnectionTimeout":
-        "无法开启以太坊节点！<br><small>如果你已经<a href='https://www.LindaX/cli#geth' class='button' target='_blank'>安装Geth</a>，使用此命令运行： <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> 或者上报此问题 </a></small>",
-      "nodeBinaryNotFound":
-        "找不到以太坊节点安装文件！<br><small> <a href='https://www.LindaX/cli#geth' class='button' target='_blank'> 请事先手动开启一个节点 </a> </small>",
+      "nodeConnectionTimeout": "无法开启以太坊节点！<br><small>如果你已经<a href='https://www.LindaX/cli#geth' class='button' target='_blank'>安装Geth</a>，使用此命令运行： <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> 或者上报此问题 </a></small>",
+      "nodeBinaryNotFound": "找不到以太坊节点安装文件！<br><small> <a href='https://www.LindaX/cli#geth' class='button' target='_blank'> 请事先手动开启一个节点 </a> </small>",
       "nodeSyncing": "需要同步以太坊节点，请等待……",
       "nodeSyncInfo": "正在下载第__displayBlock__块，共__highestBlock__。",
       "nodeSyncConnecting": "正在查找节点……",
@@ -137,10 +123,8 @@
       "nodeStopping": "LindaX node stopping...",
       "nodeStopped": "LindaX node stopped",
       "nodeError": "LindaX node connection error :'(",
-      "unableToBindPort":
-        "LindaX node cannot run. Is another instance already running?",
-      "nodeSyncInfoStates":
-        "Downloading block __displayBlock__ of __highestBlock__, <br> Downloading chain structure __displayState__ of __displayKnownStates__",
+      "unableToBindPort": "LindaX node cannot run. Is another instance already running?",
+      "nodeSyncInfoStates": "Downloading block __displayBlock__ of __highestBlock__, <br> Downloading chain structure __displayState__ of __displayKnownStates__",
       "nodeSyncFoundPeers": "Connecting to __peers__ peers...",
       "launchApp": "Launch Application",
       "clientBinaries": {
@@ -169,8 +153,7 @@
           "contractExecution": "执行合约",
           "createContract": "创建合约"
         },
-        "contractExecutionInfo":
-          "你即将执行该合约上的一个函数，这可能需要会转走你输入的数量。",
+        "contractExecutionInfo": "你即将执行该合约上的一个函数，这可能需要会转走你输入的数量。",
         "contractCreationInfo": "你即将用提供的数据创建一个合约。",
         "enterPassword": "输入密码以确认该交易",
         "unlocking": "正在确认……",
@@ -187,24 +170,19 @@
         "errors": {
           "connectionTimeout": "无法连接该节点，后台节点是否可能崩溃了？",
           "wrongPassword": "密码错误",
-          "multipleKeysMatchAddress":
-            "Multiple keys match address. Please remove duplicates from keystore (menu -> File -> Backup -> Accounts)",
-          "insufficientFundsForGas":
-            "Insufficient funds in main account (LindaXbase) to pay for gas",
+          "multipleKeysMatchAddress": "Multiple keys match address. Please remove duplicates from keystore (menu -> File -> Backup -> Accounts)",
+          "insufficientFundsForGas": "Insufficient funds in main account (LindaXbase) to pay for gas",
           "sameAccount": "Can't send to itself"
         },
-        "transactionThrow":
-          "The contract won't allow this transaction to be executed",
+        "transactionThrow": "The contract won't allow this transaction to be executed",
         "noEstimate": "We couldn't estimate the gas.",
         "parameters": "Parameters",
         "showRawBytecode": "show raw data",
         "showDecodedParameters": "show decoded parameters",
         "lookupData": "Try to decode data",
         "lookupDataExplainer": "Look this up on the internet",
-        "overBlockGasLimit":
-          "The gas required for this execution could exceed the block gas limit.",
-        "notEnoughGas":
-          "Gas might not be enough to successfully finish this transaction.<br>Click here to increase the gas amount."
+        "overBlockGasLimit": "The gas required for this execution could exceed the block gas limit.",
+        "notEnoughGas": "Gas might not be enough to successfully finish this transaction.<br>Click here to increase the gas amount."
       },
       "importAccount": {
         "doYouHaveAWalletFile": "你拥有一个钱包文件吗？",
@@ -229,23 +207,19 @@
         "download": "Download new version",
         "skipUpdate": "Skip Update",
         "checking": "Checking for updates to __name__...",
-        "noUpdateFound":
-          "No update found. You are running the latest version of __name__."
+        "noUpdateFound": "No update found. You are running the latest version of __name__."
       },
       "connectAccount": {
         "chooseAccountTitle": "Choose account",
         "createAccount": "Create new account",
         "pinToSidebar": "Pin app to the sidebar",
-        "connectAccountDescription":
-          "You are sharing your identity with __dappName__. This allows the app to see any public information of your accounts, including balances connected to it."
+        "connectAccountDescription": "You are sharing your identity with __dappName__. This allows the app to see any public information of your accounts, including balances connected to it."
       }
     }
   },
   "elements": {
-    "checksumAlert":
-      "该地址格式有效，但是由于没有安全机制保证你不会拼写错误，因此请反复确认你输入正确。如果可能的话，请验证一下安全图标是否匹配。",
-    "identiconHelper":
-      "这是一个安全图标，如果地址有任何改动，该图标将会完全不一样",
+    "checksumAlert": "该地址格式有效，但是由于没有安全机制保证你不会拼写错误，因此请反复确认你输入正确。如果可能的话，请验证一下安全图标是否匹配。",
+    "identiconHelper": "这是一个安全图标，如果地址有任何改动，该图标将会完全不一样",
     "type": {
       "address": "Address",
       "bool": "Boolean",

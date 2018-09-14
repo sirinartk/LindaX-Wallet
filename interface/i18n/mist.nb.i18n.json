@@ -43,7 +43,7 @@
         "devToolsWebview": "__webview__",
         "runTests": "Kjør tester",
         "logFiles": "Vis loggfil",
-        "ethereumNode": "LindaX Node",
+        "lindaxNode": "LindaX Node",
         "network": "Nettverk",
         "mainNetwork": "Hovednettverk",
         "startMining": "⛏ Start Mining",
@@ -63,28 +63,17 @@
     },
     "errors": {
       "nodeConnect": "Kunne ikke koble til node? Se logger for mer:",
-      "nodeStartup":
-        "Det virker som noden ikke kunne startes, har du allerede en som kjører? Oppgraderer den databasen akkurat nå?",
+      "nodeStartup": "Det virker som noden ikke kunne startes, har du allerede en som kjører? Oppgraderer den databasen akkurat nå?",
       "timeSync": {
         "title": "Datamaskinens klokke er ikke synkronisert.",
-        "description":
-          "For å kunne synkronisere med LindaX-nettverket trenger du å synkronisere datamaskinens klokke med en tidssynkroniseringsserver.",
-        "win32":
-          "Gå til tidsinnstillinger for internett i systeminnstillinger og kryss av i boksen. Se denne guiden for detaljer: http://www.guidingtech.com/3119/windows-clock-sync/",
-        "linux":
-          "For å aktivere en tidssynkroniseringsserver installer \"ntp\" via \"apt-get install ntp\".",
-        "darwin":
-          "For å aktivere tidssynkronisering, åpne tidsinnstillinger og velg \"Angi klokkeslett og dato automatisk\"."
+        "description": "For å kunne synkronisere med LindaX-nettverket trenger du å synkronisere datamaskinens klokke med en tidssynkroniseringsserver.",
+        "win32": "Gå til tidsinnstillinger for internett i systeminnstillinger og kryss av i boksen. Se denne guiden for detaljer: http://www.guidingtech.com/3119/windows-clock-sync/",
+        "linux": "For å aktivere en tidssynkroniseringsserver installer \"ntp\" via \"apt-get install ntp\".",
+        "darwin": "For å aktivere tidssynkronisering, åpne tidsinnstillinger og velg \"Angi klokkeslett og dato automatisk\"."
       },
       "nodeChecksumMismatch": {
         "title": "Checksum mismatch in downloaded node!",
-        "description":
-          "__algorithm__: __hash__\n\nPlease install the __type__ node version __version__ manually."
-      },
-      "legacyChain": {
-        "title": "Legacy chain detected",
-        "description":
-          "Your node is currently on the unsupported Ethereum Classic chain. To use this chain use tools provided by the ethereum classic project at\nhttps://ethereumclassic.github.io.\n\nTo revert to the main LindaX chain follow the tutorial here:\nhttps://github.com/thelindaprojectinc/lindax-wallet/releases/0.8.2"
+        "description": "__algorithm__: __hash__\n\nPlease install the __type__ node version __version__ manually."
       }
     },
     "rightClick": {
@@ -106,8 +95,7 @@
       "peers": "peers",
       "privateNetwork": "Privatnett",
       "test": "test",
-      "testnetExplain":
-        "Du er på testnettet, IKKE SEND noen ekte LindaX til disse adressene",
+      "testnetExplain": "Du er på testnettet, IKKE SEND noen ekte LindaX til disse adressene",
       "timeSinceBlock": "Tid siden siste blokk"
     },
     "sidebar": {
@@ -123,10 +111,8 @@
     },
     "startScreen": {
       "runningNodeFound": "Fant kjørende LindaX-node!",
-      "nodeConnectionTimeout":
-        "Kunne ikke starte LindaX-node!<br><small>Hvis du <a href='https://www.LindaX/cli#geth' class='button' target='_blank'>installerte Geth</a>, bruk denne kommandoen for å kjøre det: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> Eller rapporter et problem </a></small>",
-      "nodeBinaryNotFound":
-        "Ingen LindaX-node kilde funnet!<br><small> <a href='https://www.LindaX/cli#geth' class='button' target='_blank'> Vennligst start en manuelt først. </a> </small>",
+      "nodeConnectionTimeout": "Kunne ikke starte LindaX-node!<br><small>Hvis du <a href='https://www.LindaX/cli#geth' class='button' target='_blank'>installerte Geth</a>, bruk denne kommandoen for å kjøre det: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> Eller rapporter et problem </a></small>",
+      "nodeBinaryNotFound": "Ingen LindaX-node kilde funnet!<br><small> <a href='https://www.LindaX/cli#geth' class='button' target='_blank'> Vennligst start en manuelt først. </a> </small>",
       "nodeStarting": "LindaX-node starter opp...",
       "nodeStarted": "LindaX-node startet",
       "nodeConnected": "LindaX-node tilkoblet",
@@ -138,8 +124,7 @@
       "nodeSyncInfo": "Laster ned blokk __currentBlock__ av __highestBlock__.",
       "nodeSyncConnecting": "Leter etter peers...",
       "launchApp": "Start Applikasjonen",
-      "nodeSyncInfoStates":
-        "Downloading block __displayBlock__ of __highestBlock__, <br> Downloading chain structure __displayState__ of __displayKnownStates__",
+      "nodeSyncInfoStates": "Downloading block __displayBlock__ of __highestBlock__, <br> Downloading chain structure __displayState__ of __displayKnownStates__",
       "nodeSyncFoundPeers": "Connecting to __peers__ peers...",
       "clientBinaries": {
         "scanning": "Checking for node update...",
@@ -167,16 +152,13 @@
           "contractExecution": "Utfør kontrakt",
           "createContract": "Lag kontrakt"
         },
-        "contractExecutionInfo":
-          "Du er i ferd med å utføre en funksjon på en kontrakt. Dette kan innebære overføring av verdier.",
-        "contractCreationInfo":
-          "Du er i ferd med å lage en kontrakt fra de oppgitte data.",
+        "contractExecutionInfo": "Du er i ferd med å utføre en funksjon på en kontrakt. Dette kan innebære overføring av verdier.",
+        "contractCreationInfo": "Du er i ferd med å lage en kontrakt fra de oppgitte data.",
         "enterPassword": "Skriv inn passord for å bekrefte transaksjonen",
         "unlocking": "Bekrefter...",
         "createContract": "Lag kontrakt",
         "estimatedFee": "Beregnet avgiftsforbruk",
-        "estimatedGasError":
-          "Data kan ikke utføres, så den kommer til å bruke all gass.",
+        "estimatedGasError": "Data kan ikke utføres, så den kommer til å bruke all gass.",
         "gasPrice": "Gass pris",
         "perMillionGas": "LindaX per million gass",
         "gasLimit": "Gi maksimal avgift",
@@ -185,27 +167,21 @@
           "sendTransaction": "Send transaksjon"
         },
         "errors": {
-          "connectionTimeout":
-            "Kunne ikke koble til noden, krasjet den i bakgrunnen?",
+          "connectionTimeout": "Kunne ikke koble til noden, krasjet den i bakgrunnen?",
           "wrongPassword": "Feil passord",
-          "multipleKeysMatchAddress":
-            "Multiple keys match address. Please remove duplicates from keystore (menu -> File -> Backup -> Accounts)",
-          "insufficientFundsForGas":
-            "Insufficient funds in main account (LindaXbase) to pay for gas",
+          "multipleKeysMatchAddress": "Multiple keys match address. Please remove duplicates from keystore (menu -> File -> Backup -> Accounts)",
+          "insufficientFundsForGas": "Insufficient funds in main account (LindaXbase) to pay for gas",
           "sameAccount": "Can't send to itself"
         },
-        "transactionThrow":
-          "The contract won't allow this transaction to be executed",
+        "transactionThrow": "The contract won't allow this transaction to be executed",
         "noEstimate": "We couldn't estimate the gas.",
         "parameters": "Parameters",
         "showRawBytecode": "show raw data",
         "showDecodedParameters": "show decoded parameters",
         "lookupData": "Try to decode data",
         "lookupDataExplainer": "Look this up on the internet",
-        "overBlockGasLimit":
-          "The gas required for this execution could exceed the block gas limit.",
-        "notEnoughGas":
-          "Gas might not be enough to successfully finish this transaction.<br>Click here to increase the gas amount."
+        "overBlockGasLimit": "The gas required for this execution could exceed the block gas limit.",
+        "notEnoughGas": "Gas might not be enough to successfully finish this transaction.<br>Click here to increase the gas amount."
       },
       "importAccount": {
         "doYouHaveAWalletFile": "Har du en lommebok-fil?",
@@ -230,23 +206,19 @@
         "download": "Download new version",
         "skipUpdate": "Skip Update",
         "checking": "Checking for updates to __name__...",
-        "noUpdateFound":
-          "No update found. You are running the latest version of __name__."
+        "noUpdateFound": "No update found. You are running the latest version of __name__."
       },
       "connectAccount": {
         "chooseAccountTitle": "Choose account",
         "createAccount": "Create new account",
         "pinToSidebar": "Pin app to the sidebar",
-        "connectAccountDescription":
-          "You are sharing your identity with __dappName__. This allows the app to see any public information of your accounts, including balances connected to it."
+        "connectAccountDescription": "You are sharing your identity with __dappName__. This allows the app to see any public information of your accounts, including balances connected to it."
       }
     }
   },
   "elements": {
-    "checksumAlert":
-      "Denne adressen ser gyldig ut, men den har ikke sikkerhetsfunksjonen som vil beskytte deg mot skrivefeil, så dobbeltsjekk at den er rett. Hvis det er mulig, sjekk om sikkerhetsikonet stemmer overens.",
-    "identiconHelper":
-      "Dette er et sikkerhetsikon. Hvis det er noen endring på adressen vil resultatet gi et ikon som ser helt annerledes ut",
+    "checksumAlert": "Denne adressen ser gyldig ut, men den har ikke sikkerhetsfunksjonen som vil beskytte deg mot skrivefeil, så dobbeltsjekk at den er rett. Hvis det er mulig, sjekk om sikkerhetsikonet stemmer overens.",
+    "identiconHelper": "Dette er et sikkerhetsikon. Hvis det er noen endring på adressen vil resultatet gi et ikon som ser helt annerledes ut",
     "type": {
       "address": "Address",
       "bool": "Boolean",

@@ -137,7 +137,7 @@ Template['elements_executeContract_constant'].onCreated(function() {
   // call the contract functions when data changes and on new blocks
   this.autorun(function() {
     // make reactive to the latest block
-    EthBlocks.latest;
+    LXBlocks.latest;
 
     // get args for the constant function
     var args = TemplateVar.get('inputs');
@@ -247,12 +247,12 @@ Template['elements_executeContract_function'].onCreated(function() {
 
   // change the amount when the currency unit is changed
   template.autorun(function(c) {
-    var unit = EthTools.getUnit();
+    var unit = LXTools.getUnit();
 
     if (!c.firstRun) {
       TemplateVar.set(
         'amount',
-        EthTools.toWei(
+        LXTools.toWei(
           template.find('input[name="amount"]').value.replace(',', '.'),
           unit
         )
@@ -289,7 +289,7 @@ Template['elements_executeContract_function'].events({
     e,
     template
   ) {
-    var wei = EthTools.toWei(e.currentTarget.value.replace(',', '.'));
+    var wei = LXTools.toWei(e.currentTarget.value.replace(',', '.'));
     TemplateVar.set('amount', wei || '0');
   },
   /**
@@ -332,8 +332,8 @@ Template['elements_executeContract_function'].events({
       ),
       data = TemplateVar.get('executeData');
 
-    if (EthBlocks && EthBlocks.latest && EthBlocks.latest.gasPrice)
-      gasPrice = EthBlocks.latest.gasPrice;
+    if (LXBlocks && LXBlocks.latest && LXBlocks.latest.gasPrice)
+      gasPrice = LXBlocks.latest.gasPrice;
 
     if (selectedAccount) {
       console.log('Providing gas: ', estimatedGas, ' + 100000');
@@ -351,7 +351,7 @@ Template['elements_executeContract_function'].events({
         // CONTRACT TX
         if (contracts['ct_' + selectedAccount._id]) {
           // Load the accounts owned by user and sort by balance
-          var accounts = EthAccounts.find(
+          var accounts = LXAccounts.find(
             { name: { $exists: true } },
             { sort: { name: 1 } }
           ).fetch();
@@ -390,7 +390,7 @@ Template['elements_executeContract_function'].events({
 
                 FlowRouter.go('dashboard');
               } else {
-                // EthElements.Modal.hide();
+                // LXElements.Modal.hide();
 
                 GlobalNotification.error({
                   content: error.message,
@@ -434,7 +434,7 @@ Template['elements_executeContract_function'].events({
                   duration: 2
                 });
               } else {
-                // EthElements.Modal.hide();
+                // LXElements.Modal.hide();
 
                 GlobalNotification.error({
                   content: error.message,

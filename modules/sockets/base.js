@@ -8,7 +8,7 @@ const CONNECT_INTERVAL_MS = 1000;
 const CONNECT_TIMEOUT_MS = 3000;
 
 /**
- * Socket connecting to Ethereum Node.
+ * Socket connecting to LindaX Node.
  */
 class Socket extends EventEmitter {
   constructor(socketMgr, id) {

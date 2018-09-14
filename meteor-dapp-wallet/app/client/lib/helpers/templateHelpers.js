@@ -54,7 +54,7 @@ Check if currency unit is an ether unit
 @method (isEtherUnit)
 **/
 Template.registerHelper('isEtherUnit', function() {
-  var unit = EthTools.getUnit();
+  var unit = LXTools.getUnit();
   return !(
     unit === 'usd' ||
     unit === 'eur' ||
@@ -114,7 +114,7 @@ Return the current unit
 @method (unit)
 **/
 Template.registerHelper('unit', function() {
-  return EthTools.getUnit();
+  return LXTools.getUnit();
 });
 
 /**
@@ -123,7 +123,7 @@ Return the latest block
 @method (latestBlock)
 **/
 Template.registerHelper('latestBlock', function() {
-  return EthBlocks.latest;
+  return LXBlocks.latest;
 });
 
 /**
@@ -132,7 +132,7 @@ Returns a list of accounts and wallets sorted by balance
 @method (latestBlock)
 **/
 Template.registerHelper('selectAccounts', function(hideWallets) {
-  var accounts = EthAccounts.find(
+  var accounts = LXAccounts.find(
     { balance: { $ne: '0' } },
     { sort: { balance: 1 } }
   ).fetch();
@@ -142,7 +142,7 @@ Template.registerHelper('selectAccounts', function(hideWallets) {
       Wallets.find(
         {
           owners: {
-            $in: _.map(EthAccounts.find().fetch(), function(account) {
+            $in: _.map(LXAccounts.find().fetch(), function(account) {
               return account.address.toLowerCase();
             })
           },

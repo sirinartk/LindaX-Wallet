@@ -24,27 +24,27 @@ Template['elements_balance'].helpers({
   convertedBalance: function() {
     var balance = TemplateVar.get('balance');
 
-    if (EthTools.getUnit() === 'noether') return 'infinite';
+    if (LXTools.getUnit() === 'noether') return 'infinite';
 
     if (balance) {
       if (
-        EthTools.getUnit() === 'usd' ||
-        EthTools.getUnit() === 'eur' ||
-        EthTools.getUnit() === 'gbp' ||
-        EthTools.getUnit() === 'brl'
+        LXTools.getUnit() === 'usd' ||
+        LXTools.getUnit() === 'eur' ||
+        LXTools.getUnit() === 'gbp' ||
+        LXTools.getUnit() === 'brl'
       )
-        return EthTools.formatBalance(balance, '0,0.00');
-      else if (EthTools.getUnit() === 'LindaX')
-        return EthTools.formatBalance(
+        return LXTools.formatBalance(balance, '0,0.00');
+      else if (LXTools.getUnit() === 'LindaX')
+        return LXTools.formatBalance(
           balance,
           this.showAllDecimals ? '0,0.00[0000000000000000]' : '0,0.00'
         );
-      else if (EthTools.getUnit() === 'finney')
-        return EthTools.formatBalance(
+      else if (LXTools.getUnit() === 'finney')
+        return LXTools.formatBalance(
           balance,
           this.showAllDecimals ? '0,0.00[00000000000000]' : '0,0.00'
         );
-      else return EthTools.formatBalance(balance, '0,0.00[000000]');
+      else return LXTools.formatBalance(balance, '0,0.00[000000]');
     }
   },
   /**

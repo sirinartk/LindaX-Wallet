@@ -112,7 +112,7 @@ function renderReact() {
   // handle main window:
   if (!location.hash) {
     handleLanguage();
-    EthAccounts.init();
+    LXAccounts.init();
     initMist();
     renderReactComponentMain();
   } else {
@@ -140,7 +140,7 @@ Meteor.startup(function() {
           `numeral.js couldn't set number formating: ${err.message}`
         );
       }
-      EthTools.setLocale(lang);
+      LXTools.setLocale(lang);
     }
   });
 });

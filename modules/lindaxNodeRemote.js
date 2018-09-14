@@ -6,7 +6,7 @@ import Settings from './settings';
 import { resetRemoteNode, remoteBlockReceived } from './core/nodes/actions';
 import { InfuraEndpoints } from './constants';
 
-const ethereumNodeRemoteLog = logger.create('EthereumNodeRemote');
+const lindaxNodeRemoteLog = logger.create('LindaXNodeRemote');
 
 // Increase defaultMaxListeners since
 // every subscription created in mist
@@ -15,7 +15,7 @@ require('events').EventEmitter.defaultMaxListeners = 500;
 
 let instance;
 
-class EthereumNodeRemote extends EventEmitter {
+class LindaXNodeRemote extends EventEmitter {
   constructor() {
     super();
 
@@ -30,19 +30,19 @@ class EthereumNodeRemote extends EventEmitter {
 
   async start() {
     if (this.starting) {
-      ethereumNodeRemoteLog.trace('Already starting...');
+      lindaxNodeRemoteLog.trace('Already starting...');
       return this.starting;
     }
 
     if (this.ws && this.ws.readyState === WebSocket.OPEN) {
-      ethereumNodeRemoteLog.error('Starting connection but already open');
+      lindaxNodeRemoteLog.error('Starting connection but already open');
       return;
     }
 
     return (this.starting = new Promise((resolve, reject) => {
       this.network = store.getState().nodes.network;
 
-      ethereumNodeRemoteLog.trace(
+      lindaxNodeRemoteLog.trace(
         `Connecting to remote node on ${this.network}...`
       );
 
@@ -52,7 +52,7 @@ class EthereumNodeRemote extends EventEmitter {
 
       if (!provider) {
         const errorMessage = `No provider for network: ${this.network}`;
-        ethereumNodeRemoteLog.error(errorMessage);
+        lindaxNodeRemoteLog.error(errorMessage);
         reject(errorMessage);
         return;
       }
@@ -61,7 +61,7 @@ class EthereumNodeRemote extends EventEmitter {
 
       this.ws.once('open', () => {
         this.starting = false;
-        ethereumNodeRemoteLog.trace(
+        lindaxNodeRemoteLog.trace(
           `Connected to remote node on ${this.network}`
         );
         this.watchBlockHeaders();
@@ -73,7 +73,7 @@ class EthereumNodeRemote extends EventEmitter {
           return;
         }
 
-        ethereumNodeRemoteLog.trace(
+        lindaxNodeRemoteLog.trace(
           'Message from remote WebSocket connection: ',
           data
         );
@@ -92,11 +92,11 @@ class EthereumNodeRemote extends EventEmitter {
           errorMessage += '. Reopening connection...';
         }
 
-        ethereumNodeRemoteLog.warn(errorMessage);
+        lindaxNodeRemoteLog.warn(errorMessage);
       });
 
       this.ws.on('error', error => {
-        ethereumNodeRemoteLog.warn('Error from ws: ', error);
+        lindaxNodeRemoteLog.warn('Error from ws: ', error);
       });
     }));
   }
@@ -111,7 +111,7 @@ class EthereumNodeRemote extends EventEmitter {
       !this.ws.readyState ||
       this.ws.readyState === WebSocket.CLOSED
     ) {
-      ethereumNodeRemoteLog.warn(
+      lindaxNodeRemoteLog.warn(
         `Remote websocket connection not open, attempting to reconnect and retry ${method}...`
       );
       return new Promise(resolve => {
@@ -123,20 +123,20 @@ class EthereumNodeRemote extends EventEmitter {
 
     if (this.ws.readyState !== WebSocket.OPEN) {
       if (this.ws.readyState === WebSocket.CONNECTING) {
-        ethereumNodeRemoteLog.error(
+        lindaxNodeRemoteLog.error(
           `Can't send method ${method} because remote WebSocket is connecting`
         );
       } else if (this.ws.readyState === WebSocket.CLOSING) {
-        ethereumNodeRemoteLog.error(
+        lindaxNodeRemoteLog.error(
           `Can't send method ${method} because remote WebSocket is closing`
         );
       } else if (this.ws.readyState === WebSocket.CLOSED) {
-        ethereumNodeRemoteLog.error(
+        lindaxNodeRemoteLog.error(
           `Can't send method ${method} because remote WebSocket is closed`
         );
       }
       if (!retry) {
-        ethereumNodeRemoteLog.error(`Retrying ${method} in 1.5s...`);
+        lindaxNodeRemoteLog.error(`Retrying ${method} in 1.5s...`);
         return new Promise(resolve => {
           setTimeout(() => {
             resolve(this.send(method, params));
@@ -158,13 +158,13 @@ class EthereumNodeRemote extends EventEmitter {
 
     this.ws.send(JSON.stringify(request), error => {
       if (error) {
-        ethereumNodeRemoteLog.error(
+        lindaxNodeRemoteLog.error(
           'Error from sending request: ',
           error,
           request
         );
       } else {
-        ethereumNodeRemoteLog.trace('Sent request to remote node: ', request);
+        lindaxNodeRemoteLog.trace('Sent request to remote node: ', request);
       }
     });
 
@@ -181,7 +181,7 @@ class EthereumNodeRemote extends EventEmitter {
     const provider = null;
 
     if (!provider) {
-      ethereumNodeRemoteLog.error('No provider');
+      lindaxNodeRemoteLog.error('No provider');
       return;
     }
 
@@ -199,7 +199,7 @@ class EthereumNodeRemote extends EventEmitter {
       case 'ropsten':
         return InfuraEndpoints.ethereum.websockets.Ropsten;
       default:
-        ethereumNodeRemoteLog.error(`Unsupported network type: ${network}`);
+        lindaxNodeRemoteLog.error(`Unsupported network type: ${network}`);
         return null;
     }
   }
@@ -214,7 +214,7 @@ class EthereumNodeRemote extends EventEmitter {
     ) {
       this.ws.close(
         1000,
-        'Stopping WebSocket connection in ethereumNodeRemote.stop()'
+        'Stopping WebSocket connection in lindaxNodeRemote.stop()'
       );
     }
 
@@ -228,7 +228,7 @@ class EthereumNodeRemote extends EventEmitter {
     const requestId = await this.send('eth_subscribe', ['newHeads']);
 
     if (!requestId) {
-      ethereumNodeRemoteLog.error('No return request id for subscription');
+      lindaxNodeRemoteLog.error('No return request id for subscription');
       return;
     }
 
@@ -240,7 +240,7 @@ class EthereumNodeRemote extends EventEmitter {
       try {
         data = JSON.parse(data);
       } catch (error) {
-        ethereumNodeRemoteLog.trace('Error parsing data: ', data);
+        lindaxNodeRemoteLog.trace('Error parsing data: ', data);
       }
 
       if (data.id === requestId && data.result) {
@@ -272,4 +272,4 @@ class EthereumNodeRemote extends EventEmitter {
   }
 }
 
-module.exports = new EthereumNodeRemote();
+module.exports = new LindaXNodeRemote();

@@ -80,30 +80,18 @@
       }
     },
     "errors": {
-      "nodeConnect":
-        "Verbinden met node niet mogelijk? Zie de logboek bestanden voor meer informatie:",
-      "nodeStartup":
-        "Het lijkt erop dat de node niet kan worden opgestart, draait er al een? Is deze de database aan het upgraden?",
+      "nodeConnect": "Verbinden met node niet mogelijk? Zie de logboek bestanden voor meer informatie:",
+      "nodeStartup": "Het lijkt erop dat de node niet kan worden opgestart, draait er al een? Is deze de database aan het upgraden?",
       "timeSync": {
         "title": "Je computer's klok is niet gesynchroniseerd.",
-        "description":
-          "Om succesvol met het LindaX netwerk te verbinden moet je computer's klok gesynchroniseerd zijn met een tijdssynchronisatie server.",
-        "win32":
-          "Ga naar je Internet Tijd Instellingen in je configuratiescherm en selecteer de optie. Zie deze uitleg voor details: http://www.guidingtech.com/3119/windows-clock-sync/",
-        "linux":
-          "Installeer voor een tijdssynchronisatieserver \"ntp\" via \"apt-get install ntp\".",
-        "darwin":
-          "Zet tijdssynchronisatie aan door in je instellingen de optie \"Tijd en datum automatisch instellen\" te activeren."
+        "description": "Om succesvol met het LindaX netwerk te verbinden moet je computer's klok gesynchroniseerd zijn met een tijdssynchronisatie server.",
+        "win32": "Ga naar je Internet Tijd Instellingen in je configuratiescherm en selecteer de optie. Zie deze uitleg voor details: http://www.guidingtech.com/3119/windows-clock-sync/",
+        "linux": "Installeer voor een tijdssynchronisatieserver \"ntp\" via \"apt-get install ntp\".",
+        "darwin": "Zet tijdssynchronisatie aan door in je instellingen de optie \"Tijd en datum automatisch instellen\" te activeren."
       },
       "nodeChecksumMismatch": {
         "title": "Checksum mismatch in gedownloade node!",
-        "description":
-          "__algorithm__: __hash__\n\nInstalleer de __type__ node versie __version__ handmatig."
-      },
-      "legacyChain": {
-        "title": "Legacy chain gedetecteerd",
-        "description":
-          "Je node draait momenteel op de niet ondersteunde Ethereum Classic chain. Om deze chain te gebruiken dien je de tools te gebruiken van het Ethereum Classic project op\nhttps://ethereumclassic.github.io.\n\nOm terug te gaan naar de standaard LindaX chain kun je deze tutorial volgen:\nhttps://github.com/thelindaprojectinc/lindax-wallet/releases/0.8.2"
+        "description": "__algorithm__: __hash__\n\nInstalleer de __type__ node versie __version__ handmatig."
       }
     },
     "rightClick": {
@@ -125,8 +113,7 @@
       "peers": "peers",
       "privateNetwork": "Private-net",
       "test": "test",
-      "testnetExplain":
-        "Je bent actief op het __name__, VERSTUUR GEEN echte LindaX naar deze adressen",
+      "testnetExplain": "Je bent actief op het __name__, VERSTUUR GEEN echte LindaX naar deze adressen",
       "timeSinceBlock": "Verstreken tijd sinds laatste blok"
     },
     "sidebar": {
@@ -142,10 +129,8 @@
     },
     "startScreen": {
       "runningNodeFound": "Lopende LindaX node gevonden!",
-      "nodeConnectionTimeout":
-        "LindaX node opstarten niet mogelijk!<br><small>Als je <a href='https://www.LindaX/cli#geth' class='button' target='_blank'>Geth geinstalleerd hebt</a>, gebruik dan dit commando om het op te starten: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> Of meld een fout </a></small>",
-      "nodeBinaryNotFound":
-        "Geen LindaX node gevonden!<br><small> <a href='https://www.LindaX/cli#geth' class='button' target='_blank'> Start er a.u.b. handmatig een. </a> </small>",
+      "nodeConnectionTimeout": "LindaX node opstarten niet mogelijk!<br><small>Als je <a href='https://www.LindaX/cli#geth' class='button' target='_blank'>Geth geinstalleerd hebt</a>, gebruik dan dit commando om het op te starten: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> Of meld een fout </a></small>",
+      "nodeBinaryNotFound": "Geen LindaX node gevonden!<br><small> <a href='https://www.LindaX/cli#geth' class='button' target='_blank'> Start er a.u.b. handmatig een. </a> </small>",
       "nodeStarting": "LindaX node opstarten...",
       "nodeStarted": "LindaX node gestart",
       "nodeConnected": "LindaX node verbonden",
@@ -153,12 +138,9 @@
       "nodeStopped": "LindaX node gestopt",
       "nodeError": "LindaX node verbindingsfout :'(",
       "unableToBindPort": "LindaX node kan niet opstarten. Draait er al een?",
-      "nodeSyncing":
-        "LindaX node moet synchroniseren, even geduld alstublieft...",
-      "nodeSyncInfo":
-        "Blok __currentBlock__ van __highestBlock__ aan het downloaden.",
-      "nodeSyncInfoStates":
-        "Blok __displayBlock__ van __highestBlock__ aan het downloaden, <br> Chain structuur __displayState__ van __displayKnownStates__ aan het downloaden",
+      "nodeSyncing": "LindaX node moet synchroniseren, even geduld alstublieft...",
+      "nodeSyncInfo": "Blok __currentBlock__ van __highestBlock__ aan het downloaden.",
+      "nodeSyncInfoStates": "Blok __displayBlock__ van __highestBlock__ aan het downloaden, <br> Chain structuur __displayState__ van __displayKnownStates__ aan het downloaden",
       "nodeSyncConnecting": "Zoeken naar peers...",
       "nodeSyncFoundPeers": "Verbinden met __peers__ peers...",
       "launchApp": "Applicatie Opstarten",
@@ -181,8 +163,7 @@
         "download": "Download nieuwe versie",
         "skipUpdate": "Sla update over",
         "checking": "Controleren op updates voor __name__...",
-        "noUpdateFound":
-          "Geen updates gevonden. Je hebt de laatste versie __name__."
+        "noUpdateFound": "Geen updates gevonden. Je hebt de laatste versie __name__."
       },
       "requestAccount": {
         "title": "Account aanmaken",
@@ -200,18 +181,14 @@
           "contractExecution": "Voer contract uit",
           "createContract": "Contract aanmaken"
         },
-        "contractExecutionInfo":
-          "Je staat op het punt een functie uit te voeren op een contract. Dit kan overdrachten van waarde tot gevolg hebben.",
-        "contractCreationInfo":
-          "Je staat op het punt een contract aan te maken met de gegeven gevevens.",
+        "contractExecutionInfo": "Je staat op het punt een functie uit te voeren op een contract. Dit kan overdrachten van waarde tot gevolg hebben.",
+        "contractCreationInfo": "Je staat op het punt een contract aan te maken met de gegeven gevevens.",
         "enterPassword": "Voer wachtwoord in om de transactie te bevestigen",
         "unlocking": "Bevestigen...",
         "createContract": "Contract aanmaken",
         "estimatedFee": "Ingeschatte transactie kosten",
-        "estimatedGasError":
-          "De kans is groot dat de transactie zal mislukken. Als je de transactie toch wilt uitvoeren zal misschien alle gas worden verbruikt.",
-        "transactionThrow":
-          "Het contract staat niet toe dat deze transactie wordt uitgevoerd",
+        "estimatedGasError": "De kans is groot dat de transactie zal mislukken. Als je de transactie toch wilt uitvoeren zal misschien alle gas worden verbruikt.",
+        "transactionThrow": "Het contract staat niet toe dat deze transactie wordt uitgevoerd",
         "noEstimate": "We konden de hoeveelheid gas niet inschatten.",
         "gasPrice": "Gas prijs",
         "perMillionGas": "LindaX per millioen gas",
@@ -222,23 +199,18 @@
           "sendTransaction": "Verstuur transactie"
         },
         "errors": {
-          "connectionTimeout":
-            "Kon niet verbinden met de node, is het in de achtergrond uitgevallen?",
+          "connectionTimeout": "Kon niet verbinden met de node, is het in de achtergrond uitgevallen?",
           "wrongPassword": "Onjuist wachtwoord",
-          "multipleKeysMatchAddress":
-            "Meerdere keys matchen hebben hetzelfde adres, verwijder duplicaten uit de keystore (menu -> Bestand -> Backup -> Accounts)",
-          "insufficientFundsForGas":
-            "Onvoldoende saldo in hoofd account (LindaXbase) om gas te betalen",
+          "multipleKeysMatchAddress": "Meerdere keys matchen hebben hetzelfde adres, verwijder duplicaten uit de keystore (menu -> Bestand -> Backup -> Accounts)",
+          "insufficientFundsForGas": "Onvoldoende saldo in hoofd account (LindaXbase) om gas te betalen",
           "sameAccount": "Kan niet naar zichzelf versturen"
         },
         "showRawBytecode": "Toon ruwe data",
         "showDecodedParameters": "Toon gedecodeerde parameters",
         "lookupData": "Probeer de data te decoderen",
         "lookupDataExplainer": "Zoek hiernaar op het internet",
-        "overBlockGasLimit":
-          "The gas required for this execution could exceed the block gas limit.",
-        "notEnoughGas":
-          "Gas might not be enough to successfully finish this transaction.<br>Click here to increase the gas amount."
+        "overBlockGasLimit": "The gas required for this execution could exceed the block gas limit.",
+        "notEnoughGas": "Gas might not be enough to successfully finish this transaction.<br>Click here to increase the gas amount."
       },
       "importAccount": {
         "doYouHaveAWalletFile": "Heb je een wallet bestand?",
@@ -258,16 +230,13 @@
         "chooseAccountTitle": "Kies account",
         "createAccount": "Creëer nieuw account",
         "pinToSidebar": "Pin app aan de sidebar",
-        "connectAccountDescription":
-          "Je deelt je indentiteit met __dappName__. Hierdoor heeft de app toegen tot alle openbare informatie van uw accounts inclusief de saldi."
+        "connectAccountDescription": "Je deelt je indentiteit met __dappName__. Hierdoor heeft de app toegen tot alle openbare informatie van uw accounts inclusief de saldi."
       }
     }
   },
   "elements": {
-    "checksumAlert":
-      "Dit adres ziet er valide uit, maar het mist een aantal beveiligingsfuncties die je zullen beschermen teken typfouten, dus ga graag even na of dit de goede is. Als aangeveven, ga na of het beveiligingsicoon klopt.",
-    "identiconHelper":
-      "Dit is een beveilliginsicoon, als er enige veranderingen op dit adres plaats vinden dan zou er een volledig ander icoon moeten staan",
+    "checksumAlert": "Dit adres ziet er valide uit, maar het mist een aantal beveiligingsfuncties die je zullen beschermen teken typfouten, dus ga graag even na of dit de goede is. Als aangeveven, ga na of het beveiligingsicoon klopt.",
+    "identiconHelper": "Dit is een beveilliginsicoon, als er enige veranderingen op dit adres plaats vinden dan zou er een volledig ander icoon moeten staan",
     "type": {
       "address": "Adres",
       "bool": "Boolean",

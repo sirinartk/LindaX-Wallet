@@ -31,7 +31,7 @@ Template['views_account_create'].onCreated(function() {
 
   // check if we are still on the correct chain
   Helpers.checkChain(function(error) {
-    if (error && EthAccounts.find().count() > 0) {
+    if (error && LXAccounts.find().count() > 0) {
       checkForOriginalWallet();
     }
   });
@@ -49,7 +49,7 @@ Template['views_account_create'].helpers({
     @method (ownerAccounts)
     */
   ownerAccounts: function() {
-    var accounts = EthAccounts.find({}, { sort: { balance: -1 } }).fetch();
+    var accounts = LXAccounts.find({}, { sort: { balance: -1 } }).fetch();
     accounts.sort(Helpers.sortByBalance);
     return accounts;
   },
@@ -80,7 +80,7 @@ Template['views_account_create'].helpers({
     */
   defaultOwner: function() {
     // Load the accounts owned by user and sort by balance
-    var accounts = EthAccounts.find({}, { sort: { balance: -1 } }).fetch();
+    var accounts = LXAccounts.find({}, { sort: { balance: -1 } }).fetch();
     accounts.sort(Helpers.sortByBalance);
 
     if (FlowRouter.getQueryParam('owners')) {
@@ -306,7 +306,7 @@ Template['views_account_create'].events({
           template.find('input[name="accountName"]').value ||
           TAPi18n.__('wallet.accounts.defaultName'),
         balance: '0',
-        creationBlock: EthBlocks.latest.number,
+        creationBlock: LXBlocks.latest.number,
         code: code
       });
 
@@ -344,7 +344,7 @@ Template['views_account_create'].events({
           'LindaX'
         ),
         requiredSignatures: formValues.multisigSignatures,
-        creationBlock: EthBlocks.latest.number,
+        creationBlock: LXBlocks.latest.number,
         code: code
       });
 

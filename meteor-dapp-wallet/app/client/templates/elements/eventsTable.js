@@ -17,7 +17,7 @@ Block required until a transaction is confirmed.
 @property blocksForConfirmation
 @type Number
 */
-var blocksForConfirmation = ethereumConfig.requiredConfirmations;
+var blocksForConfirmation = lindaxConfig.requiredConfirmations;
 
 /**
 The default limit, of none is given.
@@ -150,18 +150,18 @@ Template['elements_events_row'].helpers({
     @method (unConfirmed)
     */
   unConfirmed: function() {
-    if (!this.blockNumber || !EthBlocks.latest.number)
+    if (!this.blockNumber || !LXBlocks.latest.number)
       return {
         confirmations: 0,
         percent: 0
       };
 
-    var currentBlockNumber = EthBlocks.latest.number + 1,
+    var currentBlockNumber = LXBlocks.latest.number + 1,
       confirmations = currentBlockNumber - this.blockNumber;
     return blocksForConfirmation >= confirmations && confirmations >= 0
       ? {
           confirmations: confirmations,
-          percent: confirmations / blocksForConfirmation * 100
+          percent: (confirmations / blocksForConfirmation) * 100
         }
       : false;
   },
@@ -199,7 +199,7 @@ Template['elements_events_row'].events({
   'click tr:not(.pending)': function(e) {
     var $element = $(e.target);
     if (!$element.is('button') && !$element.is('a')) {
-      EthElements.Modal.show(
+      LXElements.Modal.show(
         {
           template: 'views_modals_eventInfo',
           data: {

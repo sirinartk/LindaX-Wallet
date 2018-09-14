@@ -43,7 +43,7 @@
         "devToolsWebview": "__webview__",
         "runTests": "Realizar testes",
         "logFiles": "Mostrar arquivos de logs",
-        "ethereumNode": "LindaX Node",
+        "lindaxNode": "LindaX Node",
         "network": "Rede",
         "mainNetwork": "Rede principal",
         "startMining": "⛏ Iniciar mineração",
@@ -63,28 +63,17 @@
     },
     "errors": {
       "nodeConnect": "Não conseguiu se conectar? Veja os logs para saber mais:",
-      "nodeStartup":
-        "O node não pode ser iniciado. Você já tem um instalado? Ele está fazendo upgrade do banco de dados?",
+      "nodeStartup": "O node não pode ser iniciado. Você já tem um instalado? Ele está fazendo upgrade do banco de dados?",
       "timeSync": {
         "title": "Seu computador está fora de sincronia!",
-        "description":
-          "Para sincronizar com a rede LindaX você precisa que seu computador esteja sincronizado com um servidor de tempo preciso.",
-        "win32":
-          "Vá em ‘Ajustes de tempo’ depois a aba ‘internet’ nas suas preferências de sistema e marque a opção ‘sincronizar com um servidor de tempo’. Veja esse guia para mais detalhes: http://www.guidingtech.com/3119/windows-clock-sync/",
-        "linux":
-          "Para instalar um servidor de tempo, instale \"ntp\" via \"apt-get install ntp\".",
-        "darwin":
-          "Abra suas preferências, escolha \"preferências de tempo\" e marque \"Ajustar o tempo automaticamente\"."
+        "description": "Para sincronizar com a rede LindaX você precisa que seu computador esteja sincronizado com um servidor de tempo preciso.",
+        "win32": "Vá em ‘Ajustes de tempo’ depois a aba ‘internet’ nas suas preferências de sistema e marque a opção ‘sincronizar com um servidor de tempo’. Veja esse guia para mais detalhes: http://www.guidingtech.com/3119/windows-clock-sync/",
+        "linux": "Para instalar um servidor de tempo, instale \"ntp\" via \"apt-get install ntp\".",
+        "darwin": "Abra suas preferências, escolha \"preferências de tempo\" e marque \"Ajustar o tempo automaticamente\"."
       },
       "nodeChecksumMismatch": {
         "title": "Checksum mismatch in downloaded node!",
-        "description":
-          "__algorithm__: __hash__\n\nPlease install the __type__ node version __version__ manually."
-      },
-      "legacyChain": {
-        "title": "Legacy chain detected",
-        "description":
-          "Your node is currently on the unsupported Ethereum Classic chain. To use this chain use tools provided by the ethereum classic project at\nhttps://ethereumclassic.github.io.\n\nTo revert to the main LindaX chain follow the tutorial here:\nhttps://github.com/thelindaprojectinc/lindax-wallet/releases/0.8.2"
+        "description": "__algorithm__: __hash__\n\nPlease install the __type__ node version __version__ manually."
       }
     },
     "rightClick": {
@@ -106,8 +95,7 @@
       "peers": "nós",
       "privateNetwork": "Private-net",
       "test": "test",
-      "testnetExplain":
-        "Você está na rede de teste, NÃO ENVIE LindaX de verdade para essas contas",
+      "testnetExplain": "Você está na rede de teste, NÃO ENVIE LindaX de verdade para essas contas",
       "timeSinceBlock": "Tempo corrido desde último bloco"
     },
     "sidebar": {
@@ -123,13 +111,10 @@
     },
     "startScreen": {
       "runningNodeFound": "Node LindaX encontrado!",
-      "nodeConnectionTimeout":
-        "Não pode inicializar um Node!<br><small> Instale <a href='https://www.LindaX/cli#geth' class='button' target='_blank'>um manualmente</a>, e use esse comando para executa-lo: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> Caso não consiga, entre em contato </a></small>",
-      "nodeBinaryNotFound":
-        "Nó não encontrado!<br><small><a href='https://www.LindaX/cli#geth' class='button' target='_blank'>Instale um manualmente</a></small>",
+      "nodeConnectionTimeout": "Não pode inicializar um Node!<br><small> Instale <a href='https://www.LindaX/cli#geth' class='button' target='_blank'>um manualmente</a>, e use esse comando para executa-lo: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> Caso não consiga, entre em contato </a></small>",
+      "nodeBinaryNotFound": "Nó não encontrado!<br><small><a href='https://www.LindaX/cli#geth' class='button' target='_blank'>Instale um manualmente</a></small>",
       "nodeSyncing": "Sincronizando, favor aguarde...",
-      "nodeSyncInfoStates":
-        "Carregando bloco __displayBlock__ de __highestBlock__, <br> Lendo estrutura __displayState__ de __displayKnownStates__",
+      "nodeSyncInfoStates": "Carregando bloco __displayBlock__ de __highestBlock__, <br> Lendo estrutura __displayState__ de __displayKnownStates__",
       "nodeSyncInfo": "Carregando bloco  __displayBlock__ de __highestBlock__.",
       "nodeSyncConnecting": "Procurando outros nós...",
       "launchApp": "Iniciar Applicativo",
@@ -139,8 +124,7 @@
       "nodeStopping": "LindaX node stopping...",
       "nodeStopped": "LindaX node stopped",
       "nodeError": "LindaX node connection error :'(",
-      "unableToBindPort":
-        "LindaX node cannot run. Is another instance already running?",
+      "unableToBindPort": "LindaX node cannot run. Is another instance already running?",
       "nodeSyncFoundPeers": "Connecting to __peers__ peers...",
       "clientBinaries": {
         "scanning": "Checking for node update...",
@@ -168,15 +152,13 @@
           "contractExecution": "Executar ordem",
           "createContract": "Criar contrato"
         },
-        "contractExecutionInfo":
-          "Você irá executar uma ordem em um contrato. Isso pode envolver transferência de valores.",
+        "contractExecutionInfo": "Você irá executar uma ordem em um contrato. Isso pode envolver transferência de valores.",
         "contractCreationInfo": "Você irá criar um contrato",
         "enterPassword": "Digite a senha para confirmar",
         "unlocking": "Confirmando...",
         "createContract": "Criar contrato",
         "estimatedFee": "Taxa estimada",
-        "estimatedGasError":
-          "Transação inválida, se executada irá gastar todo o combustível dado.",
+        "estimatedGasError": "Transação inválida, se executada irá gastar todo o combustível dado.",
         "gasPrice": "Preço do combustível",
         "perMillionGas": "LindaX por milhão de combustível",
         "gasLimit": "Providenciar taxa máxima",
@@ -185,27 +167,21 @@
           "sendTransaction": "Enviar transação"
         },
         "errors": {
-          "connectionTimeout":
-            "Não pode se conectar com Node, é possível que tenha sido interrompido pelo sistema",
+          "connectionTimeout": "Não pode se conectar com Node, é possível que tenha sido interrompido pelo sistema",
           "wrongPassword": "Senha errada",
-          "multipleKeysMatchAddress":
-            "Multiple keys match address. Please remove duplicates from keystore (Arquivos -> Cópia de segurança -> Contas)",
-          "insufficientFundsForGas":
-            "Insufficient funds in main account (LindaXbase) to pay for gas",
+          "multipleKeysMatchAddress": "Multiple keys match address. Please remove duplicates from keystore (Arquivos -> Cópia de segurança -> Contas)",
+          "insufficientFundsForGas": "Insufficient funds in main account (LindaXbase) to pay for gas",
           "sameAccount": "Can't send to itself"
         },
-        "transactionThrow":
-          "The contract won't allow this transaction to be executed",
+        "transactionThrow": "The contract won't allow this transaction to be executed",
         "noEstimate": "We couldn't estimate the gas.",
         "parameters": "Parameters",
         "showRawBytecode": "show raw data",
         "showDecodedParameters": "show decoded parameters",
         "lookupData": "Try to decode data",
         "lookupDataExplainer": "Look this up on the internet",
-        "overBlockGasLimit":
-          "The gas required for this execution could exceed the block gas limit.",
-        "notEnoughGas":
-          "Gas might not be enough to successfully finish this transaction.<br>Click here to increase the gas amount."
+        "overBlockGasLimit": "The gas required for this execution could exceed the block gas limit.",
+        "notEnoughGas": "Gas might not be enough to successfully finish this transaction.<br>Click here to increase the gas amount."
       },
       "importAccount": {
         "doYouHaveAWalletFile": "Você tem um arquivo de conta?",
@@ -230,23 +206,19 @@
         "download": "Download new version",
         "skipUpdate": "Skip Update",
         "checking": "Checking for updates to __name__...",
-        "noUpdateFound":
-          "No update found. You are running the latest version of __name__."
+        "noUpdateFound": "No update found. You are running the latest version of __name__."
       },
       "connectAccount": {
         "chooseAccountTitle": "Choose account",
         "createAccount": "Create new account",
         "pinToSidebar": "Pin app to the sidebar",
-        "connectAccountDescription":
-          "You are sharing your identity with __dappName__. This allows the app to see any public information of your accounts, including balances connected to it."
+        "connectAccountDescription": "You are sharing your identity with __dappName__. This allows the app to see any public information of your accounts, including balances connected to it."
       }
     }
   },
   "elements": {
-    "checksumAlert":
-      "Esse endereço parece válido, mas não tem algumas características de segurança contra errors de digitação acidental, então assegure-se que é o recipiente correto. Se possível, confira o ícone de segurança.",
-    "identiconHelper":
-      "Esse é um ícone de segurança. Se houver qualquer mudança no endereço, ele deve ter uma aparência completamente diferente",
+    "checksumAlert": "Esse endereço parece válido, mas não tem algumas características de segurança contra errors de digitação acidental, então assegure-se que é o recipiente correto. Se possível, confira o ícone de segurança.",
+    "identiconHelper": "Esse é um ícone de segurança. Se houver qualquer mudança no endereço, ele deve ter uma aparência completamente diferente",
     "type": {
       "address": "Address",
       "bool": "Boolean",

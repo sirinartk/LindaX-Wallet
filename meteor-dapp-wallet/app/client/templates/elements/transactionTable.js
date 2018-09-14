@@ -17,7 +17,7 @@ Block required until a transaction is confirmed.
 @property blocksForConfirmation
 @type Number
 */
-var blocksForConfirmation = ethereumConfig.requiredConfirmations;
+var blocksForConfirmation = lindaxConfig.requiredConfirmations;
 
 /**
 The default limit, of none is given.
@@ -69,9 +69,7 @@ Template['elements_transactions_table'].helpers({
 
         // search value
         if (
-          pattern.test(
-            EthTools.formatBalance(item.value, '0,0.00[000000] unit')
-          )
+          pattern.test(LXTools.formatBalance(item.value, '0,0.00[000000] unit'))
         )
           return item;
 
@@ -137,12 +135,11 @@ Template['elements_transactions_row'].helpers({
     */
   incomingTx: function(account) {
     var account =
-      EthAccounts.findOne({ _id: account }) ||
-      Wallets.findOne({ _id: account });
+      LXAccounts.findOne({ _id: account }) || Wallets.findOne({ _id: account });
     return !!(
       (account && this.from !== account.address) ||
       (!account &&
-        (EthAccounts.findOne({ address: this.to }) ||
+        (LXAccounts.findOne({ address: this.to }) ||
           Wallets.findOne({ address: this.to })))
     );
   },
@@ -215,18 +212,18 @@ Template['elements_transactions_row'].helpers({
     @method (unConfirmed)
     */
   unConfirmed: function() {
-    if (!this.blockNumber || !EthBlocks.latest.number)
+    if (!this.blockNumber || !LXBlocks.latest.number)
       return {
         confirmations: 0,
         percent: 0
       };
 
-    var currentBlockNumber = EthBlocks.latest.number + 1,
+    var currentBlockNumber = LXBlocks.latest.number + 1,
       confirmations = currentBlockNumber - this.blockNumber;
     return blocksForConfirmation >= confirmations && confirmations >= 0
       ? {
           confirmations: confirmations,
-          percent: confirmations / blocksForConfirmation * 100
+          percent: (confirmations / blocksForConfirmation) * 100
         }
       : false;
   },
@@ -313,7 +310,7 @@ Template['elements_transactions_row'].events({
   'click tr:not(.pending)': function(e) {
     var $element = $(e.target);
     if (!$element.is('button') && !$element.is('a')) {
-      EthElements.Modal.show(
+      LXElements.Modal.show(
         {
           template: 'views_modals_transactionInfo',
           data: {
@@ -365,7 +362,7 @@ Template['elements_transactions_row'].events({
         };
 
         if ((wallet = Wallets.findOne({ address: owner }))) {
-          // EthElements.Modal.question({
+          // LXElements.Modal.question({
           //     text: 'Wallets can not currently confirm multisig transactions',
           //     ok: true
           // });
@@ -393,7 +390,7 @@ Template['elements_transactions_row'].events({
       else if (ownerAccounts.length > 1) {
         // if multiple ask, which one to use
         // show modal
-        EthElements.Modal.question({
+        LXElements.Modal.question({
           template: 'views_modals_selectAccount',
           data: {
             accounts:

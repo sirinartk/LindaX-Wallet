@@ -1,5 +1,5 @@
 /**
-Gest the meta[name="ethereum-dapp-url-bar-style"] meta tag
+Gest the meta[name="lindax-dapp-url-bar-style"] meta tag
 
 @module getMetaTags
 */
@@ -11,7 +11,7 @@ module.export = (function() {
 
   function DOMContentLoaded(event) {
     const appBar = document.querySelector(
-      'meta[name="ethereum-dapp-url-bar-style"]'
+      'meta[name="lindax-dapp-url-bar-style"]'
     );
 
     if (appBar) {

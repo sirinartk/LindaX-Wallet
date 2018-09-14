@@ -63,28 +63,17 @@
     },
     "errors": {
       "nodeConnect": "ノードにつながりませんか? ログを見て下さい。",
-      "nodeStartup":
-        "ノードが始まらないようです。既に動かしていますか？今すぐデータベースを動かしますか？",
+      "nodeStartup": "ノードが始まらないようです。既に動かしていますか？今すぐデータベースを動かしますか？",
       "timeSync": {
         "title": "コンピューターのクロックが未だ同期されていません.",
-        "description":
-          "LindaX のネットワークと同期を成功させるためには、時間を同期させるサーバーとあなたのコンピューターを同期させる必要があります。",
-        "win32":
-          "システム設定を開き、「インターネットの時間設定」を開いてチェックボックスにチェックを入れて下さい。詳しくはこちらのガイドをご覧下さい: http://www.guidingtech.com/3119/windows-clock-sync/",
-        "linux":
-          "時間を同期させるサーバーを使うためには、 \"ntp\" を \"apt-get install ntp\" をコマンドラインから入力してインストールする必要があります。",
-        "darwin":
-          "時間を同期するためには、時間設定を開き \"時間と日付を自動で同期\" にチェックすることが必要です."
+        "description": "LindaX のネットワークと同期を成功させるためには、時間を同期させるサーバーとあなたのコンピューターを同期させる必要があります。",
+        "win32": "システム設定を開き、「インターネットの時間設定」を開いてチェックボックスにチェックを入れて下さい。詳しくはこちらのガイドをご覧下さい: http://www.guidingtech.com/3119/windows-clock-sync/",
+        "linux": "時間を同期させるサーバーを使うためには、 \"ntp\" を \"apt-get install ntp\" をコマンドラインから入力してインストールする必要があります。",
+        "darwin": "時間を同期するためには、時間設定を開き \"時間と日付を自動で同期\" にチェックすることが必要です."
       },
       "nodeChecksumMismatch": {
         "title": "ダウンロードしたノードのチェックサムの照合に失敗しました!",
-        "description":
-          "__algorithm__: __hash__\n\nノード __type__ バージョン __version__ を手動でインストールしてください."
-      },
-      "legacyChain": {
-        "title": "レガシーチェーンを検出しました",
-        "description":
-          "あなたのノードは現在サポートされていません. Ethereum のクラシックプロジェクトによって提供されるこのチェーン使用ツールを使用するには \nhttps://ethereumclassic.github.io.\n\nメイン LindaX チェーンに戻す方法のチュートリアルはこちら:\nhttps://github.com/thelindaprojectinc/lindax-wallet/releases/0.8.2"
+        "description": "__algorithm__: __hash__\n\nノード __type__ バージョン __version__ を手動でインストールしてください."
       }
     },
     "rightClick": {
@@ -107,8 +96,7 @@
       "peers": "ピアー",
       "privateNetwork": "プライベートネット",
       "test": "test",
-      "testnetExplain":
-        "ここはテストネットです。絶対に本物の ehter を送らないでください",
+      "testnetExplain": "ここはテストネットです。絶対に本物の ehter を送らないでください",
       "timeSinceBlock": "最後のブロックから"
     },
     "sidebar": {
@@ -124,13 +112,10 @@
     },
     "startScreen": {
       "runningNodeFound": "起動している LindaX ノードを見つけました!",
-      "nodeConnectionTimeout":
-        "LindaX ノードをスタート出来ませんでした!<br><small>もし<a href='https://www.LindaX/cli#geth' class='button' target='_blank'>Geth</a>をインストールしているならば,このコマンドを使ってみてください: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'>もしくは問題を報告して下さい。 </a></small>",
-      "nodeBinaryNotFound":
-        "LindaX ノードバイナリーが見つかりませんでした。<br><small> <a href='https://www.LindaX/cli#geth' class='button' target='_blank'> 手動でスタートして下さい。 </a> </small>",
+      "nodeConnectionTimeout": "LindaX ノードをスタート出来ませんでした!<br><small>もし<a href='https://www.LindaX/cli#geth' class='button' target='_blank'>Geth</a>をインストールしているならば,このコマンドを使ってみてください: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'>もしくは問題を報告して下さい。 </a></small>",
+      "nodeBinaryNotFound": "LindaX ノードバイナリーが見つかりませんでした。<br><small> <a href='https://www.LindaX/cli#geth' class='button' target='_blank'> 手動でスタートして下さい。 </a> </small>",
       "nodeSyncing": "LindaX ノードは同期中です...",
-      "nodeSyncInfo":
-        "ブロックをダウンロードしています。 __displayBlock__ / __highestBlock__.",
+      "nodeSyncInfo": "ブロックをダウンロードしています。 __displayBlock__ / __highestBlock__.",
       "nodeSyncConnecting": "ピアーを探しています。...",
       "nodeStarting": "ノードを起動しています...",
       "nodeStarted": "ノードは起動されました",
@@ -138,10 +123,8 @@
       "nodeStopping": "ノードを終了しています...",
       "nodeStopped": "ノードは終了しました",
       "nodeError": "ノード接続エラー :'(",
-      "unableToBindPort":
-        "LindaX ノードが実行できません。既に他のインスタンスが立ち上がっていませんか？",
-      "nodeSyncInfoStates":
-        "ブロック __displayBlock__ / __highestBlock__ ダウンロード中, <br> チェーン構造 __displayState__ / __displayKnownStates__ ダウンロード中",
+      "unableToBindPort": "LindaX ノードが実行できません。既に他のインスタンスが立ち上がっていませんか？",
+      "nodeSyncInfoStates": "ブロック __displayBlock__ / __highestBlock__ ダウンロード中, <br> チェーン構造 __displayState__ / __displayKnownStates__ ダウンロード中",
       "nodeSyncFoundPeers": "ピアー __peers__ に接続中...",
       "launchApp": "アプリケーションを起動",
       "clientBinaries": {
@@ -170,17 +153,13 @@
           "contractExecution": "コントラクトを実行する",
           "createContract": "コントラクトを作成する"
         },
-        "contractExecutionInfo":
-          "コントラクトの関数を実行しようとしています。これはバリューの移転を含むことがあります。",
-        "contractCreationInfo":
-          "与えられたデータからコントラクトを作成しようとしています。",
-        "enterPassword":
-          "トランザクションを実行するためにパスワードを入力して下さい。",
+        "contractExecutionInfo": "コントラクトの関数を実行しようとしています。これはバリューの移転を含むことがあります。",
+        "contractCreationInfo": "与えられたデータからコントラクトを作成しようとしています。",
+        "enterPassword": "トランザクションを実行するためにパスワードを入力して下さい。",
         "unlocking": "承認しています...",
         "createContract": "コントラクトを作成する",
         "estimatedFee": "推定されるトランザクションフィーの消費",
-        "estimatedGasError":
-          "データが実行できませんでした、そのため全ての GAS が消費されます。",
+        "estimatedGasError": "データが実行できませんでした、そのため全ての GAS が消費されます。",
         "gasPrice": "GAS 価格",
         "perMillionGas": "100 万 GAS ごとの LindaX",
         "gasLimit": "GAS リミット",
@@ -189,13 +168,10 @@
           "sendTransaction": "トランザクションを送信"
         },
         "errors": {
-          "connectionTimeout":
-            "ノードにつなげませんでした、バックグラウンドで落ちていますか?",
+          "connectionTimeout": "ノードにつなげませんでした、バックグラウンドで落ちていますか?",
           "wrongPassword": "パスワードが間違っています",
-          "multipleKeysMatchAddress":
-            "複数のキーが一致する場合は、キーストアから重複を削除してください (ファイル -> バックアップを取る -> アカウント)",
-          "insufficientFundsForGas":
-            "GAS を支払うためにメインアカウント(etherbase)に不十分な資金",
+          "multipleKeysMatchAddress": "複数のキーが一致する場合は、キーストアから重複を削除してください (ファイル -> バックアップを取る -> アカウント)",
+          "insufficientFundsForGas": "GAS を支払うためにメインアカウント(LindaXbase)に不十分な資金",
           "sameAccount": "同一アカウントには送信できません"
         },
         "transactionThrow": "契約により、この取引は実行されません",
@@ -205,10 +181,8 @@
         "showDecodedParameters": "デコードされたパラメータを見る",
         "lookupData": "データをデコードする",
         "lookupDataExplainer": "インターネットでこれを確認してください",
-        "overBlockGasLimit":
-          "この実行に必要な GAS は、ブロック GAS の限界を超える可能性があります",
-        "notEnoughGas":
-          "GAS が不足してトランザクションが正常に終了できませんでした.<br>ここをクリックして GAS を増やしてください."
+        "overBlockGasLimit": "この実行に必要な GAS は、ブロック GAS の限界を超える可能性があります",
+        "notEnoughGas": "GAS が不足してトランザクションが正常に終了できませんでした.<br>ここをクリックして GAS を増やしてください."
       },
       "importAccount": {
         "doYouHaveAWalletFile": "ウォレットファイルを持っていますか?",
@@ -221,8 +195,7 @@
         "errors": {
           "unknownFile": "ファイルを認識できませんでした.",
           "wrongPassword": "パスワードが間違っています",
-          "importFailed":
-            "ファイルが読み込めませんでした: __error__のエラーです"
+          "importFailed": "ファイルが読み込めませんでした: __error__のエラーです"
         }
       },
       "updateAvailable": {
@@ -233,25 +206,20 @@
         "downloadAndRestart": "アップデートして再起動",
         "download": "新しいバージョンをダウンロード",
         "skipUpdate": "アップデートをスキップ",
-        "checking":
-          "__name__ のバージョンにアップデートがないか確認しています...",
-        "noUpdateFound":
-          "新しいバージョンは見つかりませんでした. あなたの __name__ は最新バージョンです."
+        "checking": "__name__ のバージョンにアップデートがないか確認しています...",
+        "noUpdateFound": "新しいバージョンは見つかりませんでした. あなたの __name__ は最新バージョンです."
       },
       "connectAccount": {
         "chooseAccountTitle": "アカウントを選ぶ",
         "createAccount": "アカウントを新規作成",
         "pinToSidebar": "サイドバーにピンする",
-        "connectAccountDescription":
-          "__dappName__ であなたの身元を共有しています。これにより、アプリはアカウントに接続された残高を含むアカウントの公開情報をすべて表示することができます。"
+        "connectAccountDescription": "__dappName__ であなたの身元を共有しています。これにより、アプリはアカウントに接続された残高を含むアカウントの公開情報をすべて表示することができます。"
       }
     }
   },
   "elements": {
-    "checksumAlert":
-      "このアドレスは正しく見えますが、誤字があります。もう一度確認して再度入力下さい。",
-    "identiconHelper":
-      "これはセキュリティアイコンです。もし何かアドレスに変更があればアイコンは全く異なるものになります。",
+    "checksumAlert": "このアドレスは正しく見えますが、誤字があります。もう一度確認して再度入力下さい。",
+    "identiconHelper": "これはセキュリティアイコンです。もし何かアドレスに変更があればアイコンは全く異なるものになります。",
     "type": {
       "address": "Address",
       "bool": "Boolean",

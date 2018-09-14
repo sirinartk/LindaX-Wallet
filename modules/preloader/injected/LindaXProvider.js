@@ -15,7 +15,7 @@
   // on events are: "connect", "data", "error", "end", "timeout"
   // "data" will get notifications
 
-  function EthereumProvider() {
+  function LindaXProvider() {
     var _this = this;
     // Call constructor of superclass to initialize superclass-derived members.
     EventEmitter.call(this);
@@ -91,8 +91,8 @@
     });
   }
 
-  EthereumProvider.prototype = Object.create(EventEmitter.prototype);
-  EthereumProvider.prototype.constructor = EthereumProvider;
+  LindaXProvider.prototype = Object.create(EventEmitter.prototype);
+  LindaXProvider.prototype.constructor = LindaXProvider;
 
   /**
      Get the adds a callback to the responseCallbacks object,
@@ -100,10 +100,7 @@
 
      @method _addResponseCallback
      */
-  EthereumProvider.prototype._addResponseCallback = function(
-    payload,
-    callback
-  ) {
+  LindaXProvider.prototype._addResponseCallback = function(payload, callback) {
     var id = payload.id || payload[0].id;
     var method = payload.method || payload[0].method;
 
@@ -122,7 +119,7 @@
 
      @method _reconnectCheck
      */
-  EthereumProvider.prototype._reconnectCheck = function() {
+  LindaXProvider.prototype._reconnectCheck = function() {
     var _this = this;
     var reconnectIntervalId;
 
@@ -142,7 +139,7 @@
 
      @method connect
      */
-  EthereumProvider.prototype._connect = function(payload, callback) {
+  LindaXProvider.prototype._connect = function(payload, callback) {
     postMessage({
       type: 'create'
     });
@@ -156,7 +153,7 @@
      @param {Function} callback the callback to call
      */
   // TODO transform to: send(method, params, callback)
-  EthereumProvider.prototype.send = function send(payload, callback) {
+  LindaXProvider.prototype.send = function send(payload, callback) {
     this._addResponseCallback(payload, callback);
     postMessage(
       {
@@ -168,11 +165,11 @@
   };
 
   delete window.EventEmitter;
-  // TODO set real ethereum provider
-  // window.ethereum = new EthereumProvider();
+  // TODO set real lindax provider
+  // window.lindax = new LindaXProvider();
 
   // For backwards compatibility of web3.currentProvider;
-  EthereumProvider.prototype.sendSync = function() {
+  LindaXProvider.prototype.sendSync = function() {
     return {
       jsonrpc: '2.0',
       error: {
@@ -181,11 +178,11 @@
       }
     };
   };
-  EthereumProvider.prototype.sendAsync = EthereumProvider.prototype.send;
-  EthereumProvider.prototype.isConnected = function() {
+  LindaXProvider.prototype.sendAsync = LindaXProvider.prototype.send;
+  LindaXProvider.prototype.isConnected = function() {
     return true;
   };
   window.web3 = {
-    currentProvider: new EthereumProvider()
+    currentProvider: new LindaXProvider()
   };
 })();

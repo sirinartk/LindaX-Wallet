@@ -22,7 +22,7 @@ exports.setup = function(options) {
         type: 'file',
         filename: `${logFolder}/category/main.log`
       },
-      EthereumNode: {
+      LindaXNode: {
         type: 'file',
         filename: `${logFolder}/category/LindaX_node.log`
       },
@@ -33,7 +33,7 @@ exports.setup = function(options) {
     },
     categories: {
       default: { appenders: ['out', 'all', 'main'], level },
-      EthereumNode: { appenders: ['out', 'all', 'EthereumNode'], level },
+      LindaXNode: { appenders: ['out', 'all', 'LindaXNode'], level },
       swarm: { appenders: ['out', 'all', 'swarm'], level }
     }
   };

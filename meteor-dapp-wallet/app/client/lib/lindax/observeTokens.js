@@ -17,7 +17,7 @@ var setupContractSubscription = function(newDocument) {
   if (!contractInstance) return;
 
   var blockToCheckBack =
-    (newDocument.checkpointBlock || 0) - ethereumConfig.rollBackBy;
+    (newDocument.checkpointBlock || 0) - lindaxConfig.rollBackBy;
 
   if (blockToCheckBack < 0) {
     blockToCheckBack = 0;
@@ -55,7 +55,7 @@ var setupContractSubscription = function(newDocument) {
   events.push(subscription);
 
   // get past logs, to set the new blockNumber
-  var currentBlock = EthBlocks.latest.number;
+  var currentBlock = LXBlocks.latest.number;
 
   // For some reason, sometimes this contractInstance doesn't
   // have a getPastEvents property so we'll reinit the contract
@@ -78,8 +78,8 @@ var setupContractSubscription = function(newDocument) {
           {
             $set: {
               checkpointBlock:
-                (currentBlock || EthBlocks.latest.number) -
-                ethereumConfig.rollBackBy
+                (currentBlock || LXBlocks.latest.number) -
+                lindaxConfig.rollBackBy
             }
           }
         );
@@ -90,7 +90,7 @@ var setupContractSubscription = function(newDocument) {
   subscription.on('data', function(log) {
     // Helpers.eventLogs(log);
 
-    if (EthBlocks.latest.number && log.blockNumber > EthBlocks.latest.number) {
+    if (LXBlocks.latest.number && log.blockNumber > LXBlocks.latest.number) {
       // update last checkpoint block
       Tokens.update(
         { _id: newDocument._id },
@@ -142,7 +142,7 @@ var setupContractSubscription = function(newDocument) {
           },
           function() {
             // on click show tx info
-            EthElements.Modal.show(
+            LXElements.Modal.show(
               {
                 template: 'views_modals_transactionInfo',
                 data: {

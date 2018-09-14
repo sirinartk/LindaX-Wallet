@@ -108,7 +108,7 @@ ipcRenderer.on('uiAction_runTests', (e, type) => {
         // update the permissions, when accounts change
         Tracker.autorun(() => {
           const accountList = _.pluck(
-            EthAccounts.find({}, { fields: { address: 1 } }).fetch(),
+            LXAccounts.find({}, { fields: { address: 1 } }).fetch(),
             'address'
           );
 

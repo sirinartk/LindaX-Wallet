@@ -25,7 +25,7 @@ Template['layout_header'].helpers({
   goToSend: function() {
     FlowRouter.watchPathChange();
     var address = web3.utils.toChecksumAddress(FlowRouter.getParam('address'));
-    var accounts = EthAccounts.find({}).fetch();
+    var accounts = LXAccounts.find({}).fetch();
 
     // For some reason the path /send/ doesn't show tokens anymore
     return address
@@ -41,7 +41,7 @@ Template['layout_header'].helpers({
     @return {String}
     */
   totalBalance: function() {
-    var accounts = EthAccounts.find({}).fetch();
+    var accounts = LXAccounts.find({}).fetch();
     var wallets = Wallets.find({
       owners: { $in: _.pluck(accounts, 'address') }
     }).fetch();
@@ -65,8 +65,8 @@ Template['layout_header'].helpers({
     @return {String}
     */
   formattedBlockNumber: function() {
-    return EthBlocks.latest.number > 0
-      ? numeral(EthBlocks.latest.number).format('0,0')
+    return LXBlocks.latest.number > 0
+      ? numeral(LXBlocks.latest.number).format('0,0')
       : '--';
   },
   /**
@@ -76,12 +76,12 @@ Template['layout_header'].helpers({
     */
   timeSinceBlock: function() {
     if (
-      EthBlocks.latest.timestamp == 0 ||
-      typeof EthBlocks.latest.timestamp == 'undefined'
+      LXBlocks.latest.timestamp == 0 ||
+      typeof LXBlocks.latest.timestamp == 'undefined'
     )
       return false;
 
-    var timeSince = moment(EthBlocks.latest.timestamp, 'X');
+    var timeSince = moment(LXBlocks.latest.timestamp, 'X');
     var now = moment();
     var diff = now.diff(timeSince, 'seconds');
 
@@ -106,12 +106,12 @@ Template['layout_header'].helpers({
     */
   timeSinceBlockText: function() {
     if (
-      EthBlocks.latest.timestamp == 0 ||
-      typeof EthBlocks.latest.timestamp == 'undefined'
+      LXBlocks.latest.timestamp == 0 ||
+      typeof LXBlocks.latest.timestamp == 'undefined'
     )
       return TAPi18n.__('wallet.app.texts.waitingForBlocks');
 
-    var timeSince = moment(EthBlocks.latest.timestamp, 'X');
+    var timeSince = moment(LXBlocks.latest.timestamp, 'X');
     var now = moment();
     var diff = now.diff(timeSince, 'seconds');
 

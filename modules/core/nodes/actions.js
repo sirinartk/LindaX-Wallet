@@ -1,4 +1,4 @@
-import ethereumNodeRemote from '../../ethereumNodeRemote';
+import lindaxNodeRemote from '../../lindaxNodeRemote';
 import { InfuraEndpoints } from '../../constants';
 
 export function changeNetwork(network) {
@@ -6,7 +6,7 @@ export function changeNetwork(network) {
     dispatch({ type: '[MAIN]:NODES:CHANGE_NETWORK_START' });
 
     try {
-      ethereumNodeRemote.setNetwork(network);
+      lindaxNodeRemote.setNetwork(network);
       dispatch({
         type: '[MAIN]:NODES:CHANGE_NETWORK_SUCCESS',
         payload: { network }

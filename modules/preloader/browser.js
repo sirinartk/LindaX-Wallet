@@ -54,11 +54,11 @@ window.addEventListener('message', function message(event) {
     return;
   }
 
-  // EthereumProvider: connect
+  // LindaXProvider: connect
   if (data.type === 'create') {
     ipcRenderer.send('ipcProvider-create');
 
-    // EthereumProvider: write
+    // LindaXProvider: write
   } else if (data.type === 'write') {
     let messageIsArray = _.isArray(data.message);
 
@@ -132,7 +132,7 @@ const postMessage = function(payload) {
   });
 });
 
-// load ethereumProvider
+// load lindaxProvider
 const bignumber = fs
   .readFileSync(path.join(__dirname, '/injected/BigNumber.js'))
   .toString();
@@ -142,8 +142,8 @@ const eventEmitter3 = fs
 let mistAPI = fs
   .readFileSync(path.join(__dirname, '/injected/mistAPI.js'))
   .toString();
-const ethereumProvider = fs
-  .readFileSync(path.join(__dirname, '/injected/EthereumProvider.js'))
+const lindaxProvider = fs
+  .readFileSync(path.join(__dirname, '/injected/LindaXProvider.js'))
   .toString();
 
 mistAPI = mistAPI
@@ -156,7 +156,7 @@ mistAPI = mistAPI
   );
 
 webFrame.executeJavaScript(
-  mistAPI + bignumber + eventEmitter3 + ethereumProvider
+  mistAPI + bignumber + eventEmitter3 + lindaxProvider
 );
 
 // notifiy the tab to store the webview id

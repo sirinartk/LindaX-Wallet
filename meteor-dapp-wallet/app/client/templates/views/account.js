@@ -15,7 +15,7 @@ var addLogWatching = function(newDocument) {
     newDocument.address
   );
   var blockToCheckBack =
-    (newDocument.checkpointBlock || 0) - ethereumConfig.rollBackBy;
+    (newDocument.checkpointBlock || 0) - lindaxConfig.rollBackBy;
 
   if (blockToCheckBack < 0) blockToCheckBack = 0;
 
@@ -44,7 +44,7 @@ var addLogWatching = function(newDocument) {
     toBlock: 'latest'
   });
   // get past logs, to set the new blockNumber
-  var currentBlock = EthBlocks.latest.number;
+  var currentBlock = LXBlocks.latest.number;
 
   contractInstance.getPastEvents('allEvents', function(error, logs) {
     if (!error) {
@@ -54,8 +54,7 @@ var addLogWatching = function(newDocument) {
         {
           $set: {
             checkpointBlock:
-              (currentBlock || EthBlocks.latest.number) -
-              ethereumConfig.rollBackBy
+              (currentBlock || LXBlocks.latest.number) - lindaxConfig.rollBackBy
           }
         }
       );
@@ -161,7 +160,7 @@ Template['views_account'].helpers({
     */
   showDailyLimit: function() {
     return (
-      this.dailyLimit && this.dailyLimit !== ethereumConfig.dailyLimitDefault
+      this.dailyLimit && this.dailyLimit !== lindaxConfig.dailyLimitDefault
     );
   },
   /**
@@ -216,9 +215,7 @@ Template['views_account'].helpers({
     @method (ownedAccount)
     */
   ownedAccount: function() {
-    return (
-      EthAccounts.find({ address: this.address.toLowerCase() }).count() > 0
-    );
+    return LXAccounts.find({ address: this.address.toLowerCase() }).count() > 0;
   },
   /**
     Gets the contract events if available
@@ -281,7 +278,7 @@ var accountClipboardEventHandler = function(e) {
     Session.set('tmpAllowCopy', true);
     copyAddress();
   } else {
-    EthElements.Modal.question({
+    LXElements.Modal.question({
       text: new Spacebars.SafeString(
         TAPi18n.__('wallet.accounts.modal.copyAddressWarning')
       ),
@@ -307,7 +304,7 @@ Template['views_account'].events({
   'click button.delete': function(e, template) {
     var data = this;
 
-    EthElements.Modal.question({
+    LXElements.Modal.question({
       text: new Spacebars.SafeString(
         TAPi18n.__('wallet.accounts.modal.deleteText') +
           '<br><input type="text" class="deletionConfirmation" autofocus="true">'
@@ -361,7 +358,7 @@ Template['views_account'].events({
           name: text
         }
       });
-      EthAccounts.update(this._id, {
+      LXAccounts.update(this._id, {
         $set: {
           name: text
         }
@@ -399,7 +396,7 @@ Template['views_account'].events({
     e.preventDefault();
 
     // Open a modal showing the QR Code
-    EthElements.Modal.show({
+    LXElements.Modal.show({
       template: 'views_modals_qrCode',
       data: {
         address: this.address
@@ -424,7 +421,7 @@ Template['views_account'].events({
     });
 
     // Open a modal showing the QR Code
-    EthElements.Modal.show({
+    LXElements.Modal.show({
       template: 'views_modals_interface',
       data: {
         jsonInterface: cleanJsonInterface

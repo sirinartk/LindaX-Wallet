@@ -59,7 +59,7 @@ observeCustomContracts = function() {
 // TODO: convert from filters to subscriptions
 // var addLogWatching = function(newDocument){
 //     var contractInstance = new web3.eth.Contract(newDocument.jsonInterface, newDocument.address);
-//     var blockToCheckBack = (newDocument.checkpointBlock || 0) - ethereumConfig.rollBackBy;
+//     var blockToCheckBack = (newDocument.checkpointBlock || 0) - lindaxConfig.rollBackBy;
 //     if(blockToCheckBack < 0)
 //         blockToCheckBack = 0;
 //     console.log('EVENT LOG:  Checking Custom Contract Events for '+ newDocument.address +' (_id: '+ newDocument._id + ') from block # '+ blockToCheckBack);
@@ -70,12 +70,12 @@ observeCustomContracts = function() {
 //     });
 //     var filter = contractInstance.allEvents({fromBlock: blockToCheckBack, toBlock: 'latest'});
 //     // get past logs, to set the new blockNumber
-//     var currentBlock = EthBlocks.latest.number;
+//     var currentBlock = LXBlocks.latest.number;
 //     filter.get(function(error, logs) {
 //         if(!error) {
 //             // update last checkpoint block
 //             CustomContracts.update({_id: newDocument._id}, {$set: {
-//                 checkpointBlock: (currentBlock || EthBlocks.latest.number) - ethereumConfig.rollBackBy
+//                 checkpointBlock: (currentBlock || LXBlocks.latest.number) - lindaxConfig.rollBackBy
 //             }});
 //         }
 //     });

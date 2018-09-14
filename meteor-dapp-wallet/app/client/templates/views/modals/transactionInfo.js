@@ -28,8 +28,8 @@ Template['views_modals_transactionInfo'].helpers({
     @return {Number} the number of confirmations
     */
   confirmations: function() {
-    return EthBlocks.latest && this.blockNumber
-      ? EthBlocks.latest.number + 1 - this.blockNumber
+    return LXBlocks.latest && this.blockNumber
+      ? LXBlocks.latest.number + 1 - this.blockNumber
       : 0;
   },
   /**

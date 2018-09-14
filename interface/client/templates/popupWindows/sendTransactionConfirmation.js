@@ -284,7 +284,7 @@ Template['popupWindows_sendTransactionConfirmation'].helpers({
     @method (totalAmount)
     */
   totalAmount: function() {
-    var amount = EthTools.formatBalance(
+    var amount = LXTools.formatBalance(
       web3.utils.toBN(this.value || 0),
       '0,0.00[0000000000000000]',
       'LindaX'
@@ -311,7 +311,7 @@ Template['popupWindows_sendTransactionConfirmation'].helpers({
       const balance = web3.utils
         .toBN(gas || 0)
         .mul(web3.utils.toBN(this.gasPrice || 0));
-      return EthTools.formatBalance(balance, '0,0.0[0000000] unit', 'LindaX');
+      return LXTools.formatBalance(balance, '0,0.0[0000000] unit', 'LindaX');
     }
   },
   /**
@@ -325,7 +325,7 @@ Template['popupWindows_sendTransactionConfirmation'].helpers({
       const balance = web3.utils
         .toBN(gas || 0)
         .mul(web3.utils.toBN(this.gasPrice || 0));
-      return EthTools.formatBalance(balance, '0,0.0[0000000]', 'LindaX');
+      return LXTools.formatBalance(balance, '0,0.0[0000000]', 'LindaX');
     }
   },
   /**

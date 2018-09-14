@@ -26,7 +26,7 @@ Returns the current block
 @method (CurrentBlock)
 **/
 Template.registerHelper('CurrentBlock', function() {
-  return EthBlocks.latest;
+  return LXBlocks.latest;
 });
 
 /**
@@ -82,7 +82,7 @@ Get all accounts
 @method (accounts)
 **/
 Template.registerHelper('accounts', function(identity) {
-  return EthAccounts.find({}, { sort: { name: 1 } });
+  return LXAccounts.find({}, { sort: { name: 1 } });
 });
 
 /**
@@ -121,7 +121,7 @@ Get the account name or display the address
 @param {String} address
 */
 Template.registerHelper('accountNameOrAddress', function(address) {
-  var account = EthAccounts.findOne({ address: address });
+  var account = LXAccounts.findOne({ address: address });
   if (account) {
     return account.name;
   } else {

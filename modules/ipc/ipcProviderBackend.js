@@ -1,5 +1,5 @@
 /**
-The IPC provider backend filter and tunnel all incoming request to the ethereum node.
+The IPC provider backend filter and tunnel all incoming request to the lindax node.
 
 @module ipcProviderBackend
 */
@@ -13,8 +13,8 @@ const path = require('path');
 const log = require('../utils/logger').create('ipcProviderBackend');
 const Sockets = require('../socketManager');
 const Settings = require('../settings');
-const ethereumNode = require('../ethereumNode');
-const ethereumNodeRemote = require('../ethereumNodeRemote');
+const lindaxNode = require('../lindaxNode');
+const lindaxNodeRemote = require('../lindaxNodeRemote');
 
 const ERRORS = {
   INVALID_PAYLOAD: {
@@ -53,7 +53,7 @@ class IpcProviderBackend {
 
     this.ERRORS = ERRORS;
 
-    ethereumNode.on('state', _.bind(this._onNodeStateChanged, this));
+    lindaxNode.on('state', _.bind(this._onNodeStateChanged, this));
 
     ipc.on('ipcProvider-create', _.bind(this._getOrCreateConnection, this));
     ipc.on('ipcProvider-destroy', _.bind(this._destroyConnection, this));
@@ -168,11 +168,11 @@ class IpcProviderBackend {
               log.debug(`Connecting socket ${ownerId}`);
 
               // wait for node to connect first.
-              if (ethereumNode.state !== ethereumNode.STATES.CONNECTED) {
+              if (lindaxNode.state !== lindaxNode.STATES.CONNECTED) {
                 return new Q((resolve, reject) => {
                   const onStateChange = newState => {
-                    if (ethereumNode.STATES.CONNECTED === newState) {
-                      ethereumNode.removeListener('state', onStateChange);
+                    if (lindaxNode.STATES.CONNECTED === newState) {
+                      lindaxNode.removeListener('state', onStateChange);
 
                       log.debug(
                         `LindaX node connected, resume connecting socket ${ownerId}`
@@ -182,7 +182,7 @@ class IpcProviderBackend {
                     }
                   };
 
-                  ethereumNode.on('state', onStateChange);
+                  lindaxNode.on('state', onStateChange);
                 });
               }
             })
@@ -232,9 +232,9 @@ class IpcProviderBackend {
   }
 
   /**
-   * Handler for when Ethereum node state changes.
+   * Handler for when LindaX node state changes.
    *
-   * Auto-reconnect sockets when ethereum node state changes
+   * Auto-reconnect sockets when lindax node state changes
    *
    * @param {String} state The new state.
    */
@@ -243,12 +243,12 @@ class IpcProviderBackend {
       state // eslint-disable-line default-case
     ) {
       // stop syncing when node about to be stopped
-      case ethereumNode.STATES.STOPPING:
+      case lindaxNode.STATES.STOPPING:
         log.info('LindaX node stopping, disconnecting sockets');
 
         // Unsubscribe remote subscriptions
         _.each(this._remoteSubscriptions, remoteSubscriptionId => {
-          ethereumNodeRemote.send('eth_unsubscribe', [remoteSubscriptionId]);
+          lindaxNodeRemote.send('eth_unsubscribe', [remoteSubscriptionId]);
         });
         this._remoteSubscriptions = {};
         this._subscriptionOwners = {};
@@ -580,7 +580,7 @@ class IpcProviderBackend {
       const subscriptionId = result.params[0];
       const localSubscriptionId = this._remoteSubscriptions[subscriptionId];
       if (localSubscriptionId) {
-        ethereumNodeRemote.send('eth_unsubscribe', [localSubscriptionId]);
+        lindaxNodeRemote.send('eth_unsubscribe', [localSubscriptionId]);
         delete this._remoteSubscriptions[subscriptionId];
         delete this._subscriptionOwners[subscriptionId];
       }
@@ -603,7 +603,7 @@ class IpcProviderBackend {
       );
 
       var remoteSubscriptionId;
-      const requestId = await ethereumNodeRemote.send('eth_subscribe', params);
+      const requestId = await lindaxNodeRemote.send('eth_subscribe', params);
 
       if (!requestId) {
         log.error('No return id for request');
@@ -637,7 +637,7 @@ class IpcProviderBackend {
         }
       };
 
-      ethereumNodeRemote.ws.on('message', callback);
+      lindaxNodeRemote.ws.on('message', callback);
     });
   }
 

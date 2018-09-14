@@ -33,7 +33,7 @@ var checkOverDailyLimit = function(address, wei, template) {
     account &&
     account.requiredSignatures > 1 &&
     !_.isUndefined(account.dailyLimit) &&
-    account.dailyLimit !== ethereumConfig.dailyLimitDefault &&
+    account.dailyLimit !== lindaxConfig.dailyLimitDefault &&
     Number(wei) !== 0
   ) {
     // check whats left
@@ -46,8 +46,8 @@ var checkOverDailyLimit = function(address, wei, template) {
         'dailyLimitText',
         new Spacebars.SafeString(
           TAPi18n.__('wallet.send.texts.overDailyLimit', {
-            limit: EthTools.formatBalance(restDailyLimit.toString(10)),
-            total: EthTools.formatBalance(account.dailyLimit),
+            limit: LXTools.formatBalance(restDailyLimit.toString(10)),
+            total: LXTools.formatBalance(account.dailyLimit),
             count: account.requiredSignatures - 1
           })
         )
@@ -57,8 +57,8 @@ var checkOverDailyLimit = function(address, wei, template) {
         'dailyLimitText',
         new Spacebars.SafeString(
           TAPi18n.__('wallet.send.texts.underDailyLimit', {
-            limit: EthTools.formatBalance(restDailyLimit.toString(10)),
-            total: EthTools.formatBalance(account.dailyLimit)
+            limit: LXTools.formatBalance(restDailyLimit.toString(10)),
+            total: LXTools.formatBalance(account.dailyLimit)
           })
         )
       );
@@ -104,7 +104,7 @@ Gas estimation callback
 var estimationCallback = function(e, res) {
   var template = this;
 
-  console.log('Estimated gas: ', res, e);
+  //console.log('Estimated gas: ', res, e);
 
   if (!e && res) {
     TemplateVar.set(template, 'estimatedGas', res);
@@ -155,7 +155,7 @@ Template['views_send'].onCreated(function() {
 
   // check if we are still on the correct chain
   Helpers.checkChain(function(error) {
-    if (error && EthAccounts.find().count() > 0) {
+    if (error && LXAccounts.find().count() > 0) {
       checkForOriginalWallet();
     }
   });
@@ -175,12 +175,12 @@ Template['views_send'].onCreated(function() {
 
   // change the amount when the currency unit is changed
   template.autorun(function(c) {
-    var unit = EthTools.getUnit();
+    var unit = LXTools.getUnit();
 
     if (!c.firstRun && TemplateVar.get('selectedToken') === 'LindaX') {
       TemplateVar.set(
         'amount',
-        EthTools.toWei(
+        LXTools.toWei(
           template.find('input[name="amount"]').value.replace(',', '.'),
           unit
         )
@@ -250,7 +250,7 @@ Template['views_send'].onRendered(function() {
 
     // Ether tx estimation
     if (tokenAddress === 'LindaX') {
-      if (EthAccounts.findOne({ address: address }, { reactive: false })) {
+      if (LXAccounts.findOne({ address: address }, { reactive: false })) {
         web3.eth.estimateGas(
           {
             from: address,
@@ -570,7 +570,7 @@ Template['views_send'].events({
   ) {
     // ether
     if (TemplateVar.get('selectedToken') === 'LindaX') {
-      var wei = EthTools.toWei(e.currentTarget.value.replace(',', '.'));
+      var wei = LXTools.toWei(e.currentTarget.value.replace(',', '.'));
 
       TemplateVar.set('amount', wei || '0');
 
@@ -715,7 +715,7 @@ Template['views_send'].events({
                     error,
                     txHash
                   );
-                  // EthElements.Modal.hide();
+                  // LXElements.Modal.hide();
                   GlobalNotification.error({
                     content: translateExternalErrorMessage(error.message),
                     duration: 8
@@ -776,7 +776,7 @@ Template['views_send'].events({
                     error,
                     txHash
                   );
-                  // EthElements.Modal.hide();
+                  // LXElements.Modal.hide();
                   GlobalNotification.error({
                     content: translateExternalErrorMessage(error.message),
                     duration: 8
@@ -819,7 +819,7 @@ Template['views_send'].events({
       if (typeof mist === 'undefined') {
         console.log('estimatedGas: ' + estimatedGas);
 
-        EthElements.Modal.question(
+        LXElements.Modal.question(
           {
             template: 'views_modals_sendTransactionInfo',
             data: {

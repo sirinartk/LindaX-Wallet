@@ -25,7 +25,7 @@ import { setActiveNode } from './modules/core/nodes/actions';
 import { SwarmState } from './modules/core/settings/reducer';
 
 import swarmNode from './modules/swarmNode.js';
-import ethereumNodeRemote from './modules/ethereumNodeRemote';
+import lindaxNodeRemote from './modules/lindaxNodeRemote';
 
 Q.config({
   cancellation: true
@@ -44,7 +44,7 @@ const db = (global.db = require('./modules/db'));
 require('./modules/ipcCommunicator.js');
 const appMenu = require('./modules/menuItems');
 const ipcProviderBackend = require('./modules/ipc/ipcProviderBackend.js');
-const ethereumNode = require('./modules/ethereumNode.js');
+const lindaxNode = require('./modules/lindaxNode.js');
 
 // Define global vars; The preloader makes some globals available to the client.
 global.webviews = [];
@@ -111,7 +111,7 @@ app.on('before-quit', async event => {
 
     // delay quit, so the sockets can close
     setTimeout(async () => {
-      await ethereumNode.stop();
+      await lindaxNode.stop();
       store.dispatch({ type: '[MAIN]:ETH_NODE:STOP' });
 
       killedSocketsAndNodes = true;
@@ -176,9 +176,9 @@ function onReady() {
 
   ipcProviderBackend.init();
 
-  ethereumNode.init();
+  lindaxNode.init();
 
-  ethereumNodeRemote.start();
+  lindaxNodeRemote.start();
 
   // TODO: Settings.language relies on global.config object being set
   store.dispatch(setLanguageOnMain(Settings.language));
@@ -190,8 +190,6 @@ function onReady() {
   checkTimeSync();
 
   initializeListeners();
-
-  checkForLegacyChain();
 
   ClientBinaryManager.init();
 
@@ -297,45 +295,24 @@ function checkTimeSync() {
   }
 }
 
-function checkForLegacyChain() {
-  if ((Settings.loadUserData('daoFork') || '').trim() === 'false') {
-    dialog.showMessageBox(
-      {
-        type: 'warning',
-        buttons: ['OK'],
-        message: global.i18n.t('mist.errors.legacyChain.title'),
-        detail: global.i18n.t('mist.errors.legacyChain.description')
-      },
-      () => {
-        shell.openExternal(
-          'https://github.com/thelindaprojectinc/lindax-wallet/releases'
-        );
-        store.dispatch(quitApp());
-      }
-    );
-
-    throw new Error('Cant start client due to legacy non-Fork setting.');
-  }
-}
-
 function initializeListeners() {
   ClientBinaryManager.on('status', (status, data) => {
     Windows.broadcast('uiAction_clientBinaryStatus', status, data);
   });
 
-  ethereumNode.on('nodeConnectionTimeout', () => {
+  lindaxNode.on('nodeConnectionTimeout', () => {
     Windows.broadcast('uiAction_nodeStatus', 'connectionTimeout');
   });
 
-  ethereumNode.on('nodeLog', data => {
+  lindaxNode.on('nodeLog', data => {
     Windows.broadcast('uiAction_nodeLogText', data.replace(/^.*[0-9]]/, ''));
   });
 
-  ethereumNode.on('state', (state, stateAsText) => {
+  lindaxNode.on('state', (state, stateAsText) => {
     Windows.broadcast(
       'uiAction_nodeStatus',
       stateAsText,
-      ethereumNode.STATES.ERROR === state ? ethereumNode.lastError : null
+      lindaxNode.STATES.ERROR === state ? lindaxNode.lastError : null
     );
   });
 }

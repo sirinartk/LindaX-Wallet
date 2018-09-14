@@ -77,7 +77,7 @@ Template['elements_selectableUnit'].helpers({
     */
   selectedUnit: function() {
     var unit = _.find(selectableUnits, function(unit) {
-      return unit.value === EthTools.getUnit();
+      return unit.value === LXTools.getUnit();
     });
 
     if (unit) return unit.value;
@@ -107,6 +107,6 @@ Template['elements_selectableUnit'].events({
     @event change .inline-form
     */
   'change .inline-form': function(e, template, value) {
-    EthTools.setUnit(value);
+    LXTools.setUnit(value);
   }
 });

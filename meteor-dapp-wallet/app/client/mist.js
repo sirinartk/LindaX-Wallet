@@ -2,7 +2,7 @@ updateMistBadge = function() {
   var conf = PendingConfirmations.findOne({ operation: { $exists: true } });
   // set total balance in Mist menu, of no pending confirmation is Present
   if (typeof mist !== 'undefined' && (!conf || !conf.confirmedOwners.length)) {
-    var accounts = EthAccounts.find({}).fetch();
+    var accounts = LXAccounts.find({}).fetch();
     var wallets = Wallets.find({
       owners: { $in: _.pluck(accounts, 'address') }
     }).fetch();
@@ -16,7 +16,7 @@ updateMistBadge = function() {
     );
 
     mist.menu.setBadge(
-      EthTools.formatBalance(balance, '0.0 a', 'LindaX') + ' ETH'
+      LXTools.formatBalance(balance, '0.0 a', 'LindaX') + ' ETH'
     );
   }
 };
@@ -27,7 +27,7 @@ updateMistMenu = function() {
 
   var accounts = _.union(
     Wallets.find({}, { sort: { name: 1 } }).fetch(),
-    EthAccounts.find({}, { sort: { name: 1 } }).fetch()
+    LXAccounts.find({}, { sort: { name: 1 } }).fetch()
   );
 
   // sort by balance
@@ -68,7 +68,7 @@ updateMistMenu = function() {
           position: 3 + index,
           name: account.name,
           badge:
-            EthTools.formatBalance(account.balance, '0 a', 'LindaX') + ' ETH',
+            LXTools.formatBalance(account.balance, '0 a', 'LindaX') + ' ETH',
           selected: location.pathname === '/account/' + account.address
         },
         function() {

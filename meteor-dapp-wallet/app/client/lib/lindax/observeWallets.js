@@ -75,7 +75,7 @@ var checkForVulnerableWallet = function(wallet) {
         if (vulnerableFull || vulnerableStub || vulnerableStubDynamic) {
           vulnerable = true;
 
-          EthElements.Modal.question(
+          LXElements.Modal.question(
             {
               text: TAPi18n.__(
                 'wallet.app.warnings.txOriginVulnerabilityPopup'
@@ -327,7 +327,7 @@ Creates subscription for a wallet contract, to watch for deposits, pending confi
 */
 var setupContractSubscription = function(newDocument, checkFromCreationBlock) {
   var blockToCheckBack =
-    (newDocument.checkpointBlock || 0) - ethereumConfig.rollBackBy;
+    (newDocument.checkpointBlock || 0) - lindaxConfig.rollBackBy;
 
   if (checkFromCreationBlock || blockToCheckBack < 0)
     blockToCheckBack = newDocument.creationBlock;
@@ -361,7 +361,7 @@ var setupContractSubscription = function(newDocument, checkFromCreationBlock) {
       },
       function(error, logs) {
         if (!error) {
-          var creationBlock = EthBlocks.latest.number;
+          var creationBlock = LXBlocks.latest.number;
 
           // get earliest block number of appeared log
           if (logs.length !== 0) {
@@ -490,7 +490,7 @@ var setupContractSubscription = function(newDocument, checkFromCreationBlock) {
     events.push(subscription);
 
     // get past logs, to set the new blockNumber
-    var currentBlock = EthBlocks.latest.number;
+    var currentBlock = LXBlocks.latest.number;
     contractInstance.getPastEvents(
       'allEvents',
       { fromBlock: blockToCheckBack },
@@ -502,8 +502,8 @@ var setupContractSubscription = function(newDocument, checkFromCreationBlock) {
             {
               $set: {
                 checkpointBlock:
-                  (currentBlock || EthBlocks.latest.number) -
-                  ethereumConfig.rollBackBy
+                  (currentBlock || LXBlocks.latest.number) -
+                  lindaxConfig.rollBackBy
               }
             }
           );
@@ -521,10 +521,7 @@ var setupContractSubscription = function(newDocument, checkFromCreationBlock) {
     subscription.on('data', function(log) {
       Helpers.eventLogs(log);
 
-      if (
-        EthBlocks.latest.number &&
-        log.blockNumber > EthBlocks.latest.number
-      ) {
+      if (LXBlocks.latest.number && log.blockNumber > LXBlocks.latest.number) {
         // update last checkpoint block
         Wallets.update(
           { _id: newDocument._id },
@@ -568,7 +565,7 @@ var setupContractSubscription = function(newDocument, checkFromCreationBlock) {
             {
               to: Helpers.getAccountNameByAddress(newDocument.address),
               from: Helpers.getAccountNameByAddress(log.returnValues.from),
-              amount: EthTools.formatBalance(
+              amount: LXTools.formatBalance(
                 log.returnValues.value,
                 '0,0.00[000000] unit',
                 'LindaX'
@@ -576,7 +573,7 @@ var setupContractSubscription = function(newDocument, checkFromCreationBlock) {
             },
             function() {
               // on click show tx info
-              EthElements.Modal.show(
+              LXElements.Modal.show(
                 {
                   template: 'views_modals_transactionInfo',
                   data: {
@@ -624,7 +621,7 @@ var setupContractSubscription = function(newDocument, checkFromCreationBlock) {
             {
               to: Helpers.getAccountNameByAddress(log.returnValues.to),
               from: Helpers.getAccountNameByAddress(newDocument.address),
-              amount: EthTools.formatBalance(
+              amount: LXTools.formatBalance(
                 log.returnValues.value,
                 '0,0.00[000000] unit',
                 'LindaX'
@@ -632,7 +629,7 @@ var setupContractSubscription = function(newDocument, checkFromCreationBlock) {
             },
             function() {
               // on click show tx info
-              EthElements.Modal.show(
+              LXElements.Modal.show(
                 {
                   template: 'views_modals_transactionInfo',
                   data: {
@@ -675,7 +672,7 @@ var setupContractSubscription = function(newDocument, checkFromCreationBlock) {
             // PREVENT SHOWING pending confirmations, of WATCH ONLY WALLETS
             if (
               !(from = Wallets.findOne({ address: log.address })) ||
-              !EthAccounts.findOne({ address: { $in: from.owners } })
+              !LXAccounts.findOne({ address: { $in: from.owners } })
             )
               return;
 
@@ -706,7 +703,7 @@ var setupContractSubscription = function(newDocument, checkFromCreationBlock) {
                   ),
                   to: Helpers.getAccountNameByAddress(log.returnValues.to),
                   from: Helpers.getAccountNameByAddress(newDocument.address),
-                  amount: EthTools.formatBalance(
+                  amount: LXTools.formatBalance(
                     log.returnValues.value,
                     '0,0.00[000000] unit',
                     'LindaX'
@@ -799,21 +796,21 @@ observeWallets = function() {
     @param {Object} oldDocument
     */
   var checkWalletConfirmations = function(newDocument, oldDocument) {
-    var confirmations = EthBlocks.latest.number - newDocument.creationBlock;
+    var confirmations = LXBlocks.latest.number - newDocument.creationBlock;
 
     if (
       newDocument.address &&
       (!oldDocument || (oldDocument && !oldDocument.address)) &&
-      confirmations < ethereumConfig.requiredConfirmations
+      confirmations < lindaxConfig.requiredConfirmations
     ) {
       var subscription = web3.eth
         .subscribe('newBlockHeaders')
         .on('data', function(blockHeader) {
           var confirmations =
-            EthBlocks.latest.number - newDocument.creationBlock;
+            LXBlocks.latest.number - newDocument.creationBlock;
 
           if (
-            confirmations < ethereumConfig.requiredConfirmations &&
+            confirmations < lindaxConfig.requiredConfirmations &&
             confirmations > 0
           ) {
             Helpers.eventLogs(
@@ -838,7 +835,7 @@ observeWallets = function() {
                 }
               }
             });
-          } else if (confirmations > ethereumConfig.requiredConfirmations) {
+          } else if (confirmations > lindaxConfig.requiredConfirmations) {
             subscription.unsubscribe();
           }
         });
@@ -865,7 +862,7 @@ observeWallets = function() {
           contracts['ct_' + newDocument._id] = WalletContract;
 
           // remove account, if something is searching since more than 30 blocks
-          if (newDocument.creationBlock + 50 <= EthBlocks.latest.number) {
+          if (newDocument.creationBlock + 50 <= LXBlocks.latest.number) {
             Wallets.remove(newDocument._id);
           } else {
             setupContractSubscription(newDocument);
@@ -915,7 +912,7 @@ observeWallets = function() {
             arguments: [
               newDocument.owners,
               newDocument.requiredSignatures || 1,
-              newDocument.dailyLimit || ethereumConfig.dailyLimitDefault
+              newDocument.dailyLimit || lindaxConfig.dailyLimitDefault
             ]
           })
             .send(
@@ -964,8 +961,8 @@ observeWallets = function() {
               // add address to account
               Wallets.update(newDocument._id, {
                 $set: {
-                  creationBlock: EthBlocks.latest.number - 1,
-                  checkpointBlock: EthBlocks.latest.number - 1,
+                  creationBlock: LXBlocks.latest.number - 1,
+                  checkpointBlock: LXBlocks.latest.number - 1,
                   address: contract.options.address
                 },
                 $unset: {
@@ -980,7 +977,7 @@ observeWallets = function() {
               setupContractSubscription(newDocument);
 
               // Show backup note
-              EthElements.Modal.question(
+              LXElements.Modal.question(
                 {
                   template: 'views_modals_backupContractAddress',
                   data: {
@@ -1078,7 +1075,7 @@ observeWallets = function() {
       ) {
         if (
           !Wallets.findOne({ transactions: tx._id }) &&
-          !EthAccounts.findOne({ transactions: tx._id })
+          !LXAccounts.findOne({ transactions: tx._id })
         )
           Transactions.remove(tx._id);
       });

@@ -11,7 +11,7 @@ const Windows = require('./windows');
 const logger = require('./utils/logger');
 const appMenu = require('./menuItems');
 const Settings = require('./settings');
-const ethereumNode = require('./ethereumNode.js');
+const lindaxNode = require('./lindaxNode.js');
 const keyfileRecognizer = require('ethereum-keyfile-recognizer');
 
 import { getLanguage } from './core/settings/actions';
@@ -144,7 +144,7 @@ ipc.on('backendAction_checkWalletFile', (e, path) => {
 
         let keystorePath = Settings.userHomePath;
         // eth
-        if (ethereumNode.isEth) {
+        if (lindaxNode.isEth) {
           if (process.platform === 'win32') {
             keystorePath = `${Settings.appDataPath}\\Web3\\keys`;
           } else {

@@ -1,4 +1,4 @@
-env:  # don't warn about no-def meteor keywords
+env: # don't warn about no-def meteor keywords
   meteor: true
 
 rules:
@@ -13,5 +13,5 @@ rules:
 globals:
   Helpers: true
   Blaze: true
-  EthAccounts: true
+  LXAccounts: true
   mist: true

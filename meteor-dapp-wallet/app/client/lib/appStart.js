@@ -53,8 +53,8 @@ var checkSync = function() {
         collectionObservers = [];
       } else if (_.isObject(syncing)) {
         syncing.progress = Math.floor(
-          (syncing.currentBlock - syncing.startingBlock) /
-            (syncing.highestBlock - syncing.startingBlock) *
+          ((syncing.currentBlock - syncing.startingBlock) /
+            (syncing.highestBlock - syncing.startingBlock)) *
             100
         );
         syncing.blockDiff = numeral(
@@ -74,7 +74,12 @@ var checkSync = function() {
     })
     .catch(function(error) {
       console.log('Error: ', error);
-      if (error.toString().toLowerCase().includes('connection not open')) {
+      if (
+        error
+          .toString()
+          .toLowerCase()
+          .includes('connection not open')
+      ) {
         showModal();
       } else {
         // retry
@@ -95,7 +100,7 @@ var showModal = function() {
         window.location.host +
         '"';
 
-    EthElements.Modal.question(
+    LXElements.Modal.question(
       {
         text: new Spacebars.SafeString(
           TAPi18n.__(
@@ -129,7 +134,7 @@ var connect = function() {
             if (!syncing) {
               connectToNode();
             } else {
-              EthAccounts.init();
+              LXAccounts.init();
             }
           })
           .catch(function(error) {
@@ -142,7 +147,12 @@ var connect = function() {
     })
     .catch(function(error) {
       console.log('Error: ', error);
-      if (error.toString().toLowerCase().includes('connection not open')) {
+      if (
+        error
+          .toString()
+          .toLowerCase()
+          .includes('connection not open')
+      ) {
         showModal();
       } else {
         // retry

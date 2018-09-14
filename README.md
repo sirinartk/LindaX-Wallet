@@ -1,24 +1,9 @@
-# Mist Browser<sup>beta</sup>
-
-[![Github All Releases](https://img.shields.io/github/downloads/ethereum/mist/total.svg)](http://www.somsubhra.com/github-release-stats/?username=ethereum&repository=mist)
-[![Build Status develop branch](https://travis-ci.org/ethereum/mist.svg?branch=develop)](https://travis-ci.org/ethereum/mist)
-[![CircleCI](https://circleci.com/gh/ethereum/mist/tree/develop.svg?style=svg)](https://circleci.com/gh/ethereum/mist/tree/develop)
-[![Greenkeeper badge](https://badges.greenkeeper.io/ethereum/mist.svg)](https://greenkeeper.io/)
-[![Join the chat at https://gitter.im/ethereum/mist](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ethereum/mist)
-[![Code Triagers Badge](https://www.codetriage.com/ethereum/mist/badges/users.svg)](https://www.codetriage.com/ethereum/mist)
-
-The Mist browser is the tool of choice to browse and use Ðapps.
-
-For the Mist API see [MISTAPI.md](MISTAPI.md).
-
-This repository is also the Electron host for the [Meteor-based wallet dapp](https://github.com/ethereum/meteor-dapp-wallet).
-
 ## Help and troubleshooting
 
 In order to get help regarding Mist or LindaX Wallet:
 
 1.  Please check the [Mist troubleshooting guide](https://github.com/thelindaprojectinc/lindax-wallet/wiki).
-1.  Go to our [Gitter channel](https://gitter.im/ethereum/mist) to connect with the community for instant help.
+1.  Go to our [Discord channel](https://discord.gg/j4MebEY) to connect with the community for instant help.
 1.  Search for [similar issues](https://github.com/thelindaprojectinc/lindax-wallet/issues?q=is%3Aopen+is%3Aissue+label%3A%22Type%3A+Canonical%22) and potential help.
 1.  Or create a [new issue](https://github.com/thelindaprojectinc/lindax-wallet/issues) and provide as much information as you can to recreate your problem.
 
@@ -26,7 +11,7 @@ In order to get help regarding Mist or LindaX Wallet:
 
 Contributions via Pull Requests are welcome. You can see where to help looking for issues with the [Enhancement](https://github.com/thelindaprojectinc/lindax-wallet/issues?q=is%3Aopen+is%3Aissue+label%3A%22Type%3A+Enhancement%22) or [Bug](https://github.com/thelindaprojectinc/lindax-wallet/issues?q=is%3Aopen+is%3Aissue+label%3A%22Type%3A+Bug%22) labels. We can help guide you towards the solution.
 
-You can also help by [responding to issues](https://github.com/thelindaprojectinc/lindax-wallet/issues?q=is%3Aissue+is%3Aopen+label%3A%22Status%3A+Triage%22). Sign up on [CodeTriage](https://www.codetriage.com/ethereum/mist) and it'll send you gentle notifications with a configurable frequency. It is a nice way to help while learning.
+You can also help by [responding to issues](https://github.com/thelindaprojectinc/lindax-wallet/issues?q=is%3Aissue+is%3Aopen+label%3A%22Status%3A+Triage%22).
 
 ## Installation
 
@@ -98,7 +83,7 @@ $ cd mist
 $ yarn dev:electron
 ```
 
-_NOTE: Client binaries (e.g. [geth](https://github.com/ethereum/go-ethereum)) specified in [clientBinaries.json](https://github.com/thelindaprojectinc/lindax-wallet/blob/master/clientBinaries.json) will be checked during every startup and downloaded if out-of-date, binaries are stored in the [config folder](#config-folder)._
+_NOTE: Client binaries (e.g. [geth](https://github.com/thelindaprojectinc/go-lindax)) specified in [clientBinaries.json](https://github.com/thelindaprojectinc/lindax-wallet/blob/master/clientBinaries.json) will be checked during every startup and downloaded if out-of-date, binaries are stored in the [config folder](#config-folder)._
 
 _NOTE: use `--help` to display available options, e.g. `--loglevel debug` (or `trace`) for verbose output_
 
@@ -207,7 +192,7 @@ To generate the LindaX Wallet:
 $ yarn build:wallet
 ```
 
-The generated binaries will be under `dist_mist/release` or `dist_wallet/release`. From 0.11.0, both LindaX Wallet and Mist bundle a meteor-dapp-wallet instance (https://github.com/ethereum/meteor-dapp-wallet).
+The generated binaries will be under `dist_mist/release` or `dist_wallet/release`. From 0.11.0, both LindaX Wallet and Mist bundle a meteor-dapp-wallet instance.
 
 #### Options
 
@@ -216,9 +201,9 @@ The generated binaries will be under `dist_mist/release` or `dist_wallet/release
 To build binaries for specific platforms (default: all available) use the following flags:
 
 ```bash
-$ yarn build:mist --mac      # mac
-$ yarn build:mist --linux    # linux
-$ yarn build:mist --win      # windows
+$ yarn build:wallet --mac      # mac
+$ yarn build:wallet --linux    # linux
+$ yarn build:wallet --win      # windows
 ```
 
 ##### skipTasks
