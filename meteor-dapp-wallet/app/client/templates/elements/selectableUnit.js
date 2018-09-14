@@ -19,7 +19,7 @@ The available units
 selectableUnits = [
   {
     text: 'LINDAX',
-    value: 'lindax'
+    value: 'LindaX'
   },
   {
     text: 'FINNEY', //(µΞ)

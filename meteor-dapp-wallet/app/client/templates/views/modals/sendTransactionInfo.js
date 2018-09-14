@@ -25,7 +25,7 @@ Template['views_modals_sendTransactionInfo'].helpers({
           new BigNumber(this.gasPrice, 10)
         ),
         '0,0.0[0000000] unit',
-        'ether'
+        'LindaX'
       );
   }
 });

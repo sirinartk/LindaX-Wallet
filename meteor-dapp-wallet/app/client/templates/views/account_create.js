@@ -223,7 +223,7 @@ Template['views_account_create'].helpers({
   defaultDailyLimit: function() {
     var dailyLimit = FlowRouter.getQueryParam('dailyLimit');
     return typeof dailyLimit != 'undefined'
-      ? web3.utils.fromWei(dailyLimit.toString(), 'ether')
+      ? web3.utils.fromWei(dailyLimit.toString(), 'LindaX')
       : 10;
   },
   /**
@@ -341,7 +341,7 @@ Template['views_account_create'].events({
         balance: '0',
         dailyLimit: web3.utils.toWei(
           formValues.dailyLimitAmount.toString(),
-          'ether'
+          'LindaX'
         ),
         requiredSignatures: formValues.multisigSignatures,
         creationBlock: EthBlocks.latest.number,

@@ -91,7 +91,7 @@ Helpers.getLocalStorageSize = function() {
   var size = 0;
   if (localStorage) {
     _.each(Object.keys(localStorage), function(key) {
-      size += localStorage[key].length * 2 / 1024 / 1024;
+      size += (localStorage[key].length * 2) / 1024 / 1024;
     });
   }
 
@@ -310,7 +310,7 @@ Helpers.formatTransactionBalance = function(value, exchangeRates, unit) {
     if (unit === 'btc') format += '[000000]';
     else format += '[0]';
 
-    var price = new BigNumber(String(web3.fromWei(value, 'ether')), 10).times(
+    var price = new BigNumber(String(web3.fromWei(value, 'LindaX')), 10).times(
       exchangeRates[unit].price
     );
     return EthTools.formatNumber(price, format) + ' ' + unit.toUpperCase();

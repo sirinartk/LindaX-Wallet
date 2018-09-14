@@ -34,7 +34,7 @@ Template['elements_balance'].helpers({
         EthTools.getUnit() === 'brl'
       )
         return EthTools.formatBalance(balance, '0,0.00');
-      else if (EthTools.getUnit() === 'ether')
+      else if (EthTools.getUnit() === 'LindaX')
         return EthTools.formatBalance(
           balance,
           this.showAllDecimals ? '0,0.00[0000000000000000]' : '0,0.00'

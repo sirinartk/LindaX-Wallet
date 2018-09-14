@@ -78,13 +78,13 @@
                         <li>
                             <input type="radio" id="LindaX" value="LindaX" name="choose-token" {{tokenSelectedAttr 'LindaX'}}>
                             <label for="LindaX">
-                                <span class="ether-symbol">Ξ</span>
+                                <span class="ether-symbol">LX</span>
                                 <span class="token-name">LINDAX</span>
                                 <span class="balance">
-                                    {{#if $neq unit 'lindax'}}
-                                        {{dapp_formatBalance selectedAccount.balance "0,0.00 UNIT"}} ({{dapp_formatBalance selectedAccount.balance "0,0.00[0000000000000000] UNIT" "lindax"}})
+                                    {{#if $neq unit 'LindaX'}}
+                                        {{dapp_formatBalance selectedAccount.balance "0,0.00 UNIT"}} ({{dapp_formatBalance selectedAccount.balance "0,0.00[0000000000000000] UNIT" 'LindaX'}})
                                     {{else}}
-                                        {{dapp_formatBalance selectedAccount.balance "0,0.00[0000000000000000] UNIT" "lindax"}}
+                                        {{dapp_formatBalance selectedAccount.balance "0,0.00[0000000000000000] UNIT" 'LindaX'}}
                                     {{/if}}
                                 </span>
                             </label>
@@ -104,13 +104,13 @@
                     </ul>
                 {{else}}
                     <div class="token-ether">
-                        <span class="ether-symbol">Ξ</span>
+                        <span class="ether-symbol">LX</span>
                         <span class="token-name">LINDAX</span>
                         <span class="balance">
-                            {{#if $neq unit 'lindax'}}
-                                {{dapp_formatBalance selectedAccount.balance "0,0.00 UNIT"}} ({{dapp_formatBalance selectedAccount.balance "0,0.00[0000000000000000] UNIT" "lindax"}})
+                            {{#if $neq unit 'LindaX'}}
+                                {{dapp_formatBalance selectedAccount.balance "0,0.00 UNIT"}} ({{dapp_formatBalance selectedAccount.balance "0,0.00[0000000000000000] UNIT" 'LindaX'}})
                             {{else}}
-                                {{dapp_formatBalance selectedAccount.balance "0,0.00[0000000000000000] UNIT" "lindax"}}
+                                {{dapp_formatBalance selectedAccount.balance "0,0.00[0000000000000000] UNIT" 'LindaX'}}
                             {{/if}}
                         </span>
                     </div>

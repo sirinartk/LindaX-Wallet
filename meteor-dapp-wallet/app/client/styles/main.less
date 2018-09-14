@@ -1,5 +1,5 @@
 // libs
-@import '{ethereum:dapp-styles}/dapp-styles.less';
+@import '{thelindaproject:dapp-styles}/dapp-styles.less';
 
 @import 'elements.import.less';
 
@@ -15,11 +15,11 @@
 
 // Platform specifics
 // Mac OSX
-@colorOSBackgroundFocus: #d9d0d0;
+@colorOSBackgroundFocus: lighten(#151727, 5%);
 @colorOSBackgroundBlur: lighten(@colorOSBackgroundFocus, 10%);
 
-@colorWinBackgroundFocus: #f0f0f0;
-@colorWinBackgroundBlur: #f0f0f0;
+@colorWinBackgroundFocus: lighten(#151727, 5%);
+@colorWinBackgroundBlur: lighten(#151727, 5%);
 
 @colorLinuxBackgroundFocus: #403f3a;
 @colorLinuxBackgroundBlur: #3c3b36;
@@ -46,6 +46,7 @@
   padding: @defaultPaddingVertical @defaultPaddingHorizontal*2.5
     @defaultPaddingVertical*2;
   max-width: none;
+  background-color: #151727;
 
   .dapp-container {
     max-width: none;
@@ -67,16 +68,10 @@ body {
     background: @colorWinBackgroundBlur;
   }
 }
-.app-blur {
-  .dapp-header {
-    background: @colorWinBackgroundBlur;
-  }
-}
 
 // WINDOWS
 .win32 {
   .dapp-header {
-    background-color: @colorWinBackgroundFocus;
     background-image: none;
 
     &.dapp-small {
@@ -92,15 +87,9 @@ body {
 
     &.app-blur {
       background: @colorLinuxBackgroundBlur;
-
-      .dapp-header {
-        background: @colorLinuxBackgroundBlur;
-      }
     }
   }
   .dapp-header {
-    background-color: @colorLinuxBackgroundFocus;
-    .background-image(linear-gradient(to bottom,  @colorLinuxBackgroundFocus 20%, lighten(@colorLinuxBackgroundFocus, 5%) 90%));
     color: @colorWhite;
 
     nav a,
@@ -118,16 +107,9 @@ body {
 
     &.app-blur {
       background: lighten(@colorOSBackgroundBlur, 10%);
-
-      .dapp-header {
-        background: @colorOSBackgroundBlur;
-      }
     }
   }
   .dapp-header {
-    background-color: @colorOSBackgroundFocus;
-    .background-image(linear-gradient(to top,  @colorOSBackgroundFocus 20%, lighten(@colorOSBackgroundFocus, 10%) 90%));
-
     nav > ul {
       margin-left: @gridWidth;
     }
@@ -148,10 +130,12 @@ body {
 .dapp-header {
   padding-right: @gridWidth * 2.5;
   padding-left: @gridWidth * 2.5;
-  background-color: @colorWinBackgroundFocus;
   -webkit-app-region: drag; // necessary to drag the wallet window
-  .background-image(linear-gradient(to bottom,  @colorWinBackgroundFocus 50%, #ddd9d9 90%));
-  background: #f0f0f0;
+
+  img {
+    height: 60px;
+    padding-right: 12px;
+  }
 
   &.dapp-small {
     z-index: 30;
@@ -160,6 +144,11 @@ body {
     left: 0;
     right: 0;
     .dapp-shadow-medium;
+
+    img {
+      height: 30px;
+      padding-right: 12px;
+    }
 
     .block-info {
       padding-bottom: @defaultPaddingVertical - 2;
@@ -194,7 +183,7 @@ body {
 
   .block-info {
     padding-bottom: @defaultPaddingVertical;
-    color: lighten(@colorGrayDark, 5%);
+    color: lighten(@colorGrayLight, 5%);
     text-align: center;
     flex: 1 0;
 
@@ -224,7 +213,7 @@ body {
     }
 
     .private-chain {
-      background-color: #f9f9f9;
+      background-color: @colorOrange;
       padding: 4px;
       border-radius: 4px;
     }
@@ -241,7 +230,7 @@ body {
     }
 
     span.account-balance {
-      color: @colorTextSecondary;
+      color: @colorWhite;
       font-size: 1.6em;
 
       .inline-form {
@@ -291,7 +280,7 @@ body {
     right: 0;
     height: @gridHeight * 2;
     padding: @gridHeight / 2 @gridWidth * 2.5;
-    background: @colorWhite;
+    background: lighten(@colorBackgroundHeader, 10%);
     opacity: 0;
     z-index: -1;
 
@@ -325,7 +314,7 @@ body {
       top: 7px;
       font-size: 1.2em;
       font-weight: 400;
-      color: #696969;
+      color: @colorGray;
       span {
         font-size: 0.75em;
         font-weight: 600;
@@ -499,15 +488,15 @@ body {
 .dapp-actionbar nav ul li button,
 .dapp-actionbar nav ul li a,
 .dapp-actionbar nav ul li a:visited {
-  color: @colorLink;
+  color: @colorOrange;
 }
 
 .dapp-header nav > ul > li.active a,
 .dapp-header nav > ul > li.active button,
 .dapp-header nav > ul > li button.active,
 .dapp-header nav > ul > li a.active {
-  color: #003a54;
-  border-bottom: 8px solid #fff;
+  color: darken(@colorOrange, 10%);
+  border-bottom: 8px solid darken(@colorOrange, 10%);
 }
 
 .account-send-form {
@@ -534,7 +523,7 @@ body {
       }
 
       select {
-        color: @colorLink;
+        color: @colorOrange;
         width: 100%;
       }
 
@@ -601,7 +590,7 @@ body {
       //     font-family: 'source code pro', "Lucida Sans Typewriter Regular", Monaco, "Courier New" ,  monospace;
       //     font-size: 0.8em;
       //     font-weight: 500;
-      //     color: @colorGrayDark;
+      //     color: @colorGrayLight;
       // }
     }
 
@@ -627,7 +616,7 @@ body {
     }
 
     .token-ether {
-      color: @colorGrayDark;
+      color: @colorGrayLight;
       font-size: 16px;
       font-weight: normal;
       height: @gridHeight;
@@ -636,7 +625,7 @@ body {
 
       .ether-symbol {
         display: inline-block;
-        border: solid 1px @colorGrayDark;
+        border: solid 1px @colorGrayLight;
         border-radius: 50%;
         width: @gridWidth*0.75;
         height: @gridWidth*0.75;
@@ -785,7 +774,7 @@ body {
 
   .contract-info {
     h3 {
-      color: @colorGrayDark;
+      color: @colorGrayLight;
       text-transform: lowercase;
       font-weight: 300;
       font-size: 1.2em;
@@ -904,26 +893,25 @@ h6 {
 }
 
 h1 {
-  color: #333;
   margin-bottom: 32px;
 }
 
 h2 {
-  padding: 3px 7px;
+  padding: 7px 11px;
+  border-radius: 99px;
   text-transform: capitalize;
-  background: #999;
+  background: #fe6c01;
   color: #fff;
   font-weight: 400;
-  border-radius: 1px;
 }
 
 .wallet-box:not(.create) {
   h3 {
     margin-top: 5px;
-    color: #333;
+    color: #fff;
     font-style: normal;
     span {
-      color: #696969;
+      color: #fe6c01;
     }
   }
   i {
@@ -960,24 +948,24 @@ span.address.not-ens-name {
 
 /* Custom icon size for auto-scan button on contracts.html */
 .account-pattern .icon-target {
-    font-size: 0.5em;
+  font-size: 0.5em;
 }
 
 button.token-auto-scan {
-    &:hover {
-        cursor: pointer;
-    }
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 table.transactions {
   font-weight: normal;
   .account-name h2 {
-    color: #555;
+    color: @colorWhite;
   }
   p {
-    color: #777;
+    color: @colorGrayLight;
     .address a {
-      color: #444 !important;
+      color: @colorWhite !important;
     }
   }
   i {

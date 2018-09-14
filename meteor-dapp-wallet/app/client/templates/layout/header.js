@@ -128,9 +128,7 @@ Template['layout_header'].helpers({
     } else if (diff < 2) {
       Helpers.rerun['1s'].tick();
       return (
-        '<span class="blue">' +
-        TAPi18n.__('wallet.app.texts.blockReceived') +
-        '</span>'
+        '<span>' + TAPi18n.__('wallet.app.texts.blockReceived') + '</span>'
       );
     } else {
       Helpers.rerun['1s'].tick();

@@ -44,7 +44,7 @@ span.address {
 
 .dapp-actionbar .icon-ethereum {
   height: 26px;
-  background-image: url('ethereum-icon.svg');
+  background-image: url('lindax-icon.svg');
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -55,6 +55,8 @@ span.address {
 }
 
 .wallet-box {
+  background-color: #1d1f36;
+  border-radius: 3px;
   position: relative;
   display: inline-block;
   width: @gridWidth * 6.5;
@@ -110,7 +112,13 @@ span.address {
   }
 
   &.wallets {
-    .background-image(linear-gradient(to right,  lighten(@colorBackgroundHeader, 12%) 0%, rgba(255,255,255, 0.1) 100%));
+    .background-image(
+      linear-gradient(
+        to right,
+        lighten(@colorBackgroundHeader, 12%) 0%,
+        rgba(255, 255, 255, 0.1) 100%
+      )
+    );
     overflow: hidden;
   }
   &.tokens {
@@ -214,7 +222,7 @@ span.address {
     width: auto;
     min-width: @gridWidth*1.4;
     padding: 0 @gridWidth / 2;
-    background-color: @colorLink;
+    background-color: @colorOrange;
     text-align: center;
     line-height: 100%;
     color: @colorWhite;
@@ -229,7 +237,7 @@ span.address {
   > h3 {
     margin: 0;
     margin-top: 4px;
-    color: @colorLink;
+    color: @colorOrange;
     max-width: @gridWidth*4.4;
     float: left;
 
@@ -248,7 +256,7 @@ span.address {
     position: relative;
     clear: left;
     float: left;
-    color: @colorTextSecondary;
+    color: @colorOrange;
     font-size: 1.3em;
     line-height: 1.35em;
     .dapp-shorten-text;
@@ -282,15 +290,15 @@ span.address {
   input:checked + label {
     position: relative;
     border-color: @colorGray;
-    color: @colorGrayDark;
+    color: @colorGrayLight;
     padding: @defaultPaddingVertical / 2 @defaultPaddingHorizontal / 2;
     opacity: 1;
     background: @colorGray;
     font-weight: 400;
 
     span {
-      color: @colorGrayDark;
-      border-color: @colorGrayDark;
+      color: @colorGrayLight;
+      border-color: @colorGrayLight;
     }
   }
 
@@ -303,7 +311,11 @@ span.address {
     overflow: hidden;
     height: @gridHeight * 2;
     padding: @defaultPaddingVertical / 2 @defaultPaddingHorizontal / 2;
-    .transition(height @animationSpeed/2, opacity @animationSpeed/2, padding @animationSpeed/2);
+    .transition(
+      height @animationSpeed / 2,
+      opacity @animationSpeed / 2,
+      padding @animationSpeed / 2
+    );
     cursor: pointer;
 
     &:hover {
@@ -369,8 +381,8 @@ table {
         cursor: pointer;
 
         &:hover {
-          border-left: 2px solid @colorGray;
-          border-right: 2px solid @colorGray;
+          border-left: 2px solid @colorOrange;
+          border-right: 2px solid @colorOrange;
         }
       }
 
@@ -395,7 +407,13 @@ table {
         .opacity(0.1);
 
         .dapp-bar {
-          .background-image(linear-gradient(to bottom, @colorBlue 0%, fadeout(@colorBlue, 100%) 100%));
+          .background-image(
+            linear-gradient(
+              to bottom,
+              @colorBlue 0%,
+              fadeout(@colorBlue, 100%) 100%
+            )
+          );
         }
 
         > span {
@@ -488,7 +506,7 @@ table {
           width: 120px;
           margin-right: @defaultMargin;
           text-align: center;
-          .transition(background-color @animationSpeed/2);
+          .transition(background-color @animationSpeed / 2);
 
           .hover-label {
             display: none;
