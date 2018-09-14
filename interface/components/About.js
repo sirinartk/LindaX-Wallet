@@ -33,7 +33,7 @@ class About extends React.Component {
               href="https://github.com/thelindaprojectinc/lindax-wallet"
               target="_blank"
             >
-              github.com/thelindaprojectinc/Linda-X-Wallet
+              github.com/thelindaprojectinc/LindaX-Wallet
             </a>
           </p>
           <small>Copyright 2018 The Linda Project Inc</small>

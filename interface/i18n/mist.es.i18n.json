@@ -62,30 +62,22 @@
       }
     },
     "errors": {
-      "nodeConnect":
-        "No se pudo conectar al nodo? Vea los registros para más información:",
-      "nodeStartup":
-        "Parece que el nodo no se pudo iniciar, tiene uno ya funcionando? ¿Está actualizando la base de datos en este momento?",
+      "nodeConnect": "No se pudo conectar al nodo? Vea los registros para más información:",
+      "nodeStartup": "Parece que el nodo no se pudo iniciar, tiene uno ya funcionando? ¿Está actualizando la base de datos en este momento?",
       "timeSync": {
         "title": "El reloj de su ordenador no está sincronizado.",
-        "description":
-          "Para sincronizar correctamente con la red LindaX necesitas sincronizar el reloj de tu ordenador con un servidor de tiempo.",
-        "win32":
-          "Ve a los ajustes del tiempo en las preferencias de sistema y marca la casilla. Vea esta guía para más detalles: http://www.guidingtech.com/3119/windows-clock-sync/",
-        "linux":
-          "Para permitir la sincronización con un servidor de tiempo instale \"ntp\" vía \"apt-get install ntp\".",
-        "darwin":
-          "Para habilitar la sincronización del tiempo, abra las preferencias de tiempo y marque \"Ajuste la hora y la fecha automáticamente\"."
+        "description": "Para sincronizar correctamente con la red LindaX necesitas sincronizar el reloj de tu ordenador con un servidor de tiempo.",
+        "win32": "Ve a los ajustes del tiempo en las preferencias de sistema y marca la casilla. Vea esta guía para más detalles: http://www.guidingtech.com/3119/windows-clock-sync/",
+        "linux": "Para permitir la sincronización con un servidor de tiempo instale \"ntp\" vía \"apt-get install ntp\".",
+        "darwin": "Para habilitar la sincronización del tiempo, abra las preferencias de tiempo y marque \"Ajuste la hora y la fecha automáticamente\"."
       },
       "nodeChecksumMismatch": {
         "title": "Checksum mismatch in downloaded node!",
-        "description":
-          "__algorithm__: __hash__\n\nPlease install the __type__ node version __version__ manually."
+        "description": "__algorithm__: __hash__\n\nPlease install the __type__ node version __version__ manually."
       },
       "legacyChain": {
         "title": "Legacy chain detected",
-        "description":
-          "Your node is currently on the unsupported Ethereum Classic chain. To use this chain use tools provided by the ethereum classic project at\nhttps://ethereumclassic.github.io.\n\nTo revert to the main LindaX chain follow the tutorial here:\nhttps://github.com/thelindaprojectinc/lindax-wallet/releases/0.8.2"
+        "description": "Your node is currently on the unsupported Ethereum Classic chain. To use this chain use tools provided by the ethereum classic project at\nhttps://ethereumclassic.github.io.\n\nTo revert to the main LindaX chain follow the tutorial here:\nhttps://github.com/thelindaprojectinc/lindax-wallet/releases/0.8.2"
       }
     },
     "rightClick": {
@@ -108,8 +100,7 @@
       "peers": "pares",
       "privateNetwork": "Private-net",
       "test": "test",
-      "testnetExplain":
-        "Estás en la red de pruebas, NO ENVÍE ningún LindaX real a estas direcciones",
+      "testnetExplain": "Estás en la red de pruebas, NO ENVÍE ningún LindaX real a estas direcciones",
       "timeSinceBlock": "Tiempo transcurrido desde el último bloque"
     },
     "sidebar": {
@@ -125,14 +116,10 @@
     },
     "startScreen": {
       "runningNodeFound": "Encontrado nodo LindaX funcionando!",
-      "nodeConnectionTimeout":
-        "No se pudo iniciar un nodo LindaX!<br><small>Si <a href='https://www.github.com/TheLindaProjectInc/Linda-X-Wallet' class='button' target='_blank'>has instalado Geth</a>, utiliza este comando para ejecutarlo: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> O informa del problema </a></small>",
-      "nodeBinaryNotFound":
-        "No se ha encontrado el binario del nodo LindaX!<br><small> <a href='https://www.github.com/TheLindaProjectInc/Linda-X-Wallet' class='button' target='_blank'> Por favor, inicie antes uno manualmente. </a> </small>",
-      "nodeSyncing":
-        "El nodo de LindaX necesita sincronizarse, por favor espere...",
-      "nodeSyncInfo":
-        "Descargando bloque __displayBlock__ de __highestBlock__.",
+      "nodeConnectionTimeout": "No se pudo iniciar un nodo LindaX!<br><small>Si <a href='https://www.github.com/TheLindaProjectInc/LindaX-Wallet' class='button' target='_blank'>has instalado Geth</a>, utiliza este comando para ejecutarlo: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> O informa del problema </a></small>",
+      "nodeBinaryNotFound": "No se ha encontrado el binario del nodo LindaX!<br><small> <a href='https://www.github.com/TheLindaProjectInc/LindaX-Wallet' class='button' target='_blank'> Por favor, inicie antes uno manualmente. </a> </small>",
+      "nodeSyncing": "El nodo de LindaX necesita sincronizarse, por favor espere...",
+      "nodeSyncInfo": "Descargando bloque __displayBlock__ de __highestBlock__.",
       "nodeSyncConnecting": "Buscando pares...",
       "nodeStarting": "LindaX node starting up...",
       "nodeStarted": "LindaX node started",
@@ -140,10 +127,8 @@
       "nodeStopping": "LindaX node stopping...",
       "nodeStopped": "LindaX node stopped",
       "nodeError": "LindaX node connection error :'(",
-      "unableToBindPort":
-        "LindaX node cannot run. Is another instance already running?",
-      "nodeSyncInfoStates":
-        "Downloading block __displayBlock__ of __highestBlock__, <br> Downloading chain structure __displayState__ of __displayKnownStates__",
+      "unableToBindPort": "LindaX node cannot run. Is another instance already running?",
+      "nodeSyncInfoStates": "Downloading block __displayBlock__ of __highestBlock__, <br> Downloading chain structure __displayState__ of __displayKnownStates__",
       "nodeSyncFoundPeers": "Connecting to __peers__ peers...",
       "launchApp": "Launch Application",
       "clientBinaries": {
@@ -172,17 +157,13 @@
           "contractExecution": "Ejecutar contrato",
           "createContract": "Crear contrato"
         },
-        "contractExecutionInfo":
-          "Estás a punto de ejecutar una función en un contrato. Esto puede implicar la transferencia de valor.",
-        "contractCreationInfo":
-          "Vas a crear un contrato a partir de los datos proporcionados.",
-        "enterPassword":
-          "Introduzca la contraseña para confirmar la transacción",
+        "contractExecutionInfo": "Estás a punto de ejecutar una función en un contrato. Esto puede implicar la transferencia de valor.",
+        "contractCreationInfo": "Vas a crear un contrato a partir de los datos proporcionados.",
+        "enterPassword": "Introduzca la contraseña para confirmar la transacción",
         "unlocking": "Confirmando...",
         "createContract": "Crear contrato",
         "estimatedFee": "Tasa de comisión estimada",
-        "estimatedGasError":
-          "Los datos no pueden ser ejecutados por lo que se utilizá todo el gas proporcionado.",
+        "estimatedGasError": "Los datos no pueden ser ejecutados por lo que se utilizá todo el gas proporcionado.",
         "gasPrice": "Precio del Gas",
         "perMillionGas": "LindaX por millón de gas",
         "gasLimit": "Proporcionar la tasa máxima",
@@ -191,32 +172,25 @@
           "sendTransaction": "Enviar transacción"
         },
         "errors": {
-          "connectionTimeout":
-            "No se pudo conectar al nodo, ha dejado de funcionar en segundo plano?",
+          "connectionTimeout": "No se pudo conectar al nodo, ha dejado de funcionar en segundo plano?",
           "wrongPassword": "Contraseña incorrecta",
-          "multipleKeysMatchAddress":
-            "Multiple keys match address. Please remove duplicates from keystore (menu -> File -> Backup -> Accounts)",
-          "insufficientFundsForGas":
-            "Insufficient funds in main account (lindaXbase) to pay for gas",
+          "multipleKeysMatchAddress": "Multiple keys match address. Please remove duplicates from keystore (menu -> File -> Backup -> Accounts)",
+          "insufficientFundsForGas": "Insufficient funds in main account (lindaXbase) to pay for gas",
           "sameAccount": "Can't send to itself"
         },
-        "transactionThrow":
-          "The contract won't allow this transaction to be executed",
+        "transactionThrow": "The contract won't allow this transaction to be executed",
         "noEstimate": "We couldn't estimate the gas.",
         "parameters": "Parameters",
         "showRawBytecode": "show raw data",
         "showDecodedParameters": "show decoded parameters",
         "lookupData": "Try to decode data",
         "lookupDataExplainer": "Look this up on the internet",
-        "overBlockGasLimit":
-          "The gas required for this execution could exceed the block gas limit.",
-        "notEnoughGas":
-          "Gas might not be enough to successfully finish this transaction.<br>Click here to increase the gas amount."
+        "overBlockGasLimit": "The gas required for this execution could exceed the block gas limit.",
+        "notEnoughGas": "Gas might not be enough to successfully finish this transaction.<br>Click here to increase the gas amount."
       },
       "importAccount": {
         "doYouHaveAWalletFile": "¿Tiene un archivo de monedero?",
-        "walletFileDescription":
-          "<p>Si participaste en la preventa de LindaX en 2014, deberías tener un archivo llamado <code>LindaX_wallet_backup.json</code>. Se descargó después de la venta y también se envió a su correo electrónico.</p>",
+        "walletFileDescription": "<p>Si participaste en la preventa de LindaX en 2014, deberías tener un archivo llamado <code>LindaX_wallet_backup.json</code>. Se descargó después de la venta y también se envió a su correo electrónico.</p>",
         "dropFilesHere": "Soltar el archivo de la pre-venta",
         "importing": "Importando...",
         "buttons": {
@@ -225,16 +199,14 @@
         "errors": {
           "unknownFile": "Archivo no reconocido.",
           "wrongPassword": "Contraseña incorrecta.",
-          "importFailed":
-            "No se pudo importar el archivo por el error: __error__"
+          "importFailed": "No se pudo importar el archivo por el error: __error__"
         }
       },
       "connectAccount": {
         "chooseAccountTitle": "Elegir sus cuentas",
         "createAccount": "Crear nueva cuenta",
         "pinToSidebar": "Mantener la aplicación en la barra lateral",
-        "connectAccountDescription":
-          "Usted está compartiendo su identidad con __dappName__. Esto permite que la aplicación tenga acceso a la información pública de las cuentas seleccionadas, saldos incuindo relacionados con las mismas."
+        "connectAccountDescription": "Usted está compartiendo su identidad con __dappName__. Esto permite que la aplicación tenga acceso a la información pública de las cuentas seleccionadas, saldos incuindo relacionados con las mismas."
       },
       "updateAvailable": {
         "newVersionAvailable": "New __name__ version available",
@@ -245,16 +217,13 @@
         "download": "Download new version",
         "skipUpdate": "Skip Update",
         "checking": "Checking for updates to __name__...",
-        "noUpdateFound":
-          "No update found. You are running the latest version of __name__."
+        "noUpdateFound": "No update found. You are running the latest version of __name__."
       }
     }
   },
   "elements": {
-    "checksumAlert":
-      "Esta dirección parece válida, pero no tiene algunas de las características de seguridad que le protegerán contra los errores tipográficos así que compruebe que tenga la correcta. Si se proporciona, compruebe si el icono de seguridad coincide.",
-    "identiconHelper":
-      "Este es un icono de seguridad. Si hay algún cambio en la dirección, el icono resultante debería ser completamente diferente",
+    "checksumAlert": "Esta dirección parece válida, pero no tiene algunas de las características de seguridad que le protegerán contra los errores tipográficos así que compruebe que tenga la correcta. Si se proporciona, compruebe si el icono de seguridad coincide.",
+    "identiconHelper": "Este es un icono de seguridad. Si hay algún cambio en la dirección, el icono resultante debería ser completamente diferente",
     "type": {
       "address": "Address",
       "bool": "Boolean",

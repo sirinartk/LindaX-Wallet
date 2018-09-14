@@ -90,32 +90,24 @@
     },
     "errors": {
       "nodeConnect": "Couldn't connect to node? See the logs for more:",
-      "nodeStartup":
-        "It seems like the node couldn't be started.  Do you already have one running? Is it upgrading the database right now?",
+      "nodeStartup": "It seems like the node couldn't be started.  Do you already have one running? Is it upgrading the database right now?",
       "timeSync": {
         "title": "Your computer's clock is not synced.",
-        "description":
-          "To successfully synchronize with the LindaX network, you need to sync your computer's clock with a time sync server.",
-        "win32":
-          "Go to your Internet Time Settings in your system preferences and check the box. See this guide for details: http://www.guidingtech.com/3119/windows-clock-sync/",
-        "linux":
-          "To enable a time sync server, install \"ntp\" via \"apt-get install ntp\".",
-        "darwin":
-          "To enable time sync, open the time preferences and check \"Set the time and date automatically\"."
+        "description": "To successfully synchronize with the LindaX network, you need to sync your computer's clock with a time sync server.",
+        "win32": "Go to your Internet Time Settings in your system preferences and check the box. See this guide for details: http://www.guidingtech.com/3119/windows-clock-sync/",
+        "linux": "To enable a time sync server, install \"ntp\" via \"apt-get install ntp\".",
+        "darwin": "To enable time sync, open the time preferences and check \"Set the time and date automatically\"."
       },
       "nodeChecksumMismatch": {
         "title": "Checksum mismatch in downloaded node!",
-        "description":
-          "__algorithm__: __hash__\n\nPlease install the __type__ node version __version__ manually."
+        "description": "__algorithm__: __hash__\n\nPlease install the __type__ node version __version__ manually."
       },
       "legacyChain": {
         "title": "Legacy chain detected",
-        "description":
-          "Your node is currently on the unsupported Ethereum Classic chain. To use this chain, use tools provided by the ethereum classic project at\nhttps://ethereumclassic.github.io.\n\nTo revert to the main LindaX chain follow the tutorial here:\nhttps://github.com/thelindaprojectinc/lindax-wallet/releases/0.8.2"
+        "description": "Your node is currently on the unsupported Ethereum Classic chain. To use this chain, use tools provided by the ethereum classic project at\nhttps://ethereumclassic.github.io.\n\nTo revert to the main LindaX chain follow the tutorial here:\nhttps://github.com/thelindaprojectinc/lindax-wallet/releases/0.8.2"
       },
       "swarm": {
-        "notEnabled":
-          "Swarm is not enabled. Please enable it in the menu under Develop > Enable Swarm."
+        "notEnabled": "Swarm is not enabled. Please enable it in the menu under Develop > Enable Swarm."
       }
     },
     "rightClick": {
@@ -136,13 +128,10 @@
       "node": "Node",
       "peers": "peers",
       "privateNetwork": "Private-net",
-      "privatenetExplain":
-        "You are on a private net. DO NOT SEND any real LindaX to these addresses",
-      "remote":
-        "Connected to remote node. Switches to local node when sync is fewer than 15 blocks behind.",
+      "privatenetExplain": "You are on a private net. DO NOT SEND any real LindaX to these addresses",
+      "remote": "Connected to remote node. Switches to local node when sync is fewer than 15 blocks behind.",
       "syncStarting": "Sync starting...",
-      "testnetExplain":
-        "You are on the __name__. DO NOT SEND any real LindaX to these addresses",
+      "testnetExplain": "You are on the __name__. DO NOT SEND any real LindaX to these addresses",
       "timeSinceBlock": "Elapsed time since last block",
       "unknownnetExplain": "Unable to determine which network you are on"
     },
@@ -163,22 +152,18 @@
     },
     "startScreen": {
       "runningNodeFound": "Found running LindaX node!",
-      "nodeConnectionTimeout":
-        "Couldn't start LindaX node!<br><small>If you <a href='https://www.github.com/TheLindaProjectInc/Linda-X-Wallet' class='button' target='_blank'>installed Geth</a>, use this command to run it: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> Or report an issue </a></small>",
-      "nodeBinaryNotFound":
-        "No LindaX node binary found!<br><small> <a href='https://www.github.com/TheLindaProjectInc/Linda-X-Wallet' class='button' target='_blank'> Please start one manually before. </a> </small>",
+      "nodeConnectionTimeout": "Couldn't start LindaX node!<br><small>If you <a href='https://www.github.com/TheLindaProjectInc/LindaX-Wallet' class='button' target='_blank'>installed Geth</a>, use this command to run it: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> Or report an issue </a></small>",
+      "nodeBinaryNotFound": "No LindaX node binary found!<br><small> <a href='https://www.github.com/TheLindaProjectInc/LindaX-Wallet' class='button' target='_blank'> Please start one manually before. </a> </small>",
       "nodeStarting": "LindaX node starting up...",
       "nodeStarted": "LindaX node started",
       "nodeConnected": "LindaX node connected",
       "nodeStopping": "LindaX node stopping...",
       "nodeStopped": "LindaX node stopped",
       "nodeError": "LindaX node connection error:'(",
-      "unableToBindPort":
-        "LindaX node cannot run. Is another instance already running?",
+      "unableToBindPort": "LindaX node cannot run. Is another instance already running?",
       "nodeSyncing": "LindaX node needs to sync, please wait...",
       "nodeSyncInfo": "Downloading block __displayBlock__ of __highestBlock__",
-      "nodeSyncInfoStates":
-        "Downloading block __displayBlock__ of __highestBlock__, <br> Downloading chain structure __displayState__ of __displayKnownStates__",
+      "nodeSyncInfoStates": "Downloading block __displayBlock__ of __highestBlock__, <br> Downloading chain structure __displayState__ of __displayKnownStates__",
       "nodeSyncConnecting": "Looking for peers...",
       "nodeSyncFoundPeers": "Connecting to __peers__ peers...",
       "launchApp": "Launch Application",
@@ -202,16 +187,14 @@
         "download": "Download new version",
         "skipUpdate": "Skip Update",
         "checking": "Checking for updates to __name__...",
-        "noUpdateFound":
-          "No update found. You are running the latest version of __name__."
+        "noUpdateFound": "No update found. You are running the latest version of __name__."
       },
       "requestAccount": {
         "title": "Create account",
         "enterPassword": "Enter password",
         "repeatPassword": "Repeat password",
         "creating": "Generating account...",
-        "backupHint":
-          "Make sure you backup your keyfiles AND password!\n\nYou can find your keyfiles folder using the main menu -> File -> Backup -> Accounts. Keep a copy of the \"keystore\" folder where you can't lose it!",
+        "backupHint": "Make sure you backup your keyfiles AND password!\n\nYou can find your keyfiles folder using the main menu -> File -> Backup -> Accounts. Keep a copy of the \"keystore\" folder where you can't lose it!",
         "errors": {
           "passwordMismatch": "Your passwords don't match.",
           "passwordTooShort": "Make a longer password"
@@ -223,24 +206,17 @@
           "contractExecution": "Execute contract",
           "createContract": "Create contract"
         },
-        "contractExecutionInfo":
-          "You are about to execute a function on a contract. This might involve transfer of value.",
-        "contractCreationInfo":
-          "You are about to create a contract from the provided data.",
+        "contractExecutionInfo": "You are about to execute a function on a contract. This might involve transfer of value.",
+        "contractCreationInfo": "You are about to create a contract from the provided data.",
         "enterPassword": "Enter password to confirm the transaction",
         "unlocking": "Confirming...",
         "createContract": "Create contract",
         "estimatedFee": "Estimated fee consumption",
-        "estimatedGasError":
-          "It seems this transaction will fail. If you submit it, it may consume all the gas you provide.",
-        "transactionThrow":
-          "The contract won't allow this transaction to be executed",
-        "overBlockGasLimit":
-          "The gas required for this execution could exceed the block gas limit.",
-        "notEnoughGas":
-          "Gas might not be enough to successfully finish this transaction.<br>Click here to increase the gas amount.",
-        "defaultGas":
-          "Couldn't estimate gas, resorting to default parameters. Transaction is likely cheaper than the estimate",
+        "estimatedGasError": "It seems this transaction will fail. If you submit it, it may consume all the gas you provide.",
+        "transactionThrow": "The contract won't allow this transaction to be executed",
+        "overBlockGasLimit": "The gas required for this execution could exceed the block gas limit.",
+        "notEnoughGas": "Gas might not be enough to successfully finish this transaction.<br>Click here to increase the gas amount.",
+        "defaultGas": "Couldn't estimate gas, resorting to default parameters. Transaction is likely cheaper than the estimate",
         "noEstimate": "We couldn't estimate the gas.",
         "gasPrice": "Gas price",
         "perMillionGas": "LindaX per million gas",
@@ -252,13 +228,10 @@
           "sendTransaction": "Send transaction"
         },
         "errors": {
-          "connectionTimeout":
-            "Couldn't connect to the node, did it crash in the background?",
+          "connectionTimeout": "Couldn't connect to the node, did it crash in the background?",
           "wrongPassword": "Wrong password",
-          "multipleKeysMatchAddress":
-            "Multiple keys match address. Please remove duplicates from keystore (menu -> File -> Backup -> Accounts)",
-          "insufficientFundsForGas":
-            "Insufficient funds in main account (LindaXbase) to pay for gas",
+          "multipleKeysMatchAddress": "Multiple keys match address. Please remove duplicates from keystore (menu -> File -> Backup -> Accounts)",
+          "insufficientFundsForGas": "Insufficient funds in main account (LindaXbase) to pay for gas",
           "sameAccount": "Can't send to itself"
         },
         "showRawBytecode": "show raw data",
@@ -284,16 +257,13 @@
         "chooseAccountTitle": "Choose account",
         "createAccount": "Create new account",
         "pinToSidebar": "Pin app to the sidebar",
-        "connectAccountDescription":
-          "You are sharing your identity with __dappName__. This allows the app to see any public information related to your accounts, including balances connected to it."
+        "connectAccountDescription": "You are sharing your identity with __dappName__. This allows the app to see any public information related to your accounts, including balances connected to it."
       }
     }
   },
   "elements": {
-    "checksumAlert":
-      "This address looks valid, but it doesn't have some security features that will protect you against typos, so double check you have the right one. If provided, check if the security icon matches.",
-    "identiconHelper":
-      "This is a security icon.  If there were any change to the address, the resulting icon would be a completely different one",
+    "checksumAlert": "This address looks valid, but it doesn't have some security features that will protect you against typos, so double check you have the right one. If provided, check if the security icon matches.",
+    "identiconHelper": "This is a security icon.  If there were any change to the address, the resulting icon would be a completely different one",
     "type": {
       "address": "Address",
       "bool": "Boolean",
