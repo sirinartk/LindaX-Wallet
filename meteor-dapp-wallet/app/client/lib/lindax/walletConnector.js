@@ -89,19 +89,6 @@ connectToNode = function() {
     checkForOriginalWallet();
   }
 
-  // LXBlocks.detectFork(function(oldBlock, block){
-  //     console.log('FORK detected from Block #'+ oldBlock.number + ' -> #'+ block.number +', rolling back!');
-
-  //     // Go through all accounts and re-run
-  //     _.each(Wallets.find({}).fetch(), function(wallet){
-  //         // REMOVE ADDRESS for YOUNG ACCOUNTS, so that it tries to get the Created event and correct address again
-  //         if(wallet.creationBlock + lindaxConfig.requiredConfirmations >= block.number)
-  //             delete wallet.address;
-
-  //         setupContractSubscription(wallet);
-  //     });
-  // });
-
   // Reset collection observers
   _.each(collectionObservers, function(observer) {
     if (observer) {

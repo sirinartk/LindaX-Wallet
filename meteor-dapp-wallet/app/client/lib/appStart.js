@@ -5,6 +5,8 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1')
 // Make sure the example contract code is up to date
 var contractSource = localStorage.getItem('contractSource');
 
+var connectedNode = false;
+
 if (
   contractSource && // repopulate placeholder contract if:
   (contractSource === '' || // source is empty or
@@ -51,7 +53,10 @@ var checkSync = function() {
           }
         });
         collectionObservers = [];
-      } else if (_.isObject(syncing)) {
+      } else if (
+        _.isObject(syncing) &&
+        syncing.highestBlock - syncing.currentBlock > 2
+      ) {
         syncing.progress = Math.floor(
           ((syncing.currentBlock - syncing.startingBlock) /
             (syncing.highestBlock - syncing.startingBlock)) *
@@ -70,6 +75,7 @@ var checkSync = function() {
 
         // re-gain app operation
         connectToNode();
+        connectedNode = true;
       }
     })
     .catch(function(error) {
@@ -132,6 +138,7 @@ var connect = function() {
           .isSyncing()
           .then(function(syncing) {
             if (!syncing) {
+              connectedNode = true;
               connectToNode();
             } else {
               LXAccounts.init();
@@ -164,8 +171,12 @@ var connect = function() {
 Meteor.startup(function() {
   // delay so we make sure the data is already loaded from the indexedDB
   // TODO improve persistent-minimongo2 ?
-  Meteor.setTimeout(function() {
-    connect();
-    checkSync();
+  var connectTimer = Meteor.setInterval(function() {
+    if (!connectedNode) {
+      connect();
+      checkSync();
+    } else {
+      Meteor.clearInterval(connectTimer);
+    }
   }, 3000);
 });
