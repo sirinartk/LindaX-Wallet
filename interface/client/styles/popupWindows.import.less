@@ -33,12 +33,24 @@
   text-align: center;
   height: 100vh;
 
+  pre {
+    background-color: @colorGaryDark;
+  }
+
+  input {
+    background: #080808;
+  }
+
   a,
   button {
     color: @colorLinkActive;
   }
   a:focus {
     color: @colorLinkFocus;
+  }
+
+  h2 {
+    background-color: @colorGaryDark !important;
   }
 
   h3 {
@@ -63,11 +75,6 @@
     right: 0;
     padding: 0 @gridHeight;
     padding-top: @gridHeight * 3;
-    background: linear-gradient(transparent 0%, @colorGrayLight 35%);
-
-    &.dapp-small {
-      background: linear-gradient(transparent 50%, @colorGrayLight 70%);
-    }
   }
 
   .info.dapp-error {
@@ -223,11 +230,6 @@
           .type {
             text-align: right;
             max-width: @gridWidth * 10;
-          }
-
-          &:hover {
-            background-color: #fff;
-            transition: background 0.1s ease-in;
           }
         }
 

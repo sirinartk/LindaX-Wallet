@@ -37,12 +37,18 @@
   }
 }
 
+html,
+body {
+  height: 100%;
+}
+
 // MODALS
 .transaction-info {
   width: 600px;
 }
 
 .dapp-content {
+  overflow: auto;
   padding: @defaultPaddingVertical @defaultPaddingHorizontal*2.5
     @defaultPaddingVertical*2;
   max-width: none;
@@ -127,6 +133,82 @@ body {
   -webkit-app-region: drag; // necessary to drag the wallet window
 }
 
+.dapp-sidebar-layout {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+
+  .dapp-sidebar {
+    width: 240px;
+
+    .wallet-balance {
+      h3 {
+        color: @colorOrange;
+        margin-bottom: 0;
+        margin-top: 10px;
+      }
+    }
+
+    .block-syncing {
+      display: flex;
+      flex-wrap: wrap;
+
+      &.bottom {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+      }
+
+      .private-chain {
+        margin-top: 10px;
+        background-color: @colorOrange;
+        padding: 4px;
+        border-radius: 4px;
+      }
+
+      .sync-divider {
+        color: #bbb;
+        padding: 0 2px;
+      }
+
+      div,
+      span {
+        margin: 0 5px;
+      }
+    }
+
+    nav {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      ul {
+        width: 100%;
+        padding: 0;
+
+        li > a {
+          color: @colorWhite;
+          display: block;
+          padding: 15px 20px;
+          border: none !important;
+
+          &.active {
+            color: @colorOrange;
+            background-color: #0e0f1a;
+          }
+
+          span {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
 .dapp-header {
   padding-right: @gridWidth * 2.5;
   padding-left: @gridWidth * 2.5;
@@ -204,19 +286,6 @@ body {
     padding-bottom: 11px;
     flex: auto;
     text-align: center;
-    .sync-divider {
-      color: #bbb;
-      padding: 0 2px;
-    }
-    i {
-      padding-right: 2px;
-    }
-
-    .private-chain {
-      background-color: @colorOrange;
-      padding: 4px;
-      border-radius: 4px;
-    }
   }
 
   .wallet-balance {
