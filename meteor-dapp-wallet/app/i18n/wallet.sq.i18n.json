@@ -4,10 +4,8 @@
       "high": "Më shpejt",
       "low": "Më lirë"
     },
-    "checksumAlert":
-      "Kjo adresë duket e vlefshme, por nuk ka disa masa sigurie që ju mbrojnë nga gabimet e shtypjes, kështu që duhet të siguroheni që kjo është adresa e duhur. Nëse e keni, kontrolloni nëse ikona e sigurisë përputhet.",
-    "identiconHelper":
-      "Kjo është një ikonë sigurie; nëse ka ndonjë ndryshim në adresë ikona e përftuar do të ishte krejt tjetër"
+    "checksumAlert": "Kjo adresë duket e vlefshme, por nuk ka disa masa sigurie që ju mbrojnë nga gabimet e shtypjes, kështu që duhet të siguroheni që kjo është adresa e duhur. Nëse e keni, kontrolloni nëse ikona e sigurisë përputhet.",
+    "identiconHelper": "Kjo është një ikonë sigurie; nëse ka ndonjë ndryshim në adresë ikona e përftuar do të ishte krejt tjetër"
   },
   "wallet": {
     "app": {
@@ -25,37 +23,28 @@
       "texts": {
         "note": "Shënim",
         "balance": "Balanca",
-        "connectionErrorMist":
-          "Nuk mund të lidhet. Ju lutemi të nisni geth duke përdorur:<br><br><small><code>__node__</code><br><br>Sigurohuni që vendndodhja e IPC të jetë ajo e parazgjedhur, nëse përdoret <code>datadir</code> e ndryshme, p.sh.<br><code>geth --datadir ... --ipcpath /Users/&lt;perdoruesiJuaj&gt;/Library/LindaX/geth.ipc</code><br>or<br><code>geth --datadir ... --ipcpath /Users/&lt;perdoruesiJuaj&gt;/.LindaX/geth.ipc</code>. <br><br>Sipas dëshirës shtoni: <code>--unlock &lt;llogariaJuaj&gt;.</code></small>",
-        "connectionErrorBrowser":
-          "Nuk mund të lidhet. Ju lutemi të nisni geth duke përdorur:<br><br><small><code>__node__</code><br><br>Sipas dëshirës shtoni: <code>--unlock &lt;llogariaJuaj&gt;.</code></small>",
+        "connectionErrorMist": "Nuk mund të lidhet. Ju lutemi të nisni geth duke përdorur:<br><br><small><code>__node__</code><br><br>Sigurohuni që vendndodhja e IPC të jetë ajo e parazgjedhur, nëse përdoret <code>datadir</code> e ndryshme, p.sh.<br><code>geth --datadir ... --ipcpath /Users/&lt;perdoruesiJuaj&gt;/Library/LindaX/geth.ipc</code><br>or<br><code>geth --datadir ... --ipcpath /Users/&lt;perdoruesiJuaj&gt;/.LindaX/geth.ipc</code>. <br><br>Sipas dëshirës shtoni: <code>--unlock &lt;llogariaJuaj&gt;.</code></small>",
+        "connectionErrorBrowser": "Nuk mund të lidhet. Ju lutemi të nisni geth duke përdorur:<br><br><small><code>__node__</code><br><br>Sipas dëshirës shtoni: <code>--unlock &lt;llogariaJuaj&gt;.</code></small>",
         "pendingConfirmationsBadge": "Duke pritur konfirmim!",
         "nodeSyncing": "__blockDiff__ blloqe të mbetura",
         "blockReceived": "U mor bllok i ri",
         "timeSinceBlock": "nga blloku i fundit",
         "peers": "miq",
         "waitingForBlocks": "Duke pritur blloqe..",
-        "testnetExplain":
-          "Jeni në rrjetin test, MOS DËRGONI Ether të vërtetë drejt këtyre adresave",
+        "testnetExplain": "Jeni në rrjetin test, MOS DËRGONI Ether të vërtetë drejt këtyre adresave",
         "noAccounts": {
           "title": "Nuk keni ende llogari",
-          "text":
-            "Duhet të krijoni të paktën një llogari me fjalëkalim të fortë."
+          "text": "Duhet të krijoni të paktën një llogari me fjalëkalim të fortë."
         }
       },
       "error": {
-        "wrongChain":
-          "Duket se jeni në zinxhir tjetër. Ju lutemi të rihapni aplikacionin e kuletës LindaX!"
+        "wrongChain": "Duket se jeni në zinxhir tjetër. Ju lutemi të rihapni aplikacionin e kuletës LindaX!"
       },
       "warnings": {
-        "txOriginVulnerabilityWallet":
-          "Kuleta e kësaj kontrate të zgjuar ka kod të papërditësuar dhe mund të jetë subjekt i sulmeve të vjedhjes së identitetit. ",
-        "txOriginVulnerabilityCallToAction":
-          "Përditësoni kontratën tuaj tani dhe transferoni fondet në versionin e përditësuar.",
-        "txOriginVulnerabilityAccount":
-          "Kjo llogari është pronare e një kontrate të cenueshme kulete. Përdorimi i kësaj llogarie në kontrata keqdashëse mund të rrezikojë fondet e kuletës suaj. Përditësojeni kuletën para se të kryeni ndonjë transaksion me këtë llogari.",
-        "txOriginVulnerabilityPopup":
-          "Gjetëm kuleta të cenueshme! Sigurohuni të krijoni kuleta të reja dhe të zhvendosni fondet!",
+        "txOriginVulnerabilityWallet": "Kuleta e kësaj kontrate të zgjuar ka kod të papërditësuar dhe mund të jetë subjekt i sulmeve të vjedhjes së identitetit. ",
+        "txOriginVulnerabilityCallToAction": "Përditësoni kontratën tuaj tani dhe transferoni fondet në versionin e përditësuar.",
+        "txOriginVulnerabilityAccount": "Kjo llogari është pronare e një kontrate të cenueshme kulete. Përdorimi i kësaj llogarie në kontrata keqdashëse mund të rrezikojë fondet e kuletës suaj. Përditësojeni kuletën para se të kryeni ndonjë transaksion me këtë llogari.",
+        "txOriginVulnerabilityPopup": "Gjetëm kuleta të cenueshme! Sigurohuni të krijoni kuleta të reja dhe të zhvendosni fondet!",
         "checkThisNow": "Shfaq kuletën e cenueshme",
         "checkThisLater": "Më vonë",
         "learnMore": "Mëso më shumë rreth këtij problemi"
@@ -66,10 +55,8 @@
         "title": "Zgjidhni një llogari"
       },
       "testnetWallet": {
-        "walletNeedsDeployment":
-          "Duket se ndodheni në një rrjet provë.<br><br>Nuk u gjet kod origjinal kontrate. Duhet ta krijojmë një, i cili mund të përdoret nga kontratat cungje, nga adresa juaj: <br><br><small><code>__account__</code></small><br><br><em>Ju lutemi sigurohuni që kjo adresë ka të paktën 1 Ether!</em>",
-        "testnetWalletDeployed":
-          "Kontrata origjinale e kuletës u vendos!<br>Një kontratë origjinale kulete u vendos në adresën:<br><br><small><code>__address__</code></small>."
+        "walletNeedsDeployment": "Duket se ndodheni në një rrjet provë.<br><br>Nuk u gjet kod origjinal kontrate. Duhet ta krijojmë një, i cili mund të përdoret nga kontratat cungje, nga adresa juaj: <br><br><small><code>__account__</code></small><br><br><em>Ju lutemi sigurohuni që kjo adresë ka të paktën 1 Ether!</em>",
+        "testnetWalletDeployed": "Kontrata origjinale e kuletës u vendos!<br>Një kontratë origjinale kulete u vendos në adresën:<br><br><small><code>__address__</code></small>."
       },
       "addToken": {
         "title": "Shto valutë",
@@ -77,14 +64,12 @@
         "contractAddress": "Adresa e kontratës së valutës",
         "tokenName": "Emri i valutës",
         "tokenSymbol": "Simboli i valutës",
-        "decimalPlaces":
-          "Shifra pas presjes dhjetore që i takojnë njësisë më të vogël",
+        "decimalPlaces": "Shifra pas presjes dhjetore që i takojnë njësisë më të vogël",
         "preview": "Paraqit"
       },
       "interface": {
         "title": "Ndërfaqja JSON e kontratës",
-        "description":
-          "Nëse doni që dikush tjetër ta ekzekutojë këtë kontratë, dërgojeni këtë informacion së bashku me adresën e kontratës."
+        "description": "Nëse doni që dikush tjetër ta ekzekutojë këtë kontratë, dërgojeni këtë informacion së bashku me adresën e kontratës."
       }
     },
     "accounts": {
@@ -94,27 +79,19 @@
       "defaultName": "Pa emër",
       "creating": "Duke krijuar",
       "importing": "Duke marrë",
-      "accountNote":
-        "Llogaritë nuk mund të tregojnë transaksionet hyrëse, por mund të ruajnë, mbajnë dhe dërgojnë Ether. Për të parë transaksionet ardhëse <a href=\"/account/new\">krijoni një kontratë kulete</a> për të ruajtur ether.",
-      "outOfSyncNote":
-        "Nëse balanca e llogarisë nuk duket e përditësuar, sigurohuni që jeni të sinkronizuar me rrjetin.",
-      "walletNote":
-        "Shumica e pikave të këmbimit nuk lejojnë akoma marrjen e ether nga kuleta kontratash. Sigurohuni që ta kaloni balancën në një adresë llogarie në fillim!",
+      "accountNote": "Llogaritë nuk mund të tregojnë transaksionet hyrëse, por mund të ruajnë, mbajnë dhe dërgojnë Ether. Për të parë transaksionet ardhëse <a href=\"/account/new\">krijoni një kontratë kulete</a> për të ruajtur ether.",
+      "outOfSyncNote": "Nëse balanca e llogarisë nuk duket e përditësuar, sigurohuni që jeni të sinkronizuar me rrjetin.",
+      "walletNote": "Shumica e pikave të këmbimit nuk lejojnë akoma marrjen e ether nga kuleta kontratash. Sigurohuni që ta kaloni balancën në një adresë llogarie në fillim!",
       "addressCopiedToClipboard": "U kopjua",
-      "addressNotCopiedToClipboard":
-        "Problem me kopjimin e adresës. Ju lutemi provoni përsëri.",
-      "qrCodeLabel":
-        "Drejtoni një aplikacion të përshtatshëm celular për të lexuar këtë kod",
+      "addressNotCopiedToClipboard": "Problem me kopjimin e adresës. Ju lutemi provoni përsëri.",
+      "qrCodeLabel": "Drejtoni një aplikacion të përshtatshëm celular për të lexuar këtë kod",
       "dailyLimit": "Limiti ditor",
       "dailyLimitRemaining": "të mbetura sot",
       "requiredSignatures": "Firma të nevojshme",
       "owners": "Pronarë",
-      "walletsDescription":
-        "Këto kontrata ruhen në zinxhirin e blloqeve dhe mund të ruajnë Ether. Mund të kenë disa llogari si pronarë dhe ruajnë një listë të plotë të transaksioneve.",
-      "walletsDescriptionNotEnoughFunds":
-        "Pasi të keni më shumë se 1 Ether mund të krijoni kontrata më të sofistikuara. Kuletat janë kontrata të zgjuara që lejojnë disa llogari të kontrollojnë fondet tuaja. Mund të kenë limit mbi tërheqjet për të rritur nivelin e sigurisë (sipas dëshirës). Krijoni kontratat tuaj sipas kërkesës në faqen <em>Kontrata</em>.",
-      "accountsDescription":
-        "Llogaritë janë çelësa të ruajtur me fjalëkalim që mund të mbajnë Ether dhe valuta të tjera të bazuara mbi Ether. Ato mund të kontrollojnë kontrata, por nuk mund të shfaqin transaksione ardhëse.",
+      "walletsDescription": "Këto kontrata ruhen në zinxhirin e blloqeve dhe mund të ruajnë Ether. Mund të kenë disa llogari si pronarë dhe ruajnë një listë të plotë të transaksioneve.",
+      "walletsDescriptionNotEnoughFunds": "Pasi të keni më shumë se 1 Ether mund të krijoni kontrata më të sofistikuara. Kuletat janë kontrata të zgjuara që lejojnë disa llogari të kontrollojnë fondet tuaja. Mund të kenë limit mbi tërheqjet për të rritur nivelin e sigurisë (sipas dëshirës). Krijoni kontratat tuaj sipas kërkesës në faqen <em>Kontrata</em>.",
+      "accountsDescription": "Llogaritë janë çelësa të ruajtur me fjalëkalim që mund të mbajnë Ether dhe valuta të tjera të bazuara mbi Ether. Ato mund të kontrollojnë kontrata, por nuk mund të shfaqin transaksione ardhëse.",
       "buttons": {
         "deposit": "Transfer Ether & Tokens",
         "buyEther": "Fund with Bitcoin",
@@ -124,14 +101,12 @@
         "showInterface": "Show Interface"
       },
       "modal": {
-        "deleteText":
-          "Do you really want to delete this wallet contract? If you don't separately track it and its private key, you may not be able to find it on the blockchain and will lose access to any funds deposited<br><br> Type \"delete\" confirm the deletion.",
+        "deleteText": "Do you really want to delete this wallet contract? If you don't separately track it and its private key, you may not be able to find it on the blockchain and will lose access to any funds deposited<br><br> Type \"delete\" confirm the deletion.",
         "backupWallet": {
           "title": "Backup your wallet contract address!",
           "description": "Make sure to write down the wallet contract address:"
         },
-        "copyAddressWarning":
-          "<strong>Warning:</strong> you are on the Test Network. Be careful not to transfer real funds to this account.",
+        "copyAddressWarning": "<strong>Warning:</strong> you are on the Test Network. Be careful not to transfer real funds to this account.",
         "buttonOk": "Copy anyway",
         "buttonCancel": "Nevermind.."
       }
@@ -170,8 +145,7 @@
       "filter": "Filtro transaksionet",
       "noneFound": "Nuk u gjet transaksion që i përshtatet kritereve.",
       "noOwnerAccount": "Shih vetëm konfirmimin",
-      "outOfGasDesc":
-        "Transaksioni duket se nuk ka mjaftueshëm karburant për t'u kryer.",
+      "outOfGasDesc": "Transaksioni duket se nuk ka mjaftueshëm karburant për t'u kryer.",
       "buttons": {
         "approve": "Aprovo",
         "approved": "Aprovuar",
@@ -180,8 +154,7 @@
       },
       "error": {
         "noDataDeployed": "Nuk ka të dhëna në adresën e kontratës!",
-        "outOfGas":
-          "Transaksioni nga __from__ drejt __to__ nuk mund të kryhet me sukses."
+        "outOfGas": "Transaksioni nga __from__ drejt __to__ nuk mund të kryhet me sukses."
       },
       "types": {
         "executeContract": "Ekzekutimi i kontratës",
@@ -208,8 +181,7 @@
         },
         "pendingConfirmation": {
           "title": "Nevojitet konfirmim",
-          "text":
-            "__initiator__ do të dërgojë __amount__ nga __from__ drejt __to__"
+          "text": "__initiator__ do të dërgojë __amount__ nga __from__ drejt __to__"
         },
         "tokenTransfer": {
           "title": "__token__ - Transfertë valutash",
@@ -226,8 +198,7 @@
         "simple": {
           "title": "Llogari me një pronar",
           "description": "Kontratë e thjeshtë pa masa shtesë sigurie.",
-          "warning":
-            "Shënim: Nëse llogaria e pronarit kompromentohet, kuleta nuk ka mbrojtje."
+          "warning": "Shënim: Nëse llogaria e pronarit kompromentohet, kuleta nuk ka mbrojtje."
         },
         "multisig": {
           "title": "Kontratë kulete me disa pronarë",
@@ -244,21 +215,17 @@
           "title": "Importo kuletë",
           "description": "Importo kuletë ekzistuese (me disa pronarë).",
           "walletAddress": "Adresa e kuletës",
-          "youreOwner":
-            "Llogaria juaj \"__account__\" është pronare e kësaj kontrate kulete.",
-          "watchOnly":
-            "Ju nuk jeni pronar i llogarisë, por mund ta shtoni si llogari vetëm për vëzhgim.",
+          "youreOwner": "Llogaria juaj \"__account__\" është pronare e kësaj kontrate kulete.",
+          "watchOnly": "Ju nuk jeni pronar i llogarisë, por mund ta shtoni si llogari vetëm për vëzhgim.",
           "notWallet": "Kjo adresë nuk ka kontratë kulete."
         }
       },
       "error": {
         "emptySignees": "Nuk keni listuar të gjithë pronarët.",
         "alreadyExists": "Kontrata e kuletës ekziston.",
-        "stubHasNoOrigWalletAddress":
-          "Kontrata juaj cung nuk ka adresë llogarie origjinale. Ju lutemi rihapni aplikacionin!",
+        "stubHasNoOrigWalletAddress": "Kontrata juaj cung nuk ka adresë llogarie origjinale. Ju lutemi rihapni aplikacionin!",
         "contractsCantBeOwners": "Kontratat nuk mund t jenë pronarë.",
-        "checkOwnerAddress":
-          "Ju lutemi ndryshoni adresën e kontratës __address__ me një llogari."
+        "checkOwnerAddress": "Ju lutemi ndryshoni adresën e kontratës __address__ me një llogari."
       }
     },
     "send": {
@@ -294,26 +261,16 @@
       "texts": {
         "ownerPaysGas": "Karburanti paguhet nga pronari i kontratës së kuletës",
         "sendAmount": "Ju doni të dërgoni <strong>__amount__</strong>.",
-        "sendAmountEquivalent":
-          "Ju doni të dërgoni <strong>__amount__</strong> në Ether, duke përdorur norma këmbimi nga <a href=\"https://www.cryptocompare.com/coins/eth/overview/BTC\" target=\"_blank\">Cryptocompare.com</a>.<br>Që tani është ekuivalente me <strong>__etherAmount__</strong>.",
-        "sendToken":
-          "Ju doni të dërgoni <strong>__amount__ __symbol__</strong> <strong> __name__</strong>.",
-        "overDailyLimit":
-          "<p class=\"over-daily\">Kjo sasi është mbi limitin e mbetur ditor prej __limit__ (nga __total__ në ditë), pra ju duhet __count__ adresë tjetër për ta konfirmuar.</p>",
-        "overDailyLimit_plural":
-          "<p class=\"over-daily\">Kjo sasi është mbi limitin e mbetur ditor prej __limit__ (nga __total__ në ditë), pra ju duhet __count__ adresa të tjera për ta konfirmuar.</p>",
-        "underDailyLimit":
-          "<p class=\"under-daily\">Kjo sasi është nën limitin ditor prej __limit__ (nga __total__ në ditë), pra do të dërgohet menjëherë.</p>",
-        "sendFee":
-          "Kjo është sasia më e madhe e parave që mund të përdoret për të procesuar këtë transaksion, që do të kryhet <strong>__timetext__</strong>.",
-        "noCodeInRecipient":
-          "Llogaria marrëse nuk është kontratë, pra ju nuk mund të ekzekutoni asgjë. <strong> Vendosni një adresë kontrate në fushën \"DREJT\". </strong>",
-        "addData":
-          "Mund të shtoni të dhëna të tjera shtesë për t'u dërguar me gjithë transaksionin. Nëse nuk e dini çfarë është, atëherë <strong>mos e prekni ose mund të ketë probleme</strong>.",
-        "dataNotExecutable":
-          "Të dhënat duket se nuk janë të ekzekutueshme, pra ky transaksion do të përdorë të gjithë karburantin që i mundësoni.",
-        "cantEstimateGas":
-          "Konsumi juaj i karburantit nuk mund të llogaritet saktësisht, sepse ju duhet të paktën 1 Ether në llogari.",
+        "sendAmountEquivalent": "Ju doni të dërgoni <strong>__amount__</strong> në Ether, duke përdorur norma këmbimi nga <a href=\"https://www.cryptocompare.com/coins/eth/overview/BTC\" target=\"_blank\">Cryptocompare.com</a>.<br>Që tani është ekuivalente me <strong>__etherAmount__</strong>.",
+        "sendToken": "Ju doni të dërgoni <strong>__amount__ __symbol__</strong> <strong> __name__</strong>.",
+        "overDailyLimit": "<p class=\"over-daily\">Kjo sasi është mbi limitin e mbetur ditor prej __limit__ (nga __total__ në ditë), pra ju duhet __count__ adresë tjetër për ta konfirmuar.</p>",
+        "overDailyLimit_plural": "<p class=\"over-daily\">Kjo sasi është mbi limitin e mbetur ditor prej __limit__ (nga __total__ në ditë), pra ju duhet __count__ adresa të tjera për ta konfirmuar.</p>",
+        "underDailyLimit": "<p class=\"under-daily\">Kjo sasi është nën limitin ditor prej __limit__ (nga __total__ në ditë), pra do të dërgohet menjëherë.</p>",
+        "sendFee": "Kjo është sasia më e madhe e parave që mund të përdoret për të procesuar këtë transaksion, që do të kryhet <strong>__timetext__</strong>.",
+        "noCodeInRecipient": "Llogaria marrëse nuk është kontratë, pra ju nuk mund të ekzekutoni asgjë. <strong> Vendosni një adresë kontrate në fushën \"DREJT\". </strong>",
+        "addData": "Mund të shtoni të dhëna të tjera shtesë për t'u dërguar me gjithë transaksionin. Nëse nuk e dini çfarë është, atëherë <strong>mos e prekni ose mund të ketë probleme</strong>.",
+        "dataNotExecutable": "Të dhënat duket se nuk janë të ekzekutueshme, pra ky transaksion do të përdorë të gjithë karburantin që i mundësoni.",
+        "cantEstimateGas": "Konsumi juaj i karburantit nuk mund të llogaritet saktësisht, sepse ju duhet të paktën 1 Ether në llogari.",
         "estimatedGas": "Karburanti i nevojshëm i përafruar",
         "timeTexts": {
           "0": "brenda pak minutave ose më gjatë",
@@ -329,10 +286,8 @@
       "title": "<strong>Valuta</strong> të personalizuara",
       "subTitle": "Valutat e shtuara",
       "admin": "__name__ (faqja e administrimit)",
-      "description":
-        "Valutat janë elemente të këmbyeshme të ndërtuara mbi platformën LindaX. Në mënyrë që llogaritë të mund të kontrollojnë për valuta dhe t'i dërgojnë ato, duhet të shtoni adresën e tyre në këtë listë. Mund të krijoni valutën tuaj personale thjesht duke modifikuar <a href=\"https://lindax.network/token#the-code\" target=\"_blank\">këtë shembull kontrate valute të personalizuar</a> ose duke mësuar më shumë rreth <a href=\"https://www.LindaX/token\" target=\"_blank\">Valutave LindaX</a>.",
-      "deleteToken":
-        "A doni ta hiqni valutën <strong>__token__</strong> nga lista juaj?",
+      "description": "Valutat janë elemente të këmbyeshme të ndërtuara mbi platformën LindaX. Në mënyrë që llogaritë të mund të kontrollojnë për valuta dhe t'i dërgojnë ato, duhet të shtoni adresën e tyre në këtë listë. Mund të krijoni valutën tuaj personale thjesht duke modifikuar <a href=\"https://lindax.network/token#the-code\" target=\"_blank\">këtë shembull kontrate valute të personalizuar</a> ose duke mësuar më shumë rreth <a href=\"https://lindax.network/token\" target=\"_blank\">Valutave LindaX</a>.",
+      "deleteToken": "A doni ta hiqni valutën <strong>__token__</strong> nga lista juaj?",
       "addedToken": "__token__ u shtua në listën tuaj të vëzhgimit",
       "editedToken": "U modifikua valuta __token__",
       "error": {
@@ -344,8 +299,7 @@
       "deployNewContract": "Lësho kontratë të re",
       "addCustomContract": "Vëzhgo kontratën",
       "customContracts": "Kontrata të personalizuara",
-      "description":
-        "Për të vëzhguar dhe për të ndërvepruar me një kontratë të lëshuar në zinxhirin e blloqeve, ju duhet të dini adresën e saj dhe përshkrimin e ndërfaqes së saj në formatin JSON.",
+      "description": "Për të vëzhguar dhe për të ndërvepruar me një kontratë të lëshuar në zinxhirin e blloqeve, ju duhet të dini adresën e saj dhe përshkrimin e ndërfaqes së saj në formatin JSON.",
       "deployContract": "<strong>Lësho</strong> kontratën",
       "contractSourceCode": "Kodi i burimit i kontratës Solidity",
       "contractByteCode": "Bajt-kodi i kontratës",
@@ -360,8 +314,7 @@
       "writeToContract": "Shkruaj te kontrata",
       "pickContract": "Zgjidh një kontratë",
       "pickFunction": "Zgjidh një funksion",
-      "noContract":
-        "<p>Vendosni burimin e kontratës që doni këtu. Mund të gjeni shumë shembuj kontratash në http://Lindax.network target=\"_blank\">lindax.network</a>: </p> <ul><li><a href=\"http://LindaX/token#the-code\" target=\"_blank\">Krijo një valutë</a></li><li><a href=\"http://LindaX/crowdsale#the-code\" target=\"_blank\">Nis një shitje në masë</a></li><li><a href=\"http://LindaX/dao#the-code\" target=\"_blank\">Krijo një organizatë në zinxhirin e blloqeve</a></li></ul>",
+      "noContract": "<p>Vendosni burimin e kontratës që doni këtu. Mund të gjeni shumë shembuj kontratash në http://Lindax.network target=\"_blank\">lindax.network</a>: </p> <ul><li><a href=\"http://LindaX/token#the-code\" target=\"_blank\">Krijo një valutë</a></li><li><a href=\"http://LindaX/crowdsale#the-code\" target=\"_blank\">Nis një shitje në masë</a></li><li><a href=\"http://LindaX/dao#the-code\" target=\"_blank\">Krijo një organizatë në zinxhirin e blloqeve</a></li></ul>",
       "buttons": {
         "showContractInfo": "Shfaq informacion mbi kontratën",
         "hideContractInfo": "Fshih informacionin mbi kontratën",
@@ -371,8 +324,7 @@
       },
       "error": {
         "compile": "Kodi i burimit nuk mund të kompilohej.",
-        "noDataProvided":
-          "Nuk ka të dhëna: zgjidhni një kontratë nga menuja \"Zgjidhni kontratë\"",
+        "noDataProvided": "Nuk ka të dhëna: zgjidhni një kontratë nga menuja \"Zgjidhni kontratë\"",
         "invalidAddress": "Kjo nuk është adresë e vlefshme.",
         "jsonInterfaceParseError": "Ndërfaqja JSON nuk mund të zbërthehet."
       }

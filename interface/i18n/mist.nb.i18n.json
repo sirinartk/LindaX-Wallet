@@ -111,8 +111,8 @@
     },
     "startScreen": {
       "runningNodeFound": "Fant kjørende LindaX-node!",
-      "nodeConnectionTimeout": "Kunne ikke starte LindaX-node!<br><small>Hvis du <a href='https://www.LindaX/cli#geth' class='button' target='_blank'>installerte Geth</a>, bruk denne kommandoen for å kjøre det: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> Eller rapporter et problem </a></small>",
-      "nodeBinaryNotFound": "Ingen LindaX-node kilde funnet!<br><small> <a href='https://www.LindaX/cli#geth' class='button' target='_blank'> Vennligst start en manuelt først. </a> </small>",
+      "nodeConnectionTimeout": "Kunne ikke starte LindaX-node!<br><small>Hvis du <a href='https://lindax.network/cli#geth' class='button' target='_blank'>installerte Geth</a>, bruk denne kommandoen for å kjøre det: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> Eller rapporter et problem </a></small>",
+      "nodeBinaryNotFound": "Ingen LindaX-node kilde funnet!<br><small> <a href='https://lindax.network/cli#geth' class='button' target='_blank'> Vennligst start en manuelt først. </a> </small>",
       "nodeStarting": "LindaX-node starter opp...",
       "nodeStarted": "LindaX-node startet",
       "nodeConnected": "LindaX-node tilkoblet",

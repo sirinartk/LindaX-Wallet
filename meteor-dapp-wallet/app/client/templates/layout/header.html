@@ -50,7 +50,11 @@
                 <span class="text">
                     <i class="icon-feed"></i> {{$.Session.get "peerCount"}}
                     <span>{{i18n 'wallet.app.texts.peers'}}</span>
+                </span>
+                <span class="text">
                     <i class="icon-layers"></i> {{i18n "wallet.app.texts.nodeSyncing" blockDiff=blockDiff}}
+                </span>
+                <span class="text">
                     <i class="icon-cloud-download"></i> {{progress}}%
                     <br>
                 </span>

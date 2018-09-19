@@ -118,8 +118,8 @@
     },
     "startScreen": {
       "runningNodeFound": "U gjet nyje LindaX në punë!",
-      "nodeConnectionTimeout": "Nuk mund të niset nyje LindaX!<br><small>Nëse ju <a href='https://www.LindaX/cli#geth' class='button' target='_blank'>instaluat Geth</a>, përdorni këtë komandë ta krijoni: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> Ose raportoni një problem </a></small>",
-      "nodeBinaryNotFound": "Nuk u gjet nyje binare LindaX!<br><small> <a href='https://www.LindaX/cli#geth' class='button' target='_blank'> Ju lutemi krijoni një manualisht më parë. </a> </small>",
+      "nodeConnectionTimeout": "Nuk mund të niset nyje LindaX!<br><small>Nëse ju <a href='https://lindax.network/cli#geth' class='button' target='_blank'>instaluat Geth</a>, përdorni këtë komandë ta krijoni: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> Ose raportoni një problem </a></small>",
+      "nodeBinaryNotFound": "Nuk u gjet nyje binare LindaX!<br><small> <a href='https://lindax.network/cli#geth' class='button' target='_blank'> Ju lutemi krijoni një manualisht më parë. </a> </small>",
       "nodeStarting": "Nyja LindaX po niset...",
       "nodeStarted": "Nyja LindaX u nis",
       "nodeConnected": "Nyja LindaX u lidh",

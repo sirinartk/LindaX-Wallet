@@ -129,8 +129,8 @@
     },
     "startScreen": {
       "runningNodeFound": "Lopende LindaX node gevonden!",
-      "nodeConnectionTimeout": "LindaX node opstarten niet mogelijk!<br><small>Als je <a href='https://www.LindaX/cli#geth' class='button' target='_blank'>Geth geinstalleerd hebt</a>, gebruik dan dit commando om het op te starten: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> Of meld een fout </a></small>",
-      "nodeBinaryNotFound": "Geen LindaX node gevonden!<br><small> <a href='https://www.LindaX/cli#geth' class='button' target='_blank'> Start er a.u.b. handmatig een. </a> </small>",
+      "nodeConnectionTimeout": "LindaX node opstarten niet mogelijk!<br><small>Als je <a href='https://lindax.network/cli#geth' class='button' target='_blank'>Geth geinstalleerd hebt</a>, gebruik dan dit commando om het op te starten: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> Of meld een fout </a></small>",
+      "nodeBinaryNotFound": "Geen LindaX node gevonden!<br><small> <a href='https://lindax.network/cli#geth' class='button' target='_blank'> Start er a.u.b. handmatig een. </a> </small>",
       "nodeStarting": "LindaX node opstarten...",
       "nodeStarted": "LindaX node gestart",
       "nodeConnected": "LindaX node verbonden",

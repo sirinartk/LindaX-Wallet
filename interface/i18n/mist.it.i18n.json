@@ -137,8 +137,8 @@
     },
     "startScreen": {
       "runningNodeFound": "Trovato nodo LindaX in esecuzione!",
-      "nodeConnectionTimeout": "Impossibile avviare un nodo LindaX!<br><small>Se <a href='https://www.LindaX/cli#geth' class='button' target='_blank'>hai installato Geth</a>, usa questo comando per eseguirlo:<br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> o riporta il problema </a></small>",
-      "nodeBinaryNotFound": "Impossibile trovare l'eseguibile del nodo LindaX !<br><small> <a href='https://www.LindaX/cli#geth' class='button' target='_blank'> Per favore avvialo manualmente prima. </a> </small>",
+      "nodeConnectionTimeout": "Impossibile avviare un nodo LindaX!<br><small>Se <a href='https://lindax.network/cli#geth' class='button' target='_blank'>hai installato Geth</a>, usa questo comando per eseguirlo:<br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> o riporta il problema </a></small>",
+      "nodeBinaryNotFound": "Impossibile trovare l'eseguibile del nodo LindaX !<br><small> <a href='https://lindax.network/cli#geth' class='button' target='_blank'> Per favore avvialo manualmente prima. </a> </small>",
       "nodeSyncing": "Il nodo LindaX deve sincronizzarsi, attendere prego...",
       "nodeSyncInfo": "Scaricamento blocco __displayBlock__ di __highestBlock__.",
       "nodeSyncConnecting": "Alla ricerca di nodi...",
