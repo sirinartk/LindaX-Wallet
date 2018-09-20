@@ -7,10 +7,10 @@
           "x64": {
             "download": {
               "url":
-                "https://lindaproject.nyc3.digitaloceanspaces.com/lindax/public/geth/geth-linux-amd64-1.8.13-8088732.tar.gz",
+                "https://lindaproject.nyc3.digitaloceanspaces.com/lindax/public/geth/geth-linux-amd64-1.8.13-d8499d4.tar.gz",
               "type": "tar",
-              "md5": "b87a2aadf0c872b4846ebb08745d31ce",
-              "bin": "geth-linux-amd64-1.8.13-8088732/geth"
+              "md5": "e2f761692784d34f03f18c25e745ebd6",
+              "bin": "geth-linux-amd64-1.8.13-d8499d4/geth"
             },
             "bin": "geth",
             "commands": {
@@ -23,10 +23,10 @@
           "ia32": {
             "download": {
               "url":
-                "https://lindaproject.nyc3.digitaloceanspaces.com/lindax/public/geth/geth-linux-386-1.8.13-8088732.tar.gz",
+                "https://lindaproject.nyc3.digitaloceanspaces.com/lindax/public/geth/geth-linux-386-1.8.13-d8499d4.tar.gz",
               "type": "tar",
-              "md5": "cd5e77f74f57e0a32d8929213ec9c0d0",
-              "bin": "geth-linux-386-1.8.13-8088732/geth"
+              "md5": "da00069bb72d0355c123dca5a68c2232",
+              "bin": "geth-linux-386-1.8.13-d8499d4/geth"
             },
             "bin": "geth",
             "commands": {
@@ -41,10 +41,10 @@
           "x64": {
             "download": {
               "url":
-                "https://lindaproject.nyc3.digitaloceanspaces.com/lindax/public/geth/geth-darwin-amd64-1.8.13-8088732.tar.gz",
+                "https://lindaproject.nyc3.digitaloceanspaces.com/lindax/public/geth/geth-darwin-amd64-1.8.13-d8499d4.tar.gz",
               "type": "tar",
-              "md5": "4daa591dfda769173c4dd433d963a90d",
-              "bin": "geth-darwin-amd64-1.8.13-8088732/geth"
+              "md5": "ebd7e454b1f2bded3609fbb4da5de2d8",
+              "bin": "geth-darwin-amd64-1.8.13-d8499d4/geth"
             },
             "bin": "geth",
             "commands": {
@@ -59,10 +59,10 @@
           "x64": {
             "download": {
               "url":
-                "https://lindaproject.nyc3.digitaloceanspaces.com/lindax/public/geth/geth-windows-amd64-1.8.13-8088732.zip",
+                "https://lindaproject.nyc3.digitaloceanspaces.com/lindax/public/geth/geth-windows-amd64-1.8.13-d8499d4.zip",
               "type": "zip",
-              "md5": "4123409289bdffab1ef19bb4480b8e55",
-              "bin": "geth-windows-amd64-1.8.13-8088732\\geth.exe"
+              "md5": "21b3cd6676ea9601500549fdf76933aa",
+              "bin": "geth-windows-amd64-1.8.13-d8499d4\\geth.exe"
             },
             "bin": "geth.exe",
             "commands": {
@@ -75,10 +75,10 @@
           "ia32": {
             "download": {
               "url":
-                "https://lindaproject.nyc3.digitaloceanspaces.com/lindax/public/geth/geth-windows-386-1.8.13-8088732.zip",
+                "https://lindaproject.nyc3.digitaloceanspaces.com/lindax/public/geth/geth-windows-386-1.8.13-d8499d4.zip",
               "type": "zip",
-              "md5": "52d25dfed6b5992d6cc377fe6c138d9d",
-              "bin": "geth-windows-386-1.8.13-8088732\\geth.exe"
+              "md5": "95e04e1a724396d87653d6fb2bc4b576",
+              "bin": "geth-windows-386-1.8.13-d8499d4\\geth.exe"
             },
             "bin": "geth.exe",
             "commands": {
