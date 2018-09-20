@@ -324,7 +324,7 @@ Command line argument parsing
 
 // Load config
 const defaultConfig = {
-  mode: 'mist',
+  mode: 'wallet',
   production: false
 };
 
