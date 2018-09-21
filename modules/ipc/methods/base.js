@@ -139,6 +139,8 @@ module.exports = class BaseProcessor {
 
   _sendToRemote(payload, retry = false) {
     return new Promise(async (resolve, reject) => {
+      return;
+
       const requestId = await lindaxNodeRemote.send(
         payload.method,
         payload.params

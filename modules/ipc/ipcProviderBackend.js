@@ -598,6 +598,8 @@ class IpcProviderBackend {
     */
   _subscribeRemote(localSubscriptionId, params, retry = false) {
     return new Promise(async (resolve, reject) => {
+      return;
+
       log.trace(
         `Creating remote subscription: ${params} (local subscription id: ${localSubscriptionId})`
       );

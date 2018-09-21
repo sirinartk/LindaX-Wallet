@@ -176,9 +176,9 @@ function onReady() {
 
   ipcProviderBackend.init();
 
-  lindaxNode.init();
+  connectNode();
 
-  lindaxNodeRemote.start();
+  // lindaxNodeRemote.start();
 
   // TODO: Settings.language relies on global.config object being set
   store.dispatch(setLanguageOnMain(Settings.language));
@@ -201,6 +201,13 @@ function onReady() {
   appMenu();
 
   startMainWindow();
+}
+
+function connectNode() {
+  lindaxNode.init().catch(err => {
+    // we probably don't have a geth yet
+    setTimeout(() => connectNode(), 5000);
+  });
 }
 
 function enableSwarmProtocol() {
@@ -332,7 +339,7 @@ function initializeMainWindowListeners() {
   // then load wallet url once node connection is established.
   // Otherwise, load immediately since we already
   // have this logic in Mist in webviews.html
-  if (global.mode !== 'wallet') {
+  if (global.mode === 'wallet') {
     mainWindow.load(global.interfaceAppUrl);
   } else {
     mainWindow.load(
