@@ -339,7 +339,7 @@ function initializeMainWindowListeners() {
   // then load wallet url once node connection is established.
   // Otherwise, load immediately since we already
   // have this logic in Mist in webviews.html
-  if (global.mode === 'wallet') {
+  if (global.mode !== 'wallet') {
     mainWindow.load(global.interfaceAppUrl);
   } else {
     mainWindow.load(

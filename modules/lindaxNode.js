@@ -642,7 +642,9 @@ class LindaXNode extends EventEmitter {
       clearInterval(this.syncInterval);
     }
 
-    this.syncInterval = setInterval(async () => {
+    this._watchLocalBlocks();
+
+    /* this.syncInterval = setInterval(async () => {
       const syncingResult = await this.send('eth_syncing');
       const sync = syncingResult.result;
       if (sync === false) {
@@ -656,7 +658,7 @@ class LindaXNode extends EventEmitter {
       } else if (_.isObject(sync)) {
         store.dispatch(syncLocalNode(sync));
       }
-    }, 1500);
+    }, 1500); */
   }
 
   _watchLocalBlocks() {

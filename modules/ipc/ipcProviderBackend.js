@@ -248,7 +248,7 @@ class IpcProviderBackend {
 
         // Unsubscribe remote subscriptions
         _.each(this._remoteSubscriptions, remoteSubscriptionId => {
-          lindaxNodeRemote.send('eth_unsubscribe', [remoteSubscriptionId]);
+          //lindaxNodeRemote.send('eth_unsubscribe', [remoteSubscriptionId]);
         });
         this._remoteSubscriptions = {};
         this._subscriptionOwners = {};
@@ -580,7 +580,7 @@ class IpcProviderBackend {
       const subscriptionId = result.params[0];
       const localSubscriptionId = this._remoteSubscriptions[subscriptionId];
       if (localSubscriptionId) {
-        lindaxNodeRemote.send('eth_unsubscribe', [localSubscriptionId]);
+        //lindaxNodeRemote.send('eth_unsubscribe', [localSubscriptionId]);
         delete this._remoteSubscriptions[subscriptionId];
         delete this._subscriptionOwners[subscriptionId];
       }
