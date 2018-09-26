@@ -91,7 +91,6 @@ export function setActiveNode() {
     // If local node is 15 or more blocks behind remote, ensure remote is active.
     // Otherwise, local should be active.
     const { active, network, local, remote } = getState().nodes;
-
     // If nosync, ensure active is 'remote'
     if (local.syncMode === 'nosync') {
       if (active === 'local') {
@@ -107,16 +106,16 @@ export function setActiveNode() {
       InfuraEndpoints.ethereum.websockets
     ).map(network => network.toLowerCase());
 
-    if (supportedRemoteNetworks.indexOf(network) === -1) {
-      // If unsupported network, ensure active is 'local'
-      if (active === 'remote') {
-        dispatch({
-          type: '[MAIN]:NODES:CHANGE_ACTIVE',
-          payload: { active: 'local' }
-        });
-      }
-      return;
+    //if (supportedRemoteNetworks.indexOf(network) === -1) {
+    // If unsupported network, ensure active is 'local'
+    if (active === 'remote') {
+      dispatch({
+        type: '[MAIN]:NODES:CHANGE_ACTIVE',
+        payload: { active: 'local' }
+      });
     }
+    return;
+    //}
 
     if (active === 'remote') {
       if (remote.blockNumber - local.blockNumber < 15) {
