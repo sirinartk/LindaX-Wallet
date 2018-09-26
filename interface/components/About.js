@@ -15,9 +15,9 @@ class About extends React.Component {
             src={appIconPath}
             style={{
               position: 'relative',
-              top: '-40px',
-              left: '-132%',
-              width: '255%'
+              top: '35px',
+              left: '0',
+              width: '100%'
             }}
           />
         </div>
@@ -28,7 +28,6 @@ class About extends React.Component {
             <br />
             License {window.mist.license}
             <br />
-            GitHub{' '}
             <a
               href="https://github.com/thelindaprojectinc/lindax-wallet"
               target="_blank"

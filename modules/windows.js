@@ -422,7 +422,7 @@ class Windows {
           url: `${global.interfacePopupsUrl}#about`,
           electronOptions: {
             width: 420,
-            height: 230,
+            height: 280,
             alwaysOnTop: true
           }
         };
