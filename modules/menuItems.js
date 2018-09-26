@@ -54,7 +54,6 @@ const restartNode = function(newType, newNetwork, syncMode, webviews) {
   return lindaxNode
     .restart(newType, newNetwork, syncMode)
     .then(() => {
-      Windows.getByType('main').load(global.interfaceAppUrl);
       createMenu(webviews);
       log.info('Node switch successful.');
     })

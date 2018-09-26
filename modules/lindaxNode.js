@@ -194,7 +194,6 @@ class LindaXNode extends EventEmitter {
       lindaxNodeLog.info('Restart node', newType, newNetwork);
 
       return this.stop()
-        .then(() => Windows.loading.show())
         .then(async () => {
           await Sockets.destroyAll();
           this._socket = Sockets.get('node-ipc', Settings.rpcMode);
@@ -207,7 +206,6 @@ class LindaXNode extends EventEmitter {
             syncMode || this.syncMode
           )
         )
-        .then(() => Windows.loading.hide())
         .catch(err => {
           lindaxNodeLog.error('Error restarting node', err);
           throw err;
