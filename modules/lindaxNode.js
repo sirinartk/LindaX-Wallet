@@ -642,15 +642,13 @@ class LindaXNode extends EventEmitter {
       clearInterval(this.syncInterval);
     }
 
-    this._watchLocalBlocks();
-
-    /* this.syncInterval = setInterval(async () => {
+    this.syncInterval = setInterval(async () => {
       const syncingResult = await this.send('eth_syncing');
       const sync = syncingResult.result;
       if (sync === false) {
         const blockNumberResult = await this.send('eth_blockNumber');
         const blockNumber = parseInt(blockNumberResult.result, 16);
-        if (blockNumber >= store.getState().nodes.remote.blockNumber - 15) {
+        if (blockNumber > 0) {
           // Sync is caught up
           clearInterval(this.syncInterval);
           this._watchLocalBlocks();
@@ -658,7 +656,7 @@ class LindaXNode extends EventEmitter {
       } else if (_.isObject(sync)) {
         store.dispatch(syncLocalNode(sync));
       }
-    }, 1500); */
+    }, 1500);
   }
 
   _watchLocalBlocks() {
@@ -703,9 +701,9 @@ class LindaXNode extends EventEmitter {
     const blockResult = await this.send('eth_getBlockByNumber', ['0x0', false]);
     const block = blockResult.result;
     switch (block.hash) {
-      case '0xd4e56740f876aef8c010b86a40d5f56745a118d0906a34e69aec8c0db1cb8fa3':
+      case '0xaa9da902a93b360bec5f2401d2bdfae952a03b331f7dc7e7560ec5a20ed1148e':
         return 'main';
-      case '0x6341fd3daf94b748c72ced5a5b26028f2474f5f00d824504e4fa37a75767e177':
+      case '0x0b6193d6734e1cd18381f477102f7be9e354d051f44aeab1acde8e56f6863490':
         return 'trajectory';
       default:
         return 'private';
