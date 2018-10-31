@@ -2,7 +2,10 @@
   "name": "Mist",
   "version": "0.11.1",
   "license": "GPL-3.0",
-  "author": "The Linda Project",
+  "author": {
+    "name": "David Stoneham",
+    "email": "dave@lindacoin.com"
+  },
   "description": "LindaX Mist",
   "repository": {
     "type": "git",
@@ -83,7 +86,7 @@
     "eslint-plugin-react": "^7.8.2",
     "express": "^4.15.3",
     "genomatic": "^1.0.0",
-    "glinx-private": "^1.3.0",
+    "geth-private": "^1.3.0",
     "gh-release-assets": "^1.1.0",
     "gulp": "^4.0.0",
     "gulp-babel": "^7.0.0",

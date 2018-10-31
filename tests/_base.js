@@ -6,7 +6,7 @@ const fs = require('fs');
 const Web3 = require('web3');
 const shell = require('shelljs');
 const path = require('path');
-const glinxPrivate = require('glinx-private');
+const gethPrivate = require('geth-private');
 const Application = require('spectron').Application;
 const chai = require('chai');
 const http = require('http');
@@ -38,7 +38,7 @@ const startglinx = function*() {
     console.info('Glinx downloaded at:', glinxPath);
   }
 
-  const glinx = glinxPrivate({
+  const glinx = gethPrivate({
     glinxPath,
     balance: 5,
     genesisBlock: {
