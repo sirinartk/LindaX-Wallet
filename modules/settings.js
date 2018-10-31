@@ -116,8 +116,8 @@ class Settings {
     return argv.swarmurl;
   }
 
-  get gethPath() {
-    return argv.gethpath;
+  get glinxPath() {
+    return argv.glinxpath;
   }
 
   get ethPath() {
@@ -161,15 +161,15 @@ class Settings {
     ipcPath = this.userHomePath;
 
     if (process.platform === 'darwin') {
-      ipcPath += '/Library/LindaX/geth.ipc';
+      ipcPath += '/Library/LindaX/glinx.ipc';
     } else if (
       process.platform === 'freebsd' ||
       process.platform === 'linux' ||
       process.platform === 'sunos'
     ) {
-      ipcPath += '/.lindax/geth.ipc';
+      ipcPath += '/.lindax/glinx.ipc';
     } else if (process.platform === 'win32') {
-      ipcPath = '\\\\.\\pipe\\geth.ipc';
+      ipcPath = '\\\\.\\pipe\\glinx.ipc';
     }
 
     settingsLog.debug(`IPC path: ${ipcPath}`);
@@ -350,7 +350,7 @@ const argv = require('yargs')
     node: {
       demand: false,
       default: null,
-      describe: 'Node to use: geth, eth',
+      describe: 'Node to use: glinx, eth',
       requiresArg: true,
       nargs: 1,
       type: 'string',
@@ -391,9 +391,9 @@ const argv = require('yargs')
       type: 'string',
       group: 'Mist options:'
     },
-    gethpath: {
+    glinxpath: {
       demand: false,
-      describe: 'Path to Geth executable to use instead of default.',
+      describe: 'Path to Glinx executable to use instead of default.',
       requiresArg: true,
       nargs: 1,
       type: 'string',
@@ -436,7 +436,7 @@ const argv = require('yargs')
     syncmode: {
       demand: false,
       requiresArg: true,
-      describe: 'Geth synchronization mode: [fast|light|full|nosync]',
+      describe: 'Glinx synchronization mode: [fast|light|full|nosync]',
       nargs: 1,
       type: 'string',
       group: 'Mist options:'
@@ -461,7 +461,7 @@ const argv = require('yargs')
     },
     '': {
       describe:
-        'To pass options to the underlying node (e.g. Geth) use the --node- prefix, e.g. --node-datadir',
+        'To pass options to the underlying node (e.g. Glinx) use the --node- prefix, e.g. --node-datadir',
       group: 'Node options:'
     }
   })

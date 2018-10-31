@@ -23,8 +23,8 @@
       "texts": {
         "note": "Nota",
         "balance": "Saldo",
-        "connectionErrorMist": "No se pudo conectar. Por favor, inicie geth con:<br><br><small><code>__node__</code><br><br>Asegúrese de establecer la ruta de IPC a la por defecto, cuando usa un <code>datadir</code> distinto, por ej.<br><code>geth --datadir ... --ipcpath /Users/&lt;suUsuario&gt;/Library/LindaX/geth.ipc</code><br>o<br><code>geth --datadir ... --ipcpath /Users/&lt;suUsuario&gt;/.LindaX/geth.ipc</code>. <br><br>Opcionalmente: <code>--unlock &lt;suCuenta&gt;.</code></small>",
-        "connectionErrorBrowser": "No se pudo conectar. Por favor inicie geth con las siguientes opciones:<br><br><small><code>__node__</code><br><br>Opcionalmente agregue: <code>--unlock &lt;suCuenta&gt;.</code></small>",
+        "connectionErrorMist": "No se pudo conectar. Por favor, inicie glinx con:<br><br><small><code>__node__</code><br><br>Asegúrese de establecer la ruta de IPC a la por defecto, cuando usa un <code>datadir</code> distinto, por ej.<br><code>glinx --datadir ... --ipcpath /Users/&lt;suUsuario&gt;/Library/LindaX/glinx.ipc</code><br>o<br><code>glinx --datadir ... --ipcpath /Users/&lt;suUsuario&gt;/.LindaX/glinx.ipc</code>. <br><br>Opcionalmente: <code>--unlock &lt;suCuenta&gt;.</code></small>",
+        "connectionErrorBrowser": "No se pudo conectar. Por favor inicie glinx con las siguientes opciones:<br><br><small><code>__node__</code><br><br>Opcionalmente agregue: <code>--unlock &lt;suCuenta&gt;.</code></small>",
         "pendingConfirmationsBadge": "Confirmación Pendiente!",
         "nodeSyncing": "__blockDiff__ blocks left",
         "blockReceived": "New Block Received",

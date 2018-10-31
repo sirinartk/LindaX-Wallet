@@ -150,7 +150,7 @@ ipc.on('backendAction_checkWalletFile', (e, path) => {
           } else {
             keystorePath += '/.web3/keys';
           }
-          // geth
+          // glinx
         } else {
           if (process.platform === 'darwin')
             keystorePath += '/Library/LindaX/keystore';
@@ -195,14 +195,14 @@ ipc.on('backendAction_importWalletFile', (e, path, pw) => {
   const ClientBinaryManager = require('./clientBinaryManager'); // eslint-disable-line global-require
   let error = false;
 
-  const binPath = ClientBinaryManager.getClient('geth').binPath;
+  const binPath = ClientBinaryManager.getClient('glinx').binPath;
   const nodeProcess = spawn(binPath, ['wallet', 'import', path]);
 
   nodeProcess.once('error', () => {
     error = true;
     e.sender.send(
       'uiAction_importedWalletFile',
-      'Couldn\'t start the "geth wallet import <file.json>" process.'
+      'Couldn\'t start the "glinx wallet import <file.json>" process.'
     );
   });
   nodeProcess.stdout.on('data', _data => {

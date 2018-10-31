@@ -136,7 +136,7 @@
     },
     "startScreen": {
       "runningNodeFound": "Trobat node d'LindaX executant-se!",
-      "nodeConnectionTimeout": "No s'ha pogut iniciar el node d'LindaX!<br><small>Si has <a href='https://github.com/LindaProjectInc' class='button' target='_blank'>instal·lat Geth</a>, utilitza aquesta comanda per executar-lo: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> O notifica l'error </a></small>",
+      "nodeConnectionTimeout": "No s'ha pogut iniciar el node d'LindaX!<br><small>Si has <a href='https://github.com/LindaProjectInc' class='button' target='_blank'>instal·lat Glinx</a>, utilitza aquesta comanda per executar-lo: <br> <code>glinx --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> O notifica l'error </a></small>",
       "nodeBinaryNotFound": "No s'ha torbat el binari del node d'LindaX!<br><small> <a href='https://github.com/LindaProjectInc' class='button' target='_blank'> Si us plau inicia'n un manualment primer. </a> </small>",
       "nodeStarting": "Node d'LindaX iniciant-se...",
       "nodeStarted": "Node d'LindaX iniciat",

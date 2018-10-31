@@ -9,11 +9,11 @@ The wallet contains its own node, but can also use an already running one, if th
 
 When you start the wallet on a testnet (e.g. different `--datadir`) you need to make sure to set the `--ipcpath` back to the original one.
 
-On OSX its `~/Library/LindaX/geth.ipc` on linux `~/.lindax/geth.ipc` and on windows it uses a named pipe, which doesn't need to be renamed.
+On OSX its `~/Library/LindaX/glinx.ipc` on linux `~/.lindax/glinx.ipc` and on windows it uses a named pipe, which doesn't need to be renamed.
 
 Example:
 
-    $ geth --datadir /my/chain/ --networkid 23 --ipcpath ~/Library/LindaX/geth.ipc
+    $ glinx --datadir /my/chain/ --networkid 23 --ipcpath ~/Library/LindaX/glinx.ipc
 
 ### Original contract
 

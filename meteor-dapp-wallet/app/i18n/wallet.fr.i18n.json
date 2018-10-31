@@ -23,7 +23,7 @@
       "texts": {
         "note": "Note",
         "balance": "Solde",
-        "connectionErrorMist": "Impossible de se connecter. Veuillez lancer gexp en utilisant : <br><br><small><code>__node__</code><br><br>Assurez-vous d'avoir bien renseigné le chemin IPC par défaut lorsque vous utilisez un <code>datadir</code> différent, ex : <br><code>geth --datadir ... --ipcpath /Users/&lt;yourUser&gt;/Library/LindaX/geth.ipc</code><br>ou<br><code>geth --datadir ... --ipcpath /Users/&lt;yourUser&gt;/.LindaX/geth.ipc</code>. <br><br>Ajout facultatif : <code>--unlock &lt;votreCompte&gt;.</code></small>",
+        "connectionErrorMist": "Impossible de se connecter. Veuillez lancer gexp en utilisant : <br><br><small><code>__node__</code><br><br>Assurez-vous d'avoir bien renseigné le chemin IPC par défaut lorsque vous utilisez un <code>datadir</code> différent, ex : <br><code>glinx --datadir ... --ipcpath /Users/&lt;yourUser&gt;/Library/LindaX/glinx.ipc</code><br>ou<br><code>glinx --datadir ... --ipcpath /Users/&lt;yourUser&gt;/.LindaX/glinx.ipc</code>. <br><br>Ajout facultatif : <code>--unlock &lt;votreCompte&gt;.</code></small>",
         "connectionErrorBrowser": "Impossible de se connecter. Veuillez lancer gexp en utilisant les options suivantes : <br><br><small><code>__node__</code><br><br>Ajout facultatif : <code>--unlock &lt;votreCompte&gt;.</code></small>",
         "pendingConfirmationsBadge": "Confirmation en cours !",
         "nodeSyncing": "__blockDiff__ blocs restants",

@@ -83,7 +83,7 @@ $ cd mist
 $ yarn dev:electron
 ```
 
-_NOTE: Client binaries (e.g. [geth](https://github.com/thelindaprojectinc/go-lindax)) specified in [clientBinaries.json](https://github.com/thelindaprojectinc/lindax-wallet/blob/master/clientBinaries.json) will be checked during every startup and downloaded if out-of-date, binaries are stored in the [config folder](#config-folder)._
+_NOTE: Client binaries (e.g. [glinx](https://github.com/thelindaprojectinc/go-lindax)) specified in [clientBinaries.json](https://github.com/thelindaprojectinc/lindax-wallet/blob/master/clientBinaries.json) will be checked during every startup and downloaded if out-of-date, binaries are stored in the [config folder](#config-folder)._
 
 _NOTE: use `--help` to display available options, e.g. `--loglevel debug` (or `trace`) for verbose output_
 
@@ -113,12 +113,12 @@ $ yarn dev:electron --mode wallet
 This is useful if you are already running your own node or would like to connect with a private or development network.
 
 ```bash
-$ yarn dev:electron --rpc path/to/geth.ipc
+$ yarn dev:electron --rpc path/to/glinx.ipc
 ```
 
-### Passing options to Geth
+### Passing options to Glinx
 
-You can pass command-line options directly to Geth by prefixing them with `--node-` in
+You can pass command-line options directly to Glinx by prefixing them with `--node-` in
 the command-line invocation:
 
 ```bash
@@ -129,13 +129,13 @@ The `--rpc` Mist option is a special case. If you set this to an IPC socket file
 path then the `--ipcpath` option automatically gets set, i.e.:
 
 ```bash
-$ yarn dev:electron --rpc path/to/geth.ipc
+$ yarn dev:electron --rpc path/to/glinx.ipc
 ```
 
 ...is the same as doing...
 
 ```bash
-$ yarn dev:electron --rpc /my/geth.ipc --node-ipcpath /path/to/geth.ipc
+$ yarn dev:electron --rpc /my/glinx.ipc --node-ipcpath /path/to/glinx.ipc
 ```
 
 ### Creating a local private net
@@ -143,13 +143,13 @@ $ yarn dev:electron --rpc /my/geth.ipc --node-ipcpath /path/to/geth.ipc
 If you would like to quickly set up a local private network on your computer, run:
 
 ```bash
-geth --dev
+glinx --dev
 ```
 
-Look for the IPC path in the resulting geth output, then start Mist with:
+Look for the IPC path in the resulting glinx output, then start Mist with:
 
 ```bash
-$ yarn dev:electron --rpc path/to/geth.ipc
+$ yarn dev:electron --rpc path/to/glinx.ipc
 ```
 
 ### Deployment

@@ -18,9 +18,9 @@ Install npm dependencies:
 
 ## Development
 
-Start a `geth` node:
+Start a `glinx` node:
 
-    $ geth --rpc --ws --wsorigins "http://localhost:3000" --unlock <your account>
+    $ glinx --rpc --ws --wsorigins "http://localhost:3000" --unlock <your account>
 
 Run dev server:
 

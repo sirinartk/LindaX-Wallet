@@ -97,10 +97,10 @@ var checkSync = function() {
 var showModal = function() {
   // make sure the modal is rendered after all routes are executed
   Meteor.setTimeout(function() {
-    // if in mist, tell to start geth, otherwise start with RPC
-    var gethRPC = window.mist
-      ? 'geth'
-      : 'geth --rpc --ws --wsorigins "' +
+    // if in mist, tell to start glinx, otherwise start with RPC
+    var glinxRPC = window.mist
+      ? 'glinx'
+      : 'glinx --rpc --ws --wsorigins "' +
         window.location.protocol +
         '//' +
         window.location.host +
@@ -112,7 +112,7 @@ var showModal = function() {
           TAPi18n.__(
             'wallet.app.texts.connectionError' +
               (window.mist ? 'Mist' : 'Browser'),
-            { node: gethRPC }
+            { node: glinxRPC }
           )
         ),
         ok: function() {

@@ -112,7 +112,7 @@
     },
     "startScreen": {
       "runningNodeFound": "Encontrado nodo LindaX funcionando!",
-      "nodeConnectionTimeout": "No se pudo iniciar un nodo LindaX!<br><small>Si <a href='https://www.github.com/TheLindaProjectInc/LindaX-Wallet' class='button' target='_blank'>has instalado Geth</a>, utiliza este comando para ejecutarlo: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> O informa del problema </a></small>",
+      "nodeConnectionTimeout": "No se pudo iniciar un nodo LindaX!<br><small>Si <a href='https://www.github.com/TheLindaProjectInc/LindaX-Wallet' class='button' target='_blank'>has instalado Glinx</a>, utiliza este comando para ejecutarlo: <br> <code>glinx --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> O informa del problema </a></small>",
       "nodeBinaryNotFound": "No se ha encontrado el binario del nodo LindaX!<br><small> <a href='https://www.github.com/TheLindaProjectInc/LindaX-Wallet' class='button' target='_blank'> Por favor, inicie antes uno manualmente. </a> </small>",
       "nodeSyncing": "El nodo de LindaX necesita sincronizarse, por favor espere...",
       "nodeSyncInfo": "Descargando bloque __displayBlock__ de __highestBlock__.",

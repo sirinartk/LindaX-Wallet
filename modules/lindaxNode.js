@@ -19,9 +19,9 @@ import {
 import logger from './utils/logger';
 const lindaxNodeLog = logger.create('LindaXNode');
 
-const DEFAULT_NODE_TYPE = 'geth';
+const DEFAULT_NODE_TYPE = 'glinx';
 const DEFAULT_NETWORK = 'main';
-const DEFAULT_SYNCMODE = 'light';
+const DEFAULT_SYNCMODE = 'fast';
 
 const UNABLE_TO_BIND_PORT_ERROR = 'unableToBindPort';
 const NODE_START_WAIT_MS = 3000;
@@ -91,8 +91,8 @@ class LindaXNode extends EventEmitter {
     return this._type === 'eth';
   }
 
-  get isGeth() {
-    return this._type === 'geth';
+  get isGlinx() {
+    return this._type === 'glinx';
   }
 
   get isMainNetwork() {
@@ -285,7 +285,7 @@ class LindaXNode extends EventEmitter {
 
   /**
    * Start a lindax node.
-   * @param  {String} nodeType geth, eth, etc
+   * @param  {String} nodeType glinx, eth, etc
    * @param  {String} network  network id
    * @param  {String} syncMode full, fast, light, nosync
    * @return {Promise}
@@ -348,9 +348,9 @@ class LindaXNode extends EventEmitter {
         this.lastError = err.tag;
         this.state = STATES.ERROR;
 
-        // if unable to start eth node then write geth to defaults
+        // if unable to start eth node then write glinx to defaults
         if (nodeType === 'eth') {
-          Settings.saveUserData('node', 'geth');
+          Settings.saveUserData('node', 'glinx');
         }
 
         throw err;
@@ -401,7 +401,7 @@ class LindaXNode extends EventEmitter {
    */
   __startProcess(nodeType, network, binPath, _syncMode) {
     let syncMode = _syncMode;
-    if (nodeType === 'geth' && !syncMode) {
+    if (nodeType === 'glinx' && !syncMode) {
       syncMode = DEFAULT_SYNCMODE;
     }
 
@@ -481,10 +481,10 @@ class LindaXNode extends EventEmitter {
         // Starts Main net
         default:
           args =
-            nodeType === 'geth'
+            nodeType === 'glinx'
               ? ['--cache', process.arch === 'x64' ? '1024' : '512']
               : ['--unsafe-transactions'];
-          if (nodeType === 'geth' && syncMode === 'nosync') {
+          if (nodeType === 'glinx' && syncMode === 'nosync') {
             args.push('--nodiscover', '--maxpeers=0');
           } else {
             args.push('--syncmode', syncMode);
@@ -534,7 +534,7 @@ class LindaXNode extends EventEmitter {
         /*
                     We wait a short while before marking startup as successful
                     because we may want to parse the initial node output for
-                    errors, etc (see geth port-binding error above)
+                    errors, etc (see glinx port-binding error above)
                 */
         setTimeout(() => {
           if (STATES.STARTING === this.state) {
@@ -584,12 +584,12 @@ class LindaXNode extends EventEmitter {
       this.emit('nodeLog', cleanData);
     }
 
-    // check for geth startup errors
+    // check for glinx startup errors
     if (STATES.STARTING === this.state) {
       const dataStr = data.toString().toLowerCase();
-      if (nodeType === 'geth') {
+      if (nodeType === 'glinx') {
         if (dataStr.indexOf('fatal: error') >= 0) {
-          const error = new Error(`Geth error: ${dataStr}`);
+          const error = new Error(`Glinx error: ${dataStr}`);
 
           if (dataStr.indexOf('bind') >= 0) {
             error.tag = UNABLE_TO_BIND_PORT_ERROR;

@@ -12,12 +12,12 @@ const parseJson = require('xml2js').parseString;
 const clientBinaries = require('../clientBinaries.json');
 
 gulp.task('update-nodes', cb => {
-  const clientBinariesGeth = clientBinaries.clients.Geth;
-  const localGethVersion = clientBinariesGeth.version;
+  const clientBinariesglinx = clientBinaries.clients.Glinx;
+  const localGlinxVersion = clientBinariesGlinx.version;
   const newJson = clientBinaries;
-  const geth = newJson.clients.Geth;
+  const glinx = newJson.clients.Glinx;
 
-  // Query latest geth version
+  // Query latest glinx version
   got(
     'https://api.github.com/repos/TheLindaProjectInc/go-lindax/releases/latest',
     {
@@ -29,11 +29,11 @@ gulp.task('update-nodes', cb => {
     })
     // Return tag name (e.g. 'v1.5.0')
     .then(tagName => {
-      const latestGethVersion = tagName.match(/\d+\.\d+\.\d+/)[0];
+      const latestGlinxVersion = tagName.match(/\d+\.\d+\.\d+/)[0];
 
-      // Compare to current geth version in clientBinaries.json
-      if (cmp(latestGethVersion, localGethVersion)) {
-        geth.version = latestGethVersion;
+      // Compare to current glinx version in clientBinaries.json
+      if (cmp(latestGlinxVersion, localGlinxVersion)) {
+        glinx.version = latestGlinxVersion;
 
         // Query commit hash (first 8 characters)
         got(
@@ -48,7 +48,7 @@ gulp.task('update-nodes', cb => {
 
             // Query Azure assets for md5 hashes
             got(
-              'https://gethstore.blob.core.windows.net/builds?restype=container&comp=list',
+              'https://glinxstore.blob.core.windows.net/builds?restype=container&comp=list',
               { xml: true }
             )
               .then(response => {
@@ -60,35 +60,37 @@ gulp.task('update-nodes', cb => {
                 });
 
                 // For each platform/arch in clientBinaries.json
-                _.keys(geth.platforms).forEach(platform => {
-                  _.keys(geth.platforms[platform]).forEach(arch => {
+                _.keys(glinx.platforms).forEach(platform => {
+                  _.keys(glinx.platforms[platform]).forEach(arch => {
                     // Update URL
-                    let url = geth.platforms[platform][arch].download.url;
+                    let url = glinx.platforms[platform][arch].download.url;
                     url = url.replace(
                       /\d+\.\d+\.\d+-[a-z0-9]{8}/,
-                      `${latestGethVersion}-${hash}`
+                      `${latestGlinxVersion}-${hash}`
                     );
-                    geth.platforms[platform][arch].download.url = url;
+                    glinx.platforms[platform][arch].download.url = url;
 
                     // Update bin name (path in archive)
-                    let bin = geth.platforms[platform][arch].download.bin;
+                    let bin = glinx.platforms[platform][arch].download.bin;
                     bin = bin.replace(
                       /\d+\.\d+\.\d+-[a-z0-9]{8}/,
-                      `${latestGethVersion}-${hash}`
+                      `${latestGlinxVersion}-${hash}`
                     );
-                    geth.platforms[platform][arch].download.bin = bin;
+                    glinx.platforms[platform][arch].download.bin = bin;
 
                     // Update expected sanity-command version output
-                    geth.platforms[platform][
+                    glinx.platforms[platform][
                       arch
-                    ].commands.sanity.output[1] = String(latestGethVersion);
+                    ].commands.sanity.output[1] = String(latestGlinxVersion);
 
                     // Update md5 checksum
                     blobs.forEach(blob => {
                       if (
                         String(blob.Name) ===
                         _.last(
-                          geth.platforms[platform][arch].download.url.split('/')
+                          glinx.platforms[platform][arch].download.url.split(
+                            '/'
+                          )
                         )
                       ) {
                         const sum = new Buffer(
@@ -96,7 +98,7 @@ gulp.task('update-nodes', cb => {
                           'base64'
                         );
 
-                        geth.platforms[platform][
+                        glinx.platforms[platform][
                           arch
                         ].download.md5 = sum.toString('hex');
                       }

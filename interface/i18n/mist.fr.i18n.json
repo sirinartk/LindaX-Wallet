@@ -111,8 +111,8 @@
     },
     "startScreen": {
       "runningNodeFound": "Nœud LindaX actif trouvé !",
-      "nodeConnectionTimeout": "Echec du démarrage du nœud LindaX !<br><small>Si vous <a href='https://lindax.network/cli#geth' class='button' target='_blank'>avez installé Geth</a>, utilisez cette commande pour le lancer : <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> Ou signalez le problème </a></small>",
-      "nodeBinaryNotFound": "Pas de binaire du nœud LindaX trouvé !<br><small> <a href='https://lindax.network/cli#geth' class='button' target='_blank'> Veuillez en lancer d'abord un manuellement. </a> </small>",
+      "nodeConnectionTimeout": "Echec du démarrage du nœud LindaX !<br><small>Si vous <a href='https://lindax.network/cli#glinx' class='button' target='_blank'>avez installé Glinx</a>, utilisez cette commande pour le lancer : <br> <code>glinx --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> Ou signalez le problème </a></small>",
+      "nodeBinaryNotFound": "Pas de binaire du nœud LindaX trouvé !<br><small> <a href='https://lindax.network/cli#glinx' class='button' target='_blank'> Veuillez en lancer d'abord un manuellement. </a> </small>",
       "nodeSyncing": "Le nœud LindaX se synchronise, veuillez patienter...",
       "nodeSyncInfo": "Télechargement du bloc __displayBlock__ depuis le bloc __highestBlock__.",
       "nodeSyncConnecting": "À la recherche de pairs...",

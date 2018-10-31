@@ -25,7 +25,7 @@ If you add any modules or files, please give them a module description and or a 
 
 ```
 /**
-The IPC provider backend filter and tunnel all incoming request to the IPC geth bridge.
+The IPC provider backend filter and tunnel all incoming request to the IPC glinx bridge.
 
 @module ipcProviderBackend
 */
