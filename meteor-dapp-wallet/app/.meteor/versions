@@ -108,7 +108,7 @@ templating-runtime@1.3.2
 templating-tools@1.1.2
 thelindaproject:accounts@1.1.0
 thelindaproject:blocks@1.1.0
-thelindaproject:dapp-styles@0.5.9
+thelindaproject:dapp-styles@0.6.0
 thelindaproject:elements@1.2.0
 thelindaproject:tools@1.1.0
 thelindaproject:web3@1.0.0-beta.33

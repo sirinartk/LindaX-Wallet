@@ -343,7 +343,7 @@ function initializeMainWindowListeners() {
     mainWindow.load(global.interfaceAppUrl);
   } else {
     let loadingWindow =
-      'data:text/html,<div class="loadingspinner"></div><style>body{background: #151727;height:100vh;margin: 0;padding: 0;display: flex;justify-content: center;align-items: center;}.loadingspinner{pointer-events: none;width: 3em;height: 3em;border: 0.4em solid transparent;border-color: #151727;border-top-color: #fe6c01;border-radius: 50%;animation: loadingspin 1s linear infinite;}@keyframes loadingspin{100% {transform: rotate(360deg)}</style>';
+      'data:text/html,<div class="loadingspinner"></div><style>body{background: #151727;height:100vh;margin: 0;padding: 0;display: flex;justify-content: center;align-items: center;}.loadingspinner{pointer-events: none;width: 3em;height: 3em;border: 0.4em solid transparent;border-color: #151727;border-top-color: #035096;border-radius: 50%;animation: loadingspin 1s linear infinite;}@keyframes loadingspin{100% {transform: rotate(360deg)}</style>';
     mainWindow.load(loadingWindow);
     let mainWindowType = 'loading';
     const unsubscribe = store.subscribe(() => {
