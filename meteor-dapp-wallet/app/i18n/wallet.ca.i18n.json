@@ -23,8 +23,8 @@
       "texts": {
         "note": "Nota",
         "balance": "Balanç",
-        "connectionErrorMist": "No s'ha pogut connectar. Si us plau inicia geth utilitzant:<br><br><small><code>__node__</code><br><br>Assegura't que la ruta al teu IPC és per defecte, quan utilitzis un <code>datadir</code> diferent, ex.<br><code>geth --datadir ... --ipcpath /Users/&lt;elTeuUsuari&gt;/Library/LindaX/geth.ipc</code><br>o<br><code>geth --datadir ... --ipcpath /Users/&lt;elTeuUsuari&gt;/.LindaX/geth.ipc</code>. <br><br>Afegeix opcionalment: <code>--unlock &lt;elTeuCompte&gt;.</code></small>",
-        "connectionErrorBrowser": "No s'ha pogut connectar. Si us plau inicia geth amb les següents opcions:<br><br><small><code>__node__</code><br><br>Opcionalment afegeix: <code>--unlock &lt;elTeuCompte&gt;.</code></small>",
+        "connectionErrorMist": "No s'ha pogut connectar. Si us plau inicia glinx utilitzant:<br><br><small><code>__node__</code><br><br>Assegura't que la ruta al teu IPC és per defecte, quan utilitzis un <code>datadir</code> diferent, ex.<br><code>glinx --datadir ... --ipcpath /Users/&lt;elTeuUsuari&gt;/Library/LindaX/glinx.ipc</code><br>o<br><code>glinx --datadir ... --ipcpath /Users/&lt;elTeuUsuari&gt;/.LindaX/glinx.ipc</code>. <br><br>Afegeix opcionalment: <code>--unlock &lt;elTeuCompte&gt;.</code></small>",
+        "connectionErrorBrowser": "No s'ha pogut connectar. Si us plau inicia glinx amb les següents opcions:<br><br><small><code>__node__</code><br><br>Opcionalment afegeix: <code>--unlock &lt;elTeuCompte&gt;.</code></small>",
         "pendingConfirmationsBadge": "Confirmació Pendent!",
         "nodeSyncing": "__blockDiff__ blocs restants",
         "blockReceived": "Nou bloc rebut",

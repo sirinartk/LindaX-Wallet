@@ -287,7 +287,7 @@ let menuTempl = function(webviews) {
                   userPath += '/.web3/keys';
                 }
 
-                // geth
+                // glinx
               } else {
                 if (process.platform === 'darwin') {
                   userPath += '/Library/LindaX/keystore';
@@ -517,16 +517,16 @@ let menuTempl = function(webviews) {
     const nodeSubmenu = [];
 
     const ethClient = ClientBinaryManager.getClient('eth');
-    const gethClient = ClientBinaryManager.getClient('geth');
+    const glinxClient = ClientBinaryManager.getClient('glinx');
 
-    if (gethClient) {
+    if (glinxClient) {
       nodeSubmenu.push({
-        label: `Geth ${gethClient.version}`,
-        checked: lindaxNode.isOwnNode && lindaxNode.isGeth,
+        label: `Glinx ${glinxClient.version}`,
+        checked: lindaxNode.isOwnNode && lindaxNode.isGlinx,
         enabled: lindaxNode.isOwnNode,
         type: 'checkbox',
         click() {
-          restartNode('geth', null, 'fast', webviews);
+          restartNode('glinx', null, 'fast', webviews);
         }
       });
     }

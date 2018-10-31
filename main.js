@@ -205,7 +205,7 @@ function onReady() {
 
 function connectNode() {
   lindaxNode.init().catch(err => {
-    // we probably don't have a geth yet
+    // we probably don't have a glinx yet
     setTimeout(() => connectNode(), 5000);
   });
 }

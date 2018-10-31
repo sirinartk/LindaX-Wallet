@@ -84,7 +84,7 @@ module.exports = class Web3Socket extends Socket {
   }
 
   /**
-   * Handle responses from Geth.
+   * Handle responses from Glinx.
    * Responses are false, a single object, or an array of objects
    */
   _handleSocketResponse() {

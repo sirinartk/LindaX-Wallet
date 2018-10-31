@@ -12,5 +12,5 @@ lockSourceIssue: false
 # Set custom aliases for targets
 aliases:
   wallet: thehelindaproject/meteor-dapp-wallet
-  geth: thehelindaproject/go-lindax
+  glinx: thehelindaproject/go-lindax
   parity: paritytech/parity

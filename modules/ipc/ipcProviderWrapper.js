@@ -26,7 +26,7 @@ const ipcProviderWrapper = {
   writable: false,
 
   /**
-    Connects the IPC on the backend to the geth node
+    Connects the IPC on the backend to the glinx node
 
     Note: web3.eth.net.isListening (previously: web3.isConnected) will always return true,
     as otherwise race conditions can occur,

@@ -1,38 +1,36 @@
 {
   "clients": {
-    "Geth": {
+    "Glinx": {
       "version": "1.8.13",
       "platforms": {
         "linux": {
           "x64": {
             "download": {
-              "url":
-                "https://lindaproject.nyc3.digitaloceanspaces.com/lindax/public/geth/geth-linux-amd64-1.8.13-d8499d4.tar.gz",
+              "url": "https://lindaproject.nyc3.digitaloceanspaces.com/lindax/public/glinx/glinx-linux-amd64-1.8.13-d8499d4.tar.gz",
               "type": "tar",
               "md5": "e2f761692784d34f03f18c25e745ebd6",
-              "bin": "geth-linux-amd64-1.8.13-d8499d4/geth"
+              "bin": "glinx-linux-amd64-1.8.13-d8499d4/glinx"
             },
-            "bin": "geth",
+            "bin": "glinx",
             "commands": {
               "sanity": {
                 "args": ["version"],
-                "output": ["Geth", "1.8.13"]
+                "output": ["Glinx", "1.8.13"]
               }
             }
           },
           "ia32": {
             "download": {
-              "url":
-                "https://lindaproject.nyc3.digitaloceanspaces.com/lindax/public/geth/geth-linux-386-1.8.13-d8499d4.tar.gz",
+              "url": "https://lindaproject.nyc3.digitaloceanspaces.com/lindax/public/glinx/glinx-linux-386-1.8.13-d8499d4.tar.gz",
               "type": "tar",
               "md5": "da00069bb72d0355c123dca5a68c2232",
-              "bin": "geth-linux-386-1.8.13-d8499d4/geth"
+              "bin": "glinx-linux-386-1.8.13-d8499d4/glinx"
             },
-            "bin": "geth",
+            "bin": "glinx",
             "commands": {
               "sanity": {
                 "args": ["version"],
-                "output": ["Geth", "1.8.13"]
+                "output": ["Glinx", "1.8.13"]
               }
             }
           }
@@ -40,17 +38,16 @@
         "mac": {
           "x64": {
             "download": {
-              "url":
-                "https://lindaproject.nyc3.digitaloceanspaces.com/lindax/public/geth/geth-darwin-amd64-1.8.13-d8499d4.tar.gz",
+              "url": "https://lindaproject.nyc3.digitaloceanspaces.com/lindax/public/glinx/glinx-darwin-amd64-1.8.13-d8499d4.tar.gz",
               "type": "tar",
               "md5": "ebd7e454b1f2bded3609fbb4da5de2d8",
-              "bin": "geth-darwin-amd64-1.8.13-d8499d4/geth"
+              "bin": "glinx-darwin-amd64-1.8.13-d8499d4/glinx"
             },
-            "bin": "geth",
+            "bin": "glinx",
             "commands": {
               "sanity": {
                 "args": ["version"],
-                "output": ["Geth", "1.8.13"]
+                "output": ["Glinx", "1.8.13"]
               }
             }
           }
@@ -58,33 +55,31 @@
         "win": {
           "x64": {
             "download": {
-              "url":
-                "https://lindaproject.nyc3.digitaloceanspaces.com/lindax/public/geth/geth-windows-amd64-1.8.13-d8499d4.zip",
+              "url": "https://lindaproject.nyc3.digitaloceanspaces.com/lindax/public/glinx/glinx-windows-amd64-1.8.13-d8499d4.zip",
               "type": "zip",
               "md5": "21b3cd6676ea9601500549fdf76933aa",
-              "bin": "geth-windows-amd64-1.8.13-d8499d4\\geth.exe"
+              "bin": "glinx-windows-amd64-1.8.13-d8499d4\\glinx.exe"
             },
-            "bin": "geth.exe",
+            "bin": "glinx.exe",
             "commands": {
               "sanity": {
                 "args": ["version"],
-                "output": ["Geth", "1.8.13"]
+                "output": ["Glinx", "1.8.13"]
               }
             }
           },
           "ia32": {
             "download": {
-              "url":
-                "https://lindaproject.nyc3.digitaloceanspaces.com/lindax/public/geth/geth-windows-386-1.8.13-d8499d4.zip",
+              "url": "https://lindaproject.nyc3.digitaloceanspaces.com/lindax/public/glinx/glinx-windows-386-1.8.13-d8499d4.zip",
               "type": "zip",
               "md5": "95e04e1a724396d87653d6fb2bc4b576",
-              "bin": "geth-windows-386-1.8.13-d8499d4\\geth.exe"
+              "bin": "glinx-windows-386-1.8.13-d8499d4\\glinx.exe"
             },
-            "bin": "geth.exe",
+            "bin": "glinx.exe",
             "commands": {
               "sanity": {
                 "args": ["version"],
-                "output": ["Geth", "1.8.13"]
+                "output": ["Glinx", "1.8.13"]
               }
             }
           }

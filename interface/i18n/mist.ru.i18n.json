@@ -112,8 +112,8 @@
     },
     "startScreen": {
       "runningNodeFound": "Обнаружена запущеная LindaX-нода!",
-      "nodeConnectionTimeout": "Не удалось запустить LindaX-ноду!<br><small>Если вы <a href='https://lindax.network/cli#geth' class='button' target='_blank'>установили Geth</a>, используйте следующую команду для запуска: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> Либо сообщите от проблеме </a></small>",
-      "nodeBinaryNotFound": "Не найдены программные файлы для LindaX-ноды!<br><small> <a href='https://lindax.network/cli#geth' class='button' target='_blank'> Пожалуйста, для начала изучите руководство. </a> </small>",
+      "nodeConnectionTimeout": "Не удалось запустить LindaX-ноду!<br><small>Если вы <a href='https://lindax.network/cli#glinx' class='button' target='_blank'>установили Glinx</a>, используйте следующую команду для запуска: <br> <code>glinx --ipcpath __path__</code></small><br> <small><a href='https://github.com/thelindaprojectinc/lindax-wallet/issues' class='button' target='_blank'> Либо сообщите от проблеме </a></small>",
+      "nodeBinaryNotFound": "Не найдены программные файлы для LindaX-ноды!<br><small> <a href='https://lindax.network/cli#glinx' class='button' target='_blank'> Пожалуйста, для начала изучите руководство. </a> </small>",
       "nodeStarting": "LindaX-нода запускается...",
       "nodeStarted": "LindaX-нода запущена",
       "nodeConnected": "LindaX-нода подключена",

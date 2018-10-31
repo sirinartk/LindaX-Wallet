@@ -23,8 +23,8 @@
       "texts": {
         "note": "Shënim",
         "balance": "Balanca",
-        "connectionErrorMist": "Nuk mund të lidhet. Ju lutemi të nisni geth duke përdorur:<br><br><small><code>__node__</code><br><br>Sigurohuni që vendndodhja e IPC të jetë ajo e parazgjedhur, nëse përdoret <code>datadir</code> e ndryshme, p.sh.<br><code>geth --datadir ... --ipcpath /Users/&lt;perdoruesiJuaj&gt;/Library/LindaX/geth.ipc</code><br>or<br><code>geth --datadir ... --ipcpath /Users/&lt;perdoruesiJuaj&gt;/.LindaX/geth.ipc</code>. <br><br>Sipas dëshirës shtoni: <code>--unlock &lt;llogariaJuaj&gt;.</code></small>",
-        "connectionErrorBrowser": "Nuk mund të lidhet. Ju lutemi të nisni geth duke përdorur:<br><br><small><code>__node__</code><br><br>Sipas dëshirës shtoni: <code>--unlock &lt;llogariaJuaj&gt;.</code></small>",
+        "connectionErrorMist": "Nuk mund të lidhet. Ju lutemi të nisni glinx duke përdorur:<br><br><small><code>__node__</code><br><br>Sigurohuni që vendndodhja e IPC të jetë ajo e parazgjedhur, nëse përdoret <code>datadir</code> e ndryshme, p.sh.<br><code>glinx --datadir ... --ipcpath /Users/&lt;perdoruesiJuaj&gt;/Library/LindaX/glinx.ipc</code><br>or<br><code>glinx --datadir ... --ipcpath /Users/&lt;perdoruesiJuaj&gt;/.LindaX/glinx.ipc</code>. <br><br>Sipas dëshirës shtoni: <code>--unlock &lt;llogariaJuaj&gt;.</code></small>",
+        "connectionErrorBrowser": "Nuk mund të lidhet. Ju lutemi të nisni glinx duke përdorur:<br><br><small><code>__node__</code><br><br>Sipas dëshirës shtoni: <code>--unlock &lt;llogariaJuaj&gt;.</code></small>",
         "pendingConfirmationsBadge": "Duke pritur konfirmim!",
         "nodeSyncing": "__blockDiff__ blloqe të mbetura",
         "blockReceived": "U mor bllok i ri",

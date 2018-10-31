@@ -8,7 +8,7 @@ export const initialState = {
     timestamp: 0
   },
   local: {
-    client: 'geth',
+    client: 'glinx',
     blockNumber: 0,
     timestamp: 0,
     syncMode: 'fast',
