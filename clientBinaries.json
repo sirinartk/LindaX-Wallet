@@ -6,10 +6,11 @@
         "linux": {
           "x64": {
             "download": {
-              "url": "https://lindaproject.nyc3.digitaloceanspaces.com/lindax/public/glinx/glinx-linux-amd64-1.8.13-d8499d4.tar.gz",
+              "url":
+                "https://lindaproject.nyc3.digitaloceanspaces.com/lindax/public/glinx/glinx-linux-amd64-1.8.13-0186ad0.tar.gz",
               "type": "tar",
-              "md5": "e2f761692784d34f03f18c25e745ebd6",
-              "bin": "glinx-linux-amd64-1.8.13-d8499d4/glinx"
+              "md5": "d55c3367a62fb3836a5f694c03dbae00",
+              "bin": "glinx-linux-amd64-1.8.13-0186ad0/glinx"
             },
             "bin": "glinx",
             "commands": {
@@ -21,10 +22,11 @@
           },
           "ia32": {
             "download": {
-              "url": "https://lindaproject.nyc3.digitaloceanspaces.com/lindax/public/glinx/glinx-linux-386-1.8.13-d8499d4.tar.gz",
+              "url":
+                "https://lindaproject.nyc3.digitaloceanspaces.com/lindax/public/glinx/glinx-linux-386-1.8.13-0186ad0.tar.gz",
               "type": "tar",
-              "md5": "da00069bb72d0355c123dca5a68c2232",
-              "bin": "glinx-linux-386-1.8.13-d8499d4/glinx"
+              "md5": "2302e74176f134dd414b432852456497",
+              "bin": "glinx-linux-386-1.8.13-0186ad0/glinx"
             },
             "bin": "glinx",
             "commands": {
@@ -38,10 +40,11 @@
         "mac": {
           "x64": {
             "download": {
-              "url": "https://lindaproject.nyc3.digitaloceanspaces.com/lindax/public/glinx/glinx-darwin-amd64-1.8.13-d8499d4.tar.gz",
+              "url":
+                "https://lindaproject.nyc3.digitaloceanspaces.com/lindax/public/glinx/glinx-darwin-amd64-1.8.13-0186ad0.tar.gz",
               "type": "tar",
-              "md5": "ebd7e454b1f2bded3609fbb4da5de2d8",
-              "bin": "glinx-darwin-amd64-1.8.13-d8499d4/glinx"
+              "md5": "bbfcc673802ea31a94d0d2153d8d7b6b",
+              "bin": "glinx-darwin-amd64-1.8.13-0186ad0/glinx"
             },
             "bin": "glinx",
             "commands": {
@@ -55,10 +58,11 @@
         "win": {
           "x64": {
             "download": {
-              "url": "https://lindaproject.nyc3.digitaloceanspaces.com/lindax/public/glinx/glinx-windows-amd64-1.8.13-d8499d4.zip",
+              "url":
+                "https://lindaproject.nyc3.digitaloceanspaces.com/lindax/public/glinx/glinx-windows-amd64-1.8.13-0186ad0.zip",
               "type": "zip",
-              "md5": "21b3cd6676ea9601500549fdf76933aa",
-              "bin": "glinx-windows-amd64-1.8.13-d8499d4\\glinx.exe"
+              "md5": "adc116d207ac8f5a665ae5dbf4c9e4f3",
+              "bin": "glinx-windows-amd64-1.8.13-0186ad0\\glinx.exe"
             },
             "bin": "glinx.exe",
             "commands": {
@@ -70,10 +74,11 @@
           },
           "ia32": {
             "download": {
-              "url": "https://lindaproject.nyc3.digitaloceanspaces.com/lindax/public/glinx/glinx-windows-386-1.8.13-d8499d4.zip",
+              "url":
+                "https://lindaproject.nyc3.digitaloceanspaces.com/lindax/public/glinx/glinx-windows-386-1.8.13-0186ad0.zip",
               "type": "zip",
-              "md5": "95e04e1a724396d87653d6fb2bc4b576",
-              "bin": "glinx-windows-386-1.8.13-d8499d4\\glinx.exe"
+              "md5": "c9c8c539e68e9dad280d48287c441f77",
+              "bin": "glinx-windows-386-1.8.13-0186ad0\\glinx.exe"
             },
             "bin": "glinx.exe",
             "commands": {
