@@ -95,7 +95,7 @@
       "buttons": {
         "deposit": "Transfer Ether & Tokens",
         "buyEther": "Fund with Bitcoin",
-        "viewOnExplorer": "View on Etherscan",
+        "viewOnExplorer": "View on Explorer",
         "copyAddress": "Copy address",
         "scanQRCode": "Show QR-Code",
         "showInterface": "Show Interface"
@@ -205,7 +205,7 @@
           "description": "Kontratë e kontrolluar nga disa llogari",
           "text1": "Kjo është llogari kyçe e kontrolluar nga",
           "text2": "pronarë. Ju mund të dërgoni deri në",
-          "text3": "Ether në ditë.",
+          "text3": "LindaX në ditë.",
           "text4": "Çdo transaksion mbi limitin ditor kërkon konfirmimin e",
           "text5": "pronarëve.",
           "accountOwnersTitle": "Pronarët e llogarisë",

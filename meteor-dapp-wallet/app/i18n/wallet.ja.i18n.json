@@ -88,9 +88,9 @@
       "walletsDescriptionNotEnoughFunds": "１ether以上保有しているとより高度な契約ができる様になります。Once you have more than 1 ether you can create a more sophisticated contracts. ウォレットはベーシックなスマートコントラクトの一種で、資金をマルチプルアカウントで管理し、セキュリティー増強のためにオプションで１日当たりの引き出し制限することもできます。 カスタムコントラクトを作るには <em> コントラクト </em> タブ",
       "accountsDescription": "アカウントはetherを保有できる、パスワードで保護されたキーです、イーサリアムベースのトークンかコインを保全しコントラクトを管理します。アカウントは入ってくる取引を表示できません。",
       "buttons": {
-        "deposit": "Etherをデポジット",
+        "deposit": "LindaXをデポジット",
         "buyEther": "Bitcoinを使ってデポジット",
-        "viewOnExplorer": "View on Etherscan",
+        "viewOnExplorer": "View on Explorer",
         "copyAddress": "アドレスをコピー",
         "scanQRCode": "QRコードを表示",
         "showInterface": "インターフェイスを表示"
@@ -197,7 +197,7 @@
           "description": "マルチプルアカウントによって管理されたコントラクト",
           "text1": "これは接続アカウントです、管理しているのは",
           "text2": "オーナーです。送信の上限は",
-          "text3": "ether／１日",
+          "text3": "LindaX／１日",
           "text4": "１日の上限を超えるトランザクションは承認が必要です",
           "text5": "オーナーの",
           "accountOwnersTitle": "アカウントオーナー",

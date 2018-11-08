@@ -90,7 +90,7 @@
       "buttons": {
         "deposit": "Depunere",
         "buyEther": "Depunere Bitcoin",
-        "viewOnExplorer": "View on Etherscan",
+        "viewOnExplorer": "View on Explorer",
         "copyAddress": "Copiaza adresa",
         "scanQRCode": "Arata QR-Code",
         "showInterface": "Arata Interfata"
@@ -197,7 +197,7 @@
           "description": "Un portofel controlat de mai multe conturi.",
           "text1": "Acesta este un portofel controlat de",
           "text2": "detinatori. Poti trimite pana la",
-          "text3": "ether pe zi.",
+          "text3": "LindaX pe zi.",
           "text4": "Orice tranzactie ce depaseste limita zilnica, necesita confirmarea celor",
           "text5": "detinatori.",
           "accountOwnersTitle": "Detinatorii Portofelului",

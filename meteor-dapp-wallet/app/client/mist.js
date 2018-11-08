@@ -10,7 +10,7 @@ updateMistBadge = function() {
     var balance = _.reduce(
       _.pluck(_.union(accounts, wallets), 'balance'),
       function(memo, num) {
-        return memo + Number(num);
+        return new BigNumber(memo).plus(BigNumber(num));
       },
       0
     );
