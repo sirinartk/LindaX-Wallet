@@ -95,7 +95,7 @@
       "buttons": {
         "deposit": "Depositar Ether",
         "buyEther": "Comprar Ether",
-        "viewOnExplorer": "Ver no Etherscan",
+        "viewOnExplorer": "Ver no Explorer",
         "copyAddress": "Copiar endereço",
         "scanQRCode": "Mostrar código QR",
         "showInterface": "Mostrar Interface"
@@ -205,7 +205,7 @@
           "description": "Um contrato controlado por diversas contas",
           "text1": "Isso é uma carteira conjunta administradas por",
           "text2": "contas. Você pode enviar até",
-          "text3": "ether por dia.",
+          "text3": "LindaX por dia.",
           "text4": "Qualquer transação acima do limite diário requer a aprovação de",
           "text5": "contas.",
           "accountOwnersTitle": "Contas administradoras",

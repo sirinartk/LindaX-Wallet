@@ -1,7 +1,7 @@
 <template name="popupWindows_clientUpdateAvailable">
     <div class="popup-windows update-available row">
         <div class="col col-3">
-            <img class="left-overlay {{mode}}" src="{{appIconPath}}" />
+            <img class="left-overlay {{mode}}" src="{{appIconPath}}" style="position:relative;top:35px;left:0;width:100%"  />
         </div>
         {{#with Session "data"}}
         <div class="col col-8 text">
@@ -9,7 +9,7 @@
                     {{i18n "mist.popupWindows.updateAvailable.newVersionAvailable" name=name version=version }}
                 </h1>
                 <p>
-                <br>
+                    <br>
                     <ul class="no-bullets">
                         <li>{{i18n "mist.popupWindows.updateAvailable.version"}}: <strong> {{version}} </strong></li>
                         <li>{{i18n "mist.popupWindows.updateAvailable.downloadURL"}}: <strong> {{downloadUrl}}</strong></li>

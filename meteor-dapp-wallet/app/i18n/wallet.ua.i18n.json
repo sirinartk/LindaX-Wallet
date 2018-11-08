@@ -83,7 +83,7 @@
       "buttons": {
         "deposit": "Поповнити Ефіріум",
         "buyEther": "Поповнити за допомогою Біткоїнів",
-        "viewOnExplorer": "View on Etherscan",
+        "viewOnExplorer": "View on Explorer",
         "copyAddress": "Копіювати адресу",
         "scanQRCode": "Показати QR-код",
         "showInterface": "Показати інтерфейс"

@@ -1,7 +1,7 @@
 <template name="popupWindows_updateAvailable">
     <div class="popup-windows update-available row">
         <div class="col col-3">
-            <img class="left-overlay {{mode}}" src="{{appIconPath}}" />
+            <img class="left-overlay {{mode}}" style="position:relative;top:35px;left:0;width:100%" src="{{appIconPath}}" />
         </div>
         {{#if TemplateVar.get "checking"}}
          <div class="col col-8 text">   

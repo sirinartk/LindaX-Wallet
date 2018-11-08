@@ -346,7 +346,7 @@ Template['views_account'].events({
   'blur .edit-name, keyup .edit-name': function(e) {
     if (!e.keyCode || e.keyCode === 13) {
       var $el = $(e.currentTarget);
-      var text = $el.text();
+      var text = $el.val();
 
       if (_.isEmpty(text)) {
         text = TAPi18n.__('wallet.accounts.defaultName');

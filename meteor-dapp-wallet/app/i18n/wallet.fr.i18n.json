@@ -90,7 +90,7 @@
       "buttons": {
         "deposit": "Déposer de l'ether",
         "buyEther": "Acheter Ether",
-        "viewOnExplorer": "View on Etherscan",
+        "viewOnExplorer": "View on Explorer",
         "copyAddress": "Copier l'adresse",
         "scanQRCode": "Afficher le QR Code",
         "showInterface": "Afficher l'interface"
@@ -197,7 +197,7 @@
           "description": "Un contrat contrôlé par plusieurs comptes.",
           "text1": "Ceci est un compte joint contrôlé par",
           "text2": "propriétaires. Vous pouvez envoyer jusqu'à",
-          "text3": "ether par jour.",
+          "text3": "LindaX par jour.",
           "text4": "Toute transaction au delà de cette limite quotidienne nécessite la confirmation de",
           "text5": "propriétaires.",
           "accountOwnersTitle": "Propriétaires du compte",

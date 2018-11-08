@@ -96,7 +96,7 @@
         "deposit": "Transfereix Ether & Tokens",
         "depositBitcoin": "Finança amb Bitcoin",
         "depositUsingCreditCard": "Finança amb targeta de crèdit (només U.S.)",
-        "viewOnExplorer": "Veure a Etherscan",
+        "viewOnExplorer": "Veure a Explorer",
         "copyAddress": "Copiar adreça",
         "scanQRCode": "Mostrar codi QR",
         "showInterface": "Mostrar interfície"
@@ -206,7 +206,7 @@
           "description": "Un contracte controlat per múltiples comptes",
           "text1": "Això és un compte conjunt controlat per",
           "text2": "propietaris. Pots enviar fins a",
-          "text3": "Ether per dia.",
+          "text3": "LindaX per dia.",
           "text4": "Qualsevol transacció per sobre d'aquest límit diari necessita la confirmació de",
           "text5": "propietaris.",
           "accountOwnersTitle": "Propietaris del compte",

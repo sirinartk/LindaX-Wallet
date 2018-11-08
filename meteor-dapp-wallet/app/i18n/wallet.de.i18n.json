@@ -91,9 +91,9 @@
       "walletsDescriptionNotEnoughFunds": "Es wird mindestens 1 Ether benötigt, um komplexe Verträge zu erstellen.",
       "accountsDescription": "Konten können Ether, LindaX-basierte Token oder Coins enthalten. Darüber hinaus können Konten Verträge kontrollieren. Im Gegensatz zu Wallets können Konten keine einkommenden Transaktionen anzeigen.",
       "buttons": {
-        "deposit": "Ether hinterlegen",
+        "deposit": "LindaX hinterlegen",
         "buyEther": "Kaufe Ether",
-        "viewOnExplorer": "View on Etherscan",
+        "viewOnExplorer": "View on Explorer",
         "copyAddress": "Adresse kopieren",
         "scanQRCode": "QR-Code anzeigen",
         "showInterface": "Interface anzeigen"
@@ -200,7 +200,7 @@
           "description": "Ein Vertrag, der von mehreren Konten kontrolliert wird",
           "text1": "Dies ist ein gemeinsames Konto von den Eigentümer",
           "text2": "Sie können bis zu",
-          "text3": "Ether pro Tag versenden.",
+          "text3": "LindaX pro Tag versenden.",
           "text4": "Jede Transaktion die über das tägliche Limit hinaus geht muss durch",
           "text5": "betätigt werden.",
           "accountOwnersTitle": "Kontoinhaber",

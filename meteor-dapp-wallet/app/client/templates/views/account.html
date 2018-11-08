@@ -29,7 +29,8 @@
                         {{#if ens}}
                         <span>{{displayName}}</span>
                         {{else}}
-                        <em class="edit-name">{{displayName}}</em>
+                        
+                        <input value="{{displayName}}" style="background: none;font-size: 18px;padding: 0;" class="edit-name" />
                         <i class="edit-icon icon-pencil"></i>
                         {{/if}}
                     </h1>
@@ -139,7 +140,7 @@
                           {{/if}}
 
                         <li>
-                            <a href="https://etherscan.io/address/{{address}}" target="_blank">
+                            <a href="https://explorer.lindax.network/addr/{{address}}" target="_blank">
                                 <i class="icon-info"></i>
                                 {{i18n "wallet.accounts.buttons.viewOnExplorer"}}
                             </a>
