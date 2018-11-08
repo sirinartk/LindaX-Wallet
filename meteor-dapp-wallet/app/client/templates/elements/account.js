@@ -98,14 +98,16 @@ Template['elements_account'].helpers({
     */
   creating: function() {
     var noAddress = !this.address;
-    var isImported = this.imported;
+    var notImported = this.imported === false;
     var belowReorgThreshold =
       blocksForConfirmation >=
       LXBlocks.latest.number - (this.creationBlock - 1);
     var blockNumberCheck =
       LXBlocks.latest.number - (this.creationBlock - 1) >= 0;
 
-    return noAddress || isImported || (belowReorgThreshold && blockNumberCheck);
+    return (
+      noAddress || notImported || (belowReorgThreshold && blockNumberCheck)
+    );
   },
   /**
     Returns the confirmations
