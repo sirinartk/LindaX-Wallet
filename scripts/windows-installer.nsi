@@ -159,10 +159,10 @@ Section Mist MIST_IDX
 
     # create shortcuts with flags in the start menu programs directory
     createDirectory "$SHORTCUTDIR"
-    createShortCut "$SHORTCUTDIR\${APPNAMENOHYPEN}.lnk" "$FILEDIR\${APPNAMENOHYPEN}.exe" '--node-datadir="$NODEDATADIR"' "$FILEDIR\${APPNAMENOHYPEN}.exe" 0
+    createShortCut "$SHORTCUTDIR\${APPNAMENOHYPEN}.lnk" "$FILEDIR\${APPNAMENOHYPEN}.exe" "$FILEDIR\${APPNAMENOHYPEN}.exe" 0
 
     # create desktop shortcut
-    createShortCut "$DESKTOPDIR\${APPNAMENOHYPEN}.lnk" "$FILEDIR\${APPNAMENOHYPEN}.exe" '--node-datadir="$NODEDATADIR"' "$FILEDIR\${APPNAMENOHYPEN}.exe" 0
+    createShortCut "$DESKTOPDIR\${APPNAMENOHYPEN}.lnk" "$FILEDIR\${APPNAMENOHYPEN}.exe" "$FILEDIR\${APPNAMENOHYPEN}.exe" 0
 
     # create a shortcut for the program uninstaller
     CreateShortCut "$SHORTCUTDIR\Uninstall.lnk" "$FILEDIR\uninstall.exe"
