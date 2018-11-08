@@ -357,7 +357,7 @@ var setupContractSubscription = function(newDocument, checkFromCreationBlock) {
       'logs',
       {
         address: newDocument.address,
-        fromBlock: newDocument.creationBlock
+        fromBlock: web3.utils.toHex(newDocument.creationBlock)
       },
       function(error, logs) {
         if (!error) {
