@@ -263,7 +263,7 @@ let menuTempl = function(webviews) {
       {
         label: i18n.t('mist.applicationMenu.file.importPresale'),
         accelerator: 'CommandOrControl+I',
-        enabled: lindaxNode.isMainNetwork,
+        enabled: store.getState().nodes.network === 'main',
         click() {
           Windows.createPopup('importAccount');
         }

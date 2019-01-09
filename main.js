@@ -363,11 +363,6 @@ function initializeMainWindowListeners() {
         }
         destroySyncStatusModal();
       } else {
-        log.info(
-          `Loading`,
-          store.getState().nodes.local.sync,
-          store.getState().nodes.local
-        );
         const myBlock =
           store.getState().nodes.local.sync.currentBlock ||
           store.getState().nodes.local.blockNumber;
@@ -403,7 +398,6 @@ function initializeMainWindowListeners() {
           newChild.loadURL(syncingWindow);
           newChild.once('ready-to-show', () => {
             newChild.show();
-            log.info(`child`, childLoadingWindow);
             if (childLoadingWindow) childLoadingWindow.destroy();
             childLoadingWindow = newChild;
           });
