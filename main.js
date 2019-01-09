@@ -1,6 +1,13 @@
 global._ = require('./modules/utils/underscore');
 
-const { app, dialog, ipcMain, shell, protocol } = require('electron');
+const {
+  app,
+  dialog,
+  ipcMain,
+  BrowserWindow,
+  shell,
+  protocol
+} = require('electron');
 const Q = require('bluebird');
 const windowStateKeeper = require('electron-window-state');
 const timesync = require('os-timesync');
@@ -330,6 +337,8 @@ function startMainWindow() {
   initializeTabs();
 }
 
+let childLoadingWindow;
+
 function initializeMainWindowListeners() {
   mainWindow.on('ready', () => {
     mainWindow.show();
@@ -352,23 +361,91 @@ function initializeMainWindowListeners() {
           mainWindow.load(loadingWindow);
           mainWindowType = 'loading';
         }
+        destroySyncStatusModal();
       } else {
-        if (
-          store.getState().nodes.local.sync.currentBlock > 0 ||
-          store.getState().nodes.local.blockNumber > 0
-        ) {
+        log.info(
+          `Loading`,
+          store.getState().nodes.local.sync,
+          store.getState().nodes.local
+        );
+        const myBlock =
+          store.getState().nodes.local.sync.currentBlock ||
+          store.getState().nodes.local.blockNumber;
+        const syncTime =
+          new Date().getTime() - store.getState().nodes.local.timestamp * 1000;
+        if (myBlock > 0 && syncTime < 24 * 60 * 60 * 1000) {
           if (mainWindowType === 'loading') {
             // Connected to node!
             mainWindow.load(global.interfaceAppUrl);
             mainWindowType = 'interface';
           }
+          destroySyncStatusModal();
           //unsubscribe();
+        } else if (myBlock > 0) {
+          // show syncing indicator
+          let syncingWindow =
+            'data:text/html,<div class="loadingspinner"></div><h4>#BLOCK</h4><h4>#TIMEREMAINING</h4><style>body{display: flex;flex-direction: column;background: #151727;height:100vh;margin: 0;padding: 0;display: flex;justify-content: center;align-items: center;}.loadingspinner{pointer-events: none;width: 3em;height: 3em;border: 0.4em solid transparent;border-color: #151727;border-top-color: #035096;border-radius: 50%;animation: loadingspin 1s linear infinite;}h4{color: white;font-family: "Helvetica Neue", Helvetica, Arial, serif;margin: 5px 0;}@keyframes loadingspin{100% {transform: rotate(360deg)}</style>';
+          syncingWindow = syncingWindow
+            .replace('#BLOCK', `Block ${myBlock}`)
+            .replace('#TIMEREMAINING', getSyncTimeRemaining(syncTime));
+
+          let newChild = new BrowserWindow({
+            parent: mainWindow,
+            modal: true,
+            show: false,
+            frame: false,
+            transparent: true,
+            resizable: false,
+            movable: false,
+            width: 300,
+            height: 175
+          });
+          newChild.loadURL(syncingWindow);
+          newChild.once('ready-to-show', () => {
+            newChild.show();
+            log.info(`child`, childLoadingWindow);
+            if (childLoadingWindow) childLoadingWindow.destroy();
+            childLoadingWindow = newChild;
+          });
         }
       }
     });
   }
 
-  mainWindow.on('closed', () => store.dispatch(quitApp()));
+  mainWindow.on('closed', () => {
+    destroySyncStatusModal();
+    store.dispatch(quitApp());
+  });
+}
+
+function destroySyncStatusModal() {
+  if (childLoadingWindow) {
+    childLoadingWindow.destroy();
+    childLoadingWindow = null;
+  }
+}
+
+function getSyncTimeRemaining(amount) {
+  const seconds = Math.round(amount / 1000);
+  const minutes = seconds / 60;
+  const hours = minutes / 60;
+  const days = hours / 24;
+  const months = days / 30.416;
+  const years = days / 365;
+
+  if (seconds <= 45) return 'A few seconds since last block';
+  else if (seconds <= 90) return 'A minute since last block';
+  else if (minutes <= 50)
+    return Math.round(minutes) + ' minutes since last block';
+  else if (hours <= 1.5) return 'A hour since last block';
+  else if (hours <= 22) return Math.round(hours) + ' hours since last block';
+  else if (hours <= 36) return 'A day since last block';
+  else if (days <= 25) return Math.round(days) + ' days since last block';
+  else if (months <= 1.5) return 'A month since last block';
+  else if (months <= 11.5)
+    return Math.round(months) + ' months since last block';
+  else if (years <= 1.5) return 'A year since last block';
+  else return Math.round(years) + ' years since last block';
 }
 
 function initializeTabs() {
