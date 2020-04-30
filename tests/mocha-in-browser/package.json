@@ -4,7 +4,13 @@
   "engines": {
     "node": "0.6.6"
   },
-  "dependencies":{
-    "mocha": "*"
-  }
+  "dependencies": {
+    "mocha": "*",
+    "snyk": "^1.316.1"
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
