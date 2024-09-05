@@ -37,7 +37,7 @@
     "bluebird": "^3.5.0",
     "chai-as-promised": "^7.1.1",
     "chai-string": "^1.3.0",
-    "electron-redux": "^1.3.1",
+    "electron-redux": "^1.5.3",
     "electron-window-state": "^4.0.1",
     "ethereum-client-binaries": "^1.6.4",
     "ethereum-keyfile-recognizer": "^1.0.2",
@@ -59,9 +59,9 @@
     "os-timesync": "^1.0.9",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
-    "remote-redux-devtools": "^0.5.12",
+    "remote-redux-devtools": "^0.5.15",
     "semver": "^5.1.0",
-    "solc": "^0.4.18",
+    "solc": "^0.5.13",
     "swarm-js": "^0.1.21",
     "typescript": "^2.2.2",
     "underscore": "^1.8.3",
@@ -69,7 +69,7 @@
     "uuid": "^3.0.1",
     "web3": "^1.0.0-beta.33",
     "ws": "^5.1.1",
-    "yargs": "^8.0.2"
+    "yargs": "^17.3.0"
   },
   "devDependencies": {
     "chai": "^4.1.1",
